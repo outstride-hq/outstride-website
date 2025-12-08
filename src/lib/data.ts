@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
     name: "Dan",
     role: "CEO & co-founder",
     company: "Lapse",
-    image: "/images/clients/dan-silvertown.jpg",
+    image: "/images/testimonial/dan-silvertown.jpg",
     quote:
       "Working with Ben has transformed how I lead and make decisions. His coaching gave me clarity, sharpened my focus, and helped me approach challenges with confidence and conviction.",
     createdAt: "2023-11-22T12:30:35.889Z",
@@ -61,7 +61,7 @@ export const testimonials: Testimonial[] = [
     name: "Maria",
     role: "Product Lead",
     company: "Lapse",
-    image: "/images/clients/maria-fazio.jpg",
+    image: "/images/testimonial/maria-fazio.jpg",
     quote:
       "Working with Ben has helped me grow into a stronger, more confident leader. Our coaching sessions give me the clarity and accountability to lead with greater impact",
     createdAt: "2024-03-01T14:40:56.748Z",
@@ -71,7 +71,7 @@ export const testimonials: Testimonial[] = [
     name: "Senam",
     role: "Head of Operations and Community",
     company: "Intel Ignite",
-    image: "/images/clients/senam.jpeg",
+    image: "/images/testimonial/senam.jpeg",
     quote:
       "Ben's workshop with our Intel Ignite founders was exceptional. He has a rare ability to simplify complex leadership challenges and spark real strategic clarity. Our founders left with sharper focus, practical tools, and a renewed sense of confidence in their decision-making",
     isInvestor: true,
@@ -81,7 +81,7 @@ export const testimonials: Testimonial[] = [
     name: "Adam",
     role: "Partner",
     company: "Antler UK",
-    image: "/images/clients/adam-french.jpeg",
+    image: "/images/testimonial/adam-french.jpeg",
     quote:
       "Ben's workshop on 'Building the Perfect Co-Founder Relationship' was a standout session for Antler UK. He blends hands-on startup experience with practical, easy-to-apply tools, our founders left motivated, aligned, and better equipped to navigate their co-founder partnerships.",
     isInvestor: true,
@@ -91,7 +91,7 @@ export const testimonials: Testimonial[] = [
     name: "Sajeev",
     role: "CEO & co-founder",
     company: "Medify",
-    image: "/images/clients/sajeev-shanmuganandarajah.jpg",
+    image: "/images/testimonial/sajeev-shanmuganandarajah.jpg",
     quote:
       "Working with Ben Jones has sharpened my leadership and decision-making. His tailored strategy sessions with my leadership team have been transformative, aligning us around clear priorities and practical actions.",
     createdAt: "2023-10-11T15:48:55.702Z",
@@ -101,7 +101,7 @@ export const testimonials: Testimonial[] = [
     name: "Ed",
     role: "CEO & co-founder",
     company: "Quetzal",
-    image: "/images/clients/ed-bramwell.jpg",
+    image: "/images/testimonial/ed-bramwell.jpg",
     quote:
       "Ben is an incredible coach, able to draw upon his real experience on any aspect of startup life. More importantly, he helped me focus on what really mattered, both for my company and my personal life.",
     createdAt: "2023-09-07T12:00:41.506Z",
@@ -111,7 +111,7 @@ export const testimonials: Testimonial[] = [
     name: "Maria",
     role: "CEO & co-founder",
     company: "Abatable",
-    image: "/images/clients/maria-abatable.jpeg",
+    image: "/images/testimonial/maria-abatable.jpeg",
     quote:
       "Working with Ben was an incredibly positive experience. His coaching gave me clarity and confidence in my leadership, and the frameworks he shared are still tools I lean on every day—both in our company and in my own life.",
     createdAt: "2023-03-09T17:32:46.605Z",
@@ -121,7 +121,7 @@ export const testimonials: Testimonial[] = [
     name: "Rui",
     role: "VP Product",
     company: "automata.tech",
-    image: "/images/clients/rui-campos.jpg",
+    image: "/images/testimonial/rui-campos.jpg",
     quote:
       "Ben has been an incredible thought partner, helping me reflect and find clarity in complex situations. His blend of deep listening and practical founder experience has been an important element in my decision-making and leadership approach.",
     createdAt: "2025-04-22T14:31:12.838Z",
@@ -141,7 +141,7 @@ export const testimonials: Testimonial[] = [
     name: "John",
     role: "CEO & co-founder",
     company: "Inephany",
-    image: "/images/testimonial/client-sm-4.jpg",
+    image: "/images/testimonial/john.jpeg",
     quote:
       "Ben has a unique ability to draw out the core issue and keep me focused on what really matters. His coaching has made me a sharper, more intentional leader.",
     createdAt: "2025-06-30T10:00:31.746Z",
@@ -161,7 +161,7 @@ export const testimonials: Testimonial[] = [
     name: "Dominic",
     role: "CEO & co-founder",
     company: "Fast Soil Intelligence",
-    image: "/images/testimonial/dominic.jpg",
+    image: "/images/testimonial/dominic.jpeg",
     quote:
       "Through working with Ben, I've gained clarity and decisiveness in my leadership. His insight, support and structure helped me navigate the the curve balls that get thrown your way with startups. He's an awesome person and a total pro.",
     createdAt: "2022-11-15T18:37:00.000Z",
@@ -171,7 +171,7 @@ export const testimonials: Testimonial[] = [
     name: "Erdem",
     role: "CEO & co-founder",
     company: "Flowla",
-    image: "/images/testimonial/client-sm-2.jpg",
+    image: "/images/testimonial/erdem.jpeg",
     quote:
       "Ben challenges me to focus on what really moves the needle. His coaching has made me a more decisive and confident leader.",
     createdAt: "2025-10-07T14:21:33.575Z",
