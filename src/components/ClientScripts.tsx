@@ -57,12 +57,20 @@ export default function ClientScripts() {
           .$(".owl-carousel")
           .each(function (this: any, index: number) {
             const a = (window as any).$(this);
+            // Skip if already initialized
+            if (a.hasClass("owl-loaded")) return;
             const rtlVal = (window as any).$("html").attr("dir") === "rtl";
+            const responsive = a.data("responsive") || {
+              0: { items: a.data("items-xs") || 1 },
+              576: { items: a.data("items-sm") || 1 },
+              768: { items: a.data("items-md") || 1 },
+              992: { items: a.data("items-lg") || 1 },
+            };
             a.owlCarousel({
               rtl: rtlVal,
               autoplay: a.data("autoplay"),
               center: a.data("center"),
-              autoplayTimeout: a.data("autoplaytimeout"),
+              autoplayTimeout: a.data("autoplaytimeout") || 5000,
               autoplayHoverPause: a.data("autoplayhoverpause"),
               loop: a.data("loop"),
               speed: a.data("speed"),
@@ -70,11 +78,11 @@ export default function ClientScripts() {
               dots: a.data("dots"),
               margin: a.data("margin"),
               stagePadding: a.data("stagepadding"),
-              items: a.data("items"),
-              responsive: a.data("responsive"),
+              items: a.data("items") || 1,
+              responsive: responsive,
               navText: [
-                '<i className="fas fa-chevron-left"></i>',
-                '<i className="fas fa-chevron-right"></i>',
+                '<i class="fas fa-chevron-left"></i>',
+                '<i class="fas fa-chevron-right"></i>',
               ],
             });
           });
@@ -128,17 +136,21 @@ export default function ClientScripts() {
     initSmoothScroll();
     initWOW();
 
-    // Also try after a short delay to ensure scripts are loaded
-    const timer = setTimeout(() => {
+    // Retry after delays to ensure scripts are loaded
+    const timer1 = setTimeout(() => {
       initTyped();
       initCarousel();
       initSmoothScroll();
       initWOW();
     }, 1000);
+    const timer2 = setTimeout(() => {
+      initCarousel();
+    }, 2500);
 
     // Cleanup on unmount
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
       cleanupTyped();
     };
   }, []);
@@ -162,7 +174,7 @@ export default function ClientScripts() {
       />
       <Script
         src="/vendor/owl.carousel/owl.carousel.min.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
     </>
   );
