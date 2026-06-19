@@ -2,11 +2,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OSHero from "@/components/os/OSHero";
 import LayerCard from "@/components/os/LayerCard";
-import StageCard from "@/components/os/StageCard";
+import OSForceFormFlow from "@/components/os/OSForceFormFlow";
+import OSHowItRuns from "@/components/os/OSHowItRuns";
 import ProcessStepCard from "@/components/os/ProcessStepCard";
 import CapabilityMenu from "@/components/os/CapabilityMenu";
+import SymptomMap from "@/components/os/SymptomMap";
 import ToolPreview from "@/components/os/ToolPreview";
-import { layers, processSteps, stages } from "@/lib/os";
+import { layers, processSteps } from "@/lib/os";
 
 export const metadata = {
   title: "Outstride OS - Outstride",
@@ -36,30 +38,14 @@ export default function OSPage() {
           </div>
         </section>
 
+        <OSForceFormFlow />
+
+        <OSHowItRuns />
+
         <section className="section bg-light">
           <div className="container">
-            <h2 className="text-10 fw-600 text-center mb-4 wow fadeInUp">
-              Force → Form → Flow
-            </h2>
-            <p className="text-5 text-center text-muted mb-5 wow fadeInUp">
-              Force, Form and Flow are not a scoring system. They describe the
-              direction of travel: from founder-dependent to structured to
-              self-sustaining.
-            </p>
-            <div className="row g-4">
-              {stages.map((stage) => (
-                <div key={stage.id} className="col-md-4 wow fadeInUp">
-                  <StageCard stage={stage} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container">
             <h2 className="text-10 fw-600 text-center mb-5 wow fadeInUp">
-              The 4D Process
+              The Process
             </h2>
             <div className="row g-4">
               {processSteps.map((step) => (
@@ -71,19 +57,21 @@ export default function OSPage() {
           </div>
         </section>
 
-        <section className="section bg-light">
+        <section className="section">
           <div className="container">
             <h2 className="text-10 fw-600 text-center mb-5 wow fadeInUp">
-              Capability Menu
+              The Capabilities
             </h2>
             <CapabilityMenu />
           </div>
         </section>
 
-        <section className="section">
+        <SymptomMap />
+
+        <section className="section bg-light">
           <div className="container">
             <h2 className="text-10 fw-600 text-center mb-5 wow fadeInUp">
-              Tools Preview
+              Tools
             </h2>
             <ToolPreview />
           </div>
@@ -98,8 +86,8 @@ export default function OSPage() {
                 </h2>
                 <p className="text-5 text-white mb-4 wow fadeInUp">
                   Outstride OS is used as a coaching cadence to help founders
-                  discover what matters, define success, design the next stage
-                  and deliver through rhythm and accountability.
+                  diagnose what matters, define success, design the next stage and
+                  deliver through rhythm and accountability.
                 </p>
                 <a
                   href="/#contact"

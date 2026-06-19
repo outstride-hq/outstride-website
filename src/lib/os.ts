@@ -1,8 +1,8 @@
 /**
  * Outstride OS content data.
  *
- * Intentionally incomplete starter content — expand capabilities, tools,
- * rhythms and descriptions as the framework matures.
+ * Edit this file to update the /os page. Capability and tool lists are
+ * complete but descriptions can still be refined over time.
  *
  * Topology: Layer → Capability Group → Capability → Tools + Rhythms
  */
@@ -42,7 +42,7 @@ export type Stage = {
 };
 
 export type ProcessStep = {
-  id: "discover" | "define" | "design" | "deliver";
+  id: "diagnose" | "define" | "design" | "deliver";
   title: string;
   question: string;
   prompts: string[];
@@ -58,6 +58,8 @@ export type CapabilityGroup = {
 
 export type Capability = {
   id: string;
+  number: number;
+  emoji: string;
   title: string;
   layerId: LayerId;
   groupId?: string;
@@ -89,6 +91,70 @@ export type Rhythm = {
   description: string;
 };
 
+export type SymptomMapEntry = {
+  id: string;
+  symptom: string;
+  capabilityTitles: string[];
+};
+
+export const osQuote =
+  "Founders do not scale by becoming more heroic. They scale by building the systems, rhythms, relationships and capabilities that make heroics less necessary.";
+
+export const howOsRunsTrainingPoints = [
+  {
+    label: "The Capabilities are what you train.",
+    text: "The skills and knowledge you build to level up as a founder, leader and human — the full map of what has to work to scale.",
+  },
+  {
+    label: "The Process is how you train.",
+    text: "The cadence you run with your coach — the four Ds — to stay honest about where you are and decide what to work on next.",
+  },
+] as const;
+
+export const howOsRunsFeltProblems = [
+  "my team keeps dropping things",
+  "I'm in every decision",
+  "I need to raise and we're not ready",
+] as const;
+
+export const howOsRunsQuarterlyIntro =
+  "Each quarter, the cadence runs:";
+
+export const howOsRunsQuarterlySteps = [
+  {
+    title: "Diagnose",
+    description:
+      "Start with the pain the founder can name, then trace it to its root: what is working, what is fragile, what is still entirely on you — and whether the loudest symptom is the real problem or a downstream effect of a deeper one.",
+  },
+  {
+    title: "Define",
+    description:
+      "Set the destination and the next milestone. This decides which capabilities actually matter right now — a pre-seed founder and a Series B founder need different things from the same map.",
+  },
+  {
+    title: "Design",
+    description:
+      "Pick the two to four capabilities to train this quarter: the ones that are holding you back and stand between you and the next milestone. Not all 26 — just the few that count.",
+  },
+  {
+    title: "Deliver",
+    description:
+      "Install the cadence, tools and accountability to actually shift them. Then re-Diagnose next quarter.",
+  },
+];
+
+export const symptomMapIntro =
+  "The way into a Diagnose conversation. A founder recognises themselves in a sentence long before they recognise a capability — so start with what they say, then follow it to what it points to.";
+
+export const symptomMapOutro =
+  "A symptom usually points to more than one capability, and the loudest one is rarely the whole story — so the map opens the conversation rather than closing it. From there, Define and Design turn the chosen capabilities into the work for the quarter.";
+
+export const toolsIntro =
+  "Tools sit underneath capabilities. A tool is anything that helps diagnose, practise, install or review a capability.";
+
+export const toolsTaggingNote =
+  "Tools can be tagged by layer (Company / Founder / Human), capability (1–26), type (Diagnostic / Framework / Template / Conversation / Rhythm / Exercise) and format (Solo / 1:1 / Team / Company).";
+
 export const layers: Layer[] = [
   {
     id: "company",
@@ -117,32 +183,31 @@ export const stages: Stage[] = [
   {
     id: "force",
     title: "Force",
-    description:
-      "Things work because the founder personally pushes them. Useful early, dangerous when it becomes the only mode.",
+    description: "It works because you personally push it.",
   },
   {
     id: "form",
     title: "Form",
     description:
-      "Things work because there is structure, cadence, ownership and standards.",
+      "It works because there is structure, cadence, ownership and standards.",
   },
   {
     id: "flow",
     title: "Flow",
     description:
-      "Things work because the system, team or relationship runs without constant founder intervention.",
+      "It works because the system, team or relationship runs without you.",
   },
 ];
 
 export const processSteps: ProcessStep[] = [
   {
-    id: "discover",
-    title: "Discover",
-    question: "Where are we today?",
+    id: "diagnose",
+    title: "Diagnose",
+    question: "Where does it hurt, and why?",
     prompts: [
-      "How are we performing at the company, founder and personal level?",
-      "What patterns, insights and hard truths appear when we zoom out?",
-      "What are the biggest opportunities and threats?",
+      "Start where the pain is. Founders arrive with a felt problem — \"I'm in every decision,\" \"my team keeps dropping things,\" \"I'm exhausted\" — not a request for an operating system.",
+      "Trace the symptom to its root: is the loudest pain the real problem, or a downstream effect of a deeper one?",
+      "Read the whole board across the company, founder and human layers, and name the biggest opportunities and threats.",
     ],
   },
   {
@@ -182,37 +247,30 @@ export const capabilityGroups: CapabilityGroup[] = [
     id: "company-system",
     layerId: "company",
     title: "Company System",
-    description:
-      "Direction, structure, rhythm, ownership, culture and talent.",
     order: 1,
   },
   {
     id: "lead-myself",
     layerId: "founder",
     title: "Lead Myself",
-    description: "How the founder spends time, energy and judgement.",
     order: 2,
   },
   {
     id: "lead-others",
     layerId: "founder",
     title: "Lead Others",
-    description:
-      "How the founder grows people, designs relationships and builds leaders.",
     order: 3,
   },
   {
     id: "lead-the-game",
     layerId: "founder",
     title: "Lead the Game",
-    description: "How the founder carries the story and the capital.",
     order: 4,
   },
   {
     id: "human-system",
     layerId: "human",
     title: "Human System",
-    description: "Energy, resilience, growth, mindset, shadow and life design.",
     order: 5,
   },
 ];
@@ -220,346 +278,547 @@ export const capabilityGroups: CapabilityGroup[] = [
 export const capabilities: Capability[] = [
   {
     id: "map-the-destination",
+    number: 1,
+    emoji: "🗺️",
     title: "Map the Destination",
     layerId: "company",
     groupId: "company-system",
-    summary:
-      "Define the problem, mission, vision and next big juicy milestone.",
+    summary: "",
     bullets: [
+      "Define the problem, mission, vision and next big juicy milestone.",
       "Clarify what the company is and what it is not.",
       "Create a destination simple enough for the team to understand and repeat.",
     ],
-    stageHint: "form",
     toolIds: ["strategy-one-pager", "ceo-test"],
     rhythmIds: ["quarterly-strategy-reset"],
-    featured: true,
     order: 1,
   },
   {
     id: "chart-the-path",
+    number: 2,
+    emoji: "🧭",
     title: "Chart the Path",
     layerId: "company",
     groupId: "company-system",
-    summary: "Turn destination into a clear strategic path and priorities.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
+    summary: "",
+    bullets: [
+      "Turn the destination into meaningful annual and quarterly company goals.",
+      "Cascade goals down the organisation so teams know how their work contributes.",
+      "Connect the North Star Metric to supporting KPIs, OKRs and team goals.",
+    ],
+    toolIds: ["north-star-metric", "okrs"],
     rhythmIds: [],
     order: 2,
   },
   {
     id: "design-the-org",
+    number: 3,
+    emoji: "🏗️",
     title: "Design the Org",
     layerId: "company",
     groupId: "company-system",
-    summary: "Shape the organisation structure for the next stage of growth.",
-    bullets: [],
-    stageHint: "form",
+    summary: "",
+    bullets: [
+      "Identify the roles, structure and leadership capacity needed for the next milestone.",
+      "Spot where the current org will break before it actually breaks.",
+      "Decide what needs to be hired, promoted, delegated or redesigned.",
+    ],
     toolIds: [],
     rhythmIds: [],
     order: 3,
   },
   {
     id: "install-the-operating-rhythm",
+    number: 4,
+    emoji: "🔄",
     title: "Install the Operating Rhythm",
     layerId: "company",
     groupId: "company-system",
-    summary:
-      "Create the weekly, monthly, quarterly and annual cadence that runs the company.",
+    summary: "",
     bullets: [
-      "Make sure the right conversations happen at the right frequency.",
+      "Create the weekly, monthly, quarterly and annual cadence that runs the company.",
+      "Give each meeting a clear job — strategy, review and accountability, decisions, or connection — so the right conversation happens at the right frequency.",
       "Reduce reactive chaos by giving planning, review and accountability a home.",
     ],
-    stageHint: "form",
     toolIds: ["operating-cadence", "quarterly-retro"],
     rhythmIds: ["weekly-leadership-meeting", "monthly-business-review"],
-    featured: true,
     order: 4,
   },
   {
     id: "make-ownership-stick",
+    number: 5,
+    emoji: "🎯",
     title: "Make Ownership Stick",
     layerId: "company",
     groupId: "company-system",
-    summary:
-      "Make people own outcomes, not just tasks, so the founder is not constantly chasing.",
+    summary: "",
     bullets: [
+      "Make people own outcomes, not just tasks.",
       "Clarify who owns what, how success is measured and what decisions they can make.",
-      "Build accountability into the system.",
+      "Build accountability into the system so the founder is not constantly chasing.",
     ],
-    stageHint: "form",
     toolIds: ["ownership-map", "delegation-ladder"],
     rhythmIds: ["weekly-ownership-review"],
-    featured: true,
     order: 5,
   },
   {
     id: "build-a-culture-that-compounds",
+    number: 6,
+    emoji: "🌱",
     title: "Build a Culture That Compounds",
     layerId: "company",
     groupId: "company-system",
-    summary: "Design culture and values that strengthen as the company scales.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
+    summary: "",
+    bullets: [
+      "Discover the company's DNA and translate it into values, behaviours and rituals.",
+      "Define what \"great\" looks like in both performance and behaviour.",
+      "Make culture visible through decisions, feedback, hiring, rituals and consequences.",
+    ],
+    toolIds: ["company-values"],
     rhythmIds: [],
     order: 6,
   },
   {
     id: "raise-the-talent-bar",
+    number: 7,
+    emoji: "📈",
     title: "Raise the Talent Bar",
     layerId: "company",
     groupId: "company-system",
-    summary: "Hire, develop and retain people who raise the bar over time.",
-    bullets: [],
-    stageHint: "form",
+    summary: "",
+    bullets: [
+      "Build a consistent, simple way of evaluating performance and potential.",
+      "Give people the tools, feedback and support to improve.",
+      "Create a talent system that raises the level of the company over time.",
+    ],
     toolIds: [],
     rhythmIds: [],
     order: 7,
   },
   {
     id: "take-command-of-my-role",
+    number: 8,
+    emoji: "🎖️",
     title: "Take Command of My Role",
     layerId: "founder",
     groupId: "lead-myself",
-    summary:
-      "Define the founder role required for the next period and how it needs to evolve.",
+    summary: "",
     bullets: [
       "Identify your unique ability: what can you do better than almost anyone else?",
-      "Clarify what only you should own now.",
+      "Define the founder role required for the next period.",
+      "Clarify how your role needs to evolve as the company scales.",
     ],
-    stageHint: "form",
-    toolIds: ["founder-jd", "founder-calendar-audit"],
+    toolIds: ["founder-jd", "founder-calendar-audit", "zone-of-genius"],
     rhythmIds: ["monthly-calendar-detox"],
-    featured: true,
     order: 8,
   },
   {
-    id: "operate-at-the-right-altitude",
-    title: "Operate at the Right Altitude",
+    id: "operate-with-leverage",
+    number: 9,
+    emoji: "⚡",
+    title: "Operate with Leverage",
     layerId: "founder",
     groupId: "lead-myself",
-    summary:
-      "Know whether you should be doing the work, leading the team or building the system.",
+    summary: "",
     bullets: [
-      "Know when to use Force, Form and Flow.",
-      "Move yourself onto your highest-leverage work.",
+      "Identify the few activities where you create the most value — and the bottlenecks where everything waits on you.",
+      "Put your time and attention there, and protect it ruthlessly.",
+      "Cut, delegate or kill low-value meetings, context-switching and reactive work.",
     ],
-    stageHint: "form",
-    toolIds: ["force-form-flow-diagnostic", "founder-calendar-audit"],
+    toolIds: ["founder-calendar-audit"],
     rhythmIds: ["weekly-planning"],
-    featured: true,
     order: 9,
   },
   {
-    id: "make-good-decisions-in-the-right-way",
-    title: "Make Good Decisions in the Right Way",
+    id: "operate-at-the-right-altitude",
+    number: 10,
+    emoji: "🪂",
+    title: "Operate at the Right Altitude",
     layerId: "founder",
     groupId: "lead-myself",
-    summary: "Build decision-making habits that match the stage of the company.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
-    rhythmIds: [],
+    summary: "",
+    bullets: [
+      "Decide what each part of your work needs from you: doing it, leading it, or building the system that runs it (Force → Form → Flow).",
+      "Climb a level as the company grows, rather than staying where you are most comfortable.",
+      "Catch yourself when you have dropped back into the weeds, and get back to the right altitude.",
+    ],
+    toolIds: ["force-form-flow-diagnostic", "founder-calendar-audit"],
+    rhythmIds: ["weekly-planning"],
     order: 10,
   },
   {
-    id: "scale-through-delegation",
-    title: "Scale Through Delegation",
+    id: "make-the-right-calls",
+    number: 11,
+    emoji: "⚖️",
+    title: "Make the Right Calls",
     layerId: "founder",
-    groupId: "lead-others",
-    summary: "Transfer responsibility for results, not just activities.",
+    groupId: "lead-myself",
+    summary: "",
     bullets: [
-      "Set clear expectations around goals, standards, risks and decision boundaries.",
-      "Understand the levels of delegation and create a delegation timeline.",
+      "Know which decisions are yours to make, which to delegate, and which to escalate.",
+      "Match the rigour to the stakes: move fast on reversible calls, slow down on the ones you cannot undo.",
+      "Cut decision congestion — no repeated debates, no unclear ownership, no calls stuck waiting on you.",
     ],
-    stageHint: "form",
-    toolIds: ["delegation-ladder", "ownership-map"],
-    rhythmIds: ["weekly-ownership-review"],
-    featured: true,
+    toolIds: [],
+    rhythmIds: [],
     order: 11,
   },
   {
-    id: "use-the-right-leadership-hat",
-    title: "Use the Right Leadership Hat",
+    id: "scale-through-delegation",
+    number: 12,
+    emoji: "🤝",
+    title: "Scale Through Delegation",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "Switch between leadership modes as the situation demands.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
-    rhythmIds: [],
+    summary: "",
+    bullets: [
+      "Transfer responsibility for results, not just activities.",
+      "Set clear expectations around goals, standards, risks and decision boundaries.",
+      "Understand the levels of delegation and create a delegation timeline.",
+    ],
+    toolIds: ["delegation-ladder", "ownership-map"],
+    rhythmIds: ["weekly-ownership-review"],
     order: 12,
   },
   {
-    id: "give-feedback-and-hold-the-standard",
-    title: "Give Feedback & Hold the Standard",
+    id: "know-and-use-the-right-leadership-hat",
+    number: 13,
+    emoji: "🎩",
+    title: "Know & Use the Right Leadership Hat",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "Give clear feedback and maintain standards without avoiding tension.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: ["sbi-feedback", "kss-feedback"],
+    summary: "",
+    bullets: [
+      "Switch deliberately between coach, mentor, empowerer and manager, depending on the person and the situation.",
+      "Default to coaching where you can: help people think for themselves and leave them more capable after each conversation, rather than handing over answers.",
+      "Notice your own default hat and where it creates bias, and choose the mode that best serves the person's growth and the outcome.",
+    ],
+    toolIds: ["coaching-questions"],
     rhythmIds: [],
     order: 13,
   },
   {
-    id: "build-incredible-relationships",
-    title: "Build Incredible Relationships",
+    id: "give-feedback-and-hold-the-standard",
+    number: 14,
+    emoji: "📣",
+    title: "Give Feedback & Hold the Standard",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "Proactively design your most important working relationships.",
+    summary: "",
     bullets: [
-      "Clarify expectations, cadence, communication preferences and decision rights.",
-      "Apply this to cofounders, execs, reports, advisors and key partners.",
+      "Make positive and corrective feedback a normal part of your operating cadence.",
+      "Challenge missed commitments clearly and early, in a way that changes behaviour.",
+      "Separate care for the person from clarity about the standard — and catch issues before they become resentment, politics or performance problems.",
     ],
-    stageHint: "form",
-    toolIds: ["relationship-design", "kss-feedback"],
-    rhythmIds: ["monthly-relationship-review"],
+    toolIds: ["sbi-feedback", "kss-feedback", "accountability-dial"],
+    rhythmIds: [],
     order: 14,
   },
   {
-    id: "build-trust-and-navigate-conflict",
-    title: "Build Trust & Navigate Conflict",
+    id: "build-incredible-relationships",
+    number: 15,
+    emoji: "💬",
+    title: "Build Incredible Relationships",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "Build trust and work through conflict before it becomes destructive.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
-    rhythmIds: [],
+    summary: "",
+    bullets: [
+      "Proactively design your most important working relationships.",
+      "Clarify expectations, cadence, communication preferences and decision rights.",
+      "Apply this to cofounders, execs, reports, advisors and key partners.",
+    ],
+    toolIds: ["relationship-design", "one-to-one-structure"],
+    rhythmIds: ["monthly-relationship-review"],
     order: 15,
   },
   {
-    id: "build-leaders-not-dependencies",
-    title: "Build Leaders, Not Dependencies",
+    id: "navigate-conflict-and-create-psychological-safety",
+    number: 16,
+    emoji: "🛡️",
+    title: "Navigate Conflict & Create Psychological Safety",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "Develop leaders who can own outcomes without constant founder input.",
-    bullets: [],
-    stageHint: "flow",
-    toolIds: [],
+    summary: "",
+    bullets: [
+      "Build enough trust that people can say hard truths early, disagree openly and admit mistakes without fear.",
+      "Turn tension into clarity instead of politics, avoidance or resentment, and prepare for hard conversations with structure and emotional discipline.",
+      "Spot when safety is missing and rebuild it deliberately.",
+    ],
+    toolIds: ["psychological-safety-diagnostic"],
     rhythmIds: [],
     order: 16,
   },
   {
-    id: "be-storyteller-in-chief",
-    title: "Be Storyteller in Chief",
+    id: "build-leaders-not-dependencies",
+    number: 17,
+    emoji: "🌳",
+    title: "Build Leaders, Not Dependencies",
     layerId: "founder",
-    groupId: "lead-the-game",
-    summary:
-      "Communicate the company's direction in a way people believe, remember and act on.",
+    groupId: "lead-others",
+    summary: "",
     bullets: [
-      "Adapt the story for team, candidates, customers, investors and board.",
-      "Use narrative to create alignment, confidence and momentum.",
+      "Teach the capabilities you have built in yourself to the leaders around you, instead of hoarding them.",
+      "Develop people who can lead their domain — make the calls, hold the standard, coach their own teams — without constant founder input.",
+      "Move from managing everyone to managing managers and leaders.",
     ],
-    stageHint: "flow",
     toolIds: [],
-    rhythmIds: ["monthly-all-hands"],
+    rhythmIds: [],
     order: 17,
   },
   {
-    id: "manage-capital-and-stakeholders",
-    title: "Manage Capital and Stakeholders",
+    id: "be-storyteller-in-chief",
+    number: 18,
+    emoji: "📖",
+    title: "Be Storyteller in Chief",
     layerId: "founder",
     groupId: "lead-the-game",
-    summary: "Manage investor and board relationships with clarity and rhythm.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
-    rhythmIds: [],
+    summary: "",
+    bullets: [
+      "Communicate the company's direction in a way people believe, remember and act on.",
+      "Adapt the story for team, candidates, customers, investors and board.",
+      "Use narrative to create alignment, confidence and momentum.",
+    ],
+    toolIds: ["investor-update"],
+    rhythmIds: ["monthly-all-hands"],
     order: 18,
   },
   {
-    id: "find-new-capital",
-    title: "Find New Capital",
+    id: "manage-capital-and-stakeholders",
+    number: 19,
+    emoji: "💼",
+    title: "Manage Capital and Stakeholders",
     layerId: "founder",
     groupId: "lead-the-game",
-    summary: "Raise capital with a clear story, plan and stakeholder alignment.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
+    summary: "",
+    bullets: [
+      "Keep existing investors, board members and key stakeholders informed and aligned.",
+      "Run board and investor conversations with preparation, candour and strategic intent.",
+      "Use stakeholders as assets rather than treating them as reporting obligations.",
+    ],
+    toolIds: ["board-pack", "investor-update"],
     rhythmIds: [],
     order: 19,
   },
   {
-    id: "manage-my-energy-system",
-    title: "Manage My Energy System",
-    layerId: "human",
-    groupId: "human-system",
-    summary: "Build a rhythm that does not depend on permanent overextension.",
+    id: "find-new-capital",
+    number: 20,
+    emoji: "💰",
+    title: "Find New Capital",
+    layerId: "founder",
+    groupId: "lead-the-game",
+    summary: "",
     bullets: [
-      "Understand what creates, drains and restores founder energy.",
-      "Design work around sustainable performance, not just availability.",
+      "Create investor belief through narrative, traction, timing and process.",
+      "Build and manage a fundraising pipeline with discipline.",
+      "Turn company progress into the capital required for the next stage.",
     ],
-    stageHint: "form",
-    toolIds: ["human-9", "energy-audit"],
-    rhythmIds: ["weekly-energy-review", "monthly-calendar-detox"],
+    toolIds: [],
+    rhythmIds: [],
     order: 20,
   },
   {
-    id: "build-resilience-and-recovery",
-    title: "Build Resilience & Recovery",
+    id: "manage-my-energy-system",
+    number: 21,
+    emoji: "🔋",
+    title: "Manage My Energy System",
     layerId: "human",
     groupId: "human-system",
-    summary: "Build habits and support systems that sustain you through pressure.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
-    rhythmIds: [],
+    summary: "",
+    bullets: [
+      "Understand what creates, drains and restores founder energy.",
+      "Build a rhythm that does not depend on permanent overextension.",
+      "Design work around sustainable performance, not just availability.",
+    ],
+    toolIds: ["human-9", "energy-audit"],
+    rhythmIds: ["weekly-energy-review", "monthly-calendar-detox"],
     order: 21,
   },
   {
-    id: "build-my-growth-system",
-    title: "Build My Growth System",
+    id: "build-resilience-and-recovery",
+    number: 22,
+    emoji: "🧘",
+    title: "Build Resilience & Recovery",
     layerId: "human",
     groupId: "human-system",
-    summary: "Create a personal growth system that compounds over time.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
+    summary: "",
+    bullets: [
+      "Watch for signs of burnout, stress and emotional overload.",
+      "Create playbooks in advance for difficult periods.",
+      "Build resilience to stay in a good state and recover quickly from a bad one.",
+    ],
+    toolIds: ["burnout-playbook"],
     rhythmIds: [],
     order: 22,
   },
   {
-    id: "master-my-mindset",
-    title: "Master My Mindset",
+    id: "build-my-growth-system",
+    number: 23,
+    emoji: "🌐",
+    title: "Build My Growth System",
     layerId: "human",
     groupId: "human-system",
-    summary: "Develop the mental habits that support clear thinking under pressure.",
-    bullets: [],
-    stageHint: "form",
-    toolIds: [],
+    summary: "",
+    bullets: [
+      "Build the right mix of coach, mentors, peers, cofounders, friends, family and advisors.",
+      "Create a personal board that supports, challenges and expands you.",
+      "Turn growth into a deliberate system rather than random inspiration.",
+    ],
+    toolIds: ["personal-board"],
     rhythmIds: [],
     order: 23,
   },
   {
-    id: "face-my-shadow",
-    title: "Face My Shadow",
+    id: "master-my-mindset",
+    number: 24,
+    emoji: "🧠",
+    title: "Master My Mindset",
     layerId: "human",
     groupId: "human-system",
-    summary: "Recognise and work with the patterns that limit your leadership.",
-    bullets: [],
-    stageHint: "form",
+    summary: "",
+    bullets: [
+      "Explore and define the mindset that will best serve the next stage.",
+      "Learn how to unlock, practise and maintain that mindset.",
+      "Notice when old beliefs, fears or narratives are driving behaviour.",
+    ],
     toolIds: [],
     rhythmIds: [],
     order: 24,
   },
   {
-    id: "build-a-life-worth-scaling-for",
-    title: "Build a Life Worth Scaling For",
+    id: "face-my-shadow",
+    number: 25,
+    emoji: "🪞",
+    title: "Face My Shadow",
     layerId: "human",
     groupId: "human-system",
-    summary: "Design a life outside the company that makes scaling worthwhile.",
-    bullets: [],
-    stageHint: "flow",
+    summary: "",
+    bullets: [
+      "Understand the ugly or uncomfortable parts of yourself and how they show up under stress.",
+      "Work with patterns like control, people-pleasing, avoidance, rescuing or status hunger.",
+      "Turn self-awareness into cleaner leadership behaviour.",
+    ],
     toolIds: [],
     rhythmIds: [],
     order: 25,
   },
+  {
+    id: "build-a-life-worth-scaling-for",
+    number: 26,
+    emoji: "🏡",
+    title: "Build a Life Worth Scaling For",
+    layerId: "human",
+    groupId: "human-system",
+    summary: "",
+    bullets: [
+      "Define what the company is meant to make possible in life.",
+      "Make the business serve the human, not consume them.",
+      "Connect daily effort to meaning, values, relationships, freedom and personal conviction.",
+    ],
+    toolIds: [],
+    rhythmIds: [],
+    order: 26,
+  },
+];
+
+export const symptomMap: SymptomMapEntry[] = [
+  {
+    id: "team-dropping-things",
+    symptom: "My team keeps dropping things.",
+    capabilityTitles: [
+      "Make Ownership Stick",
+      "Install the Operating Rhythm",
+      "Give Feedback & Hold the Standard",
+    ],
+  },
+  {
+    id: "every-decision",
+    symptom: "I'm still in every decision.",
+    capabilityTitles: [
+      "Operate with Leverage",
+      "Scale Through Delegation",
+      "Make the Right Calls",
+    ],
+  },
+  {
+    id: "bottleneck",
+    symptom: "Everything waits on me — I'm the bottleneck.",
+    capabilityTitles: [
+      "Operate with Leverage",
+      "Build Leaders, Not Dependencies",
+    ],
+  },
+  {
+    id: "cofounder-tension",
+    symptom: "Things are tense with my cofounder.",
+    capabilityTitles: [
+      "Build Incredible Relationships",
+      "Navigate Conflict & Create Psychological Safety",
+    ],
+  },
+  {
+    id: "no-rhythm",
+    symptom: "We have no rhythm — it's all reactive.",
+    capabilityTitles: ["Install the Operating Rhythm"],
+  },
+  {
+    id: "busy-not-moving",
+    symptom: "We're busy but not actually moving.",
+    capabilityTitles: ["Map the Destination", "Chart the Path"],
+  },
+  {
+    id: "delegation-comes-back",
+    symptom: "I delegate and it comes back worse.",
+    capabilityTitles: [
+      "Scale Through Delegation",
+      "Know & Use the Right Leadership Hat",
+    ],
+  },
+  {
+    id: "vision-doesnt-land",
+    symptom: "I keep repeating the vision and it doesn't land.",
+    capabilityTitles: ["Be Storyteller in Chief", "Map the Destination"],
+  },
+  {
+    id: "not-ready-to-raise",
+    symptom: "I need to raise and we're not ready.",
+    capabilityTitles: ["Find New Capital", "Chart the Path"],
+  },
+  {
+    id: "board-painful",
+    symptom: "Board meetings are painful.",
+    capabilityTitles: ["Manage Capital and Stakeholders"],
+  },
+  {
+    id: "exhausted",
+    symptom: "I'm exhausted and running on empty.",
+    capabilityTitles: [
+      "Manage My Energy System",
+      "Build Resilience & Recovery",
+    ],
+  },
+  {
+    id: "same-patterns",
+    symptom: "The same patterns keep tripping me up.",
+    capabilityTitles: ["Face My Shadow", "Master My Mindset"],
+  },
+  {
+    id: "lost-sight",
+    symptom: "I've lost sight of why I'm doing this.",
+    capabilityTitles: ["Build a Life Worth Scaling For"],
+  },
 ];
 
 export const tools: Tool[] = [
+  {
+    id: "symptom-map",
+    title: "Symptom Map",
+    type: "diagnostic",
+    format: ["solo", "one-to-one"],
+    layerIds: ["company", "founder", "human"],
+    capabilityIds: [],
+    description:
+      "Start with what the founder says, then trace symptoms to the capabilities they point to.",
+  },
   {
     id: "ceo-test",
     title: "CEO Test",
@@ -568,7 +827,7 @@ export const tools: Tool[] = [
     layerIds: ["company", "founder"],
     capabilityIds: ["map-the-destination"],
     description:
-      "A diagnostic to test whether the founder knows the next milestone, plan, risks and team confidence.",
+      "Test whether the founder knows the next milestone, plan, risks and team confidence.",
   },
   {
     id: "strategy-one-pager",
@@ -586,9 +845,29 @@ export const tools: Tool[] = [
     type: "framework",
     format: ["team", "company"],
     layerIds: ["company"],
-    capabilityIds: ["map-the-destination"],
+    capabilityIds: ["chart-the-path", "map-the-destination"],
     description:
       "Define the single metric that best captures progress toward the destination.",
+  },
+  {
+    id: "company-values",
+    title: "Company Values",
+    type: "template",
+    format: ["team", "company"],
+    layerIds: ["company"],
+    capabilityIds: ["build-a-culture-that-compounds"],
+    description:
+      "Translate company DNA into values, behaviours and rituals the team can live.",
+  },
+  {
+    id: "okrs",
+    title: "OKRs",
+    type: "framework",
+    format: ["team", "company"],
+    layerIds: ["company"],
+    capabilityIds: ["chart-the-path"],
+    description:
+      "Connect annual and quarterly goals to team priorities and measurable outcomes.",
   },
   {
     id: "operating-cadence",
@@ -628,10 +907,11 @@ export const tools: Tool[] = [
     layerIds: ["founder", "human"],
     capabilityIds: [
       "take-command-of-my-role",
+      "operate-with-leverage",
       "operate-at-the-right-altitude",
     ],
     description:
-      "Compares the founder's actual calendar to their intended role, energy and priorities.",
+      "Compare the founder's actual calendar to their intended role, energy and priorities.",
   },
   {
     id: "founder-jd",
@@ -642,6 +922,16 @@ export const tools: Tool[] = [
     capabilityIds: ["take-command-of-my-role"],
     description:
       "Defines the founder's actual job for the current stage in a few clear bullets.",
+  },
+  {
+    id: "zone-of-genius",
+    title: "Zone of Genius",
+    type: "diagnostic",
+    format: ["solo", "one-to-one"],
+    layerIds: ["founder"],
+    capabilityIds: ["take-command-of-my-role"],
+    description:
+      "Identify the work only you can do at your highest level of contribution.",
   },
   {
     id: "delegation-ladder",
@@ -662,6 +952,36 @@ export const tools: Tool[] = [
     capabilityIds: ["make-ownership-stick", "scale-through-delegation"],
     description:
       "Clarifies who owns which outcomes, metrics, risks and decisions.",
+  },
+  {
+    id: "accountability-dial",
+    title: "Accountability Dial",
+    type: "framework",
+    format: ["one-to-one", "team"],
+    layerIds: ["founder", "company"],
+    capabilityIds: ["give-feedback-and-hold-the-standard"],
+    description:
+      "A graduated approach to holding standards from a nudge to a hard conversation.",
+  },
+  {
+    id: "one-to-one-structure",
+    title: "1:1 Structure",
+    type: "template",
+    format: ["one-to-one"],
+    layerIds: ["founder"],
+    capabilityIds: ["build-incredible-relationships"],
+    description:
+      "A repeatable structure for high-quality one-to-one conversations.",
+  },
+  {
+    id: "coaching-questions",
+    title: "Coaching Questions",
+    type: "conversation",
+    format: ["one-to-one"],
+    layerIds: ["founder"],
+    capabilityIds: ["know-and-use-the-right-leadership-hat"],
+    description:
+      "Questions that help people think for themselves rather than receive answers.",
   },
   {
     id: "sbi-feedback",
@@ -687,26 +1007,6 @@ export const tools: Tool[] = [
       "A Keep / Stop / Start feedback format for improving relationships and team behaviour.",
   },
   {
-    id: "human-9",
-    title: "Human 9",
-    type: "diagnostic",
-    format: ["solo", "one-to-one"],
-    layerIds: ["human"],
-    capabilityIds: ["manage-my-energy-system"],
-    description:
-      "A personal scoring tool across relationships, health, lifestyle, income and wealth.",
-  },
-  {
-    id: "force-form-flow-diagnostic",
-    title: "Force / Form / Flow Diagnostic",
-    type: "diagnostic",
-    format: ["solo", "one-to-one"],
-    layerIds: ["founder"],
-    capabilityIds: ["operate-at-the-right-altitude"],
-    description:
-      "Identifies where the founder is using personal force where structure or flow is needed.",
-  },
-  {
     id: "relationship-design",
     title: "Relationship Design",
     type: "conversation",
@@ -715,6 +1015,49 @@ export const tools: Tool[] = [
     capabilityIds: ["build-incredible-relationships"],
     description:
       "A structured conversation for clarifying expectations, cadence, communication and decision rights.",
+  },
+  {
+    id: "psychological-safety-diagnostic",
+    title: "Psychological Safety Diagnostic",
+    type: "diagnostic",
+    format: ["team", "one-to-one"],
+    layerIds: ["founder", "company"],
+    capabilityIds: ["navigate-conflict-and-create-psychological-safety"],
+    description:
+      "Assess whether people can speak up, disagree and admit mistakes without fear.",
+  },
+  {
+    id: "board-pack",
+    title: "Board Pack",
+    type: "template",
+    format: ["company"],
+    layerIds: ["founder", "company"],
+    capabilityIds: ["manage-capital-and-stakeholders"],
+    description:
+      "A structured pack for running board meetings with clarity and strategic intent.",
+  },
+  {
+    id: "investor-update",
+    title: "Investor Update",
+    type: "template",
+    format: ["company"],
+    layerIds: ["founder", "company"],
+    capabilityIds: [
+      "be-storyteller-in-chief",
+      "manage-capital-and-stakeholders",
+    ],
+    description:
+      "A repeatable format for keeping investors and stakeholders aligned.",
+  },
+  {
+    id: "human-9",
+    title: "Human 9",
+    type: "diagnostic",
+    format: ["solo", "one-to-one"],
+    layerIds: ["human"],
+    capabilityIds: ["manage-my-energy-system"],
+    description:
+      "A personal scoring tool across relationships, health, lifestyle, income and wealth.",
   },
   {
     id: "energy-audit",
@@ -726,6 +1069,36 @@ export const tools: Tool[] = [
     description:
       "Assesses what creates, drains and restores founder energy.",
   },
+  {
+    id: "personal-board",
+    title: "Personal Board",
+    type: "framework",
+    format: ["solo"],
+    layerIds: ["human"],
+    capabilityIds: ["build-my-growth-system"],
+    description:
+      "Map the coach, mentors, peers and advisors who support your growth.",
+  },
+  {
+    id: "burnout-playbook",
+    title: "Burnout Playbook",
+    type: "template",
+    format: ["solo", "one-to-one"],
+    layerIds: ["human"],
+    capabilityIds: ["build-resilience-and-recovery"],
+    description:
+      "Playbooks for recognising burnout early and recovering deliberately.",
+  },
+  {
+    id: "force-form-flow-diagnostic",
+    title: "Force / Form / Flow Diagnostic",
+    type: "diagnostic",
+    format: ["solo", "one-to-one"],
+    layerIds: ["founder"],
+    capabilityIds: ["operate-at-the-right-altitude"],
+    description:
+      "Identifies where the founder is using personal force where structure or flow is needed.",
+  },
 ];
 
 export const rhythms: Rhythm[] = [
@@ -734,7 +1107,7 @@ export const rhythms: Rhythm[] = [
     title: "Weekly Planning",
     frequency: "weekly",
     layerIds: ["founder"],
-    capabilityIds: ["operate-at-the-right-altitude"],
+    capabilityIds: ["operate-with-leverage", "operate-at-the-right-altitude"],
     description:
       "Review priorities, calendar, bottlenecks and the founder's highest-leverage work for the week.",
   },

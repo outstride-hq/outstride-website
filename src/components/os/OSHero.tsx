@@ -1,3 +1,5 @@
+import { osQuote } from "@/lib/os";
+
 export default function OSHero() {
   return (
     <section className="section bg-primary">
@@ -14,14 +16,12 @@ export default function OSHero() {
               A practical operating system for founders scaling themselves,
               their teams and their companies.
             </p>
-            <p
-              className="text-5 text-white wow fadeInUp"
+            <blockquote
+              className="text-5 text-white mb-0 wow fadeInUp"
               data-wow-delay="0.3s"
             >
-              Founders do not scale by becoming more heroic. They scale by
-              building the systems, rhythms, relationships and capabilities that
-              make heroics less necessary.
-            </p>
+              {osQuote}
+            </blockquote>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { formatToolType, tools, type ToolType } from "@/lib/os";
+import { formatToolType, tools, toolsIntro, toolsTaggingNote, type ToolType } from "@/lib/os";
 
 const toolTypeOrder: ToolType[] = [
   "diagnostic",
@@ -19,6 +19,7 @@ export default function ToolPreview() {
 
   return (
     <div>
+      <p className="text-5 text-muted text-center mb-5">{toolsIntro}</p>
       {toolsByType.map((group) => (
         <div key={group.type} className="mb-5">
           <h3 className="text-6 fw-600 mb-3">{formatToolType(group.type)}</h3>
@@ -37,6 +38,7 @@ export default function ToolPreview() {
           </div>
         </div>
       ))}
+      <p className="text-5 text-muted mt-4 mb-0">{toolsTaggingNote}</p>
     </div>
   );
 }
