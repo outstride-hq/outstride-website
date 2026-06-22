@@ -1,4 +1,11 @@
-import { formatToolType, tools, toolsIntro, toolsTaggingNote, type ToolType } from "@/lib/os";
+import {
+  formatToolType,
+  tools,
+  toolsTaggingNote,
+  type ToolType,
+} from "@/lib/os";
+import { hasToolContent } from "@/lib/tools-content";
+import { OsSectionHeader } from "./OsPageHeader";
 
 const toolTypeOrder: ToolType[] = [
   "diagnostic",
@@ -19,26 +26,54 @@ export default function ToolPreview() {
 
   return (
     <div>
-      <p className="text-5 text-muted text-center mb-5">{toolsIntro}</p>
       {toolsByType.map((group) => (
-        <div key={group.type} className="mb-5">
-          <h3 className="text-6 fw-600 mb-3">{formatToolType(group.type)}</h3>
+        <section key={group.type} className="os-content-card p-4 p-lg-5 mb-5">
+          <OsSectionHeader
+            eyebrow="Tool Type"
+            title={formatToolType(group.type)}
+            description={`${group.items.length} tool${
+              group.items.length === 1 ? "" : "s"
+            } in this category.`}
+          />
           <div className="row g-3">
-            {group.items.map((tool) => (
-              <div key={tool.id} className="col-md-6 col-lg-4">
-                <div className="featured-box p-3 h-100">
-                  <h4 className="text-5 fw-600 mb-1">{tool.title}</h4>
-                  <p className="text-primary small mb-2">
+            {group.items.map((tool) => {
+              const card = (
+                <div className="featured-box p-4 h-100">
+                  <h4 className="text-5 fw-700 mb-1">{tool.title}</h4>
+                  <p className="os-card-meta mb-2">
                     {formatToolType(tool.type)}
                   </p>
                   <p className="text-muted small mb-0">{tool.description}</p>
+                  {hasToolContent(tool.id) ? (
+                    <p className="text-primary fw-700 small mb-0 mt-3">
+                      View tool →
+                    </p>
+                  ) : null}
                 </div>
-              </div>
-            ))}
+              );
+
+              return (
+                <div key={tool.id} className="col-md-6 col-lg-4">
+                  {hasToolContent(tool.id) ? (
+                    <a
+                      href={`/os/tools/${tool.id}/`}
+                      className="text-decoration-none"
+                    >
+                      {card}
+                    </a>
+                  ) : (
+                    card
+                  )}
+                </div>
+              );
+            })}
           </div>
-        </div>
+        </section>
       ))}
-      <p className="text-5 text-muted mt-4 mb-0">{toolsTaggingNote}</p>
+      <div className="ui-surface p-4">
+        <p className="ui-kicker mb-2">Tagging</p>
+        <p className="text-muted mb-0">{toolsTaggingNote}</p>
+      </div>
     </div>
   );
 }

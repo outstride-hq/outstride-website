@@ -1,3 +1,5 @@
+import TypedText from "@/components/TypedText";
+
 export default function Hero() {
   return (
     <section
@@ -8,16 +10,10 @@ export default function Hero() {
         <div className="row py-4">
           <div className="col-lg-7 text-center text-lg-start align-self-center order-1 order-lg-0">
             <h1 className="text-12 fw-300 mb-0 text-uppercase">I coach</h1>
-            <div className="typed-strings">
-              <p>Founders</p>
-            </div>
             <h2 className="text-21 fw-600 text-uppercase mb-0 ms-n1">
-              <span className="typed"></span>
+              <TypedText strings={["FOUNDERS"]} loop={false} backDelay={5000} />
             </h2>
-            <a
-              href="#contact"
-              className="btn btn-dark rounded-0 smooth-scroll mt-3"
-            >
+            <a href="#contact" className="btn btn-dark rounded-0 mt-3">
               Get in touch
             </a>
             <a
@@ -41,7 +37,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <a href="#about" className="scroll-down-arrow text-dark smooth-scroll">
+      <a href="#about" className="scroll-down-arrow text-dark">
         <span className="animated">
           <i className="fas fa-arrow-down"></i>
         </span>

@@ -1,0 +1,283 @@
+/* Variant 1 - Coral Bloom */
+.variant-1 {
+  --v-primary: #e4534c;
+  --v-primary-hover: #c9433d;
+  --v-ink: #151f27;
+  --v-muted: #5f6d73;
+  --v-soft: #fff1ec;
+  --v-soft-strong: #ffd9ce;
+  --v-card: #fffaf7;
+  --v-border: #f0d5cc;
+  --v-radius: 20px;
+  --v-button-radius: 999px;
+  --v-shadow: 0 20px 60px rgba(118, 47, 36, 0.13);
+  --v-body-font: "Manrope", "Poppins", sans-serif;
+  --v-heading-font: "Manrope", "Poppins", sans-serif;
+  background: #fffaf6;
+  color: var(--v-ink);
+  font-family: var(--v-body-font);
+  letter-spacing: -0.005em;
+}
+
+.variant-1 h1,
+.variant-1 h2,
+.variant-1 h3,
+.variant-1 h4,
+.variant-1 h5,
+.variant-1 h6,
+.variant-1 .text-21,
+.variant-1 .text-12,
+.variant-1 .text-10,
+.variant-1 .text-8,
+.variant-1 .text-7,
+.variant-1 .text-6 {
+  color: var(--v-ink);
+  font-family: var(--v-heading-font);
+  letter-spacing: -0.055em;
+}
+
+.variant-1 .variant-banner {
+  background: #151f27;
+  color: #fff6ef;
+  font-size: 0.82rem;
+}
+
+.variant-1 .variant-banner a {
+  color: #ffb8a8;
+  text-decoration: none;
+}
+
+.variant-1 .variant-banner a:hover {
+  color: #ffffff;
+}
+
+.variant-1 .variant-banner-label {
+  font-weight: 700;
+}
+
+.variant-1 .primary-menu {
+  background: rgba(255, 250, 246, 0.92);
+  border-bottom: 1px solid rgba(21, 31, 39, 0.08);
+  text-transform: none !important;
+}
+
+.variant-1 .primary-menu ul.navbar-nav > li > a:not(.btn) {
+  color: rgba(21, 31, 39, 0.78);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+}
+
+.variant-1 .primary-menu.navbar-line-under-text ul.navbar-nav > li > a:not(.btn):after {
+  border-color: var(--v-primary);
+}
+
+.variant-1 .navbar-expand-lg ul.navbar-nav li:hover > a:not(.btn),
+.variant-1 .navbar-expand-lg ul.navbar-nav li > a.active:not(.btn) {
+  color: var(--v-primary);
+}
+
+.variant-1 #home.bg-primary {
+  background: var(--v-primary) !important;
+}
+
+.variant-1 #home .container {
+  max-width: 1180px;
+}
+
+.variant-1 #home .text-12 {
+  font-size: clamp(2rem, 4vw, 4.25rem) !important;
+  font-weight: 600 !important;
+  line-height: 0.95;
+  text-transform: none !important;
+}
+
+.variant-1 #home .text-21 {
+  color: #6f211d;
+  font-size: clamp(4.5rem, 12vw, 9.25rem) !important;
+  font-weight: 800 !important;
+  line-height: 0.86;
+  text-transform: none !important;
+}
+
+.variant-1 #home .btn {
+  border-radius: var(--v-button-radius) !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding: 0.85rem 1.35rem;
+}
+
+.variant-1 #home .btn-dark {
+  background: var(--v-ink);
+  border-color: var(--v-ink);
+  color: #fffaf6;
+}
+
+.variant-1 #home .btn-link {
+  color: var(--v-ink) !important;
+  text-decoration-color: rgba(21, 31, 39, 0.28);
+  text-underline-offset: 0.28em;
+}
+
+.variant-1 #home .bg-light.rounded-pill {
+  aspect-ratio: 1;
+  background: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50% !important;
+  box-shadow: var(--v-shadow) !important;
+  overflow: hidden;
+  width: min(100%, 430px);
+}
+
+.variant-1 #home .img-fluid.rounded-pill {
+  border-radius: 50% !important;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+
+.variant-1 .section {
+  padding: 6rem 0;
+}
+
+.variant-1 .bg-light {
+  background: var(--v-soft) !important;
+}
+
+.variant-1 .featured-box {
+  background: var(--v-card);
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius);
+  box-shadow: 0 1px 0 rgba(21, 31, 39, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.variant-1 a:hover .featured-box,
+.variant-1 .featured-box:hover {
+  border-color: rgba(228, 83, 76, 0.45);
+  box-shadow: var(--v-shadow);
+  transform: translateY(-3px);
+}
+
+.variant-1 .featured-box-icon {
+  margin-bottom: 0.9rem;
+}
+
+.variant-1 .bg-primary {
+  background-color: var(--v-primary) !important;
+}
+
+.variant-1 .text-primary {
+  color: var(--v-primary) !important;
+}
+
+.variant-1 .border-primary {
+  border-color: var(--v-primary) !important;
+}
+
+.variant-1 a,
+.variant-1 a:focus {
+  color: var(--v-primary);
+}
+
+.variant-1 a:hover,
+.variant-1 a:active {
+  color: var(--v-primary-hover);
+}
+
+.variant-1 .btn-primary {
+  background-color: var(--v-primary);
+  border-color: var(--v-primary);
+  border-radius: var(--v-button-radius);
+  font-weight: 700;
+}
+
+.variant-1 .btn-primary:hover,
+.variant-1 .btn-primary:focus {
+  background-color: var(--v-primary-hover);
+  border-color: var(--v-primary-hover);
+}
+
+.variant-1 .btn-dark {
+  border-radius: var(--v-button-radius);
+}
+
+.variant-1 .text-muted {
+  color: var(--v-muted) !important;
+}
+
+.variant-1 .badge.bg-light {
+  background: var(--v-soft-strong) !important;
+  border: 0 !important;
+  border-radius: 999px;
+  color: var(--v-ink) !important;
+  font-weight: 700;
+  padding: 0.48em 0.9em;
+}
+
+.variant-1 .text-10 {
+  font-size: clamp(2.4rem, 4.6vw, 4.15rem) !important;
+  line-height: 0.98;
+}
+
+.variant-1 .text-12 {
+  font-size: clamp(2.7rem, 5vw, 4.7rem) !important;
+  line-height: 0.98;
+}
+
+.variant-1 p.text-5,
+.variant-1 article .text-5 {
+  line-height: 1.75;
+}
+
+.variant-1 article h2 {
+  margin-top: 3rem;
+}
+
+.variant-1 .border-top {
+  border-color: var(--v-border) !important;
+}
+
+.variant-1 .border-start.border-primary {
+  border-left-width: 5px !important;
+  border-radius: 0 var(--v-radius) var(--v-radius) 0;
+}
+
+@media (max-width: 767.98px) {
+  .variant-1 .primary-menu .social-icons {
+    display: none;
+  }
+
+  .variant-1 #home {
+    min-height: auto !important;
+  }
+
+  .variant-1 #home .container {
+    padding-bottom: 3.5rem !important;
+    padding-top: 3rem !important;
+  }
+
+  .variant-1 #home .col-lg-7 {
+    order: 0 !important;
+  }
+
+  .variant-1 #home .col-lg-5 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    max-width: 230px;
+    order: 1 !important;
+  }
+
+  .variant-1 #home .text-12 {
+    font-size: clamp(2rem, 10vw, 3.35rem) !important;
+  }
+
+  .variant-1 #home .text-21 {
+    font-size: clamp(3.45rem, 17vw, 5.6rem) !important;
+  }
+
+  .variant-1 .section {
+    padding: 4rem 0;
+  }
+}

@@ -1,13 +1,7 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Link from "next/link";
 import OSHero from "@/components/os/OSHero";
 import LayerCard from "@/components/os/LayerCard";
-import OSForceFormFlow from "@/components/os/OSForceFormFlow";
-import OSHowItRuns from "@/components/os/OSHowItRuns";
-import ProcessStepCard from "@/components/os/ProcessStepCard";
-import CapabilityMenu from "@/components/os/CapabilityMenu";
-import SymptomMap from "@/components/os/SymptomMap";
-import ToolPreview from "@/components/os/ToolPreview";
+import { OsSectionHeader } from "@/components/os/OsPageHeader";
 import { layers, processSteps } from "@/lib/os";
 
 export const metadata = {
@@ -18,89 +12,47 @@ export const metadata = {
 
 export default function OSPage() {
   return (
-    <div id="main-wrapper">
-      <Header />
-      <main id="content" role="main">
-        <OSHero />
+    <>
+      <OSHero />
 
-        <section className="section">
-          <div className="container">
-            <h2 className="text-10 fw-600 text-center mb-5 wow fadeInUp">
-              Three Layers
-            </h2>
-            <div className="row g-4">
-              {layers.map((layer) => (
-                <div key={layer.id} className="col-md-4 wow fadeInUp">
-                  <LayerCard layer={layer} />
-                </div>
-              ))}
+      <div className="mb-5">
+        <OsSectionHeader
+          eyebrow="The Map"
+          title="Three Layers"
+          description="The system looks at the company, the founder, and the human underneath both."
+          className="mb-5"
+        />
+        <div className="row g-4">
+          {layers.map((layer) => (
+            <div key={layer.id} className="col-md-4">
+              <LayerCard layer={layer} />
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
 
-        <OSForceFormFlow />
+      <div className="os-content-card p-4 p-lg-5">
+        <OsSectionHeader
+          eyebrow="How it runs"
+          title="The Four D's"
+          description="Diagnose, Define, Design and Deliver turn the OS map into a quarterly coaching cadence."
+        />
 
-        <OSHowItRuns />
-
-        <section className="section bg-light">
-          <div className="container">
-            <h2 className="text-10 fw-600 text-center mb-5 wow fadeInUp">
-              The Process
-            </h2>
-            <div className="row g-4">
-              {processSteps.map((step) => (
-                <div key={step.id} className="col-md-6 col-lg-3 wow fadeInUp">
-                  <ProcessStepCard step={step} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container">
-            <h2 className="text-10 fw-600 text-center mb-5 wow fadeInUp">
-              The Capabilities
-            </h2>
-            <CapabilityMenu />
-          </div>
-        </section>
-
-        <SymptomMap />
-
-        <section className="section bg-light">
-          <div className="container">
-            <h2 className="text-10 fw-600 text-center mb-5 wow fadeInUp">
-              Tools
-            </h2>
-            <ToolPreview />
-          </div>
-        </section>
-
-        <section className="section bg-primary">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 mx-auto text-center">
-                <h2 className="text-8 fw-600 text-white mb-4 wow fadeInUp">
-                  Want to install this in your company?
-                </h2>
-                <p className="text-5 text-white mb-4 wow fadeInUp">
-                  Outstride OS is used as a coaching cadence to help founders
-                  diagnose what matters, define success, design the next stage and
-                  deliver through rhythm and accountability.
-                </p>
-                <a
-                  href="/#contact"
-                  className="btn btn-light rounded-0 wow fadeInUp"
-                >
-                  Work with me
-                </a>
+        <div className="row g-3 mb-4">
+          {processSteps.map((step) => (
+            <div key={step.id} className="col-sm-6 col-xl-3">
+              <div className="featured-box p-4 h-100">
+                <h3 className="text-5 fw-700 mb-2">{step.title}</h3>
+                <p className="text-muted mb-0">{step.question}</p>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+          ))}
+        </div>
+
+        <Link href="/os/process/" className="btn btn-outline-primary rounded-pill">
+          Explore the Four D's
+        </Link>
+      </div>
+    </>
   );
 }

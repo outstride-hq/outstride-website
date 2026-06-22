@@ -5,9 +5,18 @@
   max-width: 150px;
 }
 
-/* Hide typed strings - they get shown by typed.js */
-.typed-strings {
-  display: none !important;
+.typed-cursor {
+  opacity: 1;
+}
+
+.typed-cursor.typed-cursor--blink {
+  animation: typedCursorBlink 0.7s infinite;
+}
+
+@keyframes typedCursorBlink {
+  50% {
+    opacity: 0;
+  }
 }
 
 #writing {
@@ -21,14 +30,6 @@
 
 #testimonial img {
   max-width: 100px;
-}
-
-#testimonial button {
-  color: #e4534c;
-}
-
-#testimonial .owl-dots span {
-  border-color: #e4534c;
 }
 
 .white-text {
@@ -126,9 +127,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Optimize animations for better scroll performance */
+/* WOW classes remain for compatibility; content stays visible without WOW.js */
 .wow {
-  visibility: hidden;
+  visibility: visible;
 }
 
 /* Reduce motion for users who prefer it */

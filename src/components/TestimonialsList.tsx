@@ -21,7 +21,7 @@ export default function TestimonialsList() {
       <div className={`col-lg-8 ${index % 2 === 1 ? "order-lg-1" : ""}`}>
         <div className="testimonial-content">
           <span className="text-9 text-primary mb-3 d-block">
-            <i className="fa fa-quote-start"></i>
+            <i className="fas fa-quote-left"></i>
           </span>
           <p className="text-5 mb-4">"{testimonial.quote}"</p>
           <div className="testimonial-author">

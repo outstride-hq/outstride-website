@@ -1,0 +1,286 @@
+/* Variant 4 - Coral Grove */
+.variant-4 {
+  --v-primary: #e4534c;
+  --v-primary-hover: #c9433d;
+  --v-accent: #718466;
+  --v-ink: #233027;
+  --v-muted: #687469;
+  --v-surface: #f8f2ea;
+  --v-surface-deep: #f0decf;
+  --v-card: #fffdf8;
+  --v-border: #e5d3c6;
+  --v-radius: 28px;
+  --v-button-radius: 999px;
+  --v-shadow: 0 24px 70px rgba(52, 63, 48, 0.12);
+  --v-body-font: "Inter", "Poppins", sans-serif;
+  --v-heading-font: "Source Serif 4", Georgia, serif;
+  background: #fffdf7;
+  color: var(--v-ink);
+  font-family: var(--v-body-font);
+}
+
+.variant-4 h1,
+.variant-4 h2,
+.variant-4 h3,
+.variant-4 h4,
+.variant-4 .text-21,
+.variant-4 .text-12,
+.variant-4 .text-10,
+.variant-4 .text-8,
+.variant-4 .text-7,
+.variant-4 .text-6 {
+  color: var(--v-ink);
+  font-family: var(--v-heading-font);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.variant-4 .variant-banner {
+  background: #233027;
+  color: #f6f3eb;
+  font-size: 0.82rem;
+}
+
+.variant-4 .variant-banner a {
+  color: #ffb8a8;
+  text-decoration: none;
+}
+
+.variant-4 .variant-banner a:hover {
+  color: #ffffff;
+}
+
+.variant-4 .variant-banner-label {
+  font-family: var(--v-heading-font);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.variant-4 .primary-menu {
+  background: rgba(255, 253, 247, 0.92);
+  border-bottom: 1px solid rgba(35, 48, 39, 0.08);
+  text-transform: none !important;
+}
+
+.variant-4 .primary-menu ul.navbar-nav > li > a:not(.btn) {
+  color: rgba(35, 48, 39, 0.72);
+  font-size: 0.84rem;
+  letter-spacing: 0.01em;
+}
+
+.variant-4 .primary-menu.navbar-line-under-text ul.navbar-nav > li > a:not(.btn):after {
+  border-color: var(--v-primary);
+}
+
+.variant-4 .navbar-expand-lg ul.navbar-nav li:hover > a:not(.btn),
+.variant-4 .navbar-expand-lg ul.navbar-nav li > a.active:not(.btn) {
+  color: var(--v-primary);
+}
+
+.variant-4 #home.bg-primary {
+  background:
+    radial-gradient(circle at 72% 18%, rgba(228, 83, 76, 0.3), transparent 30%),
+    radial-gradient(circle at 16% 76%, rgba(113, 132, 102, 0.22), transparent 34%),
+    linear-gradient(145deg, #f5f0e7 0%, #fff1e9 56%, #efd9ca 100%) !important;
+}
+
+.variant-4 #home .text-12 {
+  font-size: clamp(2.25rem, 4.2vw, 4.45rem) !important;
+  font-weight: 400 !important;
+  line-height: 1;
+  text-transform: none !important;
+}
+
+.variant-4 #home .text-21 {
+  color: var(--v-primary);
+  font-size: clamp(4.6rem, 11.5vw, 9rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.86;
+  text-transform: none !important;
+}
+
+.variant-4 #home .btn {
+  border-radius: var(--v-button-radius) !important;
+  font-weight: 700;
+  padding: 0.9rem 1.45rem;
+}
+
+.variant-4 #home .btn-dark {
+  background: var(--v-ink);
+  border-color: var(--v-ink);
+  color: #fffdf7;
+}
+
+.variant-4 #home .btn-link {
+  color: var(--v-ink) !important;
+  text-decoration-color: rgba(228, 83, 76, 0.45);
+  text-underline-offset: 0.32em;
+}
+
+.variant-4 #home .bg-light.rounded-pill {
+  background: linear-gradient(145deg, rgba(255, 253, 248, 0.9), rgba(255, 229, 220, 0.72)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--v-radius) !important;
+  box-shadow: var(--v-shadow) !important;
+}
+
+.variant-4 #home .img-fluid.rounded-pill {
+  border-radius: calc(var(--v-radius) - 10px) !important;
+  filter: saturate(0.82) contrast(1.02);
+}
+
+.variant-4 .section {
+  padding: 6.5rem 0;
+}
+
+.variant-4 .bg-light {
+  background: var(--v-surface) !important;
+}
+
+.variant-4 .featured-box {
+  background: var(--v-card);
+  border: 1px solid var(--v-border);
+  border-radius: var(--v-radius);
+  box-shadow: 0 1px 0 rgba(35, 48, 39, 0.04);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.variant-4 a:hover .featured-box,
+.variant-4 .featured-box:hover {
+  background: #ffffff;
+  border-color: rgba(228, 83, 76, 0.42);
+  box-shadow: var(--v-shadow);
+  transform: translateY(-2px);
+}
+
+.variant-4 .featured-box-icon {
+  color: var(--v-primary) !important;
+}
+
+.variant-4 .bg-primary {
+  background-color: var(--v-primary) !important;
+}
+
+.variant-4 .text-primary {
+  color: var(--v-primary) !important;
+}
+
+.variant-4 .border-primary {
+  border-color: var(--v-primary) !important;
+}
+
+.variant-4 a,
+.variant-4 a:focus {
+  color: var(--v-primary);
+}
+
+.variant-4 a:hover,
+.variant-4 a:active {
+  color: var(--v-primary-hover);
+}
+
+.variant-4 .btn-primary {
+  background-color: var(--v-primary);
+  border-color: var(--v-primary);
+  border-radius: var(--v-button-radius);
+  font-weight: 700;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.variant-4 .btn-primary:hover,
+.variant-4 .btn-primary:focus {
+  background-color: var(--v-primary-hover);
+  border-color: var(--v-primary-hover);
+}
+
+.variant-4 .btn-dark {
+  background-color: var(--v-ink);
+  border-color: var(--v-ink);
+  border-radius: var(--v-button-radius);
+}
+
+.variant-4 .text-muted {
+  color: var(--v-muted) !important;
+}
+
+.variant-4 .badge.bg-light {
+  background-color: var(--v-surface-deep) !important;
+  border: none !important;
+  border-radius: 999px;
+  color: var(--v-ink) !important;
+  font-weight: 700;
+  padding: 0.5em 0.9em;
+}
+
+.variant-4 section.bg-primary {
+  background: var(--v-primary) !important;
+}
+
+.variant-4 .text-10 {
+  font-size: clamp(2.7rem, 5.2vw, 4.9rem) !important;
+  line-height: 0.98;
+}
+
+.variant-4 .text-12 {
+  font-size: clamp(3rem, 5.5vw, 5.2rem) !important;
+  line-height: 0.96;
+}
+
+.variant-4 p.text-5,
+.variant-4 article .text-5 {
+  line-height: 1.8;
+}
+
+.variant-4 article h2 {
+  margin-top: 3.25rem;
+}
+
+.variant-4 .border-top {
+  border-color: var(--v-border) !important;
+}
+
+.variant-4 .border-start.border-primary {
+  background: var(--v-surface);
+  border-left-color: var(--v-primary) !important;
+  border-radius: 0 var(--v-radius) var(--v-radius) 0;
+}
+
+@media (max-width: 767.98px) {
+  .variant-4 .primary-menu .social-icons {
+    display: none;
+  }
+
+  .variant-4 #home {
+    min-height: auto !important;
+  }
+
+  .variant-4 #home .container {
+    padding-bottom: 3.5rem !important;
+    padding-top: 3rem !important;
+  }
+
+  .variant-4 #home .col-lg-7 {
+    order: 0 !important;
+  }
+
+  .variant-4 #home .col-lg-5 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    max-width: 230px;
+    order: 1 !important;
+  }
+
+  .variant-4 #home .text-12 {
+    font-size: clamp(2rem, 10vw, 3.4rem) !important;
+  }
+
+  .variant-4 #home .text-21 {
+    font-size: clamp(3.45rem, 17vw, 5.55rem) !important;
+  }
+
+  .variant-4 .section {
+    padding: 4.25rem 0;
+  }
+}

@@ -7,6 +7,10 @@
  * Topology: Layer → Capability Group → Capability → Tools + Rhythms
  */
 
+import type { Accreditation } from "@/lib/accreditation";
+
+export type { Accreditation };
+
 export type LayerId = "company" | "founder" | "human";
 
 export type StageId = "force" | "form" | "flow";
@@ -80,6 +84,9 @@ export type Tool = {
   layerIds: LayerId[];
   capabilityIds: string[];
   description: string;
+  accreditation?: Accreditation;
+  diagramId?: string;
+  relatedToolIds?: string[];
 };
 
 export type Rhythm = {
@@ -289,7 +296,7 @@ export const capabilities: Capability[] = [
       "Clarify what the company is and what it is not.",
       "Create a destination simple enough for the team to understand and repeat.",
     ],
-    toolIds: ["strategy-one-pager", "ceo-test"],
+    toolIds: ["strategy-one-pager", "ceo-test", "seven-powers"],
     rhythmIds: ["quarterly-strategy-reset"],
     order: 1,
   },
@@ -510,7 +517,7 @@ export const capabilities: Capability[] = [
       "Challenge missed commitments clearly and early, in a way that changes behaviour.",
       "Separate care for the person from clarity about the standard — and catch issues before they become resentment, politics or performance problems.",
     ],
-    toolIds: ["sbi-feedback", "kss-feedback", "accountability-dial"],
+    toolIds: ["sbi-feedback", "kss-feedback", "accountability-dial", "non-violent-communication"],
     rhythmIds: [],
     order: 14,
   },
@@ -527,7 +534,7 @@ export const capabilities: Capability[] = [
       "Clarify expectations, cadence, communication preferences and decision rights.",
       "Apply this to cofounders, execs, reports, advisors and key partners.",
     ],
-    toolIds: ["relationship-design", "one-to-one-structure"],
+    toolIds: ["relationship-design", "one-to-one-structure", "kss-feedback", "non-violent-communication"],
     rhythmIds: ["monthly-relationship-review"],
     order: 15,
   },
@@ -544,7 +551,7 @@ export const capabilities: Capability[] = [
       "Turn tension into clarity instead of politics, avoidance or resentment, and prepare for hard conversations with structure and emotional discipline.",
       "Spot when safety is missing and rebuild it deliberately.",
     ],
-    toolIds: ["psychological-safety-diagnostic"],
+    toolIds: ["psychological-safety-diagnostic", "non-violent-communication"],
     rhythmIds: [],
     order: 16,
   },
@@ -838,6 +845,11 @@ export const tools: Tool[] = [
     capabilityIds: ["map-the-destination"],
     description:
       "A one-page summary of destination, strategy, priorities, risks and what good looks like.",
+    diagramId: "strategy-grid",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: ["north-star-metric", "okrs", "ceo-test"],
   },
   {
     id: "north-star-metric",
@@ -962,6 +974,34 @@ export const tools: Tool[] = [
     capabilityIds: ["give-feedback-and-hold-the-standard"],
     description:
       "A graduated approach to holding standards from a nudge to a hard conversation.",
+    accreditation: {
+      originator: "Jonathan Raymond",
+      source: "The Accountability Dial",
+      sourceUrl:
+        "https://bunch.ai/blog/getting-things-done/#:~:text=Management%20Coach%20Jonathan%20Raymond%20has,Accountability%20without%20Micromanagement",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: ["sbi-feedback", "kss-feedback"],
+  },
+  {
+    id: "non-violent-communication",
+    title: "Non-Violent Communication",
+    type: "framework",
+    format: ["one-to-one", "team"],
+    layerIds: ["founder", "company"],
+    capabilityIds: [
+      "give-feedback-and-hold-the-standard",
+      "build-incredible-relationships",
+      "navigate-conflict-and-create-psychological-safety",
+    ],
+    description:
+      "A four-part model for expressing observations, feelings, needs and requests without blame or judgment.",
+    accreditation: {
+      originator: "Marshall Rosenberg",
+      source: "Nonviolent Communication",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: ["sbi-feedback", "accountability-dial", "relationship-design"],
   },
   {
     id: "one-to-one-structure",
@@ -1210,6 +1250,48 @@ export function getGroupsForLayer(layerId: LayerId): CapabilityGroup[] {
   return capabilityGroups
     .filter((group) => group.layerId === layerId)
     .sort((a, b) => a.order - b.order);
+}
+
+export function getToolBySlug(slug: string): Tool | undefined {
+  return tools.find((tool) => tool.id === slug);
+}
+
+export function getCapabilityBySlug(slug: string): Capability | undefined {
+  return capabilities.find((capability) => capability.id === slug);
+}
+
+export function getOrderedCapabilities(): Capability[] {
+  return [...capabilities].sort((a, b) => a.order - b.order);
+}
+
+export function getAdjacentCapabilities(slug: string): {
+  prev: Capability | null;
+  next: Capability | null;
+} {
+  const ordered = getOrderedCapabilities();
+  const index = ordered.findIndex((capability) => capability.id === slug);
+
+  if (index === -1) {
+    return { prev: null, next: null };
+  }
+
+  return {
+    prev: index > 0 ? ordered[index - 1] : null,
+    next: index < ordered.length - 1 ? ordered[index + 1] : null,
+  };
+}
+
+export function getRelatedCapabilities(tool: Tool): Capability[] {
+  return capabilities.filter((capability) =>
+    tool.capabilityIds.includes(capability.id),
+  );
+}
+
+export function getRelatedTools(tool: Tool): Tool[] {
+  const relatedIds = tool.relatedToolIds ?? [];
+  return relatedIds
+    .map((id) => getToolBySlug(id))
+    .filter((item): item is Tool => item !== undefined);
 }
 
 export function formatToolType(type: ToolType): string {

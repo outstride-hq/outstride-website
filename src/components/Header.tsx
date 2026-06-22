@@ -42,7 +42,7 @@ export default function Header() {
                 <li className="nav-item">
                   <Link
                     className={`nav-link ${
-                      pathname === "/os" ? "active" : ""
+                      pathname.startsWith("/os") ? "active" : ""
                     }`}
                     href="/os"
                   >

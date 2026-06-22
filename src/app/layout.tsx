@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ClientScripts from "@/components/ClientScripts";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.png" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         />
         <link
           rel="stylesheet"
@@ -40,26 +40,17 @@ export default function RootLayout({
         />
         <link
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css"
-        />
-        <link
-          rel="stylesheet"
           href="/vendor/bootstrap/css/bootstrap.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="/vendor/animate/animate.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="/vendor/owl.carousel/assets/owl.carousel.min.css"
         />
         <link rel="stylesheet" href="/css/stylesheet.css" />
         <link rel="stylesheet" href="/css/custom.css" />
       </head>
       <body>
+        <Script
+          src="/vendor/bootstrap/js/bootstrap.bundle.min.js"
+          strategy="beforeInteractive"
+        />
         {children}
-        <ClientScripts />
       </body>
     </html>
   );

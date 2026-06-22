@@ -198,7 +198,7 @@ export interface Service {
 export const services: Service[] = [
   {
     id: 1,
-    icon: "⛰",
+    icon: "⛰️",
     title: "Vision & Strategy",
     description:
       "Figure out the big things first. Defining and aligning on the core identity and purpose of your company is crucial for success.",
