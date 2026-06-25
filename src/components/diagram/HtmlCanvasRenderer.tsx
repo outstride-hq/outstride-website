@@ -447,12 +447,11 @@ export default function HtmlCanvasRenderer({ definition }: HtmlCanvasRendererPro
   return (
     <div>
       <div
-        className="overflow-auto"
+        className="diagram-canvas-scroll overflow-auto diagram-canvas-inner"
         style={{
           position: "relative",
           width: "100%",
           maxWidth: definition.canvas.width,
-          minWidth: 720,
           height: definition.canvas.height,
           backgroundColor: definition.canvas.background,
           fontFamily: theme.fontFamily,

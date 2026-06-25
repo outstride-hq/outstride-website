@@ -74,7 +74,7 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
       <RelatedRhythms rhythms={rhythms} />
 
       <nav
-        className="d-flex justify-content-between align-items-center border-top pt-4 mt-5"
+        className="os-cap-nav d-flex flex-sm-row justify-content-sm-between align-items-sm-center border-top pt-4 mt-5"
         aria-label="Capability navigation"
       >
         <div>

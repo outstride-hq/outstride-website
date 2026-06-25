@@ -54,7 +54,7 @@ export default function OSUtilsPage() {
         {utils.map((util) => (
           <Link key={util.id} href={util.href} className="text-decoration-none">
             <div className="featured-box p-4">
-              <div className="d-flex justify-content-between align-items-start gap-3">
+              <div className="os-utils-card-row d-flex justify-content-between align-items-start gap-3">
                 <div>
                   <h2 className="text-6 fw-700 mb-1">{util.title}</h2>
                   <p className="text-muted mb-2">{util.description}</p>
@@ -62,7 +62,7 @@ export default function OSUtilsPage() {
                     {util.meta}
                   </span>
                 </div>
-                <span className="text-primary fw-700 text-nowrap">Open →</span>
+                <span className="text-primary fw-700 flex-shrink-0">Open →</span>
               </div>
             </div>
           </Link>

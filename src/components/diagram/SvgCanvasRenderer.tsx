@@ -457,11 +457,11 @@ export default function SvgCanvasRenderer({ definition }: SvgCanvasRendererProps
 
   return (
     <div>
-      <div className="overflow-auto">
+      <div className="diagram-canvas-scroll overflow-auto">
         <svg
           viewBox={`0 0 ${definition.canvas.width} ${definition.canvas.height}`}
           width="100%"
-          style={{ maxWidth: definition.canvas.width, minWidth: 720 }}
+          style={{ maxWidth: definition.canvas.width }}
           role="img"
           aria-label={definition.title}
         >

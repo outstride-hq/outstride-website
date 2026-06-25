@@ -14,7 +14,7 @@ export default function OsPrevNext() {
 
   return (
     <nav
-      className="os-prev-next d-flex justify-content-between align-items-center border-top pt-4 mt-5"
+      className="os-prev-next d-flex flex-sm-row justify-content-sm-between align-items-sm-center border-top pt-4 mt-5"
       aria-label="Page navigation"
     >
       <div>
