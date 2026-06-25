@@ -330,30 +330,44 @@ export const toolsContent: Record<string, ToolContent> = {
           {
             title: "Scale Economies",
             note: "Per-unit costs fall as volume grows. The leader can price aggressively or earn higher margins while competitors struggle to match.",
+            example:
+              "Amazon fulfilment — logistics cost per package drops as volume grows.",
           },
           {
             title: "Network Economies",
             note: "The product becomes more valuable as more people use it. New entrants face a cold-start problem the incumbent does not.",
+            example:
+              "LinkedIn — more members make the graph more valuable for recruiters and job-seekers.",
           },
           {
             title: "Counter-Positioning",
             note: "A new model incumbents cannot copy without damaging their existing business. Common in origination — before the market leader has locked in.",
+            example:
+              "Vanguard — index funds undercut active managers without incumbents copying without cannibalising fees.",
           },
           {
             title: "Switching Costs",
             note: "Customers face real cost, risk or friction to leave. Retention compounds even when alternatives exist on paper.",
+            example:
+              "Salesforce — years of custom workflows and integrations make switching CRM painful.",
           },
           {
             title: "Branding",
             note: "Durable customer preference that supports premium pricing or lower acquisition cost — built over time, not bought overnight.",
+            example:
+              "Apple — customers pay premium prices and queue for launches without comparison shopping.",
           },
           {
             title: "Cornered Resource",
             note: "Preferential access to a scarce asset competitors cannot get: talent, IP, distribution, data or relationships.",
+            example:
+              "Pixar — a creative team and culture competitors could not assemble overnight.",
           },
           {
             title: "Process Power",
             note: "Embedded ways of working that improve outcomes in ways rivals cannot easily replicate — often visible only after years of refinement.",
+            example:
+              "Google — search ranking and ad auction quality refined over decades of iteration.",
           },
         ],
       },
