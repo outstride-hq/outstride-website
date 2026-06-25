@@ -319,7 +319,8 @@ export const capabilities: Capability[] = [
     title: "Map the Destination",
     layerId: "company",
     groupId: "company-system",
-    summary: "",
+    summary:
+      "A subscription founder spent a quarter chasing adjacent bets until mission clarity made one product direction suddenly obvious — the whole team could repeat where they were headed.",
     bullets: [
       "Define the problem, mission, vision and next big juicy milestone.",
       "Clarify what the company is and what it is not.",
@@ -336,7 +337,8 @@ export const capabilities: Capability[] = [
     title: "Chart the Path",
     layerId: "company",
     groupId: "company-system",
-    summary: "",
+    summary:
+      "Three funding options looked totally different on paper, but the leadership team realised every path required the same thing: stronger unit economics and cash discipline.",
     bullets: [
       "Turn the destination into meaningful annual and quarterly company goals.",
       "Cascade goals down the organisation so teams know how their work contributes.",
@@ -404,7 +406,8 @@ export const capabilities: Capability[] = [
     title: "Build a Culture That Compounds",
     layerId: "company",
     groupId: "company-system",
-    summary: "",
+    summary:
+      "Once values stopped being wall art and started shaping product trade-offs, a team that had been polite-but-misaligned finally had a shared filter for what to build and what to kill.",
     bullets: [
       "Discover the company's DNA and translate it into values, behaviours and rituals.",
       "Define what \"great\" looks like in both performance and behaviour.",
@@ -489,7 +492,8 @@ export const capabilities: Capability[] = [
     title: "Make the Right Calls",
     layerId: "founder",
     groupId: "lead-myself",
-    summary: "",
+    summary:
+      "A high-profile advisory group approached a scaling founder with a compelling pitch — but at full team capacity, saying yes would have meant months of distraction for marginal upside.",
     bullets: [
       "Know which decisions are yours to make, which to delegate, and which to escalate.",
       "Match the rigour to the stakes: move fast on reversible calls, slow down on the ones you cannot undo.",
@@ -647,7 +651,8 @@ export const capabilities: Capability[] = [
     title: "Find New Capital",
     layerId: "founder",
     groupId: "lead-the-game",
-    summary: "",
+    summary:
+      "Before opening a data room, a founder pair each wrote what would make their next round a hell yes for investors — then pressure-tested the list with two trusted angels.",
     bullets: [
       "Create investor belief through narrative, traction, timing and process.",
       "Build and manage a fundraising pipeline with discipline.",

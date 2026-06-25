@@ -35,6 +35,23 @@ Prefer editing data over hardcoding JSX.
 - `src/lib/tools-content.ts` - rich content blocks for tool detail pages (keep pages short; see Adding OS tools).
 - Testimonials can be synced from Notion - see `README.md` and `scripts/quick-reference.md`.
 
+### Content from coaching and meetings (Granola)
+
+When drawing on Granola meeting notes or coaching conversations to inform site copy:
+
+- **Always anonymize.** Strip client names, company names, investor names, and any detail that could identify a specific engagement.
+- **Transform examples.** If you use an anecdote from a coaching conversation, make it materially different and far removed from the source — change sector, stage, numbers, and specifics so it cannot be traced back.
+- **Frameworks yes, facts no.** Strategic themes and coaching frameworks are fair game; exact financials, deal terms, valuations, facility sizes, and live negotiation details are not.
+- **No attributions without consent.** Do not name clients or reference identifiable situations in public-facing content unless you have explicit written approval.
+
+### Capability copy
+
+Capability `summary` fields appear on capability detail pages, search, and related-capability cards. They are a good place for short, founder-facing anecdotes — a single sentence that shows what this capability looks like in practice.
+
+- Use generalized founder moments, not client case studies.
+- Keep anecdotes illustrative, not identifying — composite scenarios beat thinly disguised real stories.
+- Match the tone of existing capability bullets: compact, concrete, no jargon.
+
 ## Outstride OS model
 
 Topology: layers -> capability groups -> capabilities -> tools/rhythms.

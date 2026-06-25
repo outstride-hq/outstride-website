@@ -29,6 +29,10 @@ export const toolsContent: Record<string, ToolContent> = {
         text: "Use this when the team is busy but not aligned, when the story keeps changing, or when you need one shared picture before a strategy reset, fundraise or quarterly planning session.",
       },
       {
+        kind: "paragraph",
+        text: "The goal is not a polished deck — it is a plan the leadership team is genuinely committed to. If the session produces boxes ticked but no conviction, you have planning theatre, not strategy.",
+      },
+      {
         kind: "heading",
         text: "The canvas",
       },
@@ -43,15 +47,16 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "list",
         items: [
-          "Start with Problem, Mission and Vision — keep each to one clear sentence.",
-          "Define the 10-year goal and the next major company milestone (e.g. funding round, product launch, profitability).",
+          "Start with Problem, Mission and Vision — keep each to one clear sentence. Mission clarity often unlocks product bets that felt fuzzy for months.",
+          "Define the 10-year goal and the next major company milestone (e.g. funding round, product launch, profitability). Anchor the quarter to that milestone, not a wish list.",
           "Fill the matrix: 2–3 year goals, 12-month priorities and quarterly OKRs across Sales & Revenue, Product & Tech, Markets & Expansion, and Team & Ops.",
           "Review with the leadership team. Anything that cannot fit on one page is probably not clear enough yet.",
+          "Pressure-test capacity: if the quarter needs more than the team can execute, cut scope before you cascade — not after.",
         ],
       },
       {
         kind: "callout",
-        text: "The one-pager is a living document. Revisit it each quarter during your strategy reset — not as a performance review, but as a clarity check.",
+        text: "The one-pager is a living document. Revisit it each quarter during your strategy reset — not as a performance review, but as a clarity check. A good quarter plan should feel challenging but feasible — something you would be proud to have executed, not just submitted.",
       },
       {
         kind: "capabilityRefs",
@@ -108,6 +113,10 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "callout",
         text: "High scores on direction and plan but low on team plans or execution confidence usually mean the strategy work is done — the org work is not.",
+      },
+      {
+        kind: "callout",
+        text: "Different funding paths — raise, profitability, debt — often look distinct on paper but converge on the same requirement: performance. If direction and plan score high but metrics are soft, the answer is rarely a new strategy doc.",
       },
       {
         kind: "capabilityRefs",
@@ -387,6 +396,10 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "callout",
         text: "A castle without a moat is just a target. A moat without a castle is pointless. Strategy needs both benefit and barrier.",
+      },
+      {
+        kind: "callout",
+        text: "Before a fundraise, investors will pressure-test your powers — not your feature list. Ask: what would make this company a hell yes on durable advantage, not just current traction?",
       },
       {
         kind: "capabilityRefs",
@@ -819,6 +832,10 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "callout",
         text: "Failing to align on any one question prevents the clarity the organisation needs. Disagreement in the room is the point — contradiction in the hallway is the problem.",
+      },
+      {
+        kind: "callout",
+        text: "A common signal: two co-founders describe the company differently to the same investor within a week. That is rarely a comms problem — it usually means one or more of these six answers is still unsettled.",
       },
       {
         kind: "capabilityRefs",
