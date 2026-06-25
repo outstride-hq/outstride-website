@@ -88,6 +88,19 @@ For diagrams, we should prefer Candidate A — SVG Canvas, but keep the other tw
 - For `switch` statements over discriminated unions or enums, use a `never` check in the `default` case so new variants fail to compile until handled.
 - Do not add comments that merely narrate what the code does.
 
+## Git workflow
+
+This repo is in active flux. Keep local work synced with the remote so nothing is stranded on one machine.
+
+**Default:** after completing substantive work, commit and push — unless the user explicitly says not to (e.g. "don't commit", "WIP only", "local only").
+
+- Run `npm run build` first; fix any type or lint errors before committing.
+- Stage only relevant changes; do not commit secrets (`.env`, credentials, etc.).
+- Use a concise commit message focused on why, not a file list.
+- Push to the current branch when the commit succeeds (`git push` or `git push -u origin HEAD` if needed).
+
+Skip commit/push for question-only or review-only tasks with no code changes.
+
 ## Before finishing
 
-Run `npm run build` and resolve any type or lint errors introduced by your changes.
+Run `npm run build` and resolve any type or lint errors introduced by your changes. When work is complete, commit and push per the git workflow above unless the user opted out.
