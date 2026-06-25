@@ -1,14 +1,21 @@
 import {
-  capabilityGroups,
   capabilities,
+  capabilityGroups,
+  getCapabilityBySlug,
+  getCapabilityEffectiveStatus,
   getGroupsForLayer,
+  getToolBySlug,
+  getToolEffectiveStatus,
   layers,
+  resolveOsContentStatus,
   tools,
+  type OsContentStatus,
 } from "@/lib/os";
 
 export type OsNavItem = {
   label: string;
   href: string;
+  status?: OsContentStatus;
 };
 
 export type OsNavSubGroup = {
@@ -26,15 +33,18 @@ export type OsNavGroup = {
 export type OsPageLink = {
   href: string;
   label: string;
+  status?: OsContentStatus;
 };
 
-export const osPageSequence: OsPageLink[] = [
+export const osPages: OsPageLink[] = [
   { href: "/os/", label: "Home" },
   { href: "/os/process/", label: "The Four D's" },
   { href: "/os/force-form-flow/", label: "Force, Form, Flow" },
   { href: "/os/capabilities/", label: "Capabilities" },
   { href: "/os/tools/", label: "Tools" },
 ];
+
+export const osPageSequence: OsPageLink[] = osPages;
 
 function buildCapabilitySubGroups(): OsNavSubGroup[] {
   return layers.flatMap((layer) => {
@@ -50,6 +60,7 @@ function buildCapabilitySubGroups(): OsNavSubGroup[] {
         items: groupCapabilities.map((capability) => ({
           label: `${capability.number}. ${capability.title}`,
           href: `/os/capabilities/${capability.id}/`,
+          status: getCapabilityEffectiveStatus(capability),
         })),
       };
     });
@@ -59,11 +70,11 @@ function buildCapabilitySubGroups(): OsNavSubGroup[] {
 export const osNavGroups: OsNavGroup[] = [
   {
     label: "Overview",
-    items: [
-      { label: "Home", href: "/os/" },
-      { label: "The Four D's", href: "/os/process/" },
-      { label: "Force, Form, Flow", href: "/os/force-form-flow/" },
-    ],
+    items: osPages.slice(0, 3).map((page) => ({
+      label: page.label,
+      href: page.href,
+      status: page.status,
+    })),
   },
   {
     label: "Capabilities",
@@ -76,6 +87,7 @@ export const osNavGroups: OsNavGroup[] = [
     items: tools.map((tool) => ({
       label: tool.title,
       href: `/os/tools/${tool.id}/`,
+      status: getToolEffectiveStatus(tool),
     })),
   },
 ];
@@ -100,6 +112,35 @@ export function isOsNavActive(pathname: string, href: string): boolean {
     normalizedPath === normalizedHref ||
     normalizedPath.startsWith(`${normalizedHref}`)
   );
+}
+
+export function getStatusForOsPath(pathname: string): OsContentStatus {
+  const normalizedPath = normalizeOsPath(pathname);
+
+  const page = osPages.find(
+    (entry) => normalizeOsPath(entry.href) === normalizedPath,
+  );
+  if (page) {
+    return resolveOsContentStatus(page.status);
+  }
+
+  const capabilityMatch = normalizedPath.match(
+    /^\/os\/capabilities\/([^/]+)\/$/,
+  );
+  if (capabilityMatch) {
+    const capability = getCapabilityBySlug(capabilityMatch[1]);
+    return capability
+      ? getCapabilityEffectiveStatus(capability)
+      : "ready";
+  }
+
+  const toolMatch = normalizedPath.match(/^\/os\/tools\/([^/]+)\/$/);
+  if (toolMatch) {
+    const tool = getToolBySlug(toolMatch[1]);
+    return tool ? getToolEffectiveStatus(tool) : "ready";
+  }
+
+  return "ready";
 }
 
 export function getPrevNext(pathname: string): {

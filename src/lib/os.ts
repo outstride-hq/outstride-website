@@ -8,6 +8,7 @@
  */
 
 import type { Accreditation } from "@/lib/accreditation";
+import { hasToolContent } from "@/lib/tools-content";
 
 export type { Accreditation };
 
@@ -24,6 +25,32 @@ export type ToolType =
   | "exercise";
 
 export type FormatType = "solo" | "one-to-one" | "team" | "company";
+
+export type OsContentStatus = "draft" | "ready";
+
+export function resolveOsContentStatus(
+  status?: OsContentStatus,
+): OsContentStatus {
+  return status ?? "ready";
+}
+
+export function getCapabilityEffectiveStatus(
+  capability: Capability,
+): OsContentStatus {
+  if (capability.status !== undefined) {
+    return capability.status;
+  }
+
+  return capability.summary.trim() ? "ready" : "draft";
+}
+
+export function getToolEffectiveStatus(tool: Tool): OsContentStatus {
+  if (tool.status !== undefined) {
+    return tool.status;
+  }
+
+  return hasToolContent(tool.id) ? "ready" : "draft";
+}
 
 export type RhythmFrequency =
   | "daily"
@@ -74,6 +101,7 @@ export type Capability = {
   rhythmIds: string[];
   featured?: boolean;
   order: number;
+  status?: OsContentStatus;
 };
 
 export type Tool = {
@@ -87,6 +115,7 @@ export type Tool = {
   accreditation?: Accreditation;
   diagramId?: string;
   relatedToolIds?: string[];
+  status?: OsContentStatus;
 };
 
 export type Rhythm = {
@@ -296,7 +325,7 @@ export const capabilities: Capability[] = [
       "Clarify what the company is and what it is not.",
       "Create a destination simple enough for the team to understand and repeat.",
     ],
-    toolIds: ["strategy-one-pager", "ceo-test", "seven-powers"],
+    toolIds: ["strategy-one-pager", "ceo-test", "seven-powers", "six-critical-questions"],
     rhythmIds: ["quarterly-strategy-reset"],
     order: 1,
   },
@@ -364,7 +393,7 @@ export const capabilities: Capability[] = [
       "Clarify who owns what, how success is measured and what decisions they can make.",
       "Build accountability into the system so the founder is not constantly chasing.",
     ],
-    toolIds: ["ownership-map", "delegation-ladder"],
+    toolIds: ["ownership-map", "delegation-ladder", "delegation-timeline"],
     rhythmIds: ["weekly-ownership-review"],
     order: 5,
   },
@@ -381,7 +410,7 @@ export const capabilities: Capability[] = [
       "Define what \"great\" looks like in both performance and behaviour.",
       "Make culture visible through decisions, feedback, hiring, rituals and consequences.",
     ],
-    toolIds: ["company-values"],
+    toolIds: ["company-values", "four-disciplines", "six-critical-questions", "cascade-storytelling"],
     rhythmIds: [],
     order: 6,
   },
@@ -398,7 +427,7 @@ export const capabilities: Capability[] = [
       "Give people the tools, feedback and support to improve.",
       "Create a talent system that raises the level of the company over time.",
     ],
-    toolIds: [],
+    toolIds: ["four-disciplines"],
     rhythmIds: [],
     order: 7,
   },
@@ -432,7 +461,7 @@ export const capabilities: Capability[] = [
       "Put your time and attention there, and protect it ruthlessly.",
       "Cut, delegate or kill low-value meetings, context-switching and reactive work.",
     ],
-    toolIds: ["founder-calendar-audit"],
+    toolIds: ["founder-calendar-audit", "habit-stacks"],
     rhythmIds: ["weekly-planning"],
     order: 9,
   },
@@ -483,7 +512,12 @@ export const capabilities: Capability[] = [
       "Set clear expectations around goals, standards, risks and decision boundaries.",
       "Understand the levels of delegation and create a delegation timeline.",
     ],
-    toolIds: ["delegation-ladder", "ownership-map"],
+    toolIds: [
+      "alignment-autonomy",
+      "delegation-ladder",
+      "delegation-timeline",
+      "ownership-map",
+    ],
     rhythmIds: ["weekly-ownership-review"],
     order: 12,
   },
@@ -551,7 +585,7 @@ export const capabilities: Capability[] = [
       "Turn tension into clarity instead of politics, avoidance or resentment, and prepare for hard conversations with structure and emotional discipline.",
       "Spot when safety is missing and rebuild it deliberately.",
     ],
-    toolIds: ["psychological-safety-diagnostic", "non-violent-communication"],
+    toolIds: ["psychological-safety-diagnostic", "non-violent-communication", "five-dysfunctions", "personal-histories-trust", "light-conflict-assessment", "blob-tree"],
     rhythmIds: [],
     order: 16,
   },
@@ -585,7 +619,7 @@ export const capabilities: Capability[] = [
       "Adapt the story for team, candidates, customers, investors and board.",
       "Use narrative to create alignment, confidence and momentum.",
     ],
-    toolIds: ["investor-update"],
+    toolIds: ["investor-update", "cascade-storytelling", "four-disciplines"],
     rhythmIds: ["monthly-all-hands"],
     order: 18,
   },
@@ -636,7 +670,7 @@ export const capabilities: Capability[] = [
       "Build a rhythm that does not depend on permanent overextension.",
       "Design work around sustainable performance, not just availability.",
     ],
-    toolIds: ["human-9", "energy-audit"],
+    toolIds: ["human-9", "energy-audit", "habit-stacks"],
     rhythmIds: ["weekly-energy-review", "monthly-calendar-detox"],
     order: 21,
   },
@@ -670,7 +704,7 @@ export const capabilities: Capability[] = [
       "Create a personal board that supports, challenges and expands you.",
       "Turn growth into a deliberate system rather than random inspiration.",
     ],
-    toolIds: ["personal-board"],
+    toolIds: ["personal-board", "anti-wasteman-system"],
     rhythmIds: [],
     order: 23,
   },
@@ -687,7 +721,7 @@ export const capabilities: Capability[] = [
       "Learn how to unlock, practise and maintain that mindset.",
       "Notice when old beliefs, fears or narratives are driving behaviour.",
     ],
-    toolIds: [],
+    toolIds: ["anti-wasteman-system", "super-self"],
     rhythmIds: [],
     order: 24,
   },
@@ -721,7 +755,7 @@ export const capabilities: Capability[] = [
       "Make the business serve the human, not consume them.",
       "Connect daily effort to meaning, values, relationships, freedom and personal conviction.",
     ],
-    toolIds: [],
+    toolIds: ["anti-wasteman-system", "habit-stacks"],
     rhythmIds: [],
     order: 26,
   },
@@ -832,9 +866,18 @@ export const tools: Tool[] = [
     type: "diagnostic",
     format: ["solo", "one-to-one"],
     layerIds: ["company", "founder"],
-    capabilityIds: ["map-the-destination"],
+    capabilityIds: ["map-the-destination", "chart-the-path"],
     description:
-      "Test whether the founder knows the next milestone, plan, risks and team confidence.",
+      "Score yourself 1–5 on four questions that check destination, plan, team alignment and execution confidence.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: [
+      "strategy-one-pager",
+      "six-critical-questions",
+      "okrs",
+      "north-star-metric",
+    ],
   },
   {
     id: "strategy-one-pager",
@@ -849,7 +892,24 @@ export const tools: Tool[] = [
     accreditation: {
       note: "Outstride original",
     },
-    relatedToolIds: ["north-star-metric", "okrs", "ceo-test"],
+    relatedToolIds: ["north-star-metric", "okrs", "ceo-test", "seven-powers"],
+  },
+  {
+    id: "seven-powers",
+    title: "7 Powers",
+    type: "framework",
+    format: ["solo", "one-to-one", "team", "company"],
+    layerIds: ["company"],
+    capabilityIds: ["map-the-destination"],
+    description:
+      "A framework for identifying durable competitive advantage — the benefit and barrier that let a business sustain superior returns.",
+    accreditation: {
+      originator: "Hamilton Helmer",
+      source: "7 Powers: The Foundations of Business Strategy",
+      sourceUrl: "https://7powers.com/",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: ["strategy-one-pager", "north-star-metric", "ceo-test"],
   },
   {
     id: "north-star-metric",
@@ -954,6 +1014,51 @@ export const tools: Tool[] = [
     capabilityIds: ["scale-through-delegation", "make-ownership-stick"],
     description:
       "A framework for moving from task delegation to full ownership.",
+    accreditation: {
+      originator: "Michael Hyatt",
+      source: "The Five Levels of Delegation",
+      sourceUrl: "https://fullfocus.co/the-five-levels-of-delegation/",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: ["alignment-autonomy", "delegation-timeline", "ownership-map"],
+  },
+  {
+    id: "alignment-autonomy",
+    title: "Alignment vs. Autonomy",
+    type: "framework",
+    format: ["one-to-one", "team", "company"],
+    layerIds: ["founder", "company"],
+    capabilityIds: ["scale-through-delegation", "map-the-destination"],
+    description:
+      "A 2×2 for diagnosing whether teams have enough shared direction and enough decision freedom.",
+    diagramId: "alignment-autonomy",
+    accreditation: {
+      originator: "Henrik Kniberg",
+      source: "Spotify Engineering Culture",
+      sourceUrl:
+        "https://engineering.atspotify.com/2014/03/spotify-engineering-culture-part-1",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "delegation-ladder",
+      "ownership-map",
+      "six-critical-questions",
+      "strategy-one-pager",
+    ],
+  },
+  {
+    id: "delegation-timeline",
+    title: "Delegation Timeline",
+    type: "template",
+    format: ["solo", "one-to-one"],
+    layerIds: ["founder", "company"],
+    capabilityIds: ["scale-through-delegation", "make-ownership-stick"],
+    description:
+      "A proactive plan to hand off more work at higher levels of responsibility over time.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: ["delegation-ladder", "ownership-map"],
   },
   {
     id: "ownership-map",
@@ -985,7 +1090,7 @@ export const tools: Tool[] = [
   },
   {
     id: "non-violent-communication",
-    title: "Non-Violent Communication",
+    title: "Nonviolent Communication",
     type: "framework",
     format: ["one-to-one", "team"],
     layerIds: ["founder", "company"],
@@ -996,6 +1101,7 @@ export const tools: Tool[] = [
     ],
     description:
       "A four-part model for expressing observations, feelings, needs and requests without blame or judgment.",
+    diagramId: "nvc-ofnr",
     accreditation: {
       originator: "Marshall Rosenberg",
       source: "Nonviolent Communication",
@@ -1032,6 +1138,15 @@ export const tools: Tool[] = [
     capabilityIds: ["give-feedback-and-hold-the-standard"],
     description:
       "Situation-Behaviour-Impact feedback format for clear, actionable conversations.",
+    diagramId: "sbi-feedback",
+    accreditation: {
+      originator: "Center for Creative Leadership",
+      source: "Situation-Behavior-Impact (SBI)™",
+      sourceUrl:
+        "https://www.ccl.org/articles/leading-effectively-articles/sbi-feedback-model-a-quick-win-to-improve-talent-conversations-development/",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: ["non-violent-communication", "kss-feedback", "accountability-dial"],
   },
   {
     id: "kss-feedback",
@@ -1110,6 +1225,32 @@ export const tools: Tool[] = [
       "Assesses what creates, drains and restores founder energy.",
   },
   {
+    id: "habit-stacks",
+    title: "Habit Stacks",
+    type: "template",
+    format: ["solo"],
+    layerIds: ["founder", "human"],
+    capabilityIds: [
+      "manage-my-energy-system",
+      "build-a-life-worth-scaling-for",
+      "operate-with-leverage",
+    ],
+    description:
+      "Anchored sequences of habits at daily, weekly and monthly rhythms that turn founder intentions into repeatable rituals.",
+    accreditation: {
+      originator: "James Clear",
+      source: "Atomic Habits",
+      sourceUrl: "https://jamesclear.com/habit-stacking",
+      note: "Habit-stacking concept adapted for Outstride OS founder rhythms",
+    },
+    relatedToolIds: [
+      "energy-audit",
+      "anti-wasteman-system",
+      "human-9",
+      "founder-calendar-audit",
+    ],
+  },
+  {
     id: "personal-board",
     title: "Personal Board",
     type: "framework",
@@ -1138,6 +1279,221 @@ export const tools: Tool[] = [
     capabilityIds: ["operate-at-the-right-altitude"],
     description:
       "Identifies where the founder is using personal force where structure or flow is needed.",
+  },
+  {
+    id: "anti-wasteman-system",
+    title: "Anti-Wasteman System",
+    type: "framework",
+    format: ["solo", "one-to-one"],
+    layerIds: ["founder", "human"],
+    capabilityIds: [
+      "build-a-life-worth-scaling-for",
+      "master-my-mindset",
+      "build-my-growth-system",
+    ],
+    description:
+      "Turn a dream into a committed goal by stress-testing motivation, failure modes, support and the first action.",
+    accreditation: {
+      originator: "Ali Abdaal",
+      source: "Annual Review / Anti-Wasteman System",
+      sourceUrl: "https://www.youtube.com/watch?v=ERGbgvvCJ8o",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: ["personal-board", "okrs", "super-self"],
+  },
+  {
+    id: "super-self",
+    title: "Super Self",
+    type: "framework",
+    format: ["solo", "one-to-one"],
+    layerIds: ["founder", "human"],
+    capabilityIds: [
+      "master-my-mindset",
+      "take-command-of-my-role",
+      "make-the-right-calls",
+    ],
+    description:
+      "Access your best-self mindset by asking what your ten-out-of-ten version would do — and what's stopping you from doing it now.",
+    accreditation: {
+      originator: "Matthew",
+      note: "Shared in Outstride coaching; adapted for Outstride OS",
+    },
+    relatedToolIds: ["anti-wasteman-system", "zone-of-genius", "force-form-flow-diagnostic"],
+  },
+  {
+    id: "four-disciplines",
+    title: "Four Disciplines of Organizational Health",
+    type: "framework",
+    format: ["team", "company"],
+    layerIds: ["company", "founder"],
+    capabilityIds: [
+      "build-a-culture-that-compounds",
+      "navigate-conflict-and-create-psychological-safety",
+      "be-storyteller-in-chief",
+      "raise-the-talent-bar",
+    ],
+    description:
+      "Four sequential disciplines — cohesive team, clarity, over-communication, and systems — that turn organizational health into competitive advantage.",
+    accreditation: {
+      originator: "Patrick Lencioni",
+      source: "The Advantage",
+      sourceUrl: "https://www.tablegroup.com/topics-and-resources/organizational-health/",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "five-dysfunctions",
+      "six-critical-questions",
+      "personal-histories-trust",
+      "cascade-storytelling",
+      "company-values",
+    ],
+  },
+  {
+    id: "five-dysfunctions",
+    title: "Five Dysfunctions of a Team",
+    type: "framework",
+    format: ["team", "one-to-one"],
+    layerIds: ["company", "founder"],
+    capabilityIds: [
+      "navigate-conflict-and-create-psychological-safety",
+      "build-incredible-relationships",
+      "give-feedback-and-hold-the-standard",
+    ],
+    description:
+      "A pyramid model for building trust, productive conflict, commitment, accountability and collective results on a leadership team.",
+    diagramId: "five-dysfunctions",
+    accreditation: {
+      originator: "Patrick Lencioni",
+      source: "The Five Dysfunctions of a Team",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "four-disciplines",
+      "personal-histories-trust",
+      "accountability-dial",
+      "psychological-safety-diagnostic",
+    ],
+  },
+  {
+    id: "six-critical-questions",
+    title: "Six Critical Questions",
+    type: "framework",
+    format: ["team", "company"],
+    layerIds: ["company", "founder"],
+    capabilityIds: [
+      "map-the-destination",
+      "build-a-culture-that-compounds",
+      "chart-the-path",
+    ],
+    description:
+      "Six questions the leadership team must answer together — with no contradictions — to create real organizational clarity.",
+    accreditation: {
+      originator: "Patrick Lencioni",
+      source: "The Advantage",
+      sourceUrl: "https://www.tablegroup.com/topics-and-resources/organizational-health/",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "four-disciplines",
+      "strategy-one-pager",
+      "company-values",
+      "okrs",
+    ],
+  },
+  {
+    id: "personal-histories-trust",
+    title: "Personal Histories + Trust",
+    type: "exercise",
+    format: ["team"],
+    layerIds: ["company", "founder"],
+    capabilityIds: [
+      "navigate-conflict-and-create-psychological-safety",
+      "build-incredible-relationships",
+    ],
+    description:
+      "A leadership-team exercise to build vulnerability-based trust by sharing formative stories and what each person needs to feel fully themselves.",
+    accreditation: {
+      originator: "Patrick Lencioni",
+      source: "The Five Dysfunctions of a Team",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "five-dysfunctions",
+      "light-conflict-assessment",
+      "blob-tree",
+      "four-disciplines",
+    ],
+  },
+  {
+    id: "light-conflict-assessment",
+    title: "Light Conflict Assessment",
+    type: "conversation",
+    format: ["team", "one-to-one"],
+    layerIds: ["company", "founder"],
+    capabilityIds: ["navigate-conflict-and-create-psychological-safety"],
+    description:
+      "A warm-up conversation on how each person typically responds to disagreement — surfacing hidden dynamics before harder team work.",
+    accreditation: {
+      originator: "Patrick Lencioni",
+      source: "The Five Dysfunctions of a Team",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "personal-histories-trust",
+      "five-dysfunctions",
+      "non-violent-communication",
+      "blob-tree",
+    ],
+  },
+  {
+    id: "blob-tree",
+    title: "Blob Tree",
+    type: "exercise",
+    format: ["solo", "one-to-one", "team"],
+    layerIds: ["human", "founder", "company"],
+    capabilityIds: [
+      "navigate-conflict-and-create-psychological-safety",
+      "build-incredible-relationships",
+      "manage-my-energy-system",
+    ],
+    description:
+      "A non-verbal reflection tool — pick the blob figures that match how you feel or where you sit in a group, then use that as a starting point for honest conversation.",
+    accreditation: {
+      originator: "Pip Wilson & Ian Long",
+      source: "Blob Tree",
+      sourceUrl: "https://www.blobtree.com/",
+      note: "Image © Pip Wilson & Ian Long",
+    },
+    relatedToolIds: [
+      "light-conflict-assessment",
+      "personal-histories-trust",
+      "psychological-safety-diagnostic",
+      "non-violent-communication",
+    ],
+  },
+  {
+    id: "cascade-storytelling",
+    title: "Cascade Storytelling",
+    type: "exercise",
+    format: ["team", "company"],
+    layerIds: ["company", "founder"],
+    capabilityIds: [
+      "be-storyteller-in-chief",
+      "build-a-culture-that-compounds",
+    ],
+    description:
+      "Design short clarity messages and stories so the rallying cry and values land with new hires, investors and the team — consistently and often.",
+    accreditation: {
+      originator: "Patrick Lencioni",
+      source: "The Advantage",
+      sourceUrl: "https://www.tablegroup.com/topics-and-resources/organizational-health/",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "four-disciplines",
+      "six-critical-questions",
+      "investor-update",
+    ],
   },
 ];
 

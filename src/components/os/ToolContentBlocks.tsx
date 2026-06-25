@@ -70,6 +70,17 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                 <DiagramRenderer diagramId={block.diagramId} variant="svg" />
               </div>
             );
+          case "image":
+            return (
+              <div key={index} className="mb-4 text-center">
+                <img
+                  src={block.src}
+                  alt={block.alt}
+                  className="img-fluid rounded"
+                  style={{ maxHeight: "640px" }}
+                />
+              </div>
+            );
           case "capabilityRefs":
             return null;
           default: {

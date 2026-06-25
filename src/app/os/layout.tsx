@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import OsDraftBannerGate from "@/components/os/OsDraftBannerGate";
 import OsPrevNext from "@/components/os/OsPrevNext";
 import OsSidebar from "@/components/os/OsSidebar";
 
@@ -17,6 +18,7 @@ export default function OSLayout({ children }: { children: React.ReactNode }) {
                 </div>
               </aside>
               <div className="col-12 col-lg-9 os-layout-main">
+                <OsDraftBannerGate />
                 {children}
                 <OsPrevNext />
               </div>

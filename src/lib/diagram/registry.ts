@@ -1,13 +1,19 @@
 import type { DiagramDefinition } from "./schema";
 import { accountabilityDialDefinition } from "./definitions/accountability-dial";
+import { alignmentAutonomyDefinition } from "./definitions/alignment-autonomy";
 import { fiveDysfunctionsDefinition } from "./definitions/five-dysfunctions";
 import { nvcFlowDefinition } from "./definitions/nvc-flow";
+import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
+import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
 import { strategyGridDefinition } from "./definitions/strategy-grid";
 
 const definitions: Record<string, DiagramDefinition> = {
   [strategyGridDefinition.id]: strategyGridDefinition,
   [accountabilityDialDefinition.id]: accountabilityDialDefinition,
+  [alignmentAutonomyDefinition.id]: alignmentAutonomyDefinition,
   [nvcFlowDefinition.id]: nvcFlowDefinition,
+  [nvcOfnrDefinition.id]: nvcOfnrDefinition,
+  [sbiFeedbackDefinition.id]: sbiFeedbackDefinition,
   [fiveDysfunctionsDefinition.id]: fiveDysfunctionsDefinition,
 };
 
@@ -40,11 +46,28 @@ const sandboxEntries: DiagramSandboxEntry[] = [
     },
   },
   {
+    definition: nvcOfnrDefinition,
+    referenceImage: {
+      src: "/images/diagrams/nvc-ofnr-original.png",
+      alt: "Original NVC four components reference",
+    },
+  },
+  {
+    definition: sbiFeedbackDefinition,
+    referenceImage: {
+      src: "/images/diagrams/sbi-feedback-original.png",
+      alt: "Original SBI Situation-Behaviour-Impact reference",
+    },
+  },
+  {
     definition: fiveDysfunctionsDefinition,
     referenceImage: {
       src: "/images/diagrams/five-dysfunctions-original.png",
       alt: "Original Five Dysfunctions pyramid reference",
     },
+  },
+  {
+    definition: alignmentAutonomyDefinition,
   },
 ];
 

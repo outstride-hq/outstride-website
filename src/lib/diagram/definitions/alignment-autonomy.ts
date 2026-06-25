@@ -1,0 +1,62 @@
+import { validateDiagramDefinition, type GridDiagramDefinition } from "../schema";
+
+export const alignmentAutonomyDefinition: GridDiagramDefinition = validateDiagramDefinition({
+  type: "grid",
+  id: "alignment-autonomy",
+  title: "Alignment & Autonomy",
+  theme: "pastel-retro",
+  canvas: {
+    width: 820,
+    height: 400,
+    background: "#f5f5f5",
+  },
+  accreditation: {
+    originator: "Henrik Kniberg",
+    source: "Spotify Engineering Culture",
+    sourceUrl: "https://engineering.atspotify.com/2014/03/spotify-engineering-culture-part-1",
+    note: "Adapted for Outstride OS",
+  },
+  cards: [
+    {
+      id: "command-control",
+      title: "Command & control",
+      subtitle: "High alignment, low autonomy — you define the problem and the solution",
+      x: 40,
+      y: 40,
+      width: 360,
+      height: 150,
+      color: "orange",
+    },
+    {
+      id: "aligned-autonomy",
+      title: "Aligned autonomy",
+      subtitle: "High alignment, high autonomy — you define the why; teams own the how",
+      x: 420,
+      y: 40,
+      width: 360,
+      height: 150,
+      color: "coral",
+      link: { kind: "tool", id: "alignment-autonomy" },
+    },
+    {
+      id: "confusion",
+      title: "Micromanagement & confusion",
+      subtitle: "Low alignment, low autonomy — no shared goal, no real empowerment",
+      x: 40,
+      y: 210,
+      width: 360,
+      height: 150,
+      color: "blue",
+    },
+    {
+      id: "chaos",
+      title: "Chaos",
+      subtitle: "Low alignment, high autonomy — freedom without a shared direction",
+      x: 420,
+      y: 210,
+      width: 360,
+      height: 150,
+      color: "yellow",
+    },
+  ],
+}) as GridDiagramDefinition;

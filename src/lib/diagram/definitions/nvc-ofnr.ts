@@ -1,0 +1,61 @@
+import { validateDiagramDefinition, type GridDiagramDefinition } from "../schema";
+
+export const nvcOfnrDefinition: GridDiagramDefinition = validateDiagramDefinition({
+  type: "grid",
+  id: "nvc-ofnr",
+  title: "The Four Components of Nonviolent Communication",
+  theme: "pastel-retro",
+  canvas: {
+    width: 820,
+    height: 400,
+    background: "#f5f5f5",
+  },
+  accreditation: {
+    originator: "Marshall Rosenberg",
+    source: "Nonviolent Communication",
+    note: "Adapted for Outstride OS",
+  },
+  cards: [
+    {
+      id: "observation",
+      title: "Observations",
+      subtitle: "What we see and hear",
+      x: 40,
+      y: 40,
+      width: 360,
+      height: 150,
+      color: "orange",
+      link: { kind: "tool", id: "non-violent-communication" },
+    },
+    {
+      id: "feelings",
+      title: "Feelings",
+      subtitle: "How we feel about what we observed",
+      x: 420,
+      y: 40,
+      width: 360,
+      height: 150,
+      color: "coral",
+    },
+    {
+      id: "needs",
+      title: "Needs",
+      subtitle: "What we value or require",
+      x: 40,
+      y: 210,
+      width: 360,
+      height: 150,
+      color: "blue",
+    },
+    {
+      id: "requests",
+      title: "Requests",
+      subtitle: "What we ask for to meet our needs",
+      x: 420,
+      y: 210,
+      width: 360,
+      height: 150,
+      color: "yellow",
+    },
+  ],
+}) as GridDiagramDefinition;

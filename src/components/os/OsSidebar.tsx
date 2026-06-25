@@ -2,8 +2,30 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { resolveOsContentStatus, type OsContentStatus } from "@/lib/os";
 import { isOsNavActive, osNavGroups } from "@/lib/os-nav";
 import OsSearch from "./OsSearch";
+
+function sidebarLinkClass(
+  pathname: string,
+  href: string,
+  status?: OsContentStatus,
+): string {
+  const active = isOsNavActive(pathname, href);
+  const draft = resolveOsContentStatus(status) === "draft";
+
+  return [
+    "os-sidebar-link",
+    "d-block",
+    "text-decoration-none",
+    "small",
+    "py-1",
+    active ? "text-primary fw-600" : "text-muted",
+    draft ? "os-sidebar-link--draft" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
 
 export default function OsSidebar() {
   const pathname = usePathname();
@@ -35,11 +57,7 @@ export default function OsSidebar() {
                 <li key={item.href} className="mb-1">
                   <Link
                     href={item.href}
-                    className={`os-sidebar-link d-block text-decoration-none small py-1 ${
-                      isOsNavActive(pathname, item.href)
-                        ? "text-primary fw-600"
-                        : "text-muted"
-                    }`}
+                    className={sidebarLinkClass(pathname, item.href, item.status)}
                   >
                     {item.label}
                   </Link>
@@ -60,11 +78,11 @@ export default function OsSidebar() {
                       <li key={item.href} className="mb-1">
                         <Link
                           href={item.href}
-                          className={`os-sidebar-link d-block text-decoration-none small py-1 ${
-                            isOsNavActive(pathname, item.href)
-                              ? "text-primary fw-600"
-                              : "text-muted"
-                          }`}
+                          className={sidebarLinkClass(
+                            pathname,
+                            item.href,
+                            item.status,
+                          )}
                         >
                           {item.label}
                         </Link>
