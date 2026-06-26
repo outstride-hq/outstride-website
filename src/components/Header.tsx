@@ -1,26 +1,38 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header id="header" className="sticky-top-slide">
       <nav className="primary-menu navbar navbar-expand-lg text-uppercase navbar-line-under-text fw-600">
         <div className="container position-relative">
           <div className="col-auto col-lg-2 d-inline-flex ps-lg-0">
-            <Link className="logo" href="/" title="Ben">
+            <Link className="logo" href="/" title="Ben" onClick={handleNavClick}>
               <img src="/images/logo.png" alt="Ben" />
             </Link>
           </div>
           <div className="col col-lg-8 navbar-accordion px-0">
             <button
-              className="navbar-toggler ms-auto"
+              className={`navbar-toggler ms-auto ${isMenuOpen ? "show" : ""}`}
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#header-nav"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+              aria-controls="header-nav"
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle navigation"
             >
               <span></span>
               <span></span>
@@ -28,13 +40,16 @@ export default function Header() {
             </button>
             <div
               id="header-nav"
-              className="collapse navbar-collapse justify-content-end"
+              className={`collapse navbar-collapse justify-content-end ${
+                isMenuOpen ? "show" : ""
+              }`}
             >
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link
                     className={`nav-link ${pathname === "/" ? "active" : ""}`}
                     href="/"
+                    onClick={handleNavClick}
                   >
                     Home
                   </Link>
@@ -45,6 +60,7 @@ export default function Header() {
                       pathname.startsWith("/os") ? "active" : ""
                     }`}
                     href="/os"
+                    onClick={handleNavClick}
                   >
                     OS
                   </Link>
@@ -55,6 +71,7 @@ export default function Header() {
                       pathname === "/testimonials" ? "active" : ""
                     }`}
                     href="/testimonials"
+                    onClick={handleNavClick}
                   >
                     Testimonials
                   </Link>
@@ -65,6 +82,7 @@ export default function Header() {
                       pathname === "/contact" ? "active" : ""
                     }`}
                     href="/contact"
+                    onClick={handleNavClick}
                   >
                     Contact
                   </Link>
