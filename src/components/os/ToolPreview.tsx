@@ -1,44 +1,110 @@
 import {
   formatToolType,
+  futureToolBacklog,
+  toolLibraryCategories,
+  toolsHowToUse,
   tools,
   toolsTaggingNote,
-  type ToolType,
 } from "@/lib/os";
 import { hasToolContent } from "@/lib/tools-content";
 import { OsSectionHeader } from "./OsPageHeader";
 
-const toolTypeOrder: ToolType[] = [
-  "diagnostic",
-  "framework",
-  "template",
-  "conversation",
-  "rhythm",
-  "exercise",
-];
+const flagshipToolIds = new Set([
+  "three-emotions-check-in",
+  "symptom-map",
+  "company-health-scorecard",
+  "founder-role-time-split",
+  "force-form-flow-audit",
+  "two-hour-constraint",
+  "ownership-map",
+  "leadership-hats",
+  "relationship-design-canvas",
+  "life-worth-scaling-for-canvas",
+]);
 
 export default function ToolPreview() {
-  const toolsByType = toolTypeOrder
-    .map((type) => ({
-      type,
-      items: tools.filter((tool) => tool.type === type),
-    }))
+  const getCategoryId = (tool: (typeof tools)[number]) => {
+    if (tool.categoryId) {
+      return tool.categoryId;
+    }
+    switch (tool.type) {
+      case "diagnostic":
+        return "diagnostic-tools";
+      case "conversation":
+        return "relationship-tools";
+      case "rhythm":
+        return "operating-tools";
+      case "exercise":
+        return tool.layerIds.includes("human")
+          ? "human-tools"
+          : "leadership-tools";
+      case "framework":
+      case "template":
+        if (
+          tool.id.includes("investor") ||
+          tool.id.includes("board") ||
+          tool.id.includes("capital")
+        ) {
+          return "capital-tools";
+        }
+        if (
+          tool.id.includes("strategy") ||
+          tool.id.includes("north-star") ||
+          tool.id.includes("okr")
+        ) {
+          return "direction-tools";
+        }
+        return "operating-tools";
+      default: {
+        const _exhaustive: never = tool.type;
+        return _exhaustive;
+      }
+    }
+  };
+
+  const toolsByCategory = toolLibraryCategories
+    .map((category) => {
+      const items = tools
+        .filter((tool) => getCategoryId(tool) === category.id)
+        .sort((a, b) => {
+          const aFlagship = flagshipToolIds.has(a.id);
+          const bFlagship = flagshipToolIds.has(b.id);
+          if (aFlagship !== bFlagship) {
+            return aFlagship ? -1 : 1;
+          }
+          return a.title.localeCompare(b.title);
+        });
+      return { category, items };
+    })
     .filter((group) => group.items.length > 0);
 
   return (
     <div>
-      {toolsByType.map((group) => (
-        <section key={group.type} className="os-content-card p-4 p-lg-5 mb-5">
+      <section className="ui-surface p-4 mb-5">
+        <p className="ui-kicker mb-2">How to use tools</p>
+        <p className="text-muted mb-0">{toolsHowToUse}</p>
+      </section>
+
+      {toolsByCategory.map((group) => (
+        <section
+          key={group.category.id}
+          className="os-content-card p-4 p-lg-5 mb-5"
+        >
           <OsSectionHeader
-            eyebrow="Tool Type"
-            title={formatToolType(group.type)}
+            eyebrow={`Category ${group.category.letter}`}
+            title={group.category.title}
             description={`${group.items.length} tool${
               group.items.length === 1 ? "" : "s"
-            } in this category.`}
+            } - ${group.category.question}`}
           />
           <div className="row g-3">
             {group.items.map((tool) => {
+              const isFlagship = flagshipToolIds.has(tool.id);
               const card = (
                 <div className="featured-box p-4 h-100">
+                  {isFlagship ? (
+                    <p className="ui-kicker mb-2">Flagship tool</p>
+                  ) : null}
                   <h4 className="text-5 fw-700 mb-1">{tool.title}</h4>
                   <p className="os-card-meta mb-2">
                     {formatToolType(tool.type)}
@@ -70,6 +136,30 @@ export default function ToolPreview() {
           </div>
         </section>
       ))}
+
+      <section className="os-content-card p-4 p-lg-5 mb-5">
+        <OsSectionHeader
+          eyebrow="Future backlog"
+          title="Next tools to build"
+          description="Shortlist grouped by library category."
+        />
+        <div className="row g-3">
+          {futureToolBacklog.map((group) => (
+            <div key={group.id} className="col-lg-6">
+              <div className="featured-box p-4 h-100">
+                <h3 className="text-6 fw-700 mb-2">{group.title}</h3>
+                <p className="text-muted small mb-3">{group.question}</p>
+                <ul className="text-muted mb-0 ps-3">
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className="ui-surface p-4">
         <p className="ui-kicker mb-2">Tagging</p>
         <p className="text-muted mb-0">{toolsTaggingNote}</p>

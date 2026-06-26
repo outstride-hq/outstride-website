@@ -32,6 +32,31 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                 ))}
               </ul>
             );
+          case "table":
+            return (
+              <div key={index} className="table-responsive mb-4">
+                <table className="table table-sm align-middle mb-0">
+                  <thead>
+                    <tr>
+                      {block.columns.map((column) => (
+                        <th key={column} scope="col">
+                          {column}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {block.rows.map((row, rowIndex) => (
+                      <tr key={`${rowIndex}-${row.join("-")}`}>
+                        {row.map((cell, cellIndex) => (
+                          <td key={`${cellIndex}-${cell}`}>{cell}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
           case "steps":
             return (
               <div key={index} className="mb-4">

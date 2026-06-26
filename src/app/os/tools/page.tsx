@@ -13,7 +13,7 @@ export default function ToolsPage() {
     <>
       <OsPageHeader
         eyebrow="Tool Library"
-        title="Tools"
+        title="Tool Library"
         description={toolsIntro}
       >
         <p className="ui-kicker mb-3">How to use</p>
