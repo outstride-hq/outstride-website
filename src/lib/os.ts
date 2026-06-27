@@ -24,7 +24,34 @@ export type ToolType =
   | "rhythm"
   | "exercise";
 
-export type FormatType = "solo" | "one-to-one" | "team" | "company";
+export type FormatType =
+  | "solo"
+  | "one-to-one"
+  | "cofounder"
+  | "team"
+  | "board"
+  | "company";
+
+export type ToolMoment = "diagnose" | "define" | "design" | "deliver";
+
+export type ToolDepth = "surface" | "operating" | "inner-work";
+
+export type ToolFrequency =
+  | "one-off"
+  | "weekly"
+  | "monthly"
+  | "quarterly"
+  | "annually"
+  | "as-needed";
+
+export type ToolLibraryCategoryId =
+  | "diagnostic-tools"
+  | "direction-tools"
+  | "operating-tools"
+  | "leadership-tools"
+  | "relationship-tools"
+  | "capital-tools"
+  | "human-tools";
 
 export type OsContentStatus = "draft" | "ready";
 
@@ -107,8 +134,12 @@ export type Capability = {
 export type Tool = {
   id: string;
   title: string;
+  categoryId?: ToolLibraryCategoryId;
   type: ToolType;
   format: FormatType[];
+  moments?: ToolMoment[];
+  depth?: ToolDepth[];
+  frequency?: ToolFrequency[];
   layerIds: LayerId[];
   capabilityIds: string[];
   description: string;
@@ -125,6 +156,13 @@ export type Rhythm = {
   layerIds: LayerId[];
   capabilityIds: string[];
   description: string;
+};
+
+export type ToolBacklogCategory = {
+  id: ToolLibraryCategoryId;
+  title: string;
+  question: string;
+  items: string[];
 };
 
 export type SymptomMapEntry = {
@@ -186,10 +224,154 @@ export const symptomMapOutro =
   "A symptom usually points to more than one capability, and the loudest one is rarely the whole story — so the map opens the conversation rather than closing it. From there, Define and Design turn the chosen capabilities into the work for the quarter.";
 
 export const toolsIntro =
-  "Tools sit underneath capabilities. A tool is anything that helps diagnose, practise, install or review a capability.";
+  "Tools sit underneath capabilities. The capabilities are the map; tools are the practical coaching assets that help diagnose, practise, install and review the capabilities that matter right now.";
 
 export const toolsTaggingNote =
-  "Tools can be tagged by layer (Company / Founder / Human), capability (1–26), type (Diagnostic / Framework / Template / Conversation / Rhythm / Exercise) and format (Solo / 1:1 / Team / Company).";
+  "Tool tags: Layer (Company / Founder / Human), Capability (1–26), Moment (Diagnose / Define / Design / Deliver), Type (Diagnostic / Framework / Template / Conversation / Rhythm / Exercise), Format (Solo / 1:1 / Cofounder / Team / Board), Depth (Surface / Operating / Inner work), Frequency (One-off / Weekly / Monthly / Quarterly / As needed).";
+
+export const toolsHowToUse =
+  "Use tools underneath the capability map: start with diagnostics to find what is really happening, then use direction and operating tools to decide and install changes, and leadership/relationship/human tools to keep the shift alive in real conversations and rhythms.";
+
+export const toolLibraryCategories: Array<{
+  id: ToolLibraryCategoryId;
+  letter: string;
+  title: string;
+  question: string;
+}> = [
+  {
+    id: "diagnostic-tools",
+    letter: "A",
+    title: "Diagnostic tools",
+    question: "What is going on?",
+  },
+  {
+    id: "direction-tools",
+    letter: "B",
+    title: "Direction tools",
+    question: "Where are we going?",
+  },
+  {
+    id: "operating-tools",
+    letter: "C",
+    title: "Operating tools",
+    question: "How does this run?",
+  },
+  {
+    id: "leadership-tools",
+    letter: "D",
+    title: "Leadership tools",
+    question: "How do I lead others?",
+  },
+  {
+    id: "relationship-tools",
+    letter: "E",
+    title: "Relationship tools",
+    question: "How do we work together?",
+  },
+  {
+    id: "capital-tools",
+    letter: "F",
+    title: "Capital tools",
+    question: "How do we manage belief, money and stakeholders?",
+  },
+  {
+    id: "human-tools",
+    letter: "G",
+    title: "Human tools",
+    question: "How do I stay whole and grow?",
+  },
+];
+
+export const futureToolBacklog: ToolBacklogCategory[] = [
+  {
+    id: "diagnostic-tools",
+    title: "Diagnostic",
+    question: "What is going on?",
+    items: [
+      "RAG Company Status",
+      "Energy + Nervous-System Score",
+      "Function Scorecard",
+      "Human 9 / Life Wheel",
+    ],
+  },
+  {
+    id: "direction-tools",
+    title: "Direction",
+    question: "Where are we going?",
+    items: [
+      "Strategy One-Pager",
+      "North Star + Health Metrics",
+      "Quarterly Look-Back / Look-Forward",
+      "S / A / B Priority Tiers",
+    ],
+  },
+  {
+    id: "operating-tools",
+    title: "Operating",
+    question: "How does this run?",
+    items: [
+      "Operating Cadence Map",
+      "Meeting Jobs Map",
+      "Decision Gate / Shots on Goal",
+      "30/60/90 Performance Plan",
+    ],
+  },
+  {
+    id: "leadership-tools",
+    title: "Leadership",
+    question: "How do I lead others?",
+    items: [
+      "Delegation Ladder",
+      "Drive vs Hold-Accountable Map",
+      "SBI Feedback",
+      "KSS Feedback",
+      "Performance × Culture Quadrant",
+      "Dependency Map",
+    ],
+  },
+  {
+    id: "relationship-tools",
+    title: "Relationship",
+    question: "How do we work together?",
+    items: [
+      "Cofounder Rules of Engagement",
+      "Psychological Safety Diagnostic",
+      "Repair Conversation Script",
+    ],
+  },
+  {
+    id: "capital-tools",
+    title: "Capital",
+    question: "How do we manage belief, money and stakeholders?",
+    items: [
+      "Stakeholder Map",
+      "Investor Update Template",
+      "Board Pack Template",
+      "Cash-Floor Trigger",
+      "Options-on-the-Table Map",
+      "Investor Hell Yes Test",
+      "Fundraising Pipeline",
+      "Funnel Math",
+    ],
+  },
+  {
+    id: "human-tools",
+    title: "Human",
+    question: "How do I stay whole and grow?",
+    items: [
+      "Parts Work / Sub-Personas",
+      "Protector Voices",
+      "Council Exercise",
+      "Cycle Mapping",
+      "Inner Critic / Saboteur Diagnostic",
+      "Principles of Fulfilment",
+      "Vision Board",
+      "Burnout Playbook",
+      "Recovery Anchors",
+      "Personal Board",
+    ],
+  },
+];
 
 export const layers: Layer[] = [
   {
@@ -326,7 +508,14 @@ export const capabilities: Capability[] = [
       "Clarify what the company is and what it is not.",
       "Create a destination simple enough for the team to understand and repeat.",
     ],
-    toolIds: ["strategy-one-pager", "ceo-test", "seven-powers", "six-critical-questions"],
+    toolIds: [
+      "strategy-one-pager",
+      "ceo-test",
+      "seven-powers",
+      "six-critical-questions",
+      "company-health-scorecard",
+      "symptom-map",
+    ],
     rhythmIds: ["quarterly-strategy-reset"],
     order: 1,
   },
@@ -344,7 +533,7 @@ export const capabilities: Capability[] = [
       "Cascade goals down the organisation so teams know how their work contributes.",
       "Connect the North Star Metric to supporting KPIs, OKRs and team goals.",
     ],
-    toolIds: ["north-star-metric", "okrs"],
+    toolIds: ["north-star-metric", "okrs", "company-health-scorecard"],
     rhythmIds: [],
     order: 2,
   },
@@ -361,7 +550,7 @@ export const capabilities: Capability[] = [
       "Spot where the current org will break before it actually breaks.",
       "Decide what needs to be hired, promoted, delegated or redesigned.",
     ],
-    toolIds: [],
+    toolIds: ["company-health-scorecard"],
     rhythmIds: [],
     order: 3,
   },
@@ -378,7 +567,12 @@ export const capabilities: Capability[] = [
       "Give each meeting a clear job — strategy, review and accountability, decisions, or connection — so the right conversation happens at the right frequency.",
       "Reduce reactive chaos by giving planning, review and accountability a home.",
     ],
-    toolIds: ["operating-cadence", "quarterly-retro"],
+    toolIds: [
+      "operating-cadence",
+      "quarterly-retro",
+      "company-health-scorecard",
+      "force-form-flow-audit",
+    ],
     rhythmIds: ["weekly-leadership-meeting", "monthly-business-review"],
     order: 4,
   },
@@ -395,7 +589,13 @@ export const capabilities: Capability[] = [
       "Clarify who owns what, how success is measured and what decisions they can make.",
       "Build accountability into the system so the founder is not constantly chasing.",
     ],
-    toolIds: ["ownership-map", "delegation-ladder", "delegation-timeline"],
+    toolIds: [
+      "ownership-map",
+      "delegation-ladder",
+      "delegation-timeline",
+      "force-form-flow-audit",
+      "company-health-scorecard",
+    ],
     rhythmIds: ["weekly-ownership-review"],
     order: 5,
   },
@@ -413,7 +613,13 @@ export const capabilities: Capability[] = [
       "Define what \"great\" looks like in both performance and behaviour.",
       "Make culture visible through decisions, feedback, hiring, rituals and consequences.",
     ],
-    toolIds: ["company-values", "four-disciplines", "six-critical-questions", "cascade-storytelling"],
+    toolIds: [
+      "company-values",
+      "four-disciplines",
+      "six-critical-questions",
+      "cascade-storytelling",
+      "company-health-scorecard",
+    ],
     rhythmIds: [],
     order: 6,
   },
@@ -430,7 +636,7 @@ export const capabilities: Capability[] = [
       "Give people the tools, feedback and support to improve.",
       "Create a talent system that raises the level of the company over time.",
     ],
-    toolIds: ["four-disciplines"],
+    toolIds: ["four-disciplines", "company-health-scorecard"],
     rhythmIds: [],
     order: 7,
   },
@@ -447,7 +653,14 @@ export const capabilities: Capability[] = [
       "Define the founder role required for the next period.",
       "Clarify how your role needs to evolve as the company scales.",
     ],
-    toolIds: ["founder-jd", "founder-calendar-audit", "zone-of-genius"],
+    toolIds: [
+      "founder-jd",
+      "founder-calendar-audit",
+      "zone-of-genius",
+      "founder-role-time-split",
+      "two-hour-constraint",
+      "force-form-flow-audit",
+    ],
     rhythmIds: ["monthly-calendar-detox"],
     order: 8,
   },
@@ -464,7 +677,13 @@ export const capabilities: Capability[] = [
       "Put your time and attention there, and protect it ruthlessly.",
       "Cut, delegate or kill low-value meetings, context-switching and reactive work.",
     ],
-    toolIds: ["founder-calendar-audit", "habit-stacks"],
+    toolIds: [
+      "founder-calendar-audit",
+      "habit-stacks",
+      "founder-role-time-split",
+      "two-hour-constraint",
+      "force-form-flow-audit",
+    ],
     rhythmIds: ["weekly-planning"],
     order: 9,
   },
@@ -481,7 +700,7 @@ export const capabilities: Capability[] = [
       "Climb a level as the company grows, rather than staying where you are most comfortable.",
       "Catch yourself when you have dropped back into the weeds, and get back to the right altitude.",
     ],
-    toolIds: ["force-form-flow-diagnostic", "founder-calendar-audit"],
+    toolIds: ["force-form-flow-audit", "founder-calendar-audit", "founder-role-time-split"],
     rhythmIds: ["weekly-planning"],
     order: 10,
   },
@@ -499,7 +718,7 @@ export const capabilities: Capability[] = [
       "Match the rigour to the stakes: move fast on reversible calls, slow down on the ones you cannot undo.",
       "Cut decision congestion — no repeated debates, no unclear ownership, no calls stuck waiting on you.",
     ],
-    toolIds: [],
+    toolIds: ["ownership-map", "company-health-scorecard"],
     rhythmIds: [],
     order: 11,
   },
@@ -521,6 +740,8 @@ export const capabilities: Capability[] = [
       "delegation-ladder",
       "delegation-timeline",
       "ownership-map",
+      "two-hour-constraint",
+      "leadership-hats",
     ],
     rhythmIds: ["weekly-ownership-review"],
     order: 12,
@@ -538,7 +759,7 @@ export const capabilities: Capability[] = [
       "Default to coaching where you can: help people think for themselves and leave them more capable after each conversation, rather than handing over answers.",
       "Notice your own default hat and where it creates bias, and choose the mode that best serves the person's growth and the outcome.",
     ],
-    toolIds: ["coaching-questions"],
+    toolIds: ["coaching-questions", "leadership-hats"],
     rhythmIds: [],
     order: 13,
   },
@@ -555,7 +776,14 @@ export const capabilities: Capability[] = [
       "Challenge missed commitments clearly and early, in a way that changes behaviour.",
       "Separate care for the person from clarity about the standard — and catch issues before they become resentment, politics or performance problems.",
     ],
-    toolIds: ["sbi-feedback", "kss-feedback", "accountability-dial", "non-violent-communication"],
+    toolIds: [
+      "sbi-feedback",
+      "kss-feedback",
+      "accountability-dial",
+      "non-violent-communication",
+      "leadership-hats",
+      "ownership-map",
+    ],
     rhythmIds: [],
     order: 14,
   },
@@ -572,7 +800,13 @@ export const capabilities: Capability[] = [
       "Clarify expectations, cadence, communication preferences and decision rights.",
       "Apply this to cofounders, execs, reports, advisors and key partners.",
     ],
-    toolIds: ["relationship-design", "one-to-one-structure", "kss-feedback", "non-violent-communication"],
+    toolIds: [
+      "relationship-design-canvas",
+      "one-to-one-structure",
+      "kss-feedback",
+      "non-violent-communication",
+      "leadership-hats",
+    ],
     rhythmIds: ["monthly-relationship-review"],
     order: 15,
   },
@@ -589,7 +823,15 @@ export const capabilities: Capability[] = [
       "Turn tension into clarity instead of politics, avoidance or resentment, and prepare for hard conversations with structure and emotional discipline.",
       "Spot when safety is missing and rebuild it deliberately.",
     ],
-    toolIds: ["psychological-safety-diagnostic", "non-violent-communication", "five-dysfunctions", "personal-histories-trust", "light-conflict-assessment", "blob-tree"],
+    toolIds: [
+      "psychological-safety-diagnostic",
+      "non-violent-communication",
+      "five-dysfunctions",
+      "personal-histories-trust",
+      "light-conflict-assessment",
+      "blob-tree",
+      "relationship-design-canvas",
+    ],
     rhythmIds: [],
     order: 16,
   },
@@ -606,7 +848,7 @@ export const capabilities: Capability[] = [
       "Develop people who can lead their domain — make the calls, hold the standard, coach their own teams — without constant founder input.",
       "Move from managing everyone to managing managers and leaders.",
     ],
-    toolIds: [],
+    toolIds: ["ownership-map", "leadership-hats", "force-form-flow-audit"],
     rhythmIds: [],
     order: 17,
   },
@@ -640,7 +882,12 @@ export const capabilities: Capability[] = [
       "Run board and investor conversations with preparation, candour and strategic intent.",
       "Use stakeholders as assets rather than treating them as reporting obligations.",
     ],
-    toolIds: ["board-pack", "investor-update"],
+    toolIds: [
+      "board-pack",
+      "investor-update",
+      "company-health-scorecard",
+      "relationship-design-canvas",
+    ],
     rhythmIds: [],
     order: 19,
   },
@@ -658,7 +905,7 @@ export const capabilities: Capability[] = [
       "Build and manage a fundraising pipeline with discipline.",
       "Turn company progress into the capital required for the next stage.",
     ],
-    toolIds: [],
+    toolIds: ["company-health-scorecard"],
     rhythmIds: [],
     order: 20,
   },
@@ -675,7 +922,13 @@ export const capabilities: Capability[] = [
       "Build a rhythm that does not depend on permanent overextension.",
       "Design work around sustainable performance, not just availability.",
     ],
-    toolIds: ["human-9", "energy-audit", "habit-stacks"],
+    toolIds: [
+      "human-9",
+      "energy-audit",
+      "habit-stacks",
+      "three-emotions-check-in",
+      "life-worth-scaling-for-canvas",
+    ],
     rhythmIds: ["weekly-energy-review", "monthly-calendar-detox"],
     order: 21,
   },
@@ -692,7 +945,11 @@ export const capabilities: Capability[] = [
       "Create playbooks in advance for difficult periods.",
       "Build resilience to stay in a good state and recover quickly from a bad one.",
     ],
-    toolIds: ["burnout-playbook"],
+    toolIds: [
+      "burnout-playbook",
+      "three-emotions-check-in",
+      "life-worth-scaling-for-canvas",
+    ],
     rhythmIds: [],
     order: 22,
   },
@@ -709,7 +966,12 @@ export const capabilities: Capability[] = [
       "Create a personal board that supports, challenges and expands you.",
       "Turn growth into a deliberate system rather than random inspiration.",
     ],
-    toolIds: ["personal-board", "anti-wasteman-system"],
+    toolIds: [
+      "personal-board",
+      "anti-wasteman-system",
+      "relationship-design-canvas",
+      "life-worth-scaling-for-canvas",
+    ],
     rhythmIds: [],
     order: 23,
   },
@@ -726,7 +988,12 @@ export const capabilities: Capability[] = [
       "Learn how to unlock, practise and maintain that mindset.",
       "Notice when old beliefs, fears or narratives are driving behaviour.",
     ],
-    toolIds: ["anti-wasteman-system", "super-self"],
+    toolIds: [
+      "anti-wasteman-system",
+      "super-self",
+      "three-emotions-check-in",
+      "life-worth-scaling-for-canvas",
+    ],
     rhythmIds: [],
     order: 24,
   },
@@ -743,7 +1010,7 @@ export const capabilities: Capability[] = [
       "Work with patterns like control, people-pleasing, avoidance, rescuing or status hunger.",
       "Turn self-awareness into cleaner leadership behaviour.",
     ],
-    toolIds: [],
+    toolIds: ["three-emotions-check-in"],
     rhythmIds: [],
     order: 25,
   },
@@ -760,7 +1027,12 @@ export const capabilities: Capability[] = [
       "Make the business serve the human, not consume them.",
       "Connect daily effort to meaning, values, relationships, freedom and personal conviction.",
     ],
-    toolIds: ["anti-wasteman-system", "habit-stacks"],
+    toolIds: [
+      "anti-wasteman-system",
+      "habit-stacks",
+      "life-worth-scaling-for-canvas",
+      "three-emotions-check-in",
+    ],
     rhythmIds: [],
     order: 26,
   },
@@ -858,12 +1130,62 @@ export const tools: Tool[] = [
   {
     id: "symptom-map",
     title: "Symptom Map",
+    categoryId: "diagnostic-tools",
     type: "diagnostic",
-    format: ["solo", "one-to-one"],
+    format: ["one-to-one", "team"],
+    moments: ["diagnose"],
+    depth: ["surface", "operating"],
+    frequency: ["quarterly", "as-needed"],
     layerIds: ["company", "founder", "human"],
-    capabilityIds: [],
+    capabilityIds: [
+      "map-the-destination",
+      "chart-the-path",
+      "design-the-org",
+      "install-the-operating-rhythm",
+      "make-ownership-stick",
+      "build-a-culture-that-compounds",
+      "raise-the-talent-bar",
+      "take-command-of-my-role",
+      "operate-with-leverage",
+      "operate-at-the-right-altitude",
+      "make-the-right-calls",
+      "scale-through-delegation",
+      "know-and-use-the-right-leadership-hat",
+      "give-feedback-and-hold-the-standard",
+      "build-incredible-relationships",
+      "navigate-conflict-and-create-psychological-safety",
+      "build-leaders-not-dependencies",
+      "be-storyteller-in-chief",
+      "manage-capital-and-stakeholders",
+      "find-new-capital",
+      "manage-my-energy-system",
+      "build-resilience-and-recovery",
+      "build-my-growth-system",
+      "master-my-mindset",
+      "face-my-shadow",
+      "build-a-life-worth-scaling-for",
+    ],
     description:
       "Start with what the founder says, then trace symptoms to the capabilities they point to.",
+  },
+  {
+    id: "three-emotions-check-in",
+    title: "Three Emotions Check-In",
+    categoryId: "diagnostic-tools",
+    type: "conversation",
+    format: ["one-to-one"],
+    moments: ["diagnose"],
+    depth: ["surface", "inner-work"],
+    frequency: ["weekly"],
+    layerIds: ["human"],
+    capabilityIds: [
+      "manage-my-energy-system",
+      "build-resilience-and-recovery",
+      "master-my-mindset",
+      "face-my-shadow",
+    ],
+    description:
+      "A fast opening diagnostic that names emotional weather so founder sessions start with presence before tactics.",
   },
   {
     id: "ceo-test",
@@ -947,6 +1269,30 @@ export const tools: Tool[] = [
       "Connect annual and quarterly goals to team priorities and measurable outcomes.",
   },
   {
+    id: "company-health-scorecard",
+    title: "Company Health Scorecard",
+    categoryId: "diagnostic-tools",
+    type: "diagnostic",
+    format: ["one-to-one", "team", "board"],
+    moments: ["diagnose", "define"],
+    depth: ["operating"],
+    frequency: ["monthly", "quarterly"],
+    layerIds: ["company"],
+    capabilityIds: [
+      "map-the-destination",
+      "chart-the-path",
+      "design-the-org",
+      "install-the-operating-rhythm",
+      "make-ownership-stick",
+      "build-a-culture-that-compounds",
+      "raise-the-talent-bar",
+      "manage-capital-and-stakeholders",
+      "find-new-capital",
+    ],
+    description:
+      "A quantified snapshot of company health that turns overwhelm into a focused operating conversation.",
+  },
+  {
     id: "operating-cadence",
     title: "Operating Cadence",
     type: "framework",
@@ -989,6 +1335,46 @@ export const tools: Tool[] = [
     ],
     description:
       "Compare the founder's actual calendar to their intended role, energy and priorities.",
+  },
+  {
+    id: "founder-role-time-split",
+    title: "Founder Role Time Split",
+    categoryId: "diagnostic-tools",
+    type: "exercise",
+    format: ["solo", "one-to-one"],
+    moments: ["diagnose", "design"],
+    depth: ["operating"],
+    frequency: ["quarterly", "as-needed"],
+    layerIds: ["founder"],
+    capabilityIds: [
+      "take-command-of-my-role",
+      "operate-with-leverage",
+      "operate-at-the-right-altitude",
+      "scale-through-delegation",
+      "build-leaders-not-dependencies",
+    ],
+    description:
+      "Compares current founder time allocation to the role mix the next stage actually needs.",
+  },
+  {
+    id: "two-hour-constraint",
+    title: "Two-Hour Constraint",
+    categoryId: "leadership-tools",
+    type: "exercise",
+    format: ["solo", "one-to-one"],
+    moments: ["diagnose", "design"],
+    depth: ["operating"],
+    frequency: ["as-needed"],
+    layerIds: ["founder"],
+    capabilityIds: [
+      "take-command-of-my-role",
+      "operate-with-leverage",
+      "operate-at-the-right-altitude",
+      "scale-through-delegation",
+      "build-leaders-not-dependencies",
+    ],
+    description:
+      "A hard prioritisation drill that reveals highest-leverage founder work by constraining time to two hours a day.",
   },
   {
     id: "founder-jd",
@@ -1068,10 +1454,22 @@ export const tools: Tool[] = [
   {
     id: "ownership-map",
     title: "Ownership Map",
+    categoryId: "operating-tools",
     type: "framework",
-    format: ["team", "company"],
+    format: ["one-to-one", "team"],
+    moments: ["design", "deliver"],
+    depth: ["operating"],
+    frequency: ["monthly", "quarterly"],
     layerIds: ["company", "founder"],
-    capabilityIds: ["make-ownership-stick", "scale-through-delegation"],
+    capabilityIds: [
+      "install-the-operating-rhythm",
+      "make-ownership-stick",
+      "raise-the-talent-bar",
+      "make-the-right-calls",
+      "scale-through-delegation",
+      "give-feedback-and-hold-the-standard",
+      "build-leaders-not-dependencies",
+    ],
     description:
       "Clarifies who owns which outcomes, metrics, risks and decisions.",
   },
@@ -1112,7 +1510,7 @@ export const tools: Tool[] = [
       source: "Nonviolent Communication",
       note: "Adapted for Outstride OS",
     },
-    relatedToolIds: ["sbi-feedback", "accountability-dial", "relationship-design"],
+    relatedToolIds: ["sbi-feedback", "accountability-dial", "relationship-design-canvas"],
   },
   {
     id: "one-to-one-structure",
@@ -1133,6 +1531,27 @@ export const tools: Tool[] = [
     capabilityIds: ["know-and-use-the-right-leadership-hat"],
     description:
       "Questions that help people think for themselves rather than receive answers.",
+  },
+  {
+    id: "leadership-hats",
+    title: "Leadership Hats",
+    categoryId: "leadership-tools",
+    type: "framework",
+    format: ["one-to-one", "team"],
+    moments: ["diagnose", "design", "deliver"],
+    depth: ["operating"],
+    frequency: ["weekly", "as-needed"],
+    layerIds: ["founder"],
+    capabilityIds: [
+      "know-and-use-the-right-leadership-hat",
+      "scale-through-delegation",
+      "give-feedback-and-hold-the-standard",
+      "build-incredible-relationships",
+      "navigate-conflict-and-create-psychological-safety",
+      "build-leaders-not-dependencies",
+    ],
+    description:
+      "Choose the right leadership mode for the person and moment instead of defaulting to advice, control or rescue.",
   },
   {
     id: "sbi-feedback",
@@ -1167,14 +1586,23 @@ export const tools: Tool[] = [
       "A Keep / Stop / Start feedback format for improving relationships and team behaviour.",
   },
   {
-    id: "relationship-design",
-    title: "Relationship Design",
-    type: "conversation",
-    format: ["one-to-one"],
-    layerIds: ["founder"],
-    capabilityIds: ["build-incredible-relationships"],
+    id: "relationship-design-canvas",
+    title: "Relationship Design Canvas",
+    categoryId: "relationship-tools",
+    type: "framework",
+    format: ["one-to-one", "cofounder", "team"],
+    moments: ["diagnose", "design", "deliver"],
+    depth: ["operating", "inner-work"],
+    frequency: ["quarterly", "as-needed"],
+    layerIds: ["founder", "human"],
+    capabilityIds: [
+      "build-incredible-relationships",
+      "navigate-conflict-and-create-psychological-safety",
+      "manage-capital-and-stakeholders",
+      "build-my-growth-system",
+    ],
     description:
-      "A structured conversation for clarifying expectations, cadence, communication and decision rights.",
+      "Design key working relationships on purpose by making expectations, cadence, decision rights and repair rules explicit.",
   },
   {
     id: "psychological-safety-diagnostic",
@@ -1276,14 +1704,47 @@ export const tools: Tool[] = [
       "Playbooks for recognising burnout early and recovering deliberately.",
   },
   {
-    id: "force-form-flow-diagnostic",
-    title: "Force / Form / Flow Diagnostic",
-    type: "diagnostic",
+    id: "life-worth-scaling-for-canvas",
+    title: "Life Worth Scaling For Canvas",
+    categoryId: "human-tools",
+    type: "exercise",
     format: ["solo", "one-to-one"],
-    layerIds: ["founder"],
-    capabilityIds: ["operate-at-the-right-altitude"],
+    moments: ["define", "design"],
+    depth: ["inner-work"],
+    frequency: ["quarterly", "annually"],
+    layerIds: ["human"],
+    capabilityIds: [
+      "manage-my-energy-system",
+      "build-resilience-and-recovery",
+      "build-my-growth-system",
+      "master-my-mindset",
+      "face-my-shadow",
+      "build-a-life-worth-scaling-for",
+    ],
     description:
-      "Identifies where the founder is using personal force where structure or flow is needed.",
+      "Reconnects company-building effort to the life it is meant to make possible, including enough and non-negotiables.",
+  },
+  {
+    id: "force-form-flow-audit",
+    title: "Force -> Form -> Flow Audit",
+    categoryId: "operating-tools",
+    type: "diagnostic",
+    format: ["solo", "one-to-one", "team"],
+    moments: ["diagnose", "design", "deliver"],
+    depth: ["operating"],
+    frequency: ["monthly", "quarterly"],
+    layerIds: ["company", "founder"],
+    capabilityIds: [
+      "install-the-operating-rhythm",
+      "make-ownership-stick",
+      "take-command-of-my-role",
+      "operate-with-leverage",
+      "operate-at-the-right-altitude",
+      "scale-through-delegation",
+      "build-leaders-not-dependencies",
+    ],
+    description:
+      "Checks whether a system still runs on founder force or has moved into structure and flow.",
   },
   {
     id: "anti-wasteman-system",
@@ -1323,7 +1784,7 @@ export const tools: Tool[] = [
       originator: "Matthew",
       note: "Shared in Outstride coaching; adapted for Outstride OS",
     },
-    relatedToolIds: ["anti-wasteman-system", "zone-of-genius", "force-form-flow-diagnostic"],
+    relatedToolIds: ["anti-wasteman-system", "zone-of-genius", "force-form-flow-audit"],
   },
   {
     id: "four-disciplines",
@@ -1674,4 +2135,87 @@ export function formatToolType(type: ToolType): string {
       return _exhaustive;
     }
   }
+}
+
+export function formatToolMoment(moment: ToolMoment): string {
+  switch (moment) {
+    case "diagnose":
+      return "Diagnose";
+    case "define":
+      return "Define";
+    case "design":
+      return "Design";
+    case "deliver":
+      return "Deliver";
+    default: {
+      const _exhaustive: never = moment;
+      return _exhaustive;
+    }
+  }
+}
+
+export function formatToolDepth(depth: ToolDepth): string {
+  switch (depth) {
+    case "surface":
+      return "Surface";
+    case "operating":
+      return "Operating";
+    case "inner-work":
+      return "Inner work";
+    default: {
+      const _exhaustive: never = depth;
+      return _exhaustive;
+    }
+  }
+}
+
+export function formatToolFrequency(frequency: ToolFrequency): string {
+  switch (frequency) {
+    case "one-off":
+      return "One-off";
+    case "weekly":
+      return "Weekly";
+    case "monthly":
+      return "Monthly";
+    case "quarterly":
+      return "Quarterly";
+    case "annually":
+      return "Annually";
+    case "as-needed":
+      return "As needed";
+    default: {
+      const _exhaustive: never = frequency;
+      return _exhaustive;
+    }
+  }
+}
+
+export function formatToolFormat(format: FormatType): string {
+  switch (format) {
+    case "solo":
+      return "Solo";
+    case "one-to-one":
+      return "1:1";
+    case "cofounder":
+      return "Cofounder";
+    case "team":
+      return "Team";
+    case "board":
+      return "Board";
+    case "company":
+      return "Company";
+    default: {
+      const _exhaustive: never = format;
+      return _exhaustive;
+    }
+  }
+}
+
+export function getToolLibraryCategoryLabel(
+  categoryId: ToolLibraryCategoryId,
+): string {
+  return (
+    toolLibraryCategories.find((category) => category.id === categoryId)?.title ??
+    "Tool"
+  );
 }
