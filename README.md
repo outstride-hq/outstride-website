@@ -27,12 +27,33 @@ npm install
 # Start development server
 npm run dev
 
+# Generate public context dump at /json
+npm run generate:json
+
 # Build for production
 npm run build
 
 # Deploy to GitHub Pages
 npm run deploy
 ```
+
+### MCP Context Server (read-only)
+
+This repo includes a tiny MCP server that gives clients (including ChatGPT MCP clients)
+read-only access to Outstride context.
+
+```bash
+# Start MCP stdio server
+npm run mcp:outstride-context
+```
+
+Default source is `https://outstride.co/json`.
+For local testing, set `OUTSTRIDE_CONTEXT_URL` or let it fall back to `public/json`.
+
+Available tools:
+
+- `get_context` - return full context JSON or a specific slash-path
+- `search_context` - keyword search with compact snippets
 
 ## 📁 Project Structure
 

@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "s": "next dev",
+    "generate:json": "node --import tsx scripts/generate-context-json.ts",
+    "prebuild": "npm run generate:json",
     "build": "next build",
     "start": "npx serve@latest out",
     "preview": "npm run build && npx serve@latest out",
+    "mcp:outstride-context": "node mcp/server.mjs",
     "deploy": "echo 'Deployment is handled by GitHub Actions. Push to main branch to deploy.'",
     "update-testimonials": "echo 'To update testimonials from Notion: 1) Search Notion database for testimonials 2) Update src/lib/data.ts 3) Run npm run build'"
   },
@@ -24,6 +27,7 @@
   "homepage": "https://github.com/yogiben/outstride-website#readme",
   "description": "Ben's founder coaching website built with Next.js",
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.1",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",
@@ -40,6 +44,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.5"
+    "@biomejs/biome": "^2.2.5",
+    "tsx": "^4.20.6"
   }
 }
