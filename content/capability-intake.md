@@ -17,11 +17,14 @@ rough beats polished); an LLM session then drafts the page to the format spec in
 ## The seven questions
 
 1. **What do founders literally say when this is broken?**
-   A verbatim (anonymized) quote or two. This becomes the hook and the "today" lines.
+   2–3 verbatim (anonymized) quotes or fragments, not one polished line. The best one
+   becomes the hook; the rest become the "where you are today" lines.
 2. **What does conventional advice get wrong here?**
    Your contrarian one-liner (the "transparency isn't a value" move).
-3. **A real before → after you've seen.**
-   What changed for a team/founder who fixed this? What did success observably look like?
+3. **A real before → after you've seen — both sides, in day-to-day terms.**
+   Before: what did a normal week look and feel like? After: what does Monday morning
+   look like once it's fixed — what do they do, and what do they stop doing? Observable
+   beats abstract ("the exec team ran the QBR without him" beats "they aligned better").
 4. **Which tool do you reach for first, and why that order?**
 5. **The 2–3 failure modes you've personally watched.**
    Not generic ones — the specific ways it goes sideways.
