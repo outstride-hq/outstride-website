@@ -111,29 +111,27 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       "I don't really have a system for my own growth. I just hope each crisis teaches me something.",
     beforeAfter: {
       today: [
-        "Every hard week becomes your growth plan by default.",
-        "Advice comes in from books, podcasts, investors and smart friends, but none of it has a home.",
-        "You know your edge is probably feedback, delegation, boundaries or mindset, yet it keeps resurfacing because nothing in the week trains it.",
-        "Support is reactive: you reach out when you are stuck, not as part of a designed system.",
+        "Growth is happening to you, but not deliberately: each hard week becomes the next lesson you scramble to absorb.",
+        "You read, listen and talk to smart people, but there is no system deciding what you learn, from whom, or how it changes you.",
+        "You know the edge might be feedback, boundaries, mindset or hard decisions, yet it keeps resurfacing because nothing in the week trains it.",
       ],
       success: [
-        "You can name who sharpens which part of you: coach, mentor, peer, advisor, truth-teller.",
-        "One or two growth edges are chosen deliberately for the quarter instead of rediscovered the hard way.",
-        "Your calendar contains the reps: reading, reflection, feedback asks and habit stacks that actually change behaviour.",
-        "As the company gets harder, your growth system scales with it instead of collapsing into survival mode.",
+        "You have a deliberate growth system around you: coach, peers, trusted people and a personal board that expands your thinking.",
+        "You reflect regularly, identify the growth edge that matters now, and choose support and inputs that serve it.",
+        "Insight turns into practice through feedback loops and habit stacks, so your leadership keeps compounding as the company gets harder.",
       ],
     },
     why:
-      "Bill Campbell is the anchor here: the leaders of Apple, Google and Intuit still used a coach because raw intelligence does not give you distance from yourself. Founder growth rarely fails for lack of insight. It fails because nobody has designed the support, challenge and repetition that turn insight into changed behaviour.",
+      "A startup may be the most intense professional growth opportunity you ever get, but opportunity alone does not guarantee growth. Bill Campbell is the anchor here: the leaders of Apple, Google and Intuit still used a coach because raw intelligence does not give you distance from yourself. Founder growth compounds when support, reflection and accountability are designed on purpose.",
     whatGoodLooksLike: [
-      "A deliberate mix of coach, mentors, peers, friends and advisors, with clarity on what each relationship is for.",
-      "A small number of current growth edges, named explicitly and tied to real behaviours rather than vague self-improvement goals.",
-      "Weekly and monthly rhythms that turn reading, feedback and reflection into visible changes in how you lead.",
+      "A deliberate mix of coach, peers, personal board members, friends and family, with clarity on what each source gives you.",
+      "A few trusted inputs such as books, podcasts and feedback loops that sharpen the current edge instead of becoming background noise.",
+      "Weekly and monthly rhythms that turn reflection into practice, so growth lives in behaviour rather than aspiration.",
     ],
     whereFoundersGoWrong: [
-      "Treating consumption as growth: more podcasts, more notes, more tabs, no practice.",
-      "Building a personal board out of impressive people rather than the few who will actually challenge, support and tell the truth.",
-      "Waiting until crisis to ask for help, so support arrives as rescue instead of compound interest.",
+      "Treating consumption as growth: more books, more podcasts, more notes, no system.",
+      "Building a support network around prestige or convenience rather than truth, challenge and real perspective.",
+      "Having good insights but never turning them into reps, so the same lesson comes back in a different disguise.",
     ],
     toolBridge: {
       text: "Start by designing the people around your growth with the Personal Board, then turn one real growth edge into weekly reps with Habit Stacks.",
@@ -142,36 +140,53 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
     blocks: [
       {
         kind: "heading",
-        text: "Three places to look first",
+        text: "The ingredients for a growth system",
       },
       {
         kind: "steps",
         steps: [
           {
-            title: "Inputs",
-            note: "What are you reading or listening to that is actually shaping how you lead, not just making you feel productive?",
+            title: "Coaching",
+            note: "A coach gives you a place to pause, zoom out, ask what really matters, and be held accountable to the things you say are important.",
           },
           {
-            title: "People",
-            note: "Who currently plays coach, mentor, peer, challenger and truth-teller in your world — and where are you still trying to grow alone?",
+            title: "Peers",
+            note: "A personal board is not just famous founders. It is a few trusted people who challenge your thinking, widen your lens and help you grow faster than you would alone.",
           },
           {
-            title: "Practice",
-            note: "Where in your calendar do insights turn into reps: feedback asks, reflection, reading time, or a behaviour you are deliberately rehearsing?",
+            title: "Family & friends",
+            note: "Some of the best board members are not operators at all. They are people you respect for their joy, steadiness, courage or perspective when life and company both get hard.",
+          },
+          {
+            title: "Books & podcasts",
+            note: "Keep learning from strong inputs, but choose them deliberately. The point is not volume; it is exposing yourself to ideas that sharpen the growth edge you are working on now.",
           },
         ],
       },
       {
         kind: "heading",
-        text: "Insight has to change the week",
+        text: "How you really make progress",
       },
       {
-        kind: "paragraph",
-        text: "A founder can have brilliant conversations, great books and strong advice and still not grow much. The difference is whether insight changes the calendar, a key relationship, or a repeated behaviour. If the week stays the same, the founder usually does too.",
+        kind: "steps",
+        steps: [
+          {
+            title: "Reflect",
+            note: "Gather insight from feedback, books, conversations, wins, lowlights and whatever keeps repeating. The raw material for growth is already around you if you are paying attention.",
+          },
+          {
+            title: "Identify",
+            note: "Name the real growth edge underneath the noise. Do not settle for \"I want to be better\"; get specific about the behaviour, pattern or blind spot that most needs work.",
+          },
+          {
+            title: "Practice",
+            note: "Install a repeatable system that changes the week: a habit stack, a feedback rhythm, a reading block, a check-in, or a concrete rep you can actually keep.",
+          },
+        ],
       },
       {
         kind: "callout",
-        text: "If feedback is the edge, saying \"I want to get better at feedback\" is not the work. The work is a repeatable rep: every Tuesday and Thursday, name two things people did well; after a tense meeting, capture the SBI feedback before the day ends. Growth compounds when it becomes behaviour, not aspiration.",
+        text: "You can have all the conversations and all the books you want, but it does not matter unless they affect you. If feedback is the edge, the work is not the intention to improve. The work is installing the system: every Tuesday and Thursday, acknowledge two people well; after a tense meeting, write the feedback before the day ends. Growth compounds when it becomes behaviour.",
       },
     ],
   },

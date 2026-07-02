@@ -927,7 +927,7 @@ export const capabilities: Capability[] = [
     layerId: "human",
     groupId: "human-system",
     summary:
-      "One founder had plenty of advice coming in from books, peers and investors, but no deliberate system for turning any of it into sharper leadership, so the same growth edges kept resurfacing every quarter.",
+      "Founders often read, listen and talk to smart people, but without a deliberate system of coaching, support, reflection and practice, the same growth edge keeps coming back.",
     bullets: [
       "Build the right mix of coach, mentors, peers, cofounders, friends, family and advisors.",
       "Create a personal board that supports, challenges and expands you.",
