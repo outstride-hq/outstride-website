@@ -1446,6 +1446,31 @@ export const tools: Tool[] = [
       "A repeatable structure for high-quality one-to-one conversations.",
   },
   {
+    id: "relationship-one-pager",
+    title: "Relationship One-Pager",
+    categoryId: "relationship-tools",
+    type: "template",
+    format: ["one-to-one", "cofounder"],
+    moments: ["design", "deliver"],
+    depth: ["operating"],
+    frequency: ["quarterly", "as-needed"],
+    layerIds: ["founder"],
+    capabilityIds: [
+      "build-incredible-relationships",
+      "manage-capital-and-stakeholders",
+    ],
+    description:
+      "A shared one-page brief that captures purpose, expectations, working norms and repair rules for an important relationship.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: [
+      "relationship-design-canvas",
+      "one-to-one-structure",
+      "investor-update",
+    ],
+  },
+  {
     id: "coaching-questions",
     title: "Coaching Questions",
     categoryId: "leadership-tools",
@@ -1556,6 +1581,11 @@ export const tools: Tool[] = [
     ],
     description:
       "Design key working relationships on purpose by making expectations, cadence, decision rights and repair rules explicit.",
+    relatedToolIds: [
+      "relationship-one-pager",
+      "one-to-one-structure",
+      "non-violent-communication",
+    ],
   },
   {
     id: "psychological-safety-diagnostic",

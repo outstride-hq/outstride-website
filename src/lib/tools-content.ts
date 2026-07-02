@@ -1838,6 +1838,79 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "relationship-one-pager": {
+    intro:
+      "A shared one-page operating note for an important relationship: why it matters, what each person needs, and how you keep drift from turning into friction.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use this when a relationship matters enough that ambiguity is expensive: cofounders, direct reports, lead investors, advisors, chiefs of staff or strategic partners. Build it together. The value is not the document alone; it is the quality of the alignment conversation it forces.",
+      },
+      {
+        kind: "heading",
+        text: "What goes on the page",
+      },
+      {
+        kind: "table",
+        columns: ["Section", "Prompt"],
+        rows: [
+          ["Purpose", "Why does this relationship matter right now?"],
+          [
+            "What great looks like",
+            "What would make this relationship obviously working this quarter?",
+          ],
+          [
+            "Mutual expectations",
+            "What are we each counting on from the other?",
+          ],
+          [
+            "Communication norms",
+            "Which channel, cadence and prep style works best for each of us?",
+          ],
+          [
+            "Decision boundaries",
+            "Who decides what, and what should be escalated together?",
+          ],
+          [
+            "Friction signs",
+            "What usually tells us this relationship is drifting off track?",
+          ],
+          [
+            "Repair rules",
+            "How will we raise tension early and reset when something feels off?",
+          ],
+          [
+            "Current asks",
+            "What does each person most need from the other right now?",
+          ],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "How to use it",
+      },
+      {
+        kind: "list",
+        items: [
+          "Draft it live together. If one person writes it alone, it often lands like a disguised performance memo.",
+          "Keep it to one page. Compression forces the real trade-offs and expectations into the open.",
+          "Review it monthly in a 1:1, or sooner when roles, stakes or pressure change.",
+          "Use the Relationship Design Canvas to open the conversation, then compress the agreements into this working version.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "When tension appears, pull out the page and update the agreement before arguing about whose memory is right.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "build-incredible-relationships",
+          "manage-capital-and-stakeholders",
+        ],
+      },
+    ],
+  },
 };
 
 export function getToolContent(toolId: string): ToolContent | undefined {
