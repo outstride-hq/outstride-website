@@ -98,13 +98,26 @@ rough beats polished); an LLM session then drafts the page to the format spec in
 
 ### 7. Manage My Energy System (`manage-my-energy-system`)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+_(Captured from Ben's chat notes, 2026-07-02. Q1 has no verbatim quotes yet — the page hook is a
+crafted composite; Q6 not captured; replace when Ben supplies them.)_
+
+1. (No verbatim quotes captured yet.) One real quote to use, attributed "Series A founder":
+   he plans only 80% of his week because the other 20% always gets filled with random stuff.
+2. Energy is a system you design, not a mood. Plan how much before what: capacity first,
+   deliberate slack, then contents. And don't optimise every hour for leverage — the week also
+   needs work that gives energy back (the technical founder's protected coding afternoon).
+3. Before: calendar planned to 100%, surprises paid for in evenings, needs cut first under
+   pressure. After: 80% planning, seven needs with cadences, deep work in mornings /
+   meetings + dopamine work in afternoons, one protected slot for energy-giving work.
+4. 7 Core Founder Needs first (cadence per need), then Energy Audit (personal drains/chargers).
+   Habit stacks and weekly energy review carry the cadences.
+5. Planning 100% of the week; cutting the needs first under pressure (sleep, exercise, friends);
+   delegating away all energy-giving work in the name of leverage.
+6. (Not captured yet.)
+7. Dave Bailey's core-needs model — credited on the tool and diagram
+   (https://www.dave-bailey.com/blog/check-ins); purposes-and-cadences version is an Outstride
+   adaptation. Day-rhythm point: planning Monday first thing, deep work mornings, meetings and
+   short-term dopamine work afternoons.
 
 ---
 

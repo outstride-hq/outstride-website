@@ -886,15 +886,17 @@ export const capabilities: Capability[] = [
     title: "Manage My Energy System",
     layerId: "human",
     groupId: "human-system",
-    summary: "",
+    summary:
+      "A founder who planned every hour of his week wondered why he ended every Friday depleted — until he started planning only 80% of it and let the inevitable chaos fill the rest.",
     bullets: [
       "Understand what creates, drains and restores founder energy.",
       "Build a rhythm that does not depend on permanent overextension.",
       "Design work around sustainable performance, not just availability.",
     ],
     toolIds: [
-      "human-9",
+      "seven-founder-needs",
       "energy-audit",
+      "human-9",
       "habit-stacks",
     ],
     rhythmIds: ["weekly-energy-review", "calendar-audit"],
@@ -1687,6 +1689,25 @@ export const tools: Tool[] = [
     capabilityIds: ["build-my-growth-system"],
     description:
       "Map the coach, mentors, peers and advisors who support your growth.",
+  },
+  {
+    id: "seven-founder-needs",
+    title: "7 Core Founder Needs",
+    categoryId: "human-tools",
+    type: "framework",
+    format: ["solo", "one-to-one"],
+    layerIds: ["human"],
+    capabilityIds: ["manage-my-energy-system"],
+    description:
+      "Seven inputs that keep a founder running — exercise, eating, sleep, friends & family, solitude, training and vacation — each feeding a different capacity, with a target cadence for every one.",
+    diagramId: "seven-founder-needs",
+    accreditation: {
+      originator: "Dave Bailey",
+      source: "Core Needs Check-in, “How to Support a Team Under Pressure”",
+      sourceUrl: "https://www.dave-bailey.com/blog/check-ins",
+      note: "Adapted for Outstride OS with founder purposes and cadences",
+    },
+    relatedToolIds: ["energy-audit", "habit-stacks", "two-equilibria-map"],
   },
   {
     id: "two-equilibria-map",

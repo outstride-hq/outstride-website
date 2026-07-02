@@ -7,6 +7,7 @@ import { human9MiroDefinition } from "./definitions/human-9-miro";
 import { nvcFlowDefinition } from "./definitions/nvc-flow";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
+import { sevenFounderNeedsDefinition } from "./definitions/seven-founder-needs";
 import { strategyGridDefinition } from "./definitions/strategy-grid";
 import { twoEquilibriaDefinition } from "./definitions/two-equilibria";
 
@@ -21,6 +22,7 @@ const definitions: Record<string, DiagramDefinition> = {
   [fiveDysfunctionsDefinition.id]: fiveDysfunctionsDefinition,
   [human9MiroDefinition.id]: human9MiroDefinition,
   [twoEquilibriaDefinition.id]: twoEquilibriaDefinition,
+  [sevenFounderNeedsDefinition.id]: sevenFounderNeedsDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -83,6 +85,9 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: twoEquilibriaDefinition,
+  },
+  {
+    definition: sevenFounderNeedsDefinition,
   },
 ];
 

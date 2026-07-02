@@ -1216,6 +1216,41 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "seven-founder-needs": {
+    intro:
+      "Seven inputs that keep a founder running, each feeding a different capacity — with a target cadence for every one.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "What makes this more than a wellness checklist: each need funds a specific capacity. Exercise buys willpower. Sleep buys patience. Solitude buys clarity. Vacation buys perspective. Skip one and you don't just feel worse — a particular capability degrades, usually in the week you need it most.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "seven-founder-needs",
+      },
+      {
+        kind: "heading",
+        text: "How to use it",
+      },
+      {
+        kind: "list",
+        items: [
+          "Score each need out of 10 for the last month. The chronically low ones are your energy leaks.",
+          "Set your own cadences — the ones shown are starting points, not prescriptions.",
+          "Put the two biggest gaps into your habit stack or straight into the calendar this week, then check them in your weekly energy review.",
+          "Under pressure, defend these first — they fund exactly the capacities that pressure taxes.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Cheat meals are on the list on purpose: sustainable beats perfect. A diet with three cheats a week is one you'll still be running next year.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["manage-my-energy-system"],
+      },
+    ],
+  },
   "two-equilibria-map": {
     intro:
       "A one-page map of your two stable states — the good equilibrium that keeps you sharp, the bad one that quietly runs you — with the triggers that tip you over and the recovery moves that bring you back.",
