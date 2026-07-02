@@ -8,6 +8,7 @@
  */
 
 import type { Accreditation } from "@/lib/accreditation";
+import { hasCapabilityContent } from "@/lib/capabilities-content";
 import { hasToolContent } from "@/lib/tools-content";
 
 export type { Accreditation };
@@ -68,7 +69,9 @@ export function getCapabilityEffectiveStatus(
     return capability.status;
   }
 
-  return capability.summary.trim() ? "ready" : "draft";
+  return capability.summary.trim() || hasCapabilityContent(capability.id)
+    ? "ready"
+    : "draft";
 }
 
 export function getToolEffectiveStatus(tool: Tool): OsContentStatus {
@@ -497,14 +500,14 @@ export const capabilities: Capability[] = [
   {
     id: "map-the-destination",
     number: 1,
-    emoji: "🗺️",
-    title: "Map the Destination",
+    emoji: "🔥",
+    title: "Found the Cult",
     layerId: "company",
     groupId: "company-system",
     summary:
       "A subscription founder spent a quarter chasing adjacent bets until mission clarity made one product direction suddenly obvious — the whole team could repeat where they were headed.",
     bullets: [
-      "Define the problem, mission, vision and next big juicy milestone.",
+      "Define the problem, mission, vision and 10-year goal that make up the company's DNA.",
       "Clarify what the company is and what it is not.",
       "Create a destination simple enough for the team to understand and repeat.",
     ],
@@ -529,9 +532,9 @@ export const capabilities: Capability[] = [
     summary:
       "Three funding options looked totally different on paper, but the leadership team realised every path required the same thing: stronger unit economics and cash discipline.",
     bullets: [
-      "Turn the destination into meaningful annual and quarterly company goals.",
-      "Cascade goals down the organisation so teams know how their work contributes.",
-      "Connect the North Star Metric to supporting KPIs, OKRs and team goals.",
+      "Set the next big company milestone — often a funding round — and define what good looks like.",
+      "Cascade it into long-, medium- and short-term OKRs so teams know how their work contributes.",
+      "Write OKRs that measure outcomes, connecting the North Star Metric to supporting KPIs and team goals.",
     ],
     toolIds: ["north-star-metric", "okrs", "company-health-scorecard"],
     rhythmIds: [],
@@ -1058,7 +1061,7 @@ export const symptomMap: SymptomMapEntry[] = [
   {
     id: "busy-not-moving",
     symptom: "We're busy but not actually moving.",
-    capabilityTitles: ["Map the Destination", "Chart the Path"],
+    capabilityTitles: ["Found the Cult", "Chart the Path"],
   },
   {
     id: "delegation-comes-back",
@@ -1071,7 +1074,7 @@ export const symptomMap: SymptomMapEntry[] = [
   {
     id: "vision-doesnt-land",
     symptom: "I keep repeating the vision and it doesn't land.",
-    capabilityTitles: ["Be Storyteller in Chief", "Map the Destination"],
+    capabilityTitles: ["Be Storyteller in Chief", "Found the Cult"],
   },
   {
     id: "not-ready-to-raise",

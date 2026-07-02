@@ -1781,7 +1781,7 @@ export const toolsContent: Record<string, ToolContent> = {
           ["I'm still in every decision.", "Make Ownership Stick / Operate at the Right Altitude / Make the Right Calls"],
           ["Everything waits on me.", "Operate at the Right Altitude / Build Leaders, Not Dependencies"],
           ["Things are tense with my cofounder.", "Build Incredible Relationships / Navigate Conflict & Create Psychological Safety"],
-          ["We're busy but not moving.", "Map the Destination / Chart the Path"],
+          ["We're busy but not moving.", "Found the Cult / Chart the Path"],
           ["I delegate and it comes back worse.", "Make Ownership Stick / Know & Use the Right Leadership Hat"],
           ["I need to raise and we're not ready.", "Find New Capital / Chart the Path"],
           ["I'm exhausted.", "Manage My Energy System / Build Resilience & Recovery"],

@@ -8,11 +8,15 @@ import { nvcFlowDefinition } from "./definitions/nvc-flow";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
 import { sevenFounderNeedsDefinition } from "./definitions/seven-founder-needs";
+import { strategyDestinationDefinition } from "./definitions/strategy-destination";
 import { strategyGridDefinition } from "./definitions/strategy-grid";
+import { strategyPathDefinition } from "./definitions/strategy-path";
 import { twoEquilibriaDefinition } from "./definitions/two-equilibria";
 
 const definitions: Record<string, DiagramDefinition> = {
   [strategyGridDefinition.id]: strategyGridDefinition,
+  [strategyDestinationDefinition.id]: strategyDestinationDefinition,
+  [strategyPathDefinition.id]: strategyPathDefinition,
   [accountabilityDialDefinition.id]: accountabilityDialDefinition,
   [alignmentAutonomyDefinition.id]: alignmentAutonomyDefinition,
   [culturePerformanceGridDefinition.id]: culturePerformanceGridDefinition,
@@ -42,6 +46,12 @@ const sandboxEntries: DiagramSandboxEntry[] = [
       src: "/images/diagrams/strategy-grid-original.png",
       alt: "Original Strategy One-Pager reference",
     },
+  },
+  {
+    definition: strategyDestinationDefinition,
+  },
+  {
+    definition: strategyPathDefinition,
   },
   {
     definition: accountabilityDialDefinition,

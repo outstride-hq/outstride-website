@@ -33,6 +33,198 @@ export type CapabilityContent = {
 };
 
 export const capabilitiesContent: Record<string, CapabilityContent> = {
+  "map-the-destination": {
+    hook:
+      "I can rattle off our metrics in my sleep. But an investor asked me why this company deserves to exist, and I froze — I realised I'd never actually put it into words.",
+    beforeAfter: {
+      today: [
+        "You can describe what you build, but not the deeper reason it has to exist.",
+        "Ask three people on the team where you're heading in ten years and you get three different answers.",
+        "The mission lives in your head, so every retelling of it comes out slightly different.",
+      ],
+      success: [
+        "Problem, mission, vision and 10-year goal fit on one page you can recite cold.",
+        "The team repeats the destination back to each other — in their own words, without you in the room.",
+        "Every pitch, all-hands and hard call traces back to the same north.",
+      ],
+    },
+    why:
+      "This is the DNA of the company — the reason you'll work this hard, this long, for something this far away. The best versions are almost embarrassingly simple: Stripe's mission is to increase the GDP of the internet; JFK's 10-year goal was to put a man on the moon. Startups are inherently future-oriented, so this has to be aspirational — but it only works if it stays deeply connected to reality. Get it right and it becomes the essence of the company: the thing most founders should be able to state clearly, and connect everything they do back to.",
+    whatGoodLooksLike: [
+      "You can state the problem, mission, vision and 10-year goal in a single clear sentence each.",
+      "The vision is genuinely aspirational — a world you'd stop working the day you reached it — and the mission is your specific role in getting there.",
+      "The 10-year goal is audacious and measurable: a number that gets the blood racing, not a hedge.",
+    ],
+    whereFoundersGoWrong: [
+      "Confusing the four — a mission that's really a product roadmap, a vision that's really next year's revenue target.",
+      "A vision so safe it inspires no one, or a goal so vague no one could ever tell whether you hit it.",
+      "Writing it once for the deck, then never using it — so it never shapes a hire, a pitch or a decision.",
+    ],
+    doNow: [
+      {
+        action: "Write the four in one sentence each",
+        note: "Problem, mission, vision, 10-year goal. If any takes a paragraph, it isn't clear yet. Draft them on the one-pager and pressure-test with your cofounder.",
+        toolId: "strategy-one-pager",
+      },
+      {
+        action: "Fact-check your vision",
+        note: "If you actually reached it, would you stop? If the answer is no, you've written a milestone, not a vision — push it further out and higher up.",
+      },
+      {
+        action: "Put a number on the 10-year goal",
+        note: "Vague ambition doesn't move anyone. Give it a figure that makes the team's pulse jump — and that you'd know unambiguously if you hit.",
+      },
+      {
+        action: "Answer the six critical questions",
+        note: "Use them as the interrogation that turns fuzzy intent into a destination the team can repeat.",
+        toolId: "six-critical-questions",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "What problem, mission, vision and goal actually mean",
+      },
+      {
+        kind: "diagram",
+        diagramId: "strategy-destination",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Problem",
+            note: "A solid, square fact about what's imperfect in the world today. Concrete enough that everyone nods.",
+            example: "Language learning is slow, boring and inefficient.",
+          },
+          {
+            title: "Vision",
+            note: "The aspirational future where the problem is gone. If you were already there, you'd have nothing left to do.",
+            example: "Oxfam's version: a world without poverty.",
+          },
+          {
+            title: "Mission",
+            note: "Your specific role in going from problem to vision — the contribution only you make. The small, relentless thing you do about it.",
+            example: "Stripe's version: increase the GDP of the internet.",
+          },
+          {
+            title: "10-year goal",
+            note: "Where you want to be in a decade, with a number that gets the blood racing. Big, hairy, ambitious — and unambiguous.",
+            example: "JFK's version: put a man on the moon.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "A composite of one I've seen work: a health-tech founder whose 10-year goal was that 1 in 10 of the world's clinicians would run their exams on the product. It puts a number on it, it's exciting, and it begins to answer the questions that define who you are.",
+      },
+      {
+        kind: "heading",
+        text: "Where you'll actually use this",
+      },
+      {
+        kind: "list",
+        items: [
+          "In your storytelling — the through-line of every version of the story you tell.",
+          "When you pitch: to investors, to a hire you're trying to win, to a partner.",
+          "When you tell your team, for the hundredth time, what the mission is and why it matters.",
+          "To guide yourselves and hold yourselves accountable — together with your values, this is the essence of the company.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "It's what lets a founder stand up and say: \"I want to shout out someone who sat with a customer for an hour explaining how to run their exam. That's why we get up in the morning — our mission is 1 in 10 of the world's clinicians, and we get there one at a time.\" The destination is what turns a metric into a reason.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["be-storyteller-in-chief", "build-a-culture-that-compounds"],
+      },
+    ],
+  },
+  "chart-the-path": {
+    hook:
+      "We set OKRs every quarter, but if you asked my designer how her work ladders up to the raise, she couldn't tell you. Honestly, half the time neither could I.",
+    beforeAfter: {
+      today: [
+        "Goals get set each quarter, but no one can trace their day-to-day work up to the next milestone.",
+        "\"What good looks like\" for the raise is a number you picked, not one your investors would recognise.",
+        "OKRs measure activity — tickets shipped, calls made — instead of outcomes that move the company.",
+      ],
+      success: [
+        "One page connects every team's quarter to the next milestone, and back to the mission.",
+        "You know what makes the next round a hell yes — because your investors, the market and you all defined it.",
+        "Anyone in the company can explain how this quarter's work moves a company goal.",
+      ],
+    },
+    why:
+      "This is where you flip from the aspirational and long-term to what matters now. Most companies run on a rhythm, and for many that rhythm is the funding round — so the next milestone is what everything else has to serve. The discipline that connects it all is OKRs: objectives that are ambitious, key results that measure outcomes rather than inputs (Andy Grove's idea, made famous by John Doerr in Measure What Matters). Done well, the whole company fits on one page — and everyone, from support to design, can see how their work ladders up to the milestone and the mission.",
+    whatGoodLooksLike: [
+      "A clear picture of the next milestone and what \"good\" looks like — defined with your investors, your market and yourself, not in a vacuum.",
+      "Goals that cascade: long-, medium- and short-term OKRs that each ladder up to the milestone.",
+      "OKRs that measure outcomes, are ambitious and measurable, and that everyone can connect their own work to.",
+    ],
+    whereFoundersGoWrong: [
+      "Setting the next-round bar alone, so your investors don't actually share your definition of success.",
+      "OKRs that measure inputs and activity instead of outcomes — or vanity numbers no one can act on.",
+      "A plan only the leadership team understands, so most of the company can't see how they contribute.",
+    ],
+    doNow: [
+      {
+        action: "Define what good looks like for the next milestone",
+        note: "Ask your existing investors, independently, what would make the next round a hell yes. Line their answers up against your peers and the market, and your own view. Turn it into a concrete bar — e.g. 10,000 paying users, strong activation, CAC under €30.",
+        toolId: "ceo-test",
+      },
+      {
+        action: "Work backwards and cascade",
+        note: "From that bar, set long-, medium- and short-term OKRs so each layer clearly leads to the next milestone.",
+        toolId: "okrs",
+      },
+      {
+        action: "Pressure-test every key result",
+        note: "For each one ask: is this an outcome or an input? Rewrite anything that measures effort into something that measures result.",
+      },
+      {
+        action: "Run the one-page test",
+        note: "Can you explain the long-term goal and the pieces you need to get there, clearly and enthusiastically, on a single page? If not, it isn't sharp enough yet.",
+        toolId: "strategy-one-pager",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Start with the next milestone",
+      },
+      {
+        kind: "paragraph",
+        text: "Begin with the next big milestone for the company. Often this is a funding round, because that's the rhythm you operate by — but it could be a launch, a new market, or profitability. Whatever it is, define what good looks like: ask your existing investors what would make the next round a hell yes, look at your peers and the competition, and ask yourselves. Fold those into one concrete picture, then work backwards and cascade it down.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "strategy-path",
+      },
+      {
+        kind: "heading",
+        text: "Write OKRs that actually connect",
+      },
+      {
+        kind: "list",
+        items: [
+          "Objective plus key results — a direction paired with the measures that prove you got there.",
+          "Measure outcomes, not inputs: results that moved, not effort that was spent.",
+          "Set them ambitious, keep them measurable, and make sure they make sense together.",
+          "Cascade so everyone connects: support, design, engineering — each person can see how their work moves a company goal, toward the milestone, toward the mission.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The test of a good path: a founder should be able to express the most important things about the company in a single one-page document — the long-term goal, and the pieces you need to gather to get there — clearly, concisely and enthusiastically.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["map-the-destination", "make-ownership-stick"],
+      },
+    ],
+  },
   "build-a-culture-that-compounds": {
     hook: "We've grown fast, but it doesn't feel like the same company anymore. New people don't get how we do things — and I can't put my finger on what changed.",
     beforeAfter: {

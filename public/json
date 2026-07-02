@@ -1,7 +1,7 @@
 {
   "meta": {
     "site": "outstride.co",
-    "generatedAt": "2026-07-02T16:27:37.782Z",
+    "generatedAt": "2026-07-02T16:54:18.116Z",
     "version": 1
   },
   "homepage": {
@@ -532,13 +532,13 @@
       {
         "id": "map-the-destination",
         "number": 1,
-        "emoji": "🗺️",
-        "title": "Map the Destination",
+        "emoji": "🔥",
+        "title": "Found the Cult",
         "layerId": "company",
         "groupId": "company-system",
         "summary": "A subscription founder spent a quarter chasing adjacent bets until mission clarity made one product direction suddenly obvious — the whole team could repeat where they were headed.",
         "bullets": [
-          "Define the problem, mission, vision and next big juicy milestone.",
+          "Define the problem, mission, vision and 10-year goal that make up the company's DNA.",
           "Clarify what the company is and what it is not.",
           "Create a destination simple enough for the team to understand and repeat."
         ],
@@ -564,9 +564,9 @@
         "groupId": "company-system",
         "summary": "Three funding options looked totally different on paper, but the leadership team realised every path required the same thing: stronger unit economics and cash discipline.",
         "bullets": [
-          "Turn the destination into meaningful annual and quarterly company goals.",
-          "Cascade goals down the organisation so teams know how their work contributes.",
-          "Connect the North Star Metric to supporting KPIs, OKRs and team goals."
+          "Set the next big company milestone — often a funding round — and define what good looks like.",
+          "Cascade it into long-, medium- and short-term OKRs so teams know how their work contributes.",
+          "Write OKRs that measure outcomes, connecting the North Star Metric to supporting KPIs and team goals."
         ],
         "toolIds": [
           "north-star-metric",
@@ -1024,11 +1024,11 @@
         "title": "Master My Mindset",
         "layerId": "human",
         "groupId": "human-system",
-        "summary": "",
+        "summary": "The founder who decides \"I'm just not a natural leader\" tends to prove it; the one who says \"I'm on my way\" tends to grow into it. Mindset is a lever you can actually pull — and once you lead, the one everyone else feels.",
         "bullets": [
           "Explore and define the mindset that will best serve the next stage.",
           "Learn how to unlock, practise and maintain that mindset.",
-          "Notice when old beliefs, fears or narratives are driving behaviour."
+          "Catch limiting stories as they arise and reframe them into truer, more useful ones."
         ],
         "toolIds": [
           "anti-wasteman-system",
@@ -1127,7 +1127,7 @@
         "id": "busy-not-moving",
         "symptom": "We're busy but not actually moving.",
         "capabilityTitles": [
-          "Map the Destination",
+          "Found the Cult",
           "Chart the Path"
         ]
       },
@@ -1144,7 +1144,7 @@
         "symptom": "I keep repeating the vision and it doesn't land.",
         "capabilityTitles": [
           "Be Storyteller in Chief",
-          "Map the Destination"
+          "Found the Cult"
         ]
       },
       {
@@ -4552,7 +4552,7 @@
               ],
               [
                 "We're busy but not moving.",
-                "Map the Destination / Chart the Path"
+                "Found the Cult / Chart the Path"
               ],
               [
                 "I delegate and it comes back worse.",
@@ -5472,7 +5472,7 @@
             "label": "Company",
             "items": [
               {
-                "label": "1. Map the Destination",
+                "label": "1. Found the Cult",
                 "href": "/os/capabilities/map-the-destination/",
                 "status": "ready"
               },
@@ -5569,7 +5569,7 @@
               {
                 "label": "17. Be Storyteller in Chief",
                 "href": "/os/capabilities/be-storyteller-in-chief/",
-                "status": "draft"
+                "status": "ready"
               },
               {
                 "label": "18. Manage Capital and Stakeholders",
@@ -5604,7 +5604,7 @@
               {
                 "label": "23. Master My Mindset",
                 "href": "/os/capabilities/master-my-mindset/",
-                "status": "draft"
+                "status": "ready"
               },
               {
                 "label": "24. Face My Shadow",
@@ -5614,7 +5614,7 @@
               {
                 "label": "25. Build a Life Worth Scaling For",
                 "href": "/os/capabilities/build-a-life-worth-scaling-for/",
-                "status": "draft"
+                "status": "ready"
               }
             ]
           }
