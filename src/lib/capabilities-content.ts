@@ -119,7 +119,6 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         "You know your two states, and you can name what tips you from one into the other.",
         "A daily burnout score triggers a pre-agreed plan, not a negotiation with yourself.",
         "Sprints are deliberate and bounded, with recovery booked before the sprint starts.",
-        "Your cofounder knows your triggers and holds you to the vacation you promised.",
       ],
     },
     why:
@@ -266,13 +265,11 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         "You present facts and features, and watch investors stay polite and unmoved.",
         "Your best candidate nodded along, then took the corporate offer — nothing you said beat the pay cut.",
         "All-hands is a status update: the team leaves informed, not inspired.",
-        "You've told the origin story once, months ago, and assumed it stuck.",
       ],
       success: [
         "You raise on the future you paint, not just the traction you have.",
         "Great people take pay cuts to join, because they want to be part of the story.",
         "The team retells your story to each other — alignment without you in the room.",
-        "There's a story at every all-hands, and it isn't always yours.",
       ],
     },
     why:

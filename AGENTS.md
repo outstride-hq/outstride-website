@@ -67,7 +67,7 @@ Rich capability content lives in `src/lib/capabilities-content.ts`, keyed by cap
 **Always present** (typed slots, in this order on the page):
 
 - `hook` — a verbatim, anonymized founder quote naming the pain. Must sound like something a founder actually said, not marketing copy.
-- `beforeAfter` — the centerpiece. 3–4 vivid lines each for `today` (the felt, day-to-day cost) and `success` (the observable after-state). This is what sells the capability: a founder should recognise themselves in `today` and want `success`.
+- `beforeAfter` — the centerpiece. 2–3 vivid lines each for `today` (the felt, day-to-day cost) and `success` (the observable after-state); never more than 3 — cut the weakest line rather than stretch the list. This is what sells the capability: a founder should recognise themselves in `today` and want `success`.
 - `why` — why this matters, anchored by one credible authority, story or stake. No generic stakes.
 - `whatGoodLooksLike` — 3 bullets describing the end state in observable terms.
 - `whereFoundersGoWrong` — 3 bullets naming real failure modes (the credibility section; specific beats comprehensive).
