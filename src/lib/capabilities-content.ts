@@ -153,7 +153,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
           },
           {
             title: "People",
-            note: "Who currently plays coach, mentor, peer, challenger and truth-teller in your world - and where are you still trying to grow alone?",
+            note: "Who currently plays coach, mentor, peer, challenger and truth-teller in your world — and where are you still trying to grow alone?",
           },
           {
             title: "Practice",
