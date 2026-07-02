@@ -165,3 +165,33 @@ crafted composite; replace with real founder quotes when Ben supplies them.)_
    Having good insights but never turning them into reps, so the same lesson comes back in a different disguise.
 6. What are you reading, who are you learning from, who is supporting you - and where in your calendar does any of that turn into change?
 7. Bill Campbell. The leaders of Apple, Google and Intuit still needed a coach. That is the point: intelligence and ambition are not enough; you need structured challenge, reflection and accountability.
+
+### Be Storyteller in Chief (`be-storyteller-in-chief`)
+
+_(Captured from Ben's chat notes, 2026-07-02. Q1 has no verbatim founder quotes yet — the page
+hook is a crafted composite; Q4 and Q6 not captured; replace when Ben supplies them.)_
+
+1. (No verbatim quotes captured yet.) The gap Ben describes: founders who go quiet because
+   "I don't know which story to tell" — his response: bullshit, there are always stories to tell.
+2. Storytelling isn't garnish on the real work — the delta between what you have today and the
+   story you paint is literally where startup value gets created. Angels don't invest in what
+   you have; they invest in the story: the future you paint and you as the protagonist in it.
+3. Before: pitches and all-hands as status reporting; candidates hear facts, not a future worth
+   a pay cut. After: a story at every all-hands (company commitment: someone tells one at least
+   every two weeks), the story adapted per audience (team / investors / hires), and high-quality
+   hires leaving bigger salaries behind because they believe.
+4. (Not captured — inferred from existing OS links: Four Disciplines for the over-communication
+   discipline, Investor Update for the investor version, Monthly All-Hands as the practice
+   rhythm.)
+5. Going quiet because no single story feels big enough — telling nothing instead of something.
+   Under-communicating: saying it once and assuming it landed; people need to hear things more
+   than once, over-communication beats under-communication.
+   Reporting instead of storytelling: metrics readouts that inform but never move anyone.
+6. (Not captured yet.)
+7. Ben's friend Dave: the founder is the "Storyteller-in-Chief." Plus the angel-round truth:
+   first money is raised on the story, not the traction. Framework: three ingredients —
+   philosophy/mission ("democratise wealth growth for the whole world" + why it matters), a
+   customer interaction (the friend at a party: "before you, I didn't even think about
+   investing"), a team shout-out tied to a named value ("Tom pushed back, kept us aligned,
+   delivered on time"). Techniques: the three-part sandwich (tell them what you'll tell them /
+   tell them / tell them what you told them) and rhetorical questions as section breaks.

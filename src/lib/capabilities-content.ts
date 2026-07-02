@@ -258,6 +258,84 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "be-storyteller-in-chief": {
+    hook:
+      "When I pitch, I walk them through what we've built and I can feel the room staying cold. I don't know what story I'm supposed to tell — there's nothing that exciting yet.",
+    beforeAfter: {
+      today: [
+        "You present facts and features, and watch investors stay polite and unmoved.",
+        "Your best candidate nodded along, then took the corporate offer — nothing you said beat the pay cut.",
+        "All-hands is a status update: the team leaves informed, not inspired.",
+        "You've told the origin story once, months ago, and assumed it stuck.",
+      ],
+      success: [
+        "You raise on the future you paint, not just the traction you have.",
+        "Great people take pay cuts to join, because they want to be part of the story.",
+        "The team retells your story to each other — alignment without you in the room.",
+        "There's a story at every all-hands, and it isn't always yours.",
+      ],
+    },
+    why:
+      "My friend Dave calls the founder the Storyteller-in-Chief, and he's right. When you raise your first money, angels aren't investing in what you have today — they're investing in the story: the future you're painting and you as the protagonist in it. That's not a trick; it's the nature of the business. There is always a delta between what you have and the story you tell, and closing that delta is literally how a startup creates value. You'll tell the story everywhere — to your team to keep them focused, to investors when you raise, to hires who need a reason to walk away from a bigger salary.",
+    whatGoodLooksLike: [
+      "One core story — why you started, what you're changing in the world — that you can tell in your sleep, adapted for team, candidates, customers and investors.",
+      "A practice rhythm: every all-hands carries a story, and every pitch, interview and update is treated as a rep.",
+      "A repertoire that's always in stock: the mission, a customer moment from this month, and a teammate worth shouting out.",
+    ],
+    whereFoundersGoWrong: [
+      "\"I don't know which story to tell.\" Bullshit — there's always a customer from this week, a teammate who delivered, the mission itself. Going quiet is the only wrong choice.",
+      "Reporting instead of storytelling: all-hands as metrics readouts that inform everyone and move no one.",
+      "Saying it once and assuming it landed. People need to hear things more than once — over-communication beats under-communication every time.",
+    ],
+    toolBridge: {
+      text: "Make it a discipline: build the over-communication habit with the Four Disciplines, then keep investors sold on the future with the Investor Update.",
+      toolIds: ["four-disciplines", "investor-update"],
+    },
+    blocks: [
+      {
+        kind: "heading",
+        text: "The three-ingredient story",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Philosophy",
+            note: "Start with the big picture: the mission and why it matters. \"Our goal is to democratise wealth growth for the whole world\" — then a few lines on why that's worth someone's career.",
+          },
+          {
+            title: "A customer",
+            note: "Connect it to a real interaction. The friend at a party who said \"before you, I didn't even think about investing — now it feels natural and I'm in control of my money.\" Impact in the customer's own words.",
+          },
+          {
+            title: "The team",
+            note: "Close with a person. Shout out the teammate who pushed back when we were heading the wrong way, kept everyone on the same page and still delivered on time — and tie it to a company value by name.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Two techniques that carry any story",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Sandwich it",
+            note: "\"Today I'm going to tell you about A, B and C.\" Tell them. \"Today I've told you about A, B and C.\" It feels repetitive from the stage; from the audience, it's the version they remember.",
+          },
+          {
+            title: "Ask, then answer",
+            note: "\"So what's the most important thing for us to focus on next quarter?\" A rhetorical question tells the room a section just ended — and pulls their attention into the next one.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Storytelling only compounds with reps. Make it a standing commitment: someone tells a story at every all-hands, at least one every two weeks — and every pitch, interview and investor call counts as practice.",
+      },
+    ],
+  },
 };
 
 export function getCapabilityContent(
