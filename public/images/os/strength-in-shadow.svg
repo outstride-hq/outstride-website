@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1280" role="img" aria-labelledby="title desc">
+  <title id="title">Strength in Shadow</title>
+  <desc id="desc">A four-part reflection map showing how a strength can become a shadow when overused, using detail-oriented and realistic as the example.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#d9bdb4" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#39444a"/>
+    </marker>
+    <style>
+      .bg { fill: #fff7f3; }
+      .title { font: 700 28px 'Manrope', 'Arial', sans-serif; fill: #1a232a; }
+      .label { font: 600 24px 'Manrope', 'Arial', sans-serif; fill: #37424a; letter-spacing: 0.02em; text-transform: uppercase; }
+      .arrowLabel { font: 600 19px 'Manrope', 'Arial', sans-serif; fill: #55646b; }
+      .noteText { font: 600 30px 'Poppins', 'Arial', sans-serif; fill: #182128; }
+      .bubbleText { font: 600 16px 'Manrope', 'Arial', sans-serif; fill: #14353d; }
+      .line { stroke: #39444a; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .bubble { fill: #9de0f0; stroke: #2d6a79; stroke-width: 3; }
+      .strength { fill: #b9afff; }
+      .shadowNote { fill: #8be0d6; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="1280"/>
+
+  <text x="520" y="170" text-anchor="middle" class="label">Strength</text>
+  <text x="1080" y="170" text-anchor="middle" class="label">Shadow</text>
+  <text x="1080" y="1030" text-anchor="middle" class="label">Counterbalance</text>
+  <text x="520" y="1030" text-anchor="middle" class="label">Overreaction</text>
+
+  <rect x="350" y="220" width="250" height="250" rx="26" class="strength" filter="url(#shadow)"/>
+  <rect x="930" y="220" width="250" height="250" rx="26" class="shadowNote" filter="url(#shadow)"/>
+  <rect x="930" y="760" width="250" height="250" rx="26" class="strength" filter="url(#shadow)"/>
+  <rect x="350" y="760" width="250" height="250" rx="26" class="shadowNote" filter="url(#shadow)"/>
+
+  <text x="475" y="315" text-anchor="middle" class="noteText">
+    <tspan x="475" dy="0">Detail-oriented</tspan>
+    <tspan x="475" dy="46">and realistic</tspan>
+  </text>
+
+  <text x="1055" y="310" text-anchor="middle" class="noteText">
+    <tspan x="1055" dy="0">Worrying</tspan>
+    <tspan x="1055" dy="46">or negative</tspan>
+  </text>
+
+  <text x="1055" y="855" text-anchor="middle" class="noteText">
+    <tspan x="1055" dy="0">Cautiously</tspan>
+    <tspan x="1055" dy="46">optimistic</tspan>
+  </text>
+
+  <text x="475" y="865" text-anchor="middle" class="noteText">
+    <tspan x="475" dy="0">Wildly</tspan>
+    <tspan x="475" dy="46">unrealistic</tspan>
+  </text>
+
+  <path d="M615 360 H905" class="line"/>
+  <text x="760" y="325" text-anchor="middle" class="arrowLabel">Too much of a good thing</text>
+
+  <path d="M1080 485 V740" class="line"/>
+  <text x="1160" y="620" class="arrowLabel">Healthy opposite</text>
+
+  <path d="M935 885 H615" class="line"/>
+  <text x="775" y="930" text-anchor="middle" class="arrowLabel">Too much of the counterbalance</text>
+
+  <path d="M475 750 V485" class="line"/>
+  <text x="150" y="650" class="arrowLabel">What the overreaction is missing</text>
+
+  <circle cx="170" cy="110" r="62" class="bubble"/>
+  <text x="170" y="92" text-anchor="middle" class="bubbleText">
+    <tspan x="170" dy="0">What I take</tspan>
+    <tspan x="170" dy="22">for granted</tspan>
+    <tspan x="170" dy="22">in myself</tspan>
+  </text>
+
+  <circle cx="320" cy="110" r="62" class="bubble"/>
+  <text x="320" y="82" text-anchor="middle" class="bubbleText">
+    <tspan x="320" dy="0">What others</tspan>
+    <tspan x="320" dy="22">appreciate</tspan>
+    <tspan x="320" dy="22">in me</tspan>
+  </text>
+
+  <circle cx="170" cy="270" r="62" class="bubble"/>
+  <text x="170" y="238" text-anchor="middle" class="bubbleText">
+    <tspan x="170" dy="0">What I expect</tspan>
+    <tspan x="170" dy="22">or demand</tspan>
+    <tspan x="170" dy="22">in others</tspan>
+  </text>
+
+  <circle cx="1330" cy="110" r="62" class="bubble"/>
+  <text x="1330" y="82" text-anchor="middle" class="bubbleText">
+    <tspan x="1330" dy="0">What others</tspan>
+    <tspan x="1330" dy="22">blame me</tspan>
+    <tspan x="1330" dy="22">for</tspan>
+  </text>
+
+  <circle cx="1470" cy="270" r="62" class="bubble"/>
+  <text x="1470" y="238" text-anchor="middle" class="bubbleText">
+    <tspan x="1470" dy="0">What I tend</tspan>
+    <tspan x="1470" dy="22">to justify</tspan>
+    <tspan x="1470" dy="22">in myself</tspan>
+  </text>
+
+  <circle cx="1470" cy="1080" r="62" class="bubble"/>
+  <text x="1470" y="1048" text-anchor="middle" class="bubbleText">
+    <tspan x="1470" dy="0">What I miss</tspan>
+    <tspan x="1470" dy="22">in myself</tspan>
+  </text>
+
+  <circle cx="1330" cy="1080" r="62" class="bubble"/>
+  <text x="1330" y="1048" text-anchor="middle" class="bubbleText">
+    <tspan x="1330" dy="0">What others wish</tspan>
+    <tspan x="1330" dy="22">I had more of</tspan>
+  </text>
+
+  <circle cx="1470" cy="940" r="62" class="bubble"/>
+  <text x="1470" y="918" text-anchor="middle" class="bubbleText">
+    <tspan x="1470" dy="0">What I</tspan>
+    <tspan x="1470" dy="22">admire in</tspan>
+    <tspan x="1470" dy="22">others</tspan>
+  </text>
+
+  <circle cx="170" cy="1080" r="62" class="bubble"/>
+  <text x="170" y="1048" text-anchor="middle" class="bubbleText">
+    <tspan x="170" dy="0">What I would</tspan>
+    <tspan x="170" dy="22">hate in</tspan>
+    <tspan x="170" dy="22">myself</tspan>
+  </text>
+
+  <circle cx="320" cy="1180" r="62" class="bubble"/>
+  <text x="320" y="1148" text-anchor="middle" class="bubbleText">
+    <tspan x="320" dy="0">What I</tspan>
+    <tspan x="320" dy="22">despise in</tspan>
+    <tspan x="320" dy="22">others</tspan>
+  </text>
+</svg>

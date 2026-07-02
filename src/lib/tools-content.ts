@@ -728,6 +728,206 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "saboteurs-quiz": {
+    intro:
+      "Use the Positive Intelligence Saboteur Assessment as a simple doorway into the negative stories and inner critics that hijack you under pressure.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "This works best as a naming device, not a diagnosis. The point is not to become obsessed with a score; it is to get language for the patterns that most often take the wheel in hard moments.",
+      },
+      {
+        kind: "callout",
+        text: "The Source / credit link below goes straight to the official assessment.",
+      },
+      {
+        kind: "heading",
+        text: "What to expect",
+      },
+      {
+        kind: "list",
+        items: [
+          "Everyone has the Judge: the universal inner critic that attacks you, others, or your circumstances.",
+          "Most founders also have two or three accomplice saboteurs that show up in their stress patterns.",
+          "After you take the quiz, do not stop at the label. Ask when it shows up, what it says, and what it thinks it is protecting.",
+        ],
+      },
+      {
+        kind: "heading",
+        text: "The 10 saboteurs",
+      },
+      {
+        kind: "table",
+        columns: ["Saboteur", "How it often shows up in founders"],
+        rows: [
+          ["Judge", "The master critic: self-attack, blame, catastrophising, and constant focus on what is wrong."],
+          ["Avoider", "Keeps things pleasant, dodges hard conversations, and stays busy around the real issue."],
+          ["Controller", "Tightens grip, struggles to trust, and gets impatient when people do not move your way."],
+          ["Hyper-Achiever", "Ties self-worth to winning, status and visible success; the last achievement never feels like enough."],
+          ["Hyper-Rational", "Over-indexes on logic, analysis and detachment; relationships start to feel like messy data problems."],
+          ["Hyper-Vigilant", "Scans for threats, assumes something is about to go wrong, and finds it hard to stand down."],
+          ["Pleaser", "Rescues, accommodates and smooths things over to stay liked, then quietly resents the cost."],
+          ["Restless", "Chases novelty, busyness and the next hit of stimulation; struggles to stay with the boring important thing."],
+          ["Stickler", "Turns standards into perfectionism and order into rigidity; good work gets stuck waiting to be flawless."],
+          ["Victim", "Gets pulled into the pain of the story, hardship or martyrdom, and can start organising identity around it."],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "What to do with the result",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Name your top patterns",
+            note: "Circle the Judge and the two or three accomplices that feel most familiar. Fewer patterns, noticed well, beats a long list you never use.",
+          },
+          {
+            title: "Spot the trigger",
+            note: "For each one, ask what tends to wake it up: disagreement, ambiguity, criticism, a board meeting, a missed deadline, a cofounder wobble.",
+          },
+          {
+            title: "Choose one interruption",
+            note: "Do not promise total transformation. Pick one small move that breaks the pattern: a pause, a question, a compliment, a looser grip, a harder truth told sooner.",
+          },
+        ],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["face-my-shadow"],
+      },
+    ],
+  },
+  "strength-in-shadow": {
+    intro:
+      "Map how one of your best qualities turns into a liability when overused, then find the balancing quality that brings it back into service.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "This is useful when a pattern feels confusing because it has a virtue baked into it. People-pleasing often starts as care. Criticism often starts as standards. Control often starts as agency. The point is not to amputate the strength; it is to see what happens when it tips into shadow.",
+      },
+      {
+        kind: "heading",
+        text: "Example map",
+      },
+      {
+        kind: "image",
+        src: "/images/os/strength-in-shadow.svg",
+        alt: "Strength in Shadow example showing detail-oriented and realistic becoming worrying when overused, with cautiously optimistic as the balancing quality.",
+      },
+      {
+        kind: "heading",
+        text: "How to fill it in",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Name the strength",
+            note: "Start with the quality other people appreciate in you and that you often take for granted in yourself.",
+          },
+          {
+            title: "Name the shadow",
+            note: "Ask what too much of that good thing looks like when pressure rises. This is usually the thing other people end up blaming you for.",
+          },
+          {
+            title: "Find the counterbalance",
+            note: "Look for the healthy opposite that would make the strength usable again rather than overbearing. Not the negation of the strength — the balancing quality.",
+          },
+          {
+            title: "Notice the overreaction",
+            note: "Then ask what you cannot stand in others. That irritation often points to the balancing quality pushed too far, which reveals what you are missing in yourself.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Prompt bubbles",
+      },
+      {
+        kind: "list",
+        items: [
+          "What I take for granted in myself",
+          "What others appreciate in me",
+          "What I expect or demand in others",
+          "What others blame me for",
+          "What I tend to justify in myself",
+          "What I admire in others",
+          "What others wish I had more of",
+          "What I miss in myself",
+          "What I despise in others",
+          "What I would hate in myself",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The helpful reframe is simple: your weakness is often not the opposite of your strength. It is your strength, turned up too far.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["face-my-shadow"],
+      },
+    ],
+  },
+  "council-of-me": {
+    intro:
+      "Personify the versions of you that keep showing up, bring them into the same room, and ask what each is trying to protect.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "This is a light-touch reflection exercise for making inner patterns easier to hear. The move is not to exile a part of you; it is to understand what role it thinks it is playing, then choose more consciously which version of you gets the microphone.",
+      },
+      {
+        kind: "heading",
+        text: "Set up the room",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Name the characters",
+            note: "Write down three or four recurring selves: people-pleaser you, control-freak you, backpacker you, critic you, peacemaker you, whatever is real.",
+          },
+          {
+            title: "Invite them in",
+            note: "Picture them sitting around a table. Let each one have a voice instead of trying to flatten them into one blurry mood.",
+          },
+          {
+            title: "Ask the same questions",
+            note: "What are you trying to protect? What are you afraid will happen if you stop? What do you need from me? What do you want for me?",
+          },
+          {
+            title: "Choose the chair at the head of the table",
+            note: "Thank each part for what it is trying to do, then decide which adult version of you makes the call now.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Questions worth asking",
+      },
+      {
+        kind: "list",
+        items: [
+          "When do you usually show up?",
+          "What story do you keep telling me?",
+          "What are you trying to save me from?",
+          "What do you help me do well?",
+          "What cost do you create when you take over?",
+          "What would help you relax a little?",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "If this exercise opens something that feels extreme, traumatic or destabilising, pause and work with a therapist rather than forcing your way through it alone.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["face-my-shadow"],
+      },
+    ],
+  },
   "alignment-autonomy": {
     intro:
       "A 2×2 for diagnosing whether your team has the right mix of shared direction and decision freedom — popularised by Henrik Kniberg in Spotify's engineering culture work.",
@@ -1303,6 +1503,51 @@ export const toolsContent: Record<string, ToolContent> = {
           "build-resilience-and-recovery",
           "manage-my-energy-system",
         ],
+      },
+    ],
+  },
+  "live-it-today": {
+    intro:
+      "A two-part exercise: picture your life five years out in vivid detail, then find the parts of it you can start living this year instead of banking the whole thing on a future payoff.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Most founders are running an unexamined trade: sacrifice health, relationships and hobbies now in exchange for a perfect life later. But \"later\" is usually a blur — and when you actually look at it, large parts of it turn out to be available today. This exercise makes the future concrete, then mines it for what you can pull into the present.",
+      },
+      {
+        kind: "heading",
+        text: "Part one — visualise five years out",
+      },
+      {
+        kind: "paragraph",
+        text: "Close your eyes and drop into an ordinary day five years from now. Don't design it — watch it. Move slowly through the prompts and let the detail fill in.",
+      },
+      {
+        kind: "list",
+        items: [
+          "Where do you wake up, and who is next to you? Kids, animals, anyone else in the house?",
+          "What is the feeling in your body as you wake — and what does the perfect day ahead look like?",
+          "Are you still working? What kind, and how much? All-in, or more advisory?",
+          "How are your friendships and family time? What are you doing with them?",
+          "What are you actually into — the hobbies, the training, the things that are just yours?",
+          "How is your health and your mental health? What is your relationship with money — living off wealth, or still earning?",
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Part two — which part can you live today?",
+      },
+      {
+        kind: "paragraph",
+        text: "Now take each vivid piece and ask the only question that matters: which part of this could I already start living this year? Not the whole thing — one concrete piece. You may not have the money to buy your parents a house, but you can rent an Airbnb once a year and gather the people you love. You don't need the destination to start living what the destination is for.",
+      },
+      {
+        kind: "callout",
+        text: "The \"build your own yacht\" idea (from The Real Estate God's essay of that name): a billionaire's yacht buys relationships, time and status — but you don't need the yacht to get what the yacht is for. You can start building that now, at a fraction of the cost.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["build-a-life-worth-scaling-for"],
       },
     ],
   },

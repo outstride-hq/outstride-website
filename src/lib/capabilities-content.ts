@@ -3,10 +3,10 @@
  *
  * Always-present elements live in typed slots so every capability page keeps
  * the same spine: hook → beforeAfter → why → whatGoodLooksLike →
- * whereFoundersGoWrong → toolBridge. The optional `blocks` body sits between
- * the fixed sections and the tool bridge for deep dives, starter questions
- * and named examples. Capabilities without an entry here fall back to the
- * summary + bullets rendering on the capability page.
+ * whereFoundersGoWrong → doNow. The optional `blocks` body sits between the
+ * fixed sections and `doNow` for deep dives, starter questions and named
+ * examples. Capabilities without an entry here fall back to the summary +
+ * bullets rendering on the capability page.
  */
 
 import type { ToolBlock } from "@/lib/tools-content";
@@ -14,11 +14,6 @@ import type { ToolBlock } from "@/lib/tools-content";
 export type CapabilityBeforeAfter = {
   today: string[];
   success: string[];
-};
-
-export type CapabilityToolBridge = {
-  text: string;
-  toolIds: string[];
 };
 
 export type CapabilityAction = {
@@ -34,7 +29,6 @@ export type CapabilityContent = {
   whatGoodLooksLike: string[];
   whereFoundersGoWrong: string[];
   doNow?: CapabilityAction[];
-  toolBridge: CapabilityToolBridge;
   blocks?: ToolBlock[];
 };
 
@@ -79,10 +73,6 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         toolId: "values-deck",
       },
     ],
-    toolBridge: {
-      text: "Turn this into practice: make each value concrete with the Values Deck, then hold people to them with the Performance × Culture Grid.",
-      toolIds: ["values-deck", "performance-culture-grid"],
-    },
     blocks: [
       {
         kind: "heading",
@@ -174,10 +164,6 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         note: "If coding charges you, one afternoon a week, recurring. Treat it like an investor meeting: it doesn't move.",
       },
     ],
-    toolBridge: {
-      text: "Start by giving each of your seven core needs a cadence with 7 Core Founder Needs, then find your personal drains and chargers with the Energy Audit.",
-      toolIds: ["seven-founder-needs", "energy-audit"],
-    },
     blocks: [
       {
         kind: "heading",
@@ -252,10 +238,6 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         note: "One message: \"when X stacks up, I slide — if you see it, call it.\" Accountability starts that simply.",
       },
     ],
-    toolBridge: {
-      text: "Start by mapping your two states with the Two Equilibria Map, then pre-commit your responses with the Burnout Playbook.",
-      toolIds: ["two-equilibria-map", "burnout-playbook"],
-    },
     blocks: [
       {
         kind: "heading",
@@ -335,10 +317,6 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         toolId: "habit-stacks",
       },
     ],
-    toolBridge: {
-      text: "Start by designing the people around your growth with the Personal Board, then turn one real growth edge into weekly reps with Habit Stacks.",
-      toolIds: ["personal-board", "habit-stacks"],
-    },
     blocks: [
       {
         kind: "heading",
@@ -438,10 +416,6 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         toolId: "investor-update",
       },
     ],
-    toolBridge: {
-      text: "Make it a discipline: build the over-communication habit with the Four Disciplines, then keep investors sold on the future with the Investor Update.",
-      toolIds: ["four-disciplines", "investor-update"],
-    },
     blocks: [
       {
         kind: "heading",
@@ -480,6 +454,177 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
             note: "\"So what's the most important thing for us to focus on next quarter?\" A rhetorical question tells the room a section just ended — and pulls their attention into the next one.",
           },
         ],
+      },
+    ],
+  },
+  "face-my-shadow": {
+    hook:
+      "I can usually see the pattern afterwards. In the moment, though, it still feels like the safest move.",
+    beforeAfter: {
+      today: [
+        "Under pressure, the same reactions keep showing up: control, people-pleasing, criticism, avoidance, rescuing.",
+        "A part of you still believes the old script keeps you safe, even when it now creates tension, delay or distance.",
+        "You explain the pattern as personality instead of seeing it as an adaptation you can work with.",
+      ],
+      success: [
+        "You can name the story or part that is taking over before it runs the meeting.",
+        "You understand what that part is trying to protect, so you respond with less shame and more choice.",
+        "Old patterns still visit, but they stop driving your leadership by default.",
+      ],
+    },
+    why:
+      "Positive Intelligence gives a helpful starting point here: saboteurs begin life as guardians. That is the key. The behaviour is not random or proof you are broken; it solved something once. A people-pleasing response may have been brilliant in a chaotic home because it kept the peace. Years later, the same move shows up in the boardroom and calls itself diplomacy while quietly eroding trust. The work is not to reject that part of you or declare war on it. It is to make the pattern conscious, thank it for the job it once did, and decide whether it still serves the life and company you are building.",
+    whatGoodLooksLike: [
+      "You can name your recurring shadow patterns and the situations that tend to trigger them.",
+      "You can see the strength underneath the pattern: the care beneath people-pleasing, the standards beneath criticism, the agency beneath control.",
+      "You have a repeatable interruption: notice, name, choose, and repair if needed.",
+    ],
+    whereFoundersGoWrong: [
+      "Treating the shadow as identity: \"that's just how I am\" instead of a pattern that formed for a reason.",
+      "Swinging to the opposite extreme and trying to amputate a real strength instead of finding its healthier expression.",
+      "Using insight as a substitute for reps: taking the quiz, having the conversation, then never building the daily noticing muscle.",
+    ],
+    doNow: [
+      {
+        action: "Take the Saboteurs Quiz",
+        note: "Use the official Positive Intelligence assessment as a naming device, not a diagnosis. Notice the Judge plus the two or three accomplices that most often hijack you.",
+        toolId: "saboteurs-quiz",
+      },
+      {
+        action: "Map one overused strength",
+        note: "Pick a genuine strength and trace how too much of it becomes your pitfall, what balancing quality it needs, and what you attack in others when you are triggered.",
+        toolId: "strength-in-shadow",
+      },
+      {
+        action: "Run a Council of Me meeting",
+        note: "List three versions of you — people-pleaser you, control-freak you, backpacker you — invite them into the same room, and ask what each is trying to protect.",
+        toolId: "council-of-me",
+      },
+      {
+        action: "Install one noticing rep",
+        note: "For the next week, review the last workday and mark where you got overly critical, avoidant or controlling. If you catch it live, do the opposite within the hour: encourage, appreciate, ask the question, or loosen the grip.",
+        toolId: "habit-stacks",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Old protection, new cost",
+      },
+      {
+        kind: "paragraph",
+        text: "A lot of shadow work gets easier once you see the pattern as old protection. Maybe you became a people-pleaser when the adults around you were volatile and keeping the peace felt essential. Maybe control became your way of staying safe in chaos. Back then, the pattern worked. The issue is not that it existed; the issue is that it stayed in charge long after the original danger passed.",
+      },
+      {
+        kind: "callout",
+        text: "If a pattern feels extreme, traumatic or destabilising, work with a therapist rather than trying to self-coach your way through it from a website.",
+      },
+      {
+        kind: "heading",
+        text: "Build the noticing muscle",
+      },
+      {
+        kind: "paragraph",
+        text: "This is a reps game. First the pattern runs unconsciously. Then you notice it after the fact. Then you catch it in the moment and choose differently. Eventually the healthier move gets easier. That is the whole arc: from unconscious incompetence, to conscious incompetence, to conscious competence, and finally to a more natural response.",
+      },
+      {
+        kind: "list",
+        items: [
+          "Unconscious incompetence: the pattern runs you and you barely notice.",
+          "Conscious incompetence: you spot it, often after the fact.",
+          "Conscious competence: you catch it earlier and choose a better move.",
+          "Unconscious competence: the healthier response starts to feel more like you.",
+        ],
+      },
+    ],
+  },
+  "build-a-life-worth-scaling-for": {
+    hook:
+      "Someone asked me what all the sacrifice was for — the health, the friendships I'd let slide. All I had was \"Champagne at 40.\" And when I really looked at it, I couldn't tell you what that even looks like.",
+    beforeAfter: {
+      today: [
+        "You're trading your health, your relationships and your hobbies now for a payoff you keep calling \"later\".",
+        "Ask what \"later\" actually looks like and you go blank — it's a feeling, not a picture.",
+        "Achievement is the only setting you've ever run, so you never stopped to ask what you're saying no to.",
+      ],
+      success: [
+        "You can describe the life you're building toward in vivid, specific detail — the day, the people, the feeling.",
+        "You've pulled concrete pieces of it into this year, instead of banking the whole thing on 40.",
+        "You know which parts of founding genuinely serve you — and you spend more of your time there on purpose.",
+      ],
+    },
+    why:
+      "The founder who told me \"Champagne at 40\" couldn't describe the life he was sacrificing everything for. When we pulled it apart, two things fell out fast: he'd probably still be working at 40, just differently — more advisory — and he was giving up far too much today for a picture that didn't survive a second look. \"I work hard now for a better life later\" sounds like discipline, but it's usually a deferral you never examine — and most of what you're waiting for, you already have some access to. The point of the wealth, the exit, the yacht, was never the thing itself; it's the relationships, the time and the freedom underneath it. You don't need the yacht to start building those.",
+    whatGoodLooksLike: [
+      "You can picture your five-years-out life in concrete detail — where you wake up, who's there, how you spend the day, how much you're still working.",
+      "At least one piece of that future is already in this year's calendar: the yearly gathering, the protected hobby, the relationship you stopped deferring.",
+      "You've named the parts of founding that actually serve you — growth, mission, changing the lives of people around you — and you steer toward them.",
+    ],
+    whereFoundersGoWrong: [
+      "Deferring the whole of life to a future win, because achievement is the only story you've ever run — the overachiever on autopilot.",
+      "Sacrificing the needs first — health, relationships, hobbies — as if they're just the price of the ticket, when they're most of the destination.",
+      "Chasing a future state you've never actually examined, so you can't see the parts of it you could be living right now.",
+    ],
+    doNow: [
+      {
+        action: "Do the five-year visualisation",
+        note: "Close your eyes and walk through an ordinary day five years out: where you wake up, who's next to you, how the day feels, whether and how you're still working, your health, your money. Watch it, don't design it.",
+        toolId: "live-it-today",
+      },
+      {
+        action: "Pick one piece and live it this year",
+        note: "Take the most vivid part of that future and find the cheap version now. Can't buy your parents a house? Rent an Airbnb once a year and gather the people you love. Book it.",
+      },
+      {
+        action: "List your founder-years no's and yes's",
+        note: "Two columns: what am I saying no to for these years, and what am I saying yes to? Be honest about which no's you actually chose and which you drifted into.",
+      },
+      {
+        action: "Name the part of founding that serves you",
+        note: "Growth, mission, the people whose lives you're changing — pick the one that's genuinely yours and put more of next week there.",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "The overachiever's trap",
+      },
+      {
+        kind: "paragraph",
+        text: "Founders are intense people — a lot of us neurodivergent, most of us wired as achievers, the Enneagram Type 3s and the Type 1s. Achievement has been rewarded your whole life, so you run it on autopilot: the next milestone, the next round, the next win. The trap isn't working hard. It's never stopping to ask what you're trading for it, because the trade has always paid off before. These founder years are a specific chapter with specific costs — name them, or they get charged to you silently.",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "What am I saying no to?",
+            note: "The health, the relationships, the version of a normal life you're postponing. Write the real list. Some of it is a genuine, chosen trade; some of it you drifted into without deciding.",
+          },
+          {
+            title: "What am I saying yes to?",
+            note: "The parts of this you'd choose again — the growth, the freedom, the mission. This is the list you want to protect and lean into, not just endure.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Build your own yacht",
+      },
+      {
+        kind: "paragraph",
+        text: "A very common founder dream is \"I'll provide for the people I love — buy my parents a house.\" You might not have the money for the house today. But you almost certainly have enough to rent an Airbnb once a year and bring your closest friends and family together — and start living the thing the house was really for. That's the move: don't wait for the destination to start living what the destination is for.",
+      },
+      {
+        kind: "callout",
+        text: "This is the \"build your own yacht\" idea (from The Real Estate God's essay of that name): a billionaire's yacht buys relationships, time and status — but you don't need the yacht to get what the yacht is for. You can start building that now, at a fraction of the cost.",
+      },
+      {
+        kind: "heading",
+        text: "Which parts of founding actually serve you?",
+      },
+      {
+        kind: "paragraph",
+        text: "The flip side of naming the cost is getting honest about the payoff that's real for you now, not at 40. Being a founder is a genuine engine for personal growth — but push past that: how is this true to your values, and are you still connected to your mission? For me, the most meaningful part was never the customers or the wealth. It was changing the lives of the people around me — building a working environment people loved, and giving them opportunities and skills they'd carry for the rest of their careers. Find your version of that, and you're already living part of the life you're scaling for.",
       },
     ],
   },

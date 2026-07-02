@@ -208,3 +208,71 @@ hook is a crafted composite; Q4 and Q6 not captured; replace when Ben supplies t
    investing"), a team shout-out tied to a named value ("Tom pushed back, kept us aligned,
    delivered on time"). Techniques: the three-part sandwich (tell them what you'll tell them /
    tell them / tell them what you told them) and rhetorical questions as section breaks.
+
+### Build a Life Worth Scaling For (`build-a-life-worth-scaling-for`)
+
+_(Captured from Ben's chat notes, 2026-07-02. Q1 has one strong verbatim founder line; Q6 not
+captured; page written to read more like a blog than the standard format at Ben's request —
+if the fixed slots lose too much of his voice, the format itself is up for revision.)_
+
+1. Real founder line, to use as the hook (attribute "founder Ben coached"): **"Champagne at 40."**
+   When asked what all the sacrifice — health, relationships — was for, that was the whole answer:
+   a vague utopian future where everything is finally perfect. Two things surfaced fast: (a) he
+   couldn't actually describe what "Champagne at 40" looked like, and realised he'd probably still
+   be working, just differently (more advisory); (b) he was sacrificing far too much today for it.
+2. "I work hard today for a better life tomorrow" is not how it works. The perfect future you're
+   deferring to is mostly unexamined, and large parts of it are available to start living now.
+   Don't just default into the overachiever pattern — achievement has been rewarded your whole
+   life, so you run it on autopilot without asking what you're saying no to for the founder years.
+3. Before: sacrificing health, relationships, hobbies today, banking on a utopian future payoff
+   that he can't even picture. After: he's run the five-year visualisation, knows what the life
+   actually looks and feels like, and has pulled concrete pieces of it into this year — e.g. can't
+   buy his parents a house yet, but rents an Airbnb once a year and gathers family and closest
+   friends, living the "provide for my loved ones" dream now, not at 40.
+4. Live It Today first (visualise five years out, then extract what you can live now), then the
+   Anti-Wasteman System to commit to pulling one piece forward as a real goal, with Habit Stacks
+   to make the recurring pieces stick.
+5. The overachiever default: deferring the whole of life to a future win because achievement is
+   the only story you've ever run. Sacrificing the needs (health, relationships) as if they're the
+   cost of the ticket. Chasing a future state you've never actually examined — so you can't tell
+   which parts you already have access to.
+6. (Not captured yet.) Working candidate: "Picture your life five years out — which part of that
+   could you already start living this year?"
+7. "Creating Your Own Yacht" by The Real Estate God
+   (https://x.com/TheRealEstateG6/status/1556643641975873536 ;
+   https://therealestategod.substack.com/p/creating-your-own-yacht): you don't need the yacht (or
+   the billions) to get what the yacht is really for — the relationships, the time, the providing.
+   You can start building that today. Plus Ben's own view: the most meaningful part of being a
+   founder was changing the lives of the people around him — a great working environment, giving
+   people opportunities and skills — more than the customer or the wealth. Enneagram lens: founders
+   skew Achiever/Type 3 (and Type 1), often neurodivergent, driven hard by success.
+
+### Face My Shadow (`face-my-shadow`)
+
+_(Captured from Ben's chat notes, 2026-07-02. Q1 has no verbatim founder quote yet — the page
+hook is a crafted composite and should be replaced if Ben gives a real line.)_
+
+1. (No verbatim quote captured yet.) The pain Ben wants named: founders often are not aware of the
+   negative stories they tell themselves or the patterns that take over under stress — people
+   pleasing, control, criticism, rescuing, avoidance, negativity.
+2. The key reframing: do not treat these patterns as identity or as proof something is wrong with
+   you. Many of them were useful earlier in life and helped you survive or cope, but no longer
+   serve in the same way. Example Ben gave: people pleasing may come from trying to keep the peace
+   while parents were divorcing. Back then it worked; now it is embedded and overused.
+3. Before: the founder is hijacked by old scripts and only notices afterwards. After: they can see
+   the pattern earlier, understand what it is trying to protect, and choose a healthier response
+   without shaming or rejecting that part of themselves.
+4. Start with the Saboteurs quiz as the accessible naming device. Then use the overused-strength
+   quadrant image Ben shared (core quality -> pitfall -> challenge -> allergy / positive opposite)
+   as a second lens. Then the "Council of Me" exercise for personifying parts. Habit Stacks is the
+   practice layer for building the noticing muscle.
+5. Failure modes and shadow patterns Ben explicitly named: people pleasing, control freak, overly
+   critical, worrying / negativity, rescuing, avoidance, status hunger. Also: having the insight
+   once but never building reps; trying to reject the part instead of updating its role.
+6. Candidate first question: "When this pattern shows up, what story is it telling you — and what
+   is it trying to protect?"
+7. Useful anchors: Positive Intelligence's saboteurs model as a naming entrypoint; the
+   unconscious incompetence -> conscious incompetence -> conscious competence -> unconscious
+   competence arc for behaviour change; the therapist caveat if a pattern feels extreme or
+   unhealthy; the "different versions of you in a room" visualisation as a practical reflection
+   exercise.

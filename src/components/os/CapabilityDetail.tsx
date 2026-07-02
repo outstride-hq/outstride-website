@@ -153,18 +153,6 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
         </div>
       ) : null}
 
-      {content ? (
-        <div className="mt-5">
-          <p className="ui-kicker mb-3">Where to start</p>
-          <ToolContentBlocks
-            blocks={[
-              { kind: "callout", text: content.toolBridge.text },
-              { kind: "toolRef", toolIds: content.toolBridge.toolIds },
-            ]}
-          />
-        </div>
-      ) : null}
-
       <RelatedTools tools={tools} />
       <RelatedRhythms rhythms={rhythms} />
 

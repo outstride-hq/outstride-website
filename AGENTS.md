@@ -71,10 +71,9 @@ Rich capability content lives in `src/lib/capabilities-content.ts`, keyed by cap
 - `why` — why this matters, anchored by one credible authority, story or stake. No generic stakes.
 - `whatGoodLooksLike` — 3 bullets describing the end state in observable terms.
 - `whereFoundersGoWrong` — 3 bullets naming real failure modes (the credibility section; specific beats comprehensive).
-- `doNow` — "What you can do right now": 2–4 imperative actions a founder can take this week without a coach (tell your story to a mirror, book the recovery block, text your cofounder). Add a `toolId` only when the action genuinely runs through that tool. If a draft ends `blocks` with a takeaway callout, convert it into `doNow` actions instead — callouts must not stack against the tool bridge.
-- `toolBridge` — one callout sentence telling the founder where to start, plus 1–2 `toolIds` in the order they should be used. Renders under a "Where to start" kicker after `doNow`.
+- `doNow` — "What you can do right now": 2–4 imperative actions a founder can take this week without a coach (tell your story to a mirror, book the recovery block, text your cofounder). Add a `toolId` only when the action genuinely runs through that tool — it renders as an inline link. If a draft ends `blocks` with a takeaway callout, convert it into `doNow` actions instead. This is the last fixed section on the page; there is no separate tool-bridge callout, so tool links must live inside `doNow` or `blocks`.
 
-**Sometimes present** (`blocks`, rendered between the fixed sections and the tool bridge; 0–2 items, only when genuinely earned):
+**Sometimes present** (`blocks`, rendered between the fixed sections and `doNow`; 0–2 items, only when genuinely earned):
 
 - Starter questions as a `steps` block (like the culture page's intern test) — only genuinely diagnostic questions.
 - One deep-dive section (heading + paragraph/callout) carrying a distinctive point of view.
