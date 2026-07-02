@@ -313,6 +313,11 @@ hook is a crafted composite and should be replaced if Ben gives a real line.)_
    competence arc for behaviour change; the therapist caveat if a pattern feels extreme or
    unhealthy; the "different versions of you in a room" visualisation as a practical reflection
    exercise.
+8. Additional pattern Ben wants shown visually: a negative loop around expectations. Set
+   unrealistic expectations -> meet them and ratchet the bar upward, or fail to meet them ->
+   frustration -> coping mechanisms (e.g. alcohol, numbing, avoidance) -> which feeds back into
+   not meeting expectations and keeps the cycle running. The point is to help founders identify
+   the loop and step out of it earlier.
 
 ### Find New Capital (`find-new-capital`)
 

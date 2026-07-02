@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Expectation Loop</title>
+  <desc id="desc">A founder pattern loop showing unrealistic expectations leading either to raising the bar again or to frustration and coping mechanisms that reinforce the cycle.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#d9bdb4" flood-opacity="0.42"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#39444a"/>
+    </marker>
+    <style>
+      .bg { fill: #fff7f3; }
+      .title { font: 700 30px 'Manrope', 'Arial', sans-serif; fill: #151f27; }
+      .label { font: 700 18px 'Manrope', 'Arial', sans-serif; fill: #6f211d; letter-spacing: 0.08em; text-transform: uppercase; }
+      .noteText { font: 600 28px 'Poppins', 'Arial', sans-serif; fill: #182128; }
+      .smallText { font: 600 20px 'Manrope', 'Arial', sans-serif; fill: #4d5a60; }
+      .line { stroke: #39444a; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .loopLine { stroke: #d64d45; stroke-width: 5; fill: none; marker-end: url(#arrow); }
+      .purple { fill: #b9afff; }
+      .mint { fill: #8be0d6; }
+      .blue { fill: #94bdf6; }
+      .salmon { fill: #ff9a9a; }
+      .lemon { fill: #ffe875; }
+      .callout { fill: #fffaf7; stroke: #f0d5cc; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="980" rx="28"/>
+
+  <text x="800" y="78" text-anchor="middle" class="label">Negative Pattern Loop</text>
+
+  <rect x="540" y="110" width="520" height="150" rx="28" class="purple" filter="url(#shadow)"/>
+  <text x="800" y="172" text-anchor="middle" class="noteText">
+    <tspan x="800" dy="0">Set unrealistic</tspan>
+    <tspan x="800" dy="42">expectations</tspan>
+  </text>
+
+  <rect x="1160" y="310" width="260" height="140" rx="26" class="blue" filter="url(#shadow)"/>
+  <text x="1290" y="392" text-anchor="middle" class="noteText">
+    <tspan x="1290" dy="0">Meet</tspan>
+    <tspan x="1290" dy="42">them</tspan>
+  </text>
+
+  <rect x="1040" y="520" width="380" height="160" rx="26" class="lemon" filter="url(#shadow)"/>
+  <text x="1230" y="602" text-anchor="middle" class="noteText">
+    <tspan x="1230" dy="0">"This is</tspan>
+    <tspan x="1230" dy="42">normal now"</tspan>
+  </text>
+
+  <rect x="180" y="310" width="300" height="140" rx="26" class="mint" filter="url(#shadow)"/>
+  <text x="330" y="392" text-anchor="middle" class="noteText">
+    <tspan x="330" dy="0">Miss</tspan>
+    <tspan x="330" dy="42">them</tspan>
+  </text>
+
+  <rect x="150" y="560" width="360" height="150" rx="26" class="salmon" filter="url(#shadow)"/>
+  <text x="330" y="622" text-anchor="middle" class="noteText">
+    <tspan x="330" dy="0">Frustration</tspan>
+    <tspan x="330" dy="42">or shame</tspan>
+  </text>
+
+  <rect x="565" y="720" width="470" height="150" rx="28" class="purple" filter="url(#shadow)"/>
+  <text x="800" y="780" text-anchor="middle" class="noteText">
+    <tspan x="800" dy="0">Coping</tspan>
+    <tspan x="800" dy="42">alcohol, numbing, avoidance</tspan>
+  </text>
+
+  <path d="M1060 210 C1190 225 1270 260 1288 300" class="line"/>
+  <path d="M1290 452 V510" class="line"/>
+  <path d="M1140 680 C960 760 650 760 500 690" class="line"/>
+  <path d="M330 452 V548" class="line"/>
+  <path d="M515 636 C600 676 660 708 720 720" class="line"/>
+
+  <path d="M1060 170 C1285 100 1460 185 1470 420 C1480 670 1300 815 1040 845" class="loopLine"/>
+  <text x="1405" y="212" text-anchor="middle" class="smallText">raise the bar</text>
+
+  <path d="M565 815 C415 835 260 790 180 690 C102 593 106 430 180 380" class="loopLine"/>
+  <text x="150" y="760" text-anchor="middle" class="smallText">next miss gets easier</text>
+
+  <rect x="590" y="350" width="420" height="170" rx="24" class="callout"/>
+  <text x="800" y="412" text-anchor="middle" class="title">
+    <tspan x="800" dy="0">Notice the loop.</tspan>
+    <tspan x="800" dy="36">Step out earlier.</tspan>
+  </text>
+  <text x="800" y="458" text-anchor="middle" class="smallText">
+    <tspan x="800" dy="0">Make the expectation realistic.</tspan>
+    <tspan x="800" dy="28">Name the frustration earlier.</tspan>
+  </text>
+</svg>

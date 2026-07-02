@@ -605,6 +605,23 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "heading",
+        text: "Spot the loop",
+      },
+      {
+        kind: "paragraph",
+        text: "A lot of shadow patterns run as loops, not one-off incidents. You set an unrealistic expectation. Sometimes you meet it once and quietly decide that now this should always be normal. Sometimes you miss it, feel the frustration, and reach for a coping move — a drink, numbing out, avoidance, more self-criticism — which makes the next miss more likely. The win is seeing the loop early enough to step out of it.",
+      },
+      {
+        kind: "image",
+        src: "/images/os/expectation-loop.svg",
+        alt: "A loop showing unrealistic expectations leading either to raising the bar again or to frustration and coping mechanisms that feed the cycle.",
+      },
+      {
+        kind: "callout",
+        text: "Exit points are simple but not easy: make the expectation realistic, name the frustration before it hardens, and choose a cleaner coping move while the pattern is still small.",
+      },
+      {
+        kind: "heading",
         text: "Build the noticing muscle",
       },
       {
