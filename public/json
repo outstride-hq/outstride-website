@@ -1,7 +1,7 @@
 {
   "meta": {
     "site": "outstride.co",
-    "generatedAt": "2026-07-02T16:20:08.681Z",
+    "generatedAt": "2026-07-02T16:27:37.782Z",
     "version": 1
   },
   "homepage": {
@@ -915,7 +915,7 @@
         "title": "Manage Capital and Stakeholders",
         "layerId": "founder",
         "groupId": "lead-the-game",
-        "summary": "",
+        "summary": "A founder stopped dreading board meetings when he sent the pack early, pre-synced the influential investors, and treated the board as a room to steer rather than a boss to report to.",
         "bullets": [
           "Keep existing investors, board members and key stakeholders informed and aligned.",
           "Run board and investor conversations with preparation, candour and strategic intent.",
@@ -5574,7 +5574,7 @@
               {
                 "label": "18. Manage Capital and Stakeholders",
                 "href": "/os/capabilities/manage-capital-and-stakeholders/",
-                "status": "draft"
+                "status": "ready"
               },
               {
                 "label": "19. Find New Capital",

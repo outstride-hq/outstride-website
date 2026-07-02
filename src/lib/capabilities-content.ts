@@ -457,6 +457,90 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "manage-capital-and-stakeholders": {
+    hook:
+      "I had a really bad relationship with my main investor in my first startup.",
+    beforeAfter: {
+      today: [
+        "Board meetings feel like reporting upward, so you walk in tense and half-defensive.",
+        "The first real conversation about a hard decision happens in the room, when everyone's posturing has already started.",
+        "Investor updates go out as summaries, with no clear ask and no reason for people to feel part of the journey.",
+      ],
+      success: [
+        "KPIs, highlights and challenges land before the meeting, so everyone starts from the same picture.",
+        "The key investors have been pre-synced, the contentious points have already been aired, and the room can work the real decision.",
+        "Every update gives stakeholders a way to help and enough founder magic that they want to stay close.",
+      ],
+    },
+    why:
+      "This one comes from scar tissue. In my first startup, our CEO stepped down soon after the round and the trust with our lead investor never really recovered. In an early-stage company, investors are betting on the founder as much as the numbers, so when trust breaks the relationship gets heavy fast. That's why this capability matters: board meetings and investor updates are not admin. They're how you keep belief, context and influence working for the company instead of against it.",
+    whatGoodLooksLike: [
+      "A board pack sent a few days early with KPIs first, then highlights, challenges and the decisions that matter.",
+      "A pre-sync cadence that surfaces what investors want to discuss and socializes any controversial topic before it becomes a room-wide debate.",
+      "Stakeholder communication that includes a clear ask, a reminder of what the company is now, and enough story or texture to make people want to help.",
+    ],
+    whereFoundersGoWrong: [
+      "Slipping into employee mode and treating investors like your boss, which turns the meeting into a defensive report instead of a conversation you are steering.",
+      "Saving the contentious decision for the board meeting itself, so people take positions in public before you've had the useful one-to-one conversations.",
+      "Sending flat updates with no CTA, no refresher on the company, and nothing human or visual for busy angels to latch onto.",
+    ],
+    doNow: [
+      {
+        action: "Decide what the next board meeting is for",
+        note: "Write one line before you build the deck: do you want honest discussion on an open question, or approval for a plan you've already shaped?",
+      },
+      {
+        action: "Send the pack 72 hours early",
+        note: "Lead with KPIs, highlights, lowlights and the big decisions so the meeting starts from shared reality, not slide-reading.",
+        toolId: "board-pack",
+      },
+      {
+        action: "Map and pre-sync the key voices",
+        note: "Identify the one or two investors the room tends to orbit, ask what they most want to cover, and road-test anything controversial before the meeting.",
+        toolId: "relationship-design-canvas",
+      },
+      {
+        action: "Add a CTA and one visual to the next investor update",
+        note: "Close with the specific help you want, then include a team, product or customer photo so people feel the company, not just the metrics.",
+        toolId: "investor-update",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Two questions before any board meeting",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "What do I want from this room?",
+            note: "Be conscious about the job of the meeting. An honest debate and a smooth approval path are different outcomes, and they require different prep.",
+          },
+          {
+            title: "Who actually shapes the room?",
+            note: "Boards are rarely flat democracies. Most investors converge around one or two influential voices, so know where the center of gravity is.",
+          },
+          {
+            title: "What needs to be discussed one-to-one first?",
+            note: "If a choice is likely to be contentious - partner A vs partner B, a leadership change, a reset in plan - take it private before you take it public.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Remember: they are not your boss",
+      },
+      {
+        kind: "paragraph",
+        text: "Investors have capital, influence and a real stake in the company, but they are not your line manager. Treat their views as important inputs, not operating authority. That mindset shift matters because it lets you stop performing for the room and start managing it.",
+      },
+      {
+        kind: "callout",
+        text: "Stakeholders want more than a spreadsheet. They want to feel the momentum, the team and the texture of the thing they're backing. If you're in person, let them feel the office or the product. If you're remote, use stories, specifics and strong visuals. Sprinkle a little founder magic.",
+      },
+    ],
+  },
   "face-my-shadow": {
     hook:
       "I can usually see the pattern afterwards. In the moment, though, it still feels like the safest move.",

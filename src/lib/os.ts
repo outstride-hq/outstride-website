@@ -846,7 +846,8 @@ export const capabilities: Capability[] = [
     title: "Manage Capital and Stakeholders",
     layerId: "founder",
     groupId: "lead-the-game",
-    summary: "",
+    summary:
+      "A founder stopped dreading board meetings when he sent the pack early, pre-synced the influential investors, and treated the board as a room to steer rather than a boss to report to.",
     bullets: [
       "Keep existing investors, board members and key stakeholders informed and aligned.",
       "Run board and investor conversations with preparation, candour and strategic intent.",

@@ -209,6 +209,43 @@ hook is a crafted composite; Q4 and Q6 not captured; replace when Ben supplies t
    delivered on time"). Techniques: the three-part sandwich (tell them what you'll tell them /
    tell them / tell them what you told them) and rhetorical questions as section breaks.
 
+### Manage Capital and Stakeholders (`manage-capital-and-stakeholders`)
+
+_(Captured from Ben's voice memo, 2026-07-02. Q1 uses Ben's own founder line from his first
+startup; replace later if he wants a more general founder quote.)_
+
+1. "I had a really bad relationship with my main investor in my first startup."
+   Context: soon after the raise, the CEO stepped down. In an early-stage startup investors are
+   investing in the founder, especially the CEO, so trust broke and the relationship stayed
+   turbulent for years.
+2. Investors are not your boss. Treat them as influential stakeholders to manage, not authority
+   figures to report up to.
+3. Before: board meetings felt like reporting upward; controversial decisions landed cold in the
+   room; investors were surprised, frustrated or circling the wrong topics. After: the deck goes
+   out a few days early with KPIs, highlights and challenges up front; key investors are
+   pre-synced; hard decisions are pre-discussed one-to-one; the meeting has space for what
+   matters and the founder is steering the room rather than defending in it. Investor updates
+   become short, useful and specific: highlights, lowlights, KPIs, big decisions, a reminder of
+   what the company is now if needed, a CTA, and a photo.
+4. Board Pack first, because it forces clarity on KPIs, highlights, challenges and the actual
+   decisions before the room reacts. Investor Update next, because regular async updates reduce
+   surprises and keep angels and stakeholders warm between meetings. Relationship Design Canvas
+   comes in when a key investor or stakeholder relationship is drifting, politically important, or
+   needs clearer expectations. Company Health Scorecard can feed the KPI slide.
+5. Treating investors like a boss and slipping into employee/reporting mode. Letting
+   controversial decisions first appear in the board meeting instead of pre-socialising them with
+   the influential investors. Sending bland updates with no ask, no reminder what the company is,
+   and no founder magic or visual texture for busy stakeholders to latch onto.
+6. What do you want from this board meeting: an honest discussion, or approval for the plan
+   you're presenting?
+7. Ben's own story from startup one is the anchor: trust with a lead investor can stay broken for
+   years once it cracks early. Also: VCs like to be the smartest person in the room, but a lot of
+   groupthink exists; boards often converge around one or two influential investors. Practical
+   point of view: ask advice one-to-one before the meeting, because people like to be consulted
+   and it lets you bias the room constructively. Distinctive line: "sprinkle some founder
+   magic" - investors are living vicariously through the founder and want to feel part of the
+   journey.
+
 ### Build a Life Worth Scaling For (`build-a-life-worth-scaling-for`)
 
 _(Captured from Ben's chat notes, 2026-07-02. Q1 has one strong verbatim founder line; Q6 not
