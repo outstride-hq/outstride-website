@@ -106,6 +106,75 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "build-my-growth-system": {
+    hook:
+      "I don't really have a system for my own growth. I just hope each crisis teaches me something.",
+    beforeAfter: {
+      today: [
+        "Every hard week becomes your growth plan by default.",
+        "Advice comes in from books, podcasts, investors and smart friends, but none of it has a home.",
+        "You know your edge is probably feedback, delegation, boundaries or mindset, yet it keeps resurfacing because nothing in the week trains it.",
+        "Support is reactive: you reach out when you are stuck, not as part of a designed system.",
+      ],
+      success: [
+        "You can name who sharpens which part of you: coach, mentor, peer, advisor, truth-teller.",
+        "One or two growth edges are chosen deliberately for the quarter instead of rediscovered the hard way.",
+        "Your calendar contains the reps: reading, reflection, feedback asks and habit stacks that actually change behaviour.",
+        "As the company gets harder, your growth system scales with it instead of collapsing into survival mode.",
+      ],
+    },
+    why:
+      "Bill Campbell is the anchor here: the leaders of Apple, Google and Intuit still used a coach because raw intelligence does not give you distance from yourself. Founder growth rarely fails for lack of insight. It fails because nobody has designed the support, challenge and repetition that turn insight into changed behaviour.",
+    whatGoodLooksLike: [
+      "A deliberate mix of coach, mentors, peers, friends and advisors, with clarity on what each relationship is for.",
+      "A small number of current growth edges, named explicitly and tied to real behaviours rather than vague self-improvement goals.",
+      "Weekly and monthly rhythms that turn reading, feedback and reflection into visible changes in how you lead.",
+    ],
+    whereFoundersGoWrong: [
+      "Treating consumption as growth: more podcasts, more notes, more tabs, no practice.",
+      "Building a personal board out of impressive people rather than the few who will actually challenge, support and tell the truth.",
+      "Waiting until crisis to ask for help, so support arrives as rescue instead of compound interest.",
+    ],
+    toolBridge: {
+      text: "Start by designing the people around your growth with the Personal Board, then turn one real growth edge into weekly reps with Habit Stacks.",
+      toolIds: ["personal-board", "habit-stacks"],
+    },
+    blocks: [
+      {
+        kind: "heading",
+        text: "Three places to look first",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Inputs",
+            note: "What are you reading or listening to that is actually shaping how you lead, not just making you feel productive?",
+          },
+          {
+            title: "People",
+            note: "Who currently plays coach, mentor, peer, challenger and truth-teller in your world - and where are you still trying to grow alone?",
+          },
+          {
+            title: "Practice",
+            note: "Where in your calendar do insights turn into reps: feedback asks, reflection, reading time, or a behaviour you are deliberately rehearsing?",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Insight has to change the week",
+      },
+      {
+        kind: "paragraph",
+        text: "A founder can have brilliant conversations, great books and strong advice and still not grow much. The difference is whether insight changes the calendar, a key relationship, or a repeated behaviour. If the week stays the same, the founder usually does too.",
+      },
+      {
+        kind: "callout",
+        text: "If feedback is the edge, saying \"I want to get better at feedback\" is not the work. The work is a repeatable rep: every Tuesday and Thursday, name two things people did well; after a tense meeting, capture the SBI feedback before the day ends. Growth compounds when it becomes behaviour, not aspiration.",
+      },
+    ],
+  },
 };
 
 export function getCapabilityContent(

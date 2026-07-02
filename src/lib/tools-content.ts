@@ -1325,6 +1325,7 @@ export const toolsContent: Record<string, ToolContent> = {
         kind: "capabilityRefs",
         capabilityIds: [
           "manage-my-energy-system",
+          "build-my-growth-system",
           "build-a-life-worth-scaling-for",
           "take-command-of-my-role",
         ],

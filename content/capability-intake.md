@@ -122,3 +122,18 @@ Lead the Game: Be Storyteller in Chief · Manage Capital and Stakeholders · Fin
 
 Human System: Build Resilience & Recovery · Build My Growth System · Master My Mindset ·
 Face My Shadow · Build a Life Worth Scaling For
+
+### Build My Growth System (`build-my-growth-system`)
+
+1. "I don't really have a system for my own growth. I just hope each crisis teaches me something."
+   "I keep learning the same lesson in slightly different forms."
+   "I read loads and talk to smart people, but I don't know if any of it is actually changing me."
+2. Reading more is not a growth system.
+3. Before: growth was reactive. A hard board meeting, a messy people call or a cofounder wobble would become that week's "learning." The founder had lots of inputs - books, podcasts, advice, investor opinions - but no designed way to sort them, no clear support bench, and no repeatable practice. The same edges kept returning: weak feedback, poor boundaries, avoiding hard calls, overwork.
+   After: the founder had a deliberate support system - coach, a few trusted peers, a couple of specific advisors, and clearer asks of each relationship. They named one or two growth edges for the quarter and put reps in the week: feedback asks, reading time, reflection, and small behavioural commitments. Monday morning looked calmer because growth was already on the calendar instead of waiting for pain to force it.
+4. Personal Board first, because most founders have support by accident rather than by design. Then Habit Stacks, because insight only counts once it becomes a repeated behaviour in the week. Relationship Design Canvas comes later when an important support relationship needs clearer expectations.
+5. Mistaking consumption for growth - endless books, notes, podcasts and saved links, but no practice.
+   Building a "personal board" out of impressive names instead of people who will actually challenge, support and tell the truth.
+   Waiting until crisis to reach out, so support shows up as rescue instead of compounding.
+6. What are you reading, who are you learning from, who is supporting you - and where in your calendar does any of that turn into change?
+7. Bill Campbell. The leaders of Apple, Google and Intuit still needed a coach. That is the point: intelligence and ambition are not enough; you need structured challenge, reflection and accountability.

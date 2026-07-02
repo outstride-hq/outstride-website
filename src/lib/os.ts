@@ -926,14 +926,16 @@ export const capabilities: Capability[] = [
     title: "Build My Growth System",
     layerId: "human",
     groupId: "human-system",
-    summary: "",
+    summary:
+      "One founder had plenty of advice coming in from books, peers and investors, but no deliberate system for turning any of it into sharper leadership, so the same growth edges kept resurfacing every quarter.",
     bullets: [
       "Build the right mix of coach, mentors, peers, cofounders, friends, family and advisors.",
       "Create a personal board that supports, challenges and expands you.",
-      "Turn growth into a deliberate system rather than random inspiration.",
+      "Turn growth into a deliberate system of support, reflection and practice rather than random inspiration.",
     ],
     toolIds: [
       "personal-board",
+      "habit-stacks",
       "anti-wasteman-system",
       "relationship-design-canvas",
     ],
@@ -1622,6 +1624,7 @@ export const tools: Tool[] = [
     layerIds: ["founder", "human"],
     capabilityIds: [
       "manage-my-energy-system",
+      "build-my-growth-system",
       "build-a-life-worth-scaling-for",
       "take-command-of-my-role",
     ],
