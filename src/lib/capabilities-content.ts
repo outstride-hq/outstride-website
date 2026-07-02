@@ -111,14 +111,14 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       "I don't really have a system for my own growth. I just hope each crisis teaches me something.",
     beforeAfter: {
       today: [
-        "Growth is happening to you, but not deliberately: each hard week becomes the next lesson you scramble to absorb.",
-        "You read, listen and talk to smart people, but there is no system deciding what you learn, from whom, or how it changes you.",
-        "You know the edge might be feedback, boundaries, mindset or hard decisions, yet it keeps resurfacing because nothing in the week trains it.",
+        "Each hard week becomes the next lesson you scramble to absorb.",
+        "You take in advice, but nothing organizes what changes you.",
+        "The same growth edge keeps coming back.",
       ],
       success: [
-        "You have a deliberate growth system around you: coach, peers, trusted people and a personal board that expands your thinking.",
-        "You reflect regularly, identify the growth edge that matters now, and choose support and inputs that serve it.",
-        "Insight turns into practice through feedback loops and habit stacks, so your leadership keeps compounding as the company gets harder.",
+        "You have a deliberate system: coach, peers and a personal board.",
+        "You know the growth edge that matters now.",
+        "Insight turns into practice through feedback loops and habits.",
       ],
     },
     why:
