@@ -1216,6 +1216,61 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "two-equilibria-map": {
+    intro:
+      "A one-page map of your two stable states — the good equilibrium that keeps you sharp, the bad one that quietly runs you — with the triggers that tip you over and the recovery moves that bring you back.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Both states are equilibria: they hold themselves in place. In the good one, planning, real breaks and exercise feed each other and you stay there without effort. In the bad one, reactivity, stress and the caffeine-up, alcohol-down cycle feed each other just as reliably — which is why you do not drift back to good on your own. Getting back takes a deliberate move.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "two-equilibria",
+      },
+      {
+        kind: "heading",
+        text: "How to fill it in",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Describe your two states",
+            note: "In observable behaviours, not moods. What do you do more of in a good stretch — plan the week, take breaks, train? What shows up in a bad one — inbox-driven days, snapping at people, a drink to switch off?",
+          },
+          {
+            title: "Name what tips you over",
+            note: "Triggers are personal and they stack: a conference plus travel plus hotels plus caffeine plus late drinks is a different event than any one alone. Acute stressors like a fundraise count too.",
+            example: "Two conferences back-to-back plus a board meeting is a known tip-over — plan for it like one.",
+          },
+          {
+            title: "Pre-plan your recovery moves",
+            note: "Decide them in advance, because from inside the bad equilibrium you will not invent them. A two-hour slot for a long run, a spa day, sex, a weekend fully offline — whatever reliably resets you, written down and bookable.",
+          },
+          {
+            title: "Wire in a tripwire",
+            note: "Add a daily burnout score out of 10 to your habit stack and pre-agree the responses: above 8, stop — take at least a half day. Between 6 and 8, keep working but protect a fully offline weekend.",
+          },
+          {
+            title: "Share it with your cofounder",
+            note: "Tell them your triggers and your promises, and hold each other accountable — \"did you book that vacation?\" belongs next to \"did you ship that project?\".",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "A startup is neither a marathon nor a sprint — it is a marathon with periods of sprinting. Sprints are sometimes the right call: a critical launch, a fundraise. The danger is the sprint with no end date and no recovery booked on the other side.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "build-resilience-and-recovery",
+          "manage-my-energy-system",
+        ],
+      },
+    ],
+  },
   "habit-stacks": {
     intro:
       "Habit stacking links a new behaviour to something you already do — then chains those links into a rhythm you can run without willpower.",

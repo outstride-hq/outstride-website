@@ -907,14 +907,17 @@ export const capabilities: Capability[] = [
     title: "Build Resilience & Recovery",
     layerId: "human",
     groupId: "human-system",
-    summary: "",
+    summary:
+      "Days after cancer surgery, I was answering investor emails from the hospital bed — because it had never occurred to me that protecting my own recovery was part of the job.",
     bullets: [
       "Watch for signs of burnout, stress and emotional overload.",
       "Create playbooks in advance for difficult periods.",
       "Build resilience to stay in a good state and recover quickly from a bad one.",
     ],
     toolIds: [
+      "two-equilibria-map",
       "burnout-playbook",
+      "habit-stacks",
     ],
     rhythmIds: [],
     order: 21,
@@ -1654,6 +1657,7 @@ export const tools: Tool[] = [
     layerIds: ["founder", "human"],
     capabilityIds: [
       "manage-my-energy-system",
+      "build-resilience-and-recovery",
       "build-my-growth-system",
       "build-a-life-worth-scaling-for",
       "take-command-of-my-role",
@@ -1685,6 +1689,25 @@ export const tools: Tool[] = [
       "Map the coach, mentors, peers and advisors who support your growth.",
   },
   {
+    id: "two-equilibria-map",
+    title: "Two Equilibria Map",
+    categoryId: "human-tools",
+    type: "framework",
+    format: ["solo", "one-to-one"],
+    layerIds: ["human"],
+    capabilityIds: [
+      "build-resilience-and-recovery",
+      "manage-my-energy-system",
+    ],
+    description:
+      "Map your good and bad equilibrium states, the triggers that tip you from one into the other, and the recovery moves that bring you back.",
+    diagramId: "two-equilibria",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: ["burnout-playbook", "habit-stacks", "energy-audit"],
+  },
+  {
     id: "burnout-playbook",
     title: "Burnout Playbook",
     categoryId: "human-tools",
@@ -1694,6 +1717,7 @@ export const tools: Tool[] = [
     capabilityIds: ["build-resilience-and-recovery"],
     description:
       "Playbooks for recognising burnout early and recovering deliberately.",
+    relatedToolIds: ["two-equilibria-map", "habit-stacks"],
   },
   {
     id: "anti-wasteman-system",

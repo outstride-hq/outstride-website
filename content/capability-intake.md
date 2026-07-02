@@ -123,6 +123,34 @@ Lead the Game: Be Storyteller in Chief · Manage Capital and Stakeholders · Fin
 Human System: Build Resilience & Recovery · Build My Growth System · Master My Mindset ·
 Face My Shadow · Build a Life Worth Scaling For
 
+### Build Resilience & Recovery (`build-resilience-and-recovery`)
+
+_(Captured from Ben's chat notes, 2026-07-02. Q1 has no verbatim quotes yet — the page hook is a
+crafted composite; replace with real founder quotes when Ben supplies them.)_
+
+1. (No verbatim quotes captured yet.) Described state: very reactive, very stressed, drinking to
+   switch off; conferences/travel/hotels/caffeine/alcohol stack up; fundraising and other acute
+   stressors tip founders over.
+2. A startup is neither a marathon nor a sprint — it's a marathon with periods of sprinting.
+   Sprinting is sometimes required (critical launch, fundraise); sprinting continuously is a crash.
+   Also: managing your own energy is close to job number one, not self-care around the job.
+3. Before: reactive, wired, no recovery. After: founder knows their two equilibria (good:
+   planning, breaks, exercise; bad: reactive, stressed, numbing), knows their triggers, and has
+   pre-planned recovery moves (two-hour long run, spa day, sex, offline weekend).
+4. Two Equilibria Map first (see your states and triggers), then Burnout Playbook (pre-commit
+   responses), with the daily burnout score living in Habit Stacks.
+5. Ben's own story: answering emails from the hospital bed within days of cancer treatment — no
+   recovery window at all. Also: making quarter-defining decisions at 70% capacity; treating the
+   whole startup as one continuous sprint.
+6. (Not captured yet.)
+7. Ben's cancer story is the authority anchor — told first person on the page. Plus the
+   marathon-with-sprints line. Key structural point: as the company grows, work shifts from IC
+   output to decisions/leadership — higher leverage, lower tolerance for a depleted founder.
+   Cofounder accountability: share triggers and promises ("did you book that vacation?").
+
+**Open question (Ben, 2026-07-02):** possibly merge `manage-my-energy-system` and
+`build-resilience-and-recovery` into one capability — the content overlaps heavily.
+
 ### Build My Growth System (`build-my-growth-system`)
 
 1. "I don't really have a system for my own growth. I just hope each crisis teaches me something."

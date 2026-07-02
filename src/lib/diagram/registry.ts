@@ -8,6 +8,7 @@ import { nvcFlowDefinition } from "./definitions/nvc-flow";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
 import { strategyGridDefinition } from "./definitions/strategy-grid";
+import { twoEquilibriaDefinition } from "./definitions/two-equilibria";
 
 const definitions: Record<string, DiagramDefinition> = {
   [strategyGridDefinition.id]: strategyGridDefinition,
@@ -19,6 +20,7 @@ const definitions: Record<string, DiagramDefinition> = {
   [sbiFeedbackDefinition.id]: sbiFeedbackDefinition,
   [fiveDysfunctionsDefinition.id]: fiveDysfunctionsDefinition,
   [human9MiroDefinition.id]: human9MiroDefinition,
+  [twoEquilibriaDefinition.id]: twoEquilibriaDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -78,6 +80,9 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: human9MiroDefinition,
+  },
+  {
+    definition: twoEquilibriaDefinition,
   },
 ];
 

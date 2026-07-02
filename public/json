@@ -1,7 +1,7 @@
 {
   "meta": {
     "site": "outstride.co",
-    "generatedAt": "2026-07-02T14:52:57.195Z",
+    "generatedAt": "2026-07-02T15:11:38.826Z",
     "version": 1
   },
   "homepage": {
@@ -980,14 +980,16 @@
         "title": "Build Resilience & Recovery",
         "layerId": "human",
         "groupId": "human-system",
-        "summary": "",
+        "summary": "Days after cancer surgery, I was answering investor emails from the hospital bed — because it had never occurred to me that protecting my own recovery was part of the job.",
         "bullets": [
           "Watch for signs of burnout, stress and emotional overload.",
           "Create playbooks in advance for difficult periods.",
           "Build resilience to stay in a good state and recover quickly from a bad one."
         ],
         "toolIds": [
-          "burnout-playbook"
+          "two-equilibria-map",
+          "burnout-playbook",
+          "habit-stacks"
         ],
         "rhythmIds": [],
         "order": 21
@@ -2042,6 +2044,7 @@
         ],
         "capabilityIds": [
           "manage-my-energy-system",
+          "build-resilience-and-recovery",
           "build-my-growth-system",
           "build-a-life-worth-scaling-for",
           "take-command-of-my-role"
@@ -2077,6 +2080,33 @@
         "description": "Map the coach, mentors, peers and advisors who support your growth."
       },
       {
+        "id": "two-equilibria-map",
+        "title": "Two Equilibria Map",
+        "categoryId": "human-tools",
+        "type": "framework",
+        "format": [
+          "solo",
+          "one-to-one"
+        ],
+        "layerIds": [
+          "human"
+        ],
+        "capabilityIds": [
+          "build-resilience-and-recovery",
+          "manage-my-energy-system"
+        ],
+        "description": "Map your good and bad equilibrium states, the triggers that tip you from one into the other, and the recovery moves that bring you back.",
+        "diagramId": "two-equilibria",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "burnout-playbook",
+          "habit-stacks",
+          "energy-audit"
+        ]
+      },
+      {
         "id": "burnout-playbook",
         "title": "Burnout Playbook",
         "categoryId": "human-tools",
@@ -2091,7 +2121,11 @@
         "capabilityIds": [
           "build-resilience-and-recovery"
         ],
-        "description": "Playbooks for recognising burnout early and recovering deliberately."
+        "description": "Playbooks for recognising burnout early and recovering deliberately.",
+        "relatedToolIds": [
+          "two-equilibria-map",
+          "habit-stacks"
+        ]
       },
       {
         "id": "anti-wasteman-system",
@@ -3622,6 +3656,60 @@
           }
         ]
       },
+      "two-equilibria-map": {
+        "intro": "A one-page map of your two stable states — the good equilibrium that keeps you sharp, the bad one that quietly runs you — with the triggers that tip you over and the recovery moves that bring you back.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Both states are equilibria: they hold themselves in place. In the good one, planning, real breaks and exercise feed each other and you stay there without effort. In the bad one, reactivity, stress and the caffeine-up, alcohol-down cycle feed each other just as reliably — which is why you do not drift back to good on your own. Getting back takes a deliberate move."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "two-equilibria"
+          },
+          {
+            "kind": "heading",
+            "text": "How to fill it in"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Describe your two states",
+                "note": "In observable behaviours, not moods. What do you do more of in a good stretch — plan the week, take breaks, train? What shows up in a bad one — inbox-driven days, snapping at people, a drink to switch off?"
+              },
+              {
+                "title": "Name what tips you over",
+                "note": "Triggers are personal and they stack: a conference plus travel plus hotels plus caffeine plus late drinks is a different event than any one alone. Acute stressors like a fundraise count too.",
+                "example": "Two conferences back-to-back plus a board meeting is a known tip-over — plan for it like one."
+              },
+              {
+                "title": "Pre-plan your recovery moves",
+                "note": "Decide them in advance, because from inside the bad equilibrium you will not invent them. A two-hour slot for a long run, a spa day, sex, a weekend fully offline — whatever reliably resets you, written down and bookable."
+              },
+              {
+                "title": "Wire in a tripwire",
+                "note": "Add a daily burnout score out of 10 to your habit stack and pre-agree the responses: above 8, stop — take at least a half day. Between 6 and 8, keep working but protect a fully offline weekend."
+              },
+              {
+                "title": "Share it with your cofounder",
+                "note": "Tell them your triggers and your promises, and hold each other accountable — \"did you book that vacation?\" belongs next to \"did you ship that project?\"."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "A startup is neither a marathon nor a sprint — it is a marathon with periods of sprinting. Sprints are sometimes the right call: a critical launch, a fundraise. The danger is the sprint with no end date and no recovery booked on the other side."
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "build-resilience-and-recovery",
+              "manage-my-energy-system"
+            ]
+          }
+        ]
+      },
       "habit-stacks": {
         "intro": "Habit stacking links a new behaviour to something you already do — then chains those links into a rhythm you can run without willpower.",
         "blocks": [
@@ -5041,7 +5129,7 @@
               {
                 "label": "21. Build Resilience & Recovery",
                 "href": "/os/capabilities/build-resilience-and-recovery/",
-                "status": "draft"
+                "status": "ready"
               },
               {
                 "label": "22. Build My Growth System",
@@ -5240,6 +5328,11 @@
             "label": "Personal Board",
             "href": "/os/tools/personal-board/",
             "status": "draft"
+          },
+          {
+            "label": "Two Equilibria Map",
+            "href": "/os/tools/two-equilibria-map/",
+            "status": "ready"
           },
           {
             "label": "Burnout Playbook",

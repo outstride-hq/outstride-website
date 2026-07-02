@@ -106,6 +106,74 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "build-resilience-and-recovery": {
+    hook:
+      "I know I'm in a bad place when every Slack ping makes me flinch. I'm wired all day, and the only off switch I've found is a drink in the evening.",
+    beforeAfter: {
+      today: [
+        "Every week runs you: reactive, wired, no recovery in sight.",
+        "A conference or a fundraise tips you over — and you stay tipped for weeks.",
+        "You're making quarter-defining decisions at 70% capacity and calling it commitment.",
+      ],
+      success: [
+        "You know your two states, and you can name what tips you from one into the other.",
+        "A daily burnout score triggers a pre-agreed plan, not a negotiation with yourself.",
+        "Sprints are deliberate and bounded, with recovery booked before the sprint starts.",
+        "Your cofounder knows your triggers and holds you to the vacation you promised.",
+      ],
+    },
+    why:
+      "This one is personal. When I had cancer, I was answering emails from the hospital bed within a couple of days — I never gave myself a chance to recover, because it never occurred to me that recovery was part of the job. It is. As the company grows, your work shifts from doing things to making calls, and decisions have a far lower tolerance for a depleted founder than tasks do: choosing the wrong quarter focus at 70% capacity costs more than any week of lost output. If you crash out, it is a disaster for the company — which makes managing your own energy close to job number one.",
+    whatGoodLooksLike: [
+      "You can describe your good equilibrium and your bad one in concrete behaviours — and you know which one you're in today.",
+      "Known triggers — travel, conferences, fundraising — come with counterweights planned and booked in advance.",
+      "Recovery is scheduled like any other commitment: the long run, the offline weekend and the quarterly vacation actually happen.",
+    ],
+    whereFoundersGoWrong: [
+      "Treating recovery as a reward for finishing. The work never finishes, so the recovery never comes.",
+      "Running the startup as one long sprint. Continuous sprinting isn't intensity — it's a slow crash with a delay on it.",
+      "Keeping the struggle private from cofounders, so nobody can catch the slide into bad equilibrium until it shows up in your decisions.",
+    ],
+    toolBridge: {
+      text: "Start by mapping your two states with the Two Equilibria Map, then pre-commit your responses with the Burnout Playbook.",
+      toolIds: ["two-equilibria-map", "burnout-playbook"],
+    },
+    blocks: [
+      {
+        kind: "heading",
+        text: "Two stable states",
+      },
+      {
+        kind: "paragraph",
+        text: "Resilience gets easier once you see that you have two equilibria, and both are self-reinforcing. In the good one, planning, real breaks and exercise feed each other. In the bad one, reactivity, stress and drinking to switch off feed each other just as well — which is why you don't drift back to good on your own. The work is knowing what pushes you out of the good state, and having deliberate moves that pull you back.",
+      },
+      {
+        kind: "heading",
+        text: "Make it measurable",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Score it daily",
+            note: "Add a burnout score out of 10 to your habit stack. Ten seconds a day is enough to catch the slide early.",
+          },
+          {
+            title: "Pre-agree the thresholds",
+            note: "Above 8: stop working — take at least a half day. Between 6 and 8: keep going, but the weekend is fully offline, no email, no laptop. Decide this while you're well; you won't decide it well when you're not.",
+          },
+          {
+            title: "Enlist your cofounder",
+            note: "Share your triggers and your thresholds. Let them ask \"did you book that vacation?\" with the same weight as \"did you ship that project?\".",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "A startup is neither a marathon nor a sprint — it's a marathon with periods of sprinting. Sprinting is sometimes exactly right: a critical launch, a fundraise. Sprinting continuously is just burnout on a payment plan.",
+      },
+    ],
+  },
   "build-my-growth-system": {
     hook:
       "I don't really have a system for my own growth. I just hope each crisis teaches me something.",
