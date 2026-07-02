@@ -26,6 +26,68 @@ This file is the source of truth for repo conventions. Cursor and other AGENTS.m
 - The homepage hero uses flat coral with a white circular photo frame. Keep future hero work aligned with that direction unless explicitly exploring a replacement.
 - For diagrams, tool screenshots, sticky-note canvases and category-heavy visuals, use the pastel diagram set in `src/lib/ui.ts` (`--out-pastel-*`) rather than ad hoc colors.
 
+## Raw thoughts to CMS
+
+Ben often uses agent sessions to turn voice memos, chat dumps, or pasted notes into site content. The dominant loop: raw input → capture → classify → draft into typed CMS data → verify.
+
+### Core capture rule
+
+Capture the majority of what Ben says. Paraphrase and edit down for tightness, but do not cut large chunks or lose distinctive phrasings — keep lines like "marathon with periods of sprinting", "sprinkle founder magic", and "Champagne at 40" verbatim. Prefer his voice over marketing gloss.
+
+### Fit the template, extend otherwise
+
+Map the dump to the right typed slots first:
+
+- Capabilities → `src/lib/capabilities-content.ts` (see "Capability pages" below).
+- Tools → `src/lib/os.ts` + `src/lib/tools-content.ts` (see "Adding OS tools" below).
+- Diagrams → `src/lib/diagram/definitions/` + `src/lib/diagram/registry.ts`.
+
+When content overflows the fixed slots, extend via `blocks` (capability) or extra `ToolBlock`s (tool) rather than dropping material. Do not pad empty slots with filler. If the fixed format actively fights the material, flag it and offer a blog-style variant (`build-a-life-worth-scaling-for` is the precedent) instead of forcing it.
+
+### Capture-first
+
+Before drafting into `src/lib/`, paste the raw dump into the matching intake doc with a dated provenance note:
+
+- Capabilities → `content/capability-intake.md`
+- Tools → `content/tool-intake.md`
+
+This keeps drafts auditable and prevents lossy rewrites.
+
+### Route before drafting
+
+Classify each dump in one line before writing: capability / tool / diagram / cleanup pass. Confirm target file(s) and whether intake already exists or needs a new section.
+
+### Mark invented vs. real
+
+When Ben does not supply a real founder quote or authority anchor, label it a crafted composite in the intake doc (e.g. "(No verbatim quotes captured yet)") so it can be replaced later — never silently canonise invented lines.
+
+### Capture open questions and decisions
+
+Park side-decisions ("maybe merge X and Y", format questions, missing Q6) in the intake doc rather than losing them between sessions.
+
+### Anonymize raw dumps
+
+The Granola rules below apply to voice dumps and chat notes, not just meeting notes. Strip client names, company names, investor names, and identifying details before content reaches `src/lib/`. Transform anecdotes into composite scenarios with changed sector, stage, and numbers.
+
+### Consistency invariants
+
+Check on every content edit:
+
+- **Draft flag ↔ has content:** if a capability or tool has rich content in `capabilities-content.ts` or `tools-content.ts`, it must not be marked draft in `os.ts` (and vice versa).
+- **Bidirectional links:** `capabilityIds` on tools and `toolIds` on capabilities should stay aligned where the relationship is intentional.
+- **Accreditation:** adapted frameworks carry `accreditation` on both the tool in `os.ts` and any matching diagram definition.
+
+### Diagram self-debug loop
+
+When you add or materially change a diagram:
+
+1. Run `npm run build` and fix type or lint errors.
+2. Load the relevant page (tool detail, capability page, or `/os/diagrams`).
+3. Use `browser_snapshot` plus at least one screenshot to verify layout, text overflow, and padding.
+4. Iterate on the definition until it renders correctly.
+
+Prefer Candidate A (SVG Canvas) — see "Diagram-as-code system" below.
+
 ## Content is data-driven
 
 Prefer editing data over hardcoding JSX.
@@ -79,7 +141,7 @@ Rich capability content lives in `src/lib/capabilities-content.ts`, keyed by cap
 - One deep-dive section (heading + paragraph/callout) carrying a distinctive point of view.
 - A named-example callout — only when the story is real and sourced.
 
-**Intake before drafting.** A capability entry should not be drafted from thin air. Get answers (from Ben, ideally via `content/capability-intake.md`) to: (1) what founders literally say when this is broken, (2) what conventional advice gets wrong, (3) a real anonymized before→after, (4) which tool he reaches for first and why, (5) failure modes he has personally seen, (6) the first question he asks in a session, (7) one authority anchor he believes. Questions 1, 2 and 5 are non-negotiable; without them, leave the capability on fallback rendering.
+**Intake before drafting.** A capability entry should not be drafted from thin air. Get answers (from Ben, ideally via `content/capability-intake.md`; tools use `content/tool-intake.md`) to: (1) what founders literally say when this is broken, (2) what conventional advice gets wrong, (3) a real anonymized before→after, (4) which tool he reaches for first and why, (5) failure modes he has personally seen, (6) the first question he asks in a session, (7) one authority anchor he believes. Questions 1, 2 and 5 are non-negotiable; without them, leave the capability on fallback rendering.
 
 ### Adding OS tools
 
@@ -120,7 +182,7 @@ Custom visual canvases (strategy grid, dial, flow, pyramid) are defined as data 
 
 For diagrams, we should prefer Candidate A — SVG Canvas, but keep the other two as fallback options.
 
-When you add or materially change a diagram, verify it in-browser before finishing using `browser_snapshot` plus at least one screenshot from the relevant page.
+When you add or materially change a diagram, follow the **Diagram self-debug loop** in "Raw thoughts to CMS" above.
 
 ## Repo rules (always apply)
 
