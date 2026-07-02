@@ -4,6 +4,7 @@ import { alignmentAutonomyDefinition } from "./definitions/alignment-autonomy";
 import { culturePerformanceGridDefinition } from "./definitions/culture-performance-grid";
 import { fiveDysfunctionsDefinition } from "./definitions/five-dysfunctions";
 import { human9MiroDefinition } from "./definitions/human-9-miro";
+import { operatingCadenceDefinition } from "./definitions/operating-cadence";
 import { nvcFlowDefinition } from "./definitions/nvc-flow";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
@@ -31,6 +32,7 @@ const definitions: Record<string, DiagramDefinition> = {
   [sevenFounderNeedsDefinition.id]: sevenFounderNeedsDefinition,
   [threeCsDecisionDefinition.id]: threeCsDecisionDefinition,
   [zoneOfGeniusDefinition.id]: zoneOfGeniusDefinition,
+  [operatingCadenceDefinition.id]: operatingCadenceDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -108,6 +110,9 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: zoneOfGeniusDefinition,
+  },
+  {
+    definition: operatingCadenceDefinition,
   },
 ];
 

@@ -225,6 +225,94 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "install-the-operating-rhythm": {
+    hook:
+      "I walked out of the quarterly planning offsite feeling like we'd nailed it. Six weeks later half the company was working on something else — and I genuinely thought I'd made it crystal clear.",
+    beforeAfter: {
+      today: [
+        "Planning happens in bursts, then the company drifts until the next fire drill.",
+        "The same priorities get re-debated in every meeting because nothing has a fixed home.",
+        "Teams report activity — tickets closed, calls made — not progress against the goals they agreed to.",
+      ],
+      success: [
+        "Planning, review and accountability each have a meeting with one clear job.",
+        "Every team opens its review by traffic-lighting OKRs — green, amber, red — against goals they co-created.",
+        "You over-communicate early, then dial back once the muscle is built — not the other way around.",
+      ],
+    },
+    why:
+      "Once you know where you're going and how to get there, your job shifts again: you're the one who bangs the drum. Make sure the company is marching at the right speed in the right direction. That means cascading goals from company to team to individual, and getting the right people into the planning room — not too few, or you get false alignment and the dysfunctions Patrick Lencioni describes when trust and commitment never get tested; not too many, or planning becomes a slow democracy that kills momentum. The three Cs still apply: create the view, collaborate with the few who shape it, communicate it to everyone who has to act. Cadence is how you install that rhythm — weekly, fortnightly, monthly, quarterly, annual — so planning, retrospectives, performance reviews and all-hands each happen at the frequency that matches their job.",
+    whatGoodLooksLike: [
+      "Every recurring meeting has one job — plan, hold accountable, communicate, connect, or review — and everyone in the room knows which one it is.",
+      "Strategy meetings and execution meetings are separate, so one doesn't crowd out the other.",
+      "Teams self-report against agreed goals at a fixed rhythm — traffic-light OKRs every two weeks is a simple start.",
+    ],
+    whereFoundersGoWrong: [
+      "Under-communicating at the start — assuming people heard what you meant, then wondering why they're marching the wrong way.",
+      "Combining strategy and execution in the same meeting, so one always wins and the other never gets real airtime.",
+      "Wrong-sized planning rooms: too few people and you get false alignment; too many and you drown in meetings without decisions.",
+    ],
+    doNow: [
+      {
+        action: "Install a fortnightly OKR traffic-light",
+        note: "Engineering, product, sales — each team opens the meeting by reporting green, amber or red against the goals they agreed to. No narrative first; status against goals first.",
+        toolId: "okrs",
+      },
+      {
+        action: "Split strategy from execution this week",
+        note: "If your leadership meeting mixes 'where are we going' with 'are we on track', carve two slots. Strategy sets direction; execution holds people to it.",
+      },
+      {
+        action: "Name who's in the planning room",
+        note: "For the next big planning cycle, list who creates, who collaborates and who gets communicated to. Too few risks false alignment; too many risks paralysis.",
+        toolId: "three-cs-decision",
+      },
+      {
+        action: "Book the non-negotiables",
+        note: "Weekly strategy, fortnightly OKR review, monthly all-hands. Put them on the calendar before anything else fills the gaps.",
+        toolId: "operating-cadence",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Planning vs execution",
+      },
+      {
+        kind: "paragraph",
+        text: "Cadence handles planning — where you're going, what this quarter is for, who owns what. Execution is accountability — are we actually doing it? Keep them in separate meetings. When you combine them, strategy gets rushed or execution gets skipped, and you end up re-litigating direction every fortnight instead of reporting against it.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "operating-cadence",
+      },
+      {
+        kind: "heading",
+        text: "The meetings your company needs",
+      },
+      {
+        kind: "list",
+        items: [
+          "Weekly strategy meeting — plan: direction, priorities and the calls that need making.",
+          "Weekly leadership meeting — hold accountable: metrics, blockers, decisions that can't wait.",
+          "Fortnightly OKR traffic-light — hold accountable: each team reports green, amber or red against agreed goals before anything else.",
+          "Monthly all-hands — communicate: repeat the story, progress and what matters this month.",
+          "Monthly founder dinner — connect: informal, off-agenda; relationships that don't happen in stand-ups.",
+          "Quarterly strategy reset and OKR cascade — plan and collaborate: revisit destination, draft company goals, team OKRs, approve and communicate.",
+          "Quarterly retro — review: what worked, what didn't, before you set the next quarter.",
+          "Annual offsite — plan: long-range strategy, SWOT, the bets that won't fit in a weekly slot.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Over-communicate first, then dial it down. Founders who optimise for meeting efficiency too early often discover people were never aligned — they just weren't speaking up. Start with more rhythm than feels necessary; trim once the drumbeat is landing.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["operating-cadence", "okrs", "quarterly-retro"],
+      },
+    ],
+  },
   "build-a-culture-that-compounds": {
     hook: "We've grown fast, but it doesn't feel like the same company anymore. New people don't get how we do things — and I can't put my finger on what changed.",
     beforeAfter: {

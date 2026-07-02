@@ -1,7 +1,7 @@
 {
   "meta": {
     "site": "outstride.co",
-    "generatedAt": "2026-07-02T17:03:01.903Z",
+    "generatedAt": "2026-07-02T17:07:52.302Z",
     "version": 1
   },
   "homepage": {
@@ -602,7 +602,7 @@
         "title": "Install the Operating Rhythm",
         "layerId": "company",
         "groupId": "company-system",
-        "summary": "",
+        "summary": "A SaaS founder left quarterly planning convinced everyone was aligned — six weeks later, half the company was building against a different set of priorities.",
         "bullets": [
           "Create the weekly, monthly, quarterly and annual cadence that runs the company.",
           "Give each meeting a clear job — strategy, review and accountability, decisions, or connection — so the right conversation happens at the right frequency.",
@@ -610,7 +610,9 @@
         ],
         "toolIds": [
           "operating-cadence",
+          "okrs",
           "quarterly-retro",
+          "three-cs-decision",
           "company-health-scorecard"
         ],
         "rhythmIds": [
@@ -1401,7 +1403,8 @@
           "company"
         ],
         "capabilityIds": [
-          "chart-the-path"
+          "chart-the-path",
+          "install-the-operating-rhythm"
         ],
         "description": "Connect annual and quarterly goals to team priorities and measurable outcomes."
       },
@@ -1457,7 +1460,15 @@
         "capabilityIds": [
           "install-the-operating-rhythm"
         ],
-        "description": "The weekly, monthly, quarterly and annual rhythm that keeps the company aligned."
+        "description": "The weekly, monthly, quarterly and annual rhythm that keeps the company aligned.",
+        "diagramId": "operating-cadence",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "okrs",
+          "quarterly-retro"
+        ]
       },
       {
         "id": "quarterly-retro",
@@ -5867,7 +5878,7 @@
               {
                 "label": "4. Install the Operating Rhythm",
                 "href": "/os/capabilities/install-the-operating-rhythm/",
-                "status": "draft"
+                "status": "ready"
               },
               {
                 "label": "5. Make Ownership Stick",

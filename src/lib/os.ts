@@ -564,7 +564,8 @@ export const capabilities: Capability[] = [
     title: "Install the Operating Rhythm",
     layerId: "company",
     groupId: "company-system",
-    summary: "",
+    summary:
+      "A SaaS founder left quarterly planning convinced everyone was aligned — six weeks later, half the company was building against a different set of priorities.",
     bullets: [
       "Create the weekly, monthly, quarterly and annual cadence that runs the company.",
       "Give each meeting a clear job — strategy, review and accountability, decisions, or connection — so the right conversation happens at the right frequency.",
@@ -572,7 +573,9 @@ export const capabilities: Capability[] = [
     ],
     toolIds: [
       "operating-cadence",
+      "okrs",
       "quarterly-retro",
+      "three-cs-decision",
       "company-health-scorecard",
     ],
     rhythmIds: ["weekly-leadership-meeting", "monthly-business-review"],
@@ -1250,7 +1253,7 @@ export const tools: Tool[] = [
     type: "framework",
     format: ["team", "company"],
     layerIds: ["company"],
-    capabilityIds: ["chart-the-path"],
+    capabilityIds: ["chart-the-path", "install-the-operating-rhythm"],
     description:
       "Connect annual and quarterly goals to team priorities and measurable outcomes.",
   },
@@ -1288,6 +1291,11 @@ export const tools: Tool[] = [
     capabilityIds: ["install-the-operating-rhythm"],
     description:
       "The weekly, monthly, quarterly and annual rhythm that keeps the company aligned.",
+    diagramId: "operating-cadence",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: ["okrs", "quarterly-retro"],
   },
   {
     id: "quarterly-retro",
