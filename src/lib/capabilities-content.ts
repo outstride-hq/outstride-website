@@ -628,6 +628,78 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "find-new-capital": {
+    hook:
+      "I've been out raising for months. Every pitch feels like a coin toss, half the no's come with a reason that means nothing, and the whole time the company is drifting without me. I'm exhausted and I can't even tell if I'm close.",
+    beforeAfter: {
+      today: [
+        "You're raising because that's what founders do — you never stopped to ask what the capital is actually for.",
+        "Outreach goes to everyone at once, with no momentum, and the market can smell the desperation.",
+        "The raise has become your whole job, and culture and execution are quietly slipping while you're in investor meetings.",
+      ],
+      success: [
+        "You've decided consciously to raise, and you know exactly what a great round looks like — because your investors, your peers and you defined it up front.",
+        "You work a categorised list in short, sharp bursts that build FOMO, so investors move because they're afraid to miss out.",
+        "The company keeps compounding while you're out raising, and you come back to a business that held the line without you.",
+      ],
+    },
+    why:
+      "Fundraising is not fair, and pretending otherwise will break you. Plenty of weak companies raise easily and plenty of great ones never do — momentum and luck matter far more than founders want to admit. I had a Series A extension that took a brutal year, and it very nearly finished me. So start with the question almost nobody asks: what is the capital actually for? Some businesses genuinely need it — a capital-intensive model like fintech, say — but many founders raise by default. Raising isn't a rite of passage; it's choosing to get married to an external party who will shape your decisions for years. Make that decision consciously, then treat the raise itself as a bounded, high-stakes sprint you prepare for rather than a thing that happens to you.",
+    whatGoodLooksLike: [
+      "You can say in one line what makes the next round a hell yes — and your existing investors, asked independently, would say the same thing.",
+      "You work a long list categorised by likelihood and desirability, in phases of six to ten, rather than blasting everyone at once.",
+      "Every pitch feeds a two-minute retro and a growing Q&A library, so your tenth conversation is far sharper than your first.",
+    ],
+    whereFoundersGoWrong: [
+      "Raising by default — never asking what the capital is for, and getting married to an investor they didn't need.",
+      "Going out to the whole list at once with no momentum, so a slow start reads as desperation and there's nowhere left to turn.",
+      "Accepting generic rejections — \"wrong stage\", \"come back with more traction\" — as answers, instead of mining for the real reason they passed.",
+    ],
+    doNow: [
+      {
+        action: "Decide whether to raise at all",
+        note: "Before anything else, write down exactly what the capital is for and what changes the day you take it on. If you can reach the next milestone without it, that's a finding.",
+      },
+      {
+        action: "Run the hell-yes question",
+        note: "Ask your existing investors, independently, what would make the next round a hell yes for them. Line their answers up next to your peers' rounds and your own view of success.",
+      },
+      {
+        action: "Build and rank your long list",
+        note: "List every plausible investor and tag each by likelihood and desirability; note ticket size, vertical and geography limits. Then carve off the top as a first phase of six to ten.",
+      },
+      {
+        action: "Book a rehearsal-dinner pitch",
+        note: "Do two low-stakes pitches with less desirable investors first. After each, run a two-minute retro with your cofounder and add every question you got to a Q&A library.",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Momentum is the whole game",
+      },
+      {
+        kind: "paragraph",
+        text: "Investors move for one reason: fear of missing out. A raise isn't a series of independent meetings — it's a single narrative you manage. Go out in short, sharp bursts to a phase of six to ten investors, give them a deadline, and keep feeding the story with real progress: a signed customer, a milestone hit, and above all another investor's interest. The first term sheet isn't the finish line — it's the lever you use to pull the next one forward. And if a phase stalls, pause. Don't burn your whole network and crawl back to the same people six months later; stop, fix what isn't landing, and come back with a stronger hand.",
+      },
+      {
+        kind: "callout",
+        text: "When an investor passes, don't accept \"wrong stage\" or \"needs more traction\" — those are non-answers. Ask the one question that gets a real one: \"What three things would have had to be different for this to go from a no to a hell yes?\"",
+      },
+      {
+        kind: "heading",
+        text: "Protect yourself and the company before you start",
+      },
+      {
+        kind: "paragraph",
+        text: "A raise takes far longer than you think, and it pulls you out of the business for months. Two things quietly break in that time: you, and the company. Look after yourself — take the vacation before you start, not after — and build enough resilience to survive a process that is genuinely unfair. Then make the company resilient without you: if you're in investor meetings all day, watch for culture and execution slipping, and stress-test now whether the business can thrive while you step back.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["build-resilience-and-recovery", "master-my-mindset"],
+      },
+    ],
+  },
 };
 
 export function getCapabilityContent(

@@ -276,3 +276,62 @@ hook is a crafted composite and should be replaced if Ben gives a real line.)_
    competence arc for behaviour change; the therapist caveat if a pattern feels extreme or
    unhealthy; the "different versions of you in a room" visualisation as a practical reflection
    exercise.
+
+### Find New Capital (`find-new-capital`)
+
+_(Captured from Ben's chat notes, 2026-07-02. Q1 has no verbatim founder quotes yet — the page
+hook is a crafted composite; Q6 not captured. Ben explicitly asked to link out to the resilience
+and mindset capabilities from this page. Replace the hook with a real founder line when supplied.)_
+
+1. (No verbatim quotes captured yet.) The felt state Ben describes: fundraising is one of the most
+   stressful things a founder does; it's exhausting, feels random and unfair, and can drag on far
+   longer than expected while the company drifts without you. Ben's own line: a Series A extension
+   was so brutal it "almost killed me."
+2. Don't raise by default. The first question — before "how do I raise?" — is "what is the capital
+   actually for?" Many founders assume they need to raise; some genuinely do (capital-intensive
+   models like fintech), many don't. Raising means getting married to an external party who changes
+   a lot about how you run the company, so make the decision consciously. Also: fundraising is not
+   fair — bad companies raise, good ones don't; it's largely momentum and luck, not merit.
+3. Before: pitching everyone at once with no momentum, letting the market smell desperation,
+   accepting generic "no"s, the raise swallowing the founder's time while culture and execution slip.
+   After: consciously decided to raise; a shared, up-front definition of what a "hell yes" round
+   looks like; a categorised long list worked in phases (6–10 at a time); a Q&A library and per-pitch
+   retros; momentum/FOMO managed deliberately; the company (and the founder) resilient enough to
+   survive a long process.
+4. (No dedicated tools exist yet — Investor Hell Yes Test and Fundraising Pipeline are only in the
+   backlog.) In practice: define success first (three inputs below), then build and phase the long
+   list, then rehearse the pitch on low-stakes investors. Company Health Scorecard is the only
+   currently-linked tool.
+5. Failure modes Ben named: (a) raising by default without deciding what the capital is for and
+   getting married to an investor you didn't need; (b) blasting the whole list at once with no
+   momentum, so a slow start reads as desperation and there's nowhere left to go — then crawling back
+   to the same burned contacts six months later; (c) accepting generic rejections ("wrong stage",
+   "come back with more traction") as answers instead of mining for the real reason.
+6. (Not captured yet.) Working candidate: "Before we talk about how to raise — what is this capital
+   actually for, and what changes the day you take it?"
+7. Ben's own year-long Series A extension is the authority anchor — told first person, it nearly
+   finished him. Key frameworks he uses:
+   - **Align on success first** using three inputs: (1) existing investors, asked independently,
+     "what would make the next round a hell yes for you?"; (2) the market / peers (what comparable
+     companies raised and built); (3) your own view. Combine into a shared target. Expect tension
+     (e.g. a few large investors vs many small ones) — "strong opinions loosely held": run one as
+     primary, keep the other as backup, and pre-decide when you'd pivot from strategy A to B.
+   - **Long list**, categorised by likelihood and desirability, plus ticket size, vertical, geography
+     restrictions.
+   - **Rehearse the pitch** (the "rehearsal dinner"): practise with existing investors, peers, coach;
+     then two low-stakes pitches with less desirable investors as the trial run. After every pitch:
+     a two-minute retro with your cofounder (went well / didn't) and add every question to a growing
+     Q&A library with the perfect answer for next time.
+   - **Phased outreach**: break the list into phases (phase 1 = 6–10 investors), give them time,
+     see how it lands. Don't appear too keen; don't let the market get a whiff of desperation.
+   - **Momentum / FOMO is everything**: investors only move if they fear losing out. Short, sharp
+     bursts; manage the narrative (tell others you have a term sheet; announce milestones — a new
+     deal, 100k DAU). Pause if it's not going well rather than burning every contact.
+   - **Mine investors for feedback**: they give non-answers. Best question when they pass — "what
+     three things would have had to be different to make this go from a no to a hell yes?"
+   - **Term sheets**: use the first to get more (better bargaining position); get a good lawyer who
+     fights for you; invest in a healthy long-term relationship — you're getting married.
+   - **Resilience angle** (Ben asked to link these): fundraising takes longer than you think, so
+     protect your runway and your mindset. Take a vacation before you start; make the company
+     resilient without you (watch culture/execution while you're in investor meetings); look after
+     yourself throughout. Cross-link to `build-resilience-and-recovery` and `master-my-mindset`.

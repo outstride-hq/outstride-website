@@ -1,6 +1,6 @@
 import type { ToolBlock } from "@/lib/tools-content";
 import DiagramRenderer from "@/components/diagram/DiagramRenderer";
-import { formatToolType, getToolBySlug } from "@/lib/os";
+import { formatToolType, getCapabilityBySlug, getToolBySlug } from "@/lib/os";
 
 type ToolContentBlocksProps = {
   blocks: ToolBlock[];
@@ -143,8 +143,48 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
               </div>
             );
           }
-          case "capabilityRefs":
-            return null;
+          case "capabilityRefs": {
+            const refs = block.capabilityIds
+              .map((capabilityId) => getCapabilityBySlug(capabilityId))
+              .filter(
+                (capability): capability is NonNullable<typeof capability> =>
+                  Boolean(capability),
+              );
+
+            if (refs.length === 0) {
+              return null;
+            }
+
+            return (
+              <div key={index} className="row g-3">
+                {refs.map((capability) => (
+                  <div key={capability.id} className="col-md-6">
+                    <a
+                      href={`/os/capabilities/${capability.id}/`}
+                      className="text-decoration-none"
+                    >
+                      <div className="os-tool-ref featured-box p-3 h-100">
+                        <span className="os-card-meta d-block mb-1">
+                          Capability {capability.number}
+                        </span>
+                        <span className="os-prose-card-title d-block mb-1">
+                          {capability.title}
+                        </span>
+                        {capability.summary ? (
+                          <span className="text-muted small d-block">
+                            {capability.summary}
+                          </span>
+                        ) : null}
+                        <span className="text-primary fw-700 small d-block mt-2">
+                          Open capability →
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            );
+          }
           default: {
             const _exhaustive: never = block;
             return _exhaustive;
