@@ -48,13 +48,15 @@ rough beats polished); an LLM session then drafts the page to the format spec in
 
 ### 2. Know My Special Ability (`know-my-special-ability`)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+_(Captured from Ben's chat notes, 2026-07-02. Q1 and Q5 use anonymized composites — the page hook and failure modes are crafted; replace with real founder lines when Ben supplies them.)_
+
+1. Composite hook: "I'm the bottleneck on everything — product reviews, sales calls, hiring debriefs. I tell myself only I can do it right, but honestly I'm just doing a lot of things I'm merely good at."
+2. Excellence is not genius. The Zone of Excellence — work you're genuinely good at — is the most seductive trap because it earns praise and feels productive. A founder who stays there becomes the ceiling.
+3. Before: calendar full of excellent work, every hire routes through you, can't name your special ability in one sentence. After: one-line genius everyone knows, calendar built around it, company knows where to find your highest-leverage contribution.
+4. Zone of Genius first — the diagnostic that separates incompetence, competence, excellence and genius across your last two weeks of work.
+5. Drowning in the Zone of Excellence; confusing being the bottleneck with being indispensable; building the org before naming your genius.
+6. Working candidate: "What could you do better than almost anyone — and what does this company need from you that no one else can deliver?"
+7. Gay Hendricks, The Big Leap — the four zones (Incompetence, Competence, Excellence, Genius). The excellence trap is the key insight for founders.
 
 ### 3. Take Command of My Role (`take-command-of-my-role`)
 

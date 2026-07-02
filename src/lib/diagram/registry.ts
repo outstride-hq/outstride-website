@@ -11,7 +11,9 @@ import { sevenFounderNeedsDefinition } from "./definitions/seven-founder-needs";
 import { strategyDestinationDefinition } from "./definitions/strategy-destination";
 import { strategyGridDefinition } from "./definitions/strategy-grid";
 import { strategyPathDefinition } from "./definitions/strategy-path";
+import { threeCsDecisionDefinition } from "./definitions/three-cs-decision";
 import { twoEquilibriaDefinition } from "./definitions/two-equilibria";
+import { zoneOfGeniusDefinition } from "./definitions/zone-of-genius";
 
 const definitions: Record<string, DiagramDefinition> = {
   [strategyGridDefinition.id]: strategyGridDefinition,
@@ -27,6 +29,8 @@ const definitions: Record<string, DiagramDefinition> = {
   [human9MiroDefinition.id]: human9MiroDefinition,
   [twoEquilibriaDefinition.id]: twoEquilibriaDefinition,
   [sevenFounderNeedsDefinition.id]: sevenFounderNeedsDefinition,
+  [threeCsDecisionDefinition.id]: threeCsDecisionDefinition,
+  [zoneOfGeniusDefinition.id]: zoneOfGeniusDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -98,6 +102,12 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: sevenFounderNeedsDefinition,
+  },
+  {
+    definition: threeCsDecisionDefinition,
+  },
+  {
+    definition: zoneOfGeniusDefinition,
   },
 ];
 

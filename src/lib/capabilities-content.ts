@@ -310,6 +310,137 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "make-the-right-calls": {
+    hook:
+      "When we were four people I just did the work. Now half my week is calls I can't take back — do we hire her, do we bet on A or B — and I catch myself making them exhausted, on the fly, between two other meetings.",
+    beforeAfter: {
+      today: [
+        "The biggest calls get made in the cracks between meetings, on whatever energy is left over.",
+        "The same decision keeps coming back because no one's sure whose it was — or whether it's actually closed.",
+        "You're still in every call, so the trivial ones drain you and the important ones wait on you.",
+      ],
+      success: [
+        "You spend real time on the decisions you can't undo, and move fast on the ones you can.",
+        "Every big call has an owner and a moment it's settled — no zombie debates.",
+        "You make your few high-stakes calls rested and deliberate, not reactive and depleted.",
+      ],
+    },
+    why:
+      "Jeff Bezos says a senior executive is paid to make a small number of high-quality decisions, not a thousand small ones: \"If I make three good decisions a day, that's enough\" — and Warren Buffett reckons he's good if he makes three good decisions a year. As you scale, your job shifts from doing the work to making the calls, and the weightiest ones — who to hire, which strategy to back — quietly make or break the company. That's exactly why Bezos guards his sleep and does his hard thinking before lunch: a decision made at 70% capacity costs far more than a task done at 70%. The all-nighter that shipped a module when you were three people is a bad trade once your real output is judgement.",
+    whatGoodLooksLike: [
+      "You match rigour to stakes: reversible calls get made quickly, irreversible ones get real time and room for dissent.",
+      "Every significant decision has a clear owner and a clear point at which it's closed — so it stops getting re-litigated.",
+      "Your calendar protects time to think, and the big calls get made in good health, not on fumes.",
+    ],
+    whereFoundersGoWrong: [
+      "Spending the same energy on every decision, so a hundred small calls crowd out the handful that actually matter.",
+      "Chasing full consensus — waiting for everyone to agree instead of getting aligned enough to commit and move.",
+      "Deciding while depleted: pulling the all-nighter, then betting the quarter the next bleary-eyed morning.",
+    ],
+    doNow: [
+      {
+        action: "Block time for your biggest call this week",
+        note: "Put a recurring strategic-thinking slot on the calendar and give this week's one irreversible decision real, undistracted time. My own biggest regret was being too busy to ever step back and think.",
+      },
+      {
+        action: "Sort this week's decisions into one-way and two-way doors",
+        note: "Reversible calls: decide fast or delegate them. Irreversible calls: slow down and spend your time there. The point is to stop treating them the same.",
+        toolId: "ownership-map",
+      },
+      {
+        action: "Ask for dissent out loud, then get commitment",
+        note: "Before you close the next big call, ask the quietest person what they'd push back on. Then aim for 80% alignment and 100% commitment — including from those who disagreed.",
+      },
+      {
+        action: "Run one stuck decision through the Six Hats",
+        note: "Take a call that's going in circles and walk the group through the six modes one at a time. It usually surfaces the missing option or the unchallenged fear.",
+        toolId: "six-thinking-hats",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Match the time to the stakes",
+      },
+      {
+        kind: "paragraph",
+        text: "Correlate the weight of a decision with the time you give it. Small, reversible calls — two-way doors you can walk back through — should be fast, or delegated outright. The big, irreversible ones deserve the opposite: space, options and real thinking. The failure mode is treating them all the same, so the trivial many drown out the vital few.",
+      },
+      {
+        kind: "callout",
+        text: "One of my own biggest regrets as a founder was being so busy that I never blocked time to step back and look at the whole thing. Protect a recurring slot for strategic thinking the way you'd protect an investor meeting — the decisions that shape the company rarely get made in the gaps between Slack messages.",
+      },
+      {
+        kind: "heading",
+        text: "Mindsets that make calls better",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Strong opinions, weakly held",
+            note: "Commit to a clear view so the team has something concrete to react to — but hold it loosely enough to change your mind the moment better evidence turns up. A firm opinion moves people; the willingness to drop it keeps you honest.",
+          },
+          {
+            title: "80% alignment, 100% commitment",
+            note: "You'll never all agree on everything, and a company pulling in different directions is a nightmare. Get aligned enough — roughly 80% — then everyone commits fully, including the people who argued the other way. Disagree and commit.",
+          },
+          {
+            title: "Give dissent room before you close",
+            note: "Make sure everyone had a real chance to raise concerns and push back before the decision lands. Silence isn't agreement — it's usually the objection you'll hear later, at a worse time.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Get the company aligned enough to move",
+      },
+      {
+        kind: "paragraph",
+        text: "Aim for aligned autonomy: you define the problem and the why, and teams own the how. That's what lets a decision hold once it leaves the room — people know which direction to run without checking back on every call. The grid below is the quick diagnostic for whether you have enough shared direction and enough decision freedom.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "alignment-autonomy",
+      },
+      {
+        kind: "heading",
+        text: "Frameworks worth reaching for",
+      },
+      {
+        kind: "list",
+        items: [
+          "Six Thinking Hats — when a call is going in circles or one voice dominates, look at it from six angles one at a time.",
+          "Double Diamond — when you might be solving the wrong problem, widen before you narrow: find the right problem, then the right solution.",
+          "First Principles Thinking — when received wisdom is boxing you in, strip the problem back to what's actually true and reason up from there.",
+        ],
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["six-thinking-hats", "double-diamond", "first-principles-thinking"],
+      },
+      {
+        kind: "heading",
+        text: "Run the decision: create, collaborate, communicate",
+      },
+      {
+        kind: "paragraph",
+        text: "Be explicit about which mode a decision is in. Create is the thinking you do to form a view. Collaborate is inviting the few people who should shape it to give input and dissent — while it's still open. Communicate is sharing the settled decision and the why with everyone who has to act on it. In a company of around thirty, most big calls run: founders and heads collaborate, and once that's done, it gets communicated to the team.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "three-cs-decision",
+      },
+      {
+        kind: "callout",
+        text: "You don't only decide alone. Two sources worth pulling in: your personal board, for outside perspective on a call you're too close to, and your Super Self — asking what your ten-out-of-ten version would do here, and what's stopping you doing it now.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["three-cs-decision", "personal-board", "super-self"],
+      },
+    ],
+  },
   "manage-my-energy-system": {
     hook:
       "My calendar is full of everyone else's priorities. By Thursday I'm running on caffeine, and the work I actually love hasn't happened in weeks.",
@@ -990,6 +1121,93 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       {
         kind: "capabilityRefs",
         capabilityIds: ["build-resilience-and-recovery", "master-my-mindset"],
+      },
+    ],
+  },
+  "know-my-special-ability": {
+    hook:
+      "I'm the bottleneck on everything — product reviews, sales calls, hiring debriefs. I tell myself only I can do it right, but honestly I'm just doing a lot of things I'm merely good at.",
+    beforeAfter: {
+      today: [
+        "Your calendar is full of work you're excellent at — and none of it is the thing only you can do.",
+        "Every new hire still routes through you because you haven't named what actually needs your genius.",
+        "You can't articulate your special ability in one sentence, so the company can't build around it.",
+      ],
+      success: [
+        "You can name your zone of genius in one line — and everyone around you knows it too.",
+        "Your calendar is built around that work; the rest is hired, delegated or designed away.",
+        "When the company needs its highest-leverage founder contribution, it knows exactly where to find you.",
+      ],
+    },
+    why:
+      "Gay Hendricks' distinction in The Big Leap is the one most founders miss: excellence is not genius. The Zone of Excellence — work you're genuinely good at — is the most seductive trap because it earns praise and feels productive. But a founder who stays there becomes the ceiling. Your special ability is the work at the intersection of unique skill, energy and company need — and the company can only scale past you once you stop hoarding everything you're merely excellent at.",
+    whatGoodLooksLike: [
+      "You can state your zone of genius in one sentence — specific enough that it couldn't describe any other founder.",
+      "Your calendar, org design and hiring all trace back to that answer: you keep the genius work, everything else has an owner.",
+      "The team knows what only you can do and protects that time — because they've seen what happens when you're in it.",
+    ],
+    whereFoundersGoWrong: [
+      "Drowning in the Zone of Excellence — doing a lot of things you're good at because they feel important, while the genius work gets the scraps.",
+      "Confusing being the bottleneck with being indispensable — holding work that others could own because it feels safer than letting go.",
+      "Building the org before naming your genius, so you hire for gaps you haven't diagnosed and still end up doing everything.",
+    ],
+    doNow: [
+      {
+        action: "Run the Zone of Genius diagnostic",
+        note: "List your last two weeks of work. Mark each item: incompetence, competence, excellence or genius. Count how much time landed in excellence — that's your leak.",
+        toolId: "zone-of-genius",
+      },
+      {
+        action: "Answer the three questions out loud",
+        note: "What could you do better than almost anyone? What gives you energy rather than draining it? What does this company need from you that no one else can deliver? The overlap is your answer.",
+      },
+      {
+        action: "Name one excellence trap to exit this month",
+        note: "Pick the highest-volume task you're merely excellent at and decide who owns it by end of month — hire, delegate or kill.",
+      },
+      {
+        action: "Tell your cofounder or coach your one-line genius",
+        note: "If you can't say it in one sentence, it isn't clear enough yet. Their job is to hold you to it when excellence tries to pull you back.",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Three questions to start",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "What could you do better than almost anyone?",
+            note: "Creating, selling, storytelling, building product, reading a room, closing a deal — name the thing, not the job title.",
+          },
+          {
+            title: "What gives you energy rather than draining it?",
+            note: "Genius work leaves you more alive after four hours. Excellence work earns praise but costs you. Be honest about the difference.",
+          },
+          {
+            title: "What does this company need from you that no one else can deliver?",
+            note: "Your genius has to connect to what the company actually needs — not just what you enjoy. The overlap is your special ability.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Connect genius to what the company needs",
+      },
+      {
+        kind: "paragraph",
+        text: "Naming your genius is only half the job. The other half is wiring it into the company: designing the org so your genius has room, hiring people who are geniuses where you're not, and building ownership so the excellent work doesn't keep boomeranging back to you.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "design-the-org",
+          "raise-the-talent-bar",
+          "make-ownership-stick",
+          "take-command-of-my-role",
+        ],
       },
     ],
   },

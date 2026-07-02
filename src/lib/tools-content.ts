@@ -978,6 +978,153 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "six-thinking-hats": {
+    intro:
+      "A way to pull a group — or your own head — through six modes of thinking one at a time, so a decision gets looked at from every angle instead of the loudest voice or your default lens.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use this when a decision is going in circles, when one person dominates the room, or when you notice you only ever look at calls through a single lens — usually all risk, or all optimism. The trick is that everyone wears the same hat at the same time: you get the whole group's caution, then the whole group's optimism, rather than the pessimist and the optimist fighting.",
+      },
+      {
+        kind: "heading",
+        text: "The six hats",
+      },
+      {
+        kind: "table",
+        columns: ["Hat", "Mode", "The question it asks"],
+        rows: [
+          ["White", "Facts", "What do we actually know, and what's missing?"],
+          ["Red", "Feelings", "What's your gut say? No justification needed."],
+          ["Black", "Caution", "What could go wrong? (Useful — but don't let it run the whole meeting.)"],
+          ["Yellow", "Optimism", "What's the upside, the best case, why it could work?"],
+          ["Green", "Creativity", "What other options haven't we considered?"],
+          ["Blue", "Process", "How are we running this? Set the agenda, then summarise the call."],
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Start and end with the Blue hat: open by framing the decision, close by naming what was actually decided. Most stuck decisions are really a missing Green hat (no real alternatives) or an unchallenged Black hat (fear masquerading as analysis).",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["make-the-right-calls"],
+      },
+    ],
+  },
+  "three-cs-decision": {
+    intro:
+      "A simple model for running a decision: decide how much of it you Create yourself, who you Collaborate with, and how you Communicate it — so everyone knows whether they're being asked to shape a call or just hear it.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Most decision friction is a mismatch of expectations: people think they're collaborating when you've already decided, or you think you communicated something you never actually created a clear view on. Naming which mode you're in removes most of that friction before it starts.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "three-cs-decision",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Create",
+            note: "You form the strategy or decision yourself, or with a cofounder. The thinking work only you can do — don't outsource it to a meeting.",
+          },
+          {
+            title: "Collaborate",
+            note: "Bring in the few people who should genuinely shape the call. Ask for input, dissent and feedback while it's still open — not after it's fixed.",
+          },
+          {
+            title: "Communicate",
+            note: "Once it's decided, share it and the why with everyone who has to act on it. This is not the moment to reopen the debate.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "In a ~30-person company, most big calls run the same way: the founders and heads collaborate, and once that's done it gets communicated to the team. Trouble starts when you skip a stage — communicating something you never collaborated on, or 'collaborating' on something you'd already decided.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["make-the-right-calls", "make-ownership-stick"],
+      },
+    ],
+  },
+  "double-diamond": {
+    intro:
+      "A four-phase shape for solving a problem well: diverge then converge, twice — first to find the right problem, then to find the right solution.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Founders — technical ones especially — tend to jump to the first workable solution. The Double Diamond forces you to widen before you narrow, so you don't end up building the wrong thing beautifully.",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Discover (widen)",
+            note: "Explore the problem broadly. Talk to users, gather signal, resist the urge to solve it yet.",
+          },
+          {
+            title: "Define (narrow)",
+            note: "Converge on the real problem worth solving — a single, sharp problem statement.",
+          },
+          {
+            title: "Develop (widen)",
+            note: "Generate many possible solutions, not just the obvious one.",
+          },
+          {
+            title: "Deliver (narrow)",
+            note: "Pick, prototype and ship the strongest option.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The two diamonds map neatly onto the Outstride process: Diagnose/Define, then Design/Deliver. Same discipline — understand before you decide, options before you commit.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["make-the-right-calls", "chart-the-path"],
+      },
+    ],
+  },
+  "first-principles-thinking": {
+    intro:
+      "Break a problem down to the things you know are actually true, then reason back up — instead of reasoning by analogy from what everyone else does.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Reach for this when received wisdom is boxing you in — \"this is just how it's done\", \"it costs what it costs\" — or when a decision feels stuck because you're copying a template that may not fit your company.",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Name the assumption",
+            note: "What are you taking as given? (\"We have to hire a senior sales leader now.\")",
+          },
+          {
+            title: "Break it down",
+            note: "Strip away convention. What is actually true underneath, independent of how others do it?",
+          },
+          {
+            title: "Rebuild from the truths",
+            note: "Reason up from the facts alone. What would you do if no one had ever solved this before?",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The classic example: pricing batteries from raw materials rather than the market rate. Reasoning by analogy said \"expensive\"; reasoning from first principles said \"far cheaper than everyone assumes.\"",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["make-the-right-calls", "chart-the-path"],
+      },
+    ],
+  },
   "performance-culture-grid": {
     intro:
       "A simple 2x2 for rating people on role performance and culture fit so talent decisions are explicit, comparable and faster.",
@@ -2243,6 +2390,58 @@ export const toolsContent: Record<string, ToolContent> = {
           "build-incredible-relationships",
           "manage-capital-and-stakeholders",
         ],
+      },
+    ],
+  },
+  "zone-of-genius": {
+    intro:
+      "Identify the work only you can do at your highest level of contribution — the intersection of what you're uniquely great at, what gives you energy, and what the company actually needs from you.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use this when you're drowning in work you're good at but that isn't yours to carry, when every hire still routes through you, or when you're about to redesign your role and need a honest filter for what stays on your plate.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "zone-of-genius",
+      },
+      {
+        kind: "heading",
+        text: "The four zones",
+      },
+      {
+        kind: "list",
+        items: [
+          "Zone of Incompetence — work you're bad at. Delegate or eliminate.",
+          "Zone of Competence — work you can do adequately. Others can handle this.",
+          "Zone of Excellence — work you're genuinely good at. This is the seductive trap: it earns praise, feels productive, and quietly eats the time your genius needs.",
+          "Zone of Genius — work only you can do at your highest level, that gives you energy rather than draining it.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The things you're merely good at are the most seductive place to waste your time. Excellence feels like contribution — but a founder stuck in the Zone of Excellence is usually the bottleneck the company can't scale past.",
+      },
+      {
+        kind: "heading",
+        text: "Find yours",
+      },
+      {
+        kind: "list",
+        items: [
+          "Energy: what work leaves you more alive after four hours, not less?",
+          "Results: where do your outputs clearly outperform what anyone else on the team would produce?",
+          "Uniqueness: what could you do better than almost anyone — creating, selling, storytelling, building product, reading a room?",
+          "Evidence: when has the company moved fastest because you were in the work, not managing it?",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Use genius as a filter: what you keep is built around it; the rest gets hired, delegated or designed away. Your calendar, your org chart and your next hire should all trace back to this answer.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["know-my-special-ability", "take-command-of-my-role"],
       },
     ],
   },
