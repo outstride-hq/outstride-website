@@ -43,7 +43,6 @@ export const zoneOfGeniusDefinition: PyramidDiagramDefinition = validateDiagramD
       leftLabel: "Energy",
       rightLabel: "Highest contribution",
       color: "pyramid-4",
-      link: { kind: "tool", id: "zone-of-genius" },
     },
   ],
 }) as PyramidDiagramDefinition;

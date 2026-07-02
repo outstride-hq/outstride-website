@@ -24,7 +24,6 @@ export const sbiFeedbackDefinition: FlowDiagramDefinition = validateDiagramDefin
       title: "Situation",
       subtitle: "When and where it happened",
       color: "blue",
-      link: { kind: "tool", id: "sbi-feedback" },
     },
     {
       id: "behaviour",

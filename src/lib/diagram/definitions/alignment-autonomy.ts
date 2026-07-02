@@ -36,7 +36,6 @@ export const alignmentAutonomyDefinition: GridDiagramDefinition = validateDiagra
       width: 360,
       height: 150,
       color: "coral",
-      link: { kind: "tool", id: "alignment-autonomy" },
     },
     {
       id: "confusion",

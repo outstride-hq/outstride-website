@@ -5,7 +5,6 @@ import type {
   PyramidDiagramDefinition,
 } from "@/lib/diagram/schema";
 import { getMatrixCells } from "@/lib/diagram/schema";
-import { getCardHref } from "@/lib/diagram/links";
 import { getTheme, resolveColor } from "@/lib/diagram/themes";
 import DiagramAccreditation from "./DiagramAccreditation";
 
@@ -25,7 +24,6 @@ type PositionedCardProps = {
   color: string;
   title: string;
   subtitle?: string;
-  href?: string;
   showTitleInside?: boolean;
   labelAbove?: string;
   labelLeft?: string;
@@ -40,7 +38,6 @@ function PositionedCard({
   color,
   title,
   subtitle,
-  href,
   showTitleInside = true,
   labelAbove,
   labelLeft,
@@ -109,13 +106,7 @@ function PositionedCard({
           {labelLeft}
         </div>
       ) : null}
-      {href ? (
-        <a href={href} style={cardStyle}>
-          {inner}
-        </a>
-      ) : (
-        <div style={cardStyle}>{inner}</div>
-      )}
+      <div style={cardStyle}>{inner}</div>
     </>
   );
 }
@@ -142,7 +133,6 @@ function HtmlGridRenderer({ definition }: { definition: GridDiagramDefinition })
             color={resolveColor(theme, card.color)}
             title={isTopRow || isMiddleRow ? "" : card.title}
             subtitle={isMiddleRow ? undefined : card.subtitle}
-            href={card.link ? getCardHref(card.link) : undefined}
             labelAbove={isTopRow ? card.title : undefined}
             labelLeft={
               isMiddleRow
@@ -216,7 +206,6 @@ function HtmlDialRenderer({ definition }: { definition: DialDiagramDefinition })
         const y = startY + index * (barHeight + 16);
         const width = barWidth + index * 30;
         const x = (definition.canvas.width - width) / 2;
-        const href = segment.link ? getCardHref(segment.link) : undefined;
 
         return (
           <div key={segment.id}>
@@ -227,7 +216,6 @@ function HtmlDialRenderer({ definition }: { definition: DialDiagramDefinition })
               height={barHeight}
               color={resolveColor(theme, segment.color)}
               title={segment.label}
-              href={href}
               textColor={index >= 3 ? "#ffffff" : "#1a1a1a"}
             />
             {segment.description ? (
@@ -312,7 +300,6 @@ function HtmlFlowRenderer({ definition }: { definition: FlowDiagramDefinition })
               color={resolveColor(theme, stage.color)}
               title={stage.title}
               subtitle={stage.subtitle}
-              href={stage.link ? getCardHref(stage.link) : undefined}
             />
             {definition.showArrows && index < definition.stages.length - 1 ? (
               <div
@@ -410,16 +397,7 @@ function HtmlPyramidRenderer({ definition }: { definition: PyramidDiagramDefinit
                 clipPath,
               }}
             >
-              {layer.link ? (
-                <a
-                  href={getCardHref(layer.link)}
-                  style={{ color: "#ffffff", textDecoration: "none" }}
-                >
-                  {layer.label}
-                </a>
-              ) : (
-                layer.label
-              )}
+              {layer.label}
             </div>
             {layer.rightLabel ? (
               <div

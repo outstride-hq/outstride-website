@@ -25,7 +25,6 @@ export const nvcOfnrDefinition: GridDiagramDefinition = validateDiagramDefinitio
       width: 360,
       height: 150,
       color: "orange",
-      link: { kind: "tool", id: "non-violent-communication" },
     },
     {
       id: "feelings",

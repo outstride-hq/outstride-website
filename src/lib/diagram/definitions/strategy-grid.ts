@@ -30,7 +30,6 @@ export const strategyGridDefinition: GridDiagramDefinition = validateDiagramDefi
       width: 190,
       height: 110,
       color: "purple",
-      link: { kind: "capability", id: "map-the-destination" },
     },
     {
       id: "mission",
@@ -40,7 +39,6 @@ export const strategyGridDefinition: GridDiagramDefinition = validateDiagramDefi
       width: 190,
       height: 110,
       color: "pink",
-      link: { kind: "capability", id: "map-the-destination" },
     },
     {
       id: "vision",
@@ -50,7 +48,6 @@ export const strategyGridDefinition: GridDiagramDefinition = validateDiagramDefi
       width: 190,
       height: 110,
       color: "coral",
-      link: { kind: "capability", id: "map-the-destination" },
     },
     {
       id: "ten_year_goal",
@@ -60,7 +57,6 @@ export const strategyGridDefinition: GridDiagramDefinition = validateDiagramDefi
       width: 280,
       height: 100,
       color: "blue",
-      link: { kind: "capability", id: "map-the-destination" },
     },
     {
       id: "next_milestone",
@@ -71,7 +67,6 @@ export const strategyGridDefinition: GridDiagramDefinition = validateDiagramDefi
       width: 280,
       height: 100,
       color: "cyan",
-      link: { kind: "capability", id: "chart-the-path" },
     },
   ],
   rows: [

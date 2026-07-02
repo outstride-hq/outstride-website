@@ -24,7 +24,6 @@ export const accountabilityDialDefinition: DialDiagramDefinition = validateDiagr
       description: "Casual check-in. Name what you noticed without making it a big deal.",
       example: "Hey Anna, you missed our Zoom call this morning. Is everything ok?",
       color: "dial-1",
-      link: { kind: "tool", id: "accountability-dial" },
     },
     {
       id: "invitation",
@@ -57,7 +56,6 @@ export const accountabilityDialDefinition: DialDiagramDefinition = validateDiagr
       example:
         "Anna, this is your final warning to improve your attendance at company meetings. Your absence is causing friction — it's unacceptable.",
       color: "dial-5",
-      link: { kind: "capability", id: "give-feedback-and-hold-the-standard" },
     },
   ],
 }) as DialDiagramDefinition;

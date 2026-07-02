@@ -29,7 +29,6 @@ export const threeCsDecisionDefinition: FlowDiagramDefinition = validateDiagramD
       title: "Create",
       subtitle: "Form the view yourself",
       color: "blue",
-      link: { kind: "tool", id: "three-cs-decision" },
     },
     {
       id: "collaborate",

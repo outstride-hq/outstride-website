@@ -41,7 +41,6 @@ export const operatingCadenceDefinition: GridDiagramDefinition = validateDiagram
       width: CARD_WIDTH,
       height: CARD_HEIGHT,
       color: "blue",
-      link: { kind: "capability", id: "install-the-operating-rhythm" },
     },
     {
       id: "weekly_leadership",
@@ -52,7 +51,6 @@ export const operatingCadenceDefinition: GridDiagramDefinition = validateDiagram
       width: CARD_WIDTH,
       height: CARD_HEIGHT,
       color: "coral",
-      link: { kind: "capability", id: "install-the-operating-rhythm" },
     },
     {
       id: "fortnightly_okr_review",
@@ -63,7 +61,6 @@ export const operatingCadenceDefinition: GridDiagramDefinition = validateDiagram
       width: CARD_WIDTH,
       height: CARD_HEIGHT,
       color: "coral",
-      link: { kind: "tool", id: "okrs" },
     },
     {
       id: "monthly_all_hands",
@@ -74,7 +71,6 @@ export const operatingCadenceDefinition: GridDiagramDefinition = validateDiagram
       width: CARD_WIDTH,
       height: CARD_HEIGHT,
       color: "green",
-      link: { kind: "capability", id: "be-storyteller-in-chief" },
     },
     {
       id: "monthly_founder_dinner",
@@ -95,7 +91,6 @@ export const operatingCadenceDefinition: GridDiagramDefinition = validateDiagram
       width: CARD_WIDTH,
       height: CARD_HEIGHT,
       color: "blue",
-      link: { kind: "capability", id: "map-the-destination" },
     },
     {
       id: "quarterly_retro",
@@ -106,7 +101,6 @@ export const operatingCadenceDefinition: GridDiagramDefinition = validateDiagram
       width: CARD_WIDTH,
       height: CARD_HEIGHT,
       color: "coral",
-      link: { kind: "tool", id: "quarterly-retro" },
     },
     {
       id: "quarterly_okr_cascade",
@@ -117,7 +111,6 @@ export const operatingCadenceDefinition: GridDiagramDefinition = validateDiagram
       width: CARD_WIDTH,
       height: CARD_HEIGHT,
       color: "indigo",
-      link: { kind: "tool", id: "okrs" },
     },
     {
       id: "annual_offsite",

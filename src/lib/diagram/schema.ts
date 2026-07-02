@@ -8,11 +8,6 @@ export const accreditationSchema = z.object({
   note: z.string().optional(),
 });
 
-export const cardLinkSchema = z.object({
-  kind: z.enum(["capability", "tool"]),
-  id: z.string(),
-});
-
 export const canvasSchema = z.object({
   width: z.number(),
   height: z.number(),
@@ -36,7 +31,6 @@ export const cardSchema = z.object({
   width: z.number(),
   height: z.number(),
   color: z.string(),
-  link: cardLinkSchema.optional(),
 });
 
 export const rowSchema = z.object({
@@ -75,7 +69,6 @@ export const dialSegmentSchema = z.object({
   description: z.string().optional(),
   example: z.string().optional(),
   color: z.string(),
-  link: cardLinkSchema.optional(),
 });
 
 export const dialDiagramSchema = diagramBaseSchema.extend({
@@ -89,7 +82,6 @@ export const flowStageSchema = z.object({
   title: z.string(),
   subtitle: z.string().optional(),
   color: z.string(),
-  link: cardLinkSchema.optional(),
 });
 
 export const flowAnnotationSchema = z.object({
@@ -112,7 +104,6 @@ export const pyramidLayerSchema = z.object({
   leftLabel: z.string().optional(),
   rightLabel: z.string().optional(),
   color: z.string(),
-  link: cardLinkSchema.optional(),
 });
 
 export const pyramidDiagramSchema = diagramBaseSchema.extend({
@@ -127,7 +118,6 @@ export const diagramDefinitionSchema = z.discriminatedUnion("type", [
   pyramidDiagramSchema,
 ]);
 
-export type CardLink = z.infer<typeof cardLinkSchema>;
 export type DiagramCard = z.infer<typeof cardSchema>;
 export type DiagramRow = z.infer<typeof rowSchema>;
 export type DiagramColumn = z.infer<typeof columnSchema>;

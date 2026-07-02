@@ -43,7 +43,6 @@ export const fiveDysfunctionsDefinition: PyramidDiagramDefinition = validateDiag
       leftLabel: "Flakiness",
       rightLabel: "High standards",
       color: "pyramid-4",
-      link: { kind: "capability", id: "give-feedback-and-hold-the-standard" },
     },
     {
       id: "results",

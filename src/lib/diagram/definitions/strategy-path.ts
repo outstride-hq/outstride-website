@@ -34,7 +34,6 @@ export const strategyPathDefinition: GridDiagramDefinition = validateDiagramDefi
       width: 280,
       height: 100,
       color: "cyan",
-      link: { kind: "capability", id: "chart-the-path" },
     },
   ],
   rows: [

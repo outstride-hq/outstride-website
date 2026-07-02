@@ -23,7 +23,6 @@ export const nvcFlowDefinition: FlowDiagramDefinition = validateDiagramDefinitio
       columnLabel: "Only Alice",
       title: "Intention",
       color: "blue",
-      link: { kind: "tool", id: "non-violent-communication" },
     },
     {
       id: "action",

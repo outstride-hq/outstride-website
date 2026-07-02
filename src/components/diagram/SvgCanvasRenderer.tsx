@@ -5,7 +5,6 @@ import type {
   PyramidDiagramDefinition,
 } from "@/lib/diagram/schema";
 import { getMatrixCells } from "@/lib/diagram/schema";
-import { getCardHref } from "@/lib/diagram/links";
 import { getTheme, resolveColor } from "@/lib/diagram/themes";
 import DiagramAccreditation from "./DiagramAccreditation";
 
@@ -17,6 +16,37 @@ type SvgCanvasRendererProps = {
     | PyramidDiagramDefinition;
 };
 
+const CARD_TEXT_PADDING = 16;
+
+function estimateMaxChars(textWidth: number, fontSize: number): number {
+  return Math.max(4, Math.floor(textWidth / (fontSize * 0.55)));
+}
+
+function wrapTextLines(lines: string[], maxChars: number): string[] {
+  const wrapped: string[] = [];
+
+  for (const line of lines) {
+    const words = line.split(/\s+/).filter(Boolean);
+    if (words.length === 0) {
+      continue;
+    }
+
+    let current = words[0];
+    for (let index = 1; index < words.length; index += 1) {
+      const candidate = `${current} ${words[index]}`;
+      if (candidate.length <= maxChars) {
+        current = candidate;
+      } else {
+        wrapped.push(current);
+        current = words[index];
+      }
+    }
+    wrapped.push(current);
+  }
+
+  return wrapped;
+}
+
 function SvgCard({
   x,
   y,
@@ -25,7 +55,6 @@ function SvgCard({
   fill,
   title,
   subtitle,
-  href,
   theme,
   textColor = "#1a1a1a",
 }: {
@@ -36,7 +65,6 @@ function SvgCard({
   fill: string;
   title: string;
   subtitle?: string;
-  href?: string;
   theme: ReturnType<typeof getTheme>;
   textColor?: string;
 }) {
@@ -52,15 +80,24 @@ function SvgCard({
         .map((line) => line.trim())
         .filter((line) => line.length > 0)
     : [];
+  const textWidth = width - 2 * CARD_TEXT_PADDING;
+  const wrappedTitleLines = wrapTextLines(
+    titleLines,
+    estimateMaxChars(textWidth, theme.cardTitleFontSize),
+  );
+  const wrappedSubtitleLines = wrapTextLines(
+    subtitleLines,
+    estimateMaxChars(textWidth, theme.cardSubtitleFontSize),
+  );
   const titleLineHeight = 20;
   const subtitleLineHeight = 16;
   const totalTextHeight =
-    titleLines.length * titleLineHeight +
-    (subtitleLines.length > 0 && titleLines.length > 0 ? 8 : 0) +
-    subtitleLines.length * subtitleLineHeight;
+    wrappedTitleLines.length * titleLineHeight +
+    (wrappedSubtitleLines.length > 0 && wrappedTitleLines.length > 0 ? 8 : 0) +
+    wrappedSubtitleLines.length * subtitleLineHeight;
   const textStartY = y + height / 2 - totalTextHeight / 2 + titleLineHeight * 0.8;
 
-  const content = (
+  return (
     <g>
       <rect
         x={x}
@@ -70,7 +107,7 @@ function SvgCard({
         fill={fill}
         filter={width <= 4 || height <= 4 ? undefined : "url(#cardShadow)"}
       />
-      {titleLines.length > 0 ? (
+      {wrappedTitleLines.length > 0 ? (
         <text
           x={x + width / 2}
           y={textStartY}
@@ -80,27 +117,27 @@ function SvgCard({
           fontFamily={theme.fontFamily}
           fontWeight={600}
         >
-          {titleLines.map((line, index) => (
+          {wrappedTitleLines.map((line, index) => (
             <tspan key={`${line}-${index}`} x={x + width / 2} dy={index === 0 ? 0 : titleLineHeight}>
               {line}
             </tspan>
           ))}
         </text>
       ) : null}
-      {subtitleLines.length > 0 ? (
+      {wrappedSubtitleLines.length > 0 ? (
         <text
           x={x + width / 2}
           y={
             textStartY +
-            titleLines.length * titleLineHeight +
-            (titleLines.length > 0 ? 8 : 0)
+            wrappedTitleLines.length * titleLineHeight +
+            (wrappedTitleLines.length > 0 ? 8 : 0)
           }
           textAnchor="middle"
           fill={theme.cardSubtitleColor}
           fontSize={theme.cardSubtitleFontSize}
           fontFamily={theme.fontFamily}
         >
-          {subtitleLines.map((line, index) => (
+          {wrappedSubtitleLines.map((line, index) => (
             <tspan
               key={`${line}-${index}`}
               x={x + width / 2}
@@ -113,12 +150,6 @@ function SvgCard({
       ) : null}
     </g>
   );
-
-  if (href) {
-    return <a href={href}>{content}</a>;
-  }
-
-  return content;
 }
 
 function SvgGridRenderer({ definition }: { definition: GridDiagramDefinition }) {
@@ -170,7 +201,6 @@ function SvgGridRenderer({ definition }: { definition: GridDiagramDefinition }) 
               fill={resolveColor(theme, card.color)}
               title={isTopRow || isMiddleRow ? "" : card.title}
               subtitle={isMiddleRow ? undefined : card.subtitle}
-              href={card.link ? getCardHref(card.link) : undefined}
               theme={theme}
             />
           </g>
@@ -235,11 +265,10 @@ function SvgDialRenderer({ definition }: { definition: DialDiagramDefinition }) 
       {definition.segments.map((segment, index) => {
         const y = startY + index * (barHeight + gap);
         const fill = resolveColor(theme, segment.color);
-        const href = segment.link ? getCardHref(segment.link) : undefined;
         const textColor = index >= 3 ? "#ffffff" : theme.cardTextColor;
 
-        const rect = (
-          <g>
+        return (
+          <g key={segment.id}>
             <rect
               x={startX}
               y={y}
@@ -260,14 +289,6 @@ function SvgDialRenderer({ definition }: { definition: DialDiagramDefinition }) 
               {segment.label}
             </text>
           </g>
-        );
-
-        return href ? (
-          <a key={segment.id} href={href}>
-            {rect}
-          </a>
-        ) : (
-          <g key={segment.id}>{rect}</g>
         );
       })}
     </>
@@ -308,7 +329,6 @@ function SvgFlowRenderer({ definition }: { definition: FlowDiagramDefinition }) 
 
       {definition.stages.map((stage, index) => {
         const x = startX + index * (stageWidth + gap);
-        const href = stage.link ? getCardHref(stage.link) : undefined;
 
         return (
           <g key={stage.id}>
@@ -333,7 +353,6 @@ function SvgFlowRenderer({ definition }: { definition: FlowDiagramDefinition }) 
               fill={resolveColor(theme, stage.color)}
               title={stage.title}
               subtitle={stage.subtitle}
-              href={href}
               theme={theme}
             />
             {definition.showArrows && index < definition.stages.length - 1 ? (
@@ -410,11 +429,10 @@ function SvgPyramidRenderer({ definition }: { definition: PyramidDiagramDefiniti
         const bottomRight = cx + bottomW / 2;
         const points = `${topLeft},${yTop} ${topRight},${yTop} ${bottomRight},${yBottom} ${bottomLeft},${yBottom}`;
         const fill = resolveColor(theme, layer.color);
-        const href = layer.link ? getCardHref(layer.link) : undefined;
         const midY = yTop + layerHeight / 2;
 
-        const shape = (
-          <g>
+        return (
+          <g key={layer.id}>
             <polygon points={points} fill={fill} filter="url(#cardShadow)" />
             <text
               x={cx}
@@ -474,14 +492,6 @@ function SvgPyramidRenderer({ definition }: { definition: PyramidDiagramDefiniti
               </>
             ) : null}
           </g>
-        );
-
-        return href ? (
-          <a key={layer.id} href={href}>
-            {shape}
-          </a>
-        ) : (
-          <g key={layer.id}>{shape}</g>
         );
       })}
     </>

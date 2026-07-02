@@ -4,7 +4,6 @@ import type {
   GridDiagramDefinition,
   PyramidDiagramDefinition,
 } from "@/lib/diagram/schema";
-import { getCardHref } from "@/lib/diagram/links";
 import { getTheme, resolveColor } from "@/lib/diagram/themes";
 import DiagramAccreditation from "./DiagramAccreditation";
 
@@ -20,14 +19,12 @@ function CardBlock({
   color,
   title,
   subtitle,
-  href,
   minHeight = "6rem",
   textColor = "#1a1a1a",
 }: {
   color: string;
   title: string;
   subtitle?: string;
-  href?: string;
   minHeight?: string;
   textColor?: string;
 }) {
@@ -52,14 +49,6 @@ function CardBlock({
     </>
   );
 
-  if (href) {
-    return (
-      <a href={href} style={style}>
-        {inner}
-      </a>
-    );
-  }
-
   return <div style={style}>{inner}</div>;
 }
 
@@ -81,7 +70,6 @@ function ResponsiveGridDiagram({ definition }: { definition: GridDiagramDefiniti
             <CardBlock
               color={resolveColor(theme, card.color)}
               title=""
-              href={card.link ? getCardHref(card.link) : undefined}
               minHeight="5.5rem"
             />
           </div>
@@ -100,7 +88,6 @@ function ResponsiveGridDiagram({ definition }: { definition: GridDiagramDefiniti
             <CardBlock
               color={resolveColor(theme, card.color)}
               title=""
-              href={card.link ? getCardHref(card.link) : undefined}
               minHeight="4.5rem"
             />
           </div>
@@ -184,15 +171,7 @@ function ResponsiveDialDiagram({ definition }: { definition: DialDiagramDefiniti
               {index + 1}
             </span>
             <div className="flex-grow-1">
-              <h3 className="text-6 fw-600 mb-1">
-                {segment.link ? (
-                  <a href={getCardHref(segment.link)} className="text-decoration-none">
-                    {segment.label}
-                  </a>
-                ) : (
-                  segment.label
-                )}
-              </h3>
+              <h3 className="text-6 fw-600 mb-1">{segment.label}</h3>
               {segment.description ? (
                 <p className="text-muted small mb-1">{segment.description}</p>
               ) : null}
@@ -226,7 +205,6 @@ function ResponsiveFlowDiagram({ definition }: { definition: FlowDiagramDefiniti
               color={resolveColor(theme, stage.color)}
               title={stage.title}
               subtitle={stage.subtitle}
-              href={stage.link ? getCardHref(stage.link) : undefined}
             />
             {annotation ? (
               <p className="text-center text-muted small fst-italic mt-2 mb-0">
@@ -266,7 +244,6 @@ function ResponsivePyramidDiagram({ definition }: { definition: PyramidDiagramDe
           <CardBlock
             color={resolveColor(theme, layer.color)}
             title={layer.label}
-            href={layer.link ? getCardHref(layer.link) : undefined}
             textColor="#ffffff"
             minHeight="3.5rem"
           />
