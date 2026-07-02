@@ -955,11 +955,12 @@ export const capabilities: Capability[] = [
     title: "Master My Mindset",
     layerId: "human",
     groupId: "human-system",
-    summary: "",
+    summary:
+      "The founder who decides \"I'm just not a natural leader\" tends to prove it; the one who says \"I'm on my way\" tends to grow into it. Mindset is a lever you can actually pull — and once you lead, the one everyone else feels.",
     bullets: [
       "Explore and define the mindset that will best serve the next stage.",
       "Learn how to unlock, practise and maintain that mindset.",
-      "Notice when old beliefs, fears or narratives are driving behaviour.",
+      "Catch limiting stories as they arise and reframe them into truer, more useful ones.",
     ],
     toolIds: [
       "anti-wasteman-system",

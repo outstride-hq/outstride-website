@@ -801,6 +801,79 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "master-my-mindset": {
+    hook:
+      "Somewhere along the way I decided I'm the technical one, not the front-person. So I walk into investor meetings already braced to be bad at them — and then I am. It feels less like a skill I'm missing and more like just who I am.",
+    beforeAfter: {
+      today: [
+        "Your self-talk runs on autopilot, and most of it is a low ceiling: \"I'm not a salesperson,\" \"I'm not a natural leader.\"",
+        "When the pressure spikes you shrink to a smaller, more defensive version of yourself — and the team catches it before you say a word.",
+        "You treat your personality as fixed, so today's weak spots feel like a life sentence rather than a stage you're passing through.",
+      ],
+      success: [
+        "You can tell a fact from a story you're telling yourself — and you rewrite the story: not \"I'm bad at pitching\" but \"I'm on my way to being great at it.\"",
+        "You can step into your best-self mindset on demand, in the moments that actually decide things.",
+        "The mindset you walk in with sets the weather for the whole room — steady and ambitious enough that others borrow it.",
+      ],
+    },
+    why:
+      "Carol Dweck draws a hard line between two beliefs: that your abilities are fixed, or that they can be grown. It sounds academic until you notice that a fixed mindset makes you spend your energy proving you're good instead of getting good — and that \"I'm just not a leader\" behaves like a prediction that quietly comes true. The higher stake is that, once you lead, your inner world becomes the team's outer world. Founders rarely see how much their own state leaks: walk in braced and scarce and the room tightens; walk in as your best self and people borrow the certainty. Mindset stops being self-help the moment other people have to work inside the weather you bring.",
+    whatGoodLooksLike: [
+      "You catch your own narration in the moment and can name the belief driving a reaction — before it drives the decision.",
+      "You have a repeatable way to reach your best self when it counts, instead of waiting to feel ready.",
+      "Your default frame is \"on my way to,\" so setbacks read as reps and feedback lands as data, not a verdict on who you are.",
+    ],
+    whereFoundersGoWrong: [
+      "Dismissing mindset as fluff — \"just think positive\" — so they never actually practise it, and drop it the instant real pressure hits.",
+      "Mistaking a fixed self-image for the truth: \"I'm not a numbers person,\" \"I'm not the inspiring type\" — an old conclusion applied to a present that has already moved on.",
+      "Reaching for affirmations instead of evidence. Repeating \"I'm a great leader\" you don't believe changes nothing; collecting proof you can't argue with does.",
+    ],
+    doNow: [
+      {
+        action: "Rewrite one limiting sentence",
+        note: "Catch yourself saying \"I'm bad at X\" and say it again out loud as \"I'm on my way to being great at X.\" Small, but it moves you from a verdict to a direction.",
+      },
+      {
+        action: "Run the two Super Self questions",
+        note: "On whatever you're avoiding right now: what would your best self do, and what's actually stopping you from doing it?",
+        toolId: "super-self",
+      },
+      {
+        action: "Collect three pieces of evidence against your loudest limiting belief",
+        note: "Facts, not affirmations: the round you closed, the hire who chose you, the call you turned around. Keep them somewhere you'll see them when the story flares up.",
+      },
+      {
+        action: "Name the mindset the next stage needs",
+        note: "One or two words — \"calm and decisive,\" \"ferociously focused\" — then pick one moment this week to show up as exactly that.",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Rewrite the story, then act as if",
+      },
+      {
+        kind: "paragraph",
+        text: "Most limiting beliefs aren't observations, they're old conclusions — usually formed long before the company and applied to a present that has moved on. The story is a hypothesis, not the truth. The fix isn't to argue with it or paper over it with affirmations you don't believe; it's to gather evidence that contradicts it and keep that evidence somewhere you can reach when the story gets loud.",
+      },
+      {
+        kind: "paragraph",
+        text: "Then flip the order. James Clear's line is that every action is a vote for the person you're becoming — identity comes first, behaviour follows. You don't wait until you feel like a founder who's going to change the world and then act like one; you act like one, and the feeling catches up as the votes stack. \"On my way to being a great pitcher\" is a different person from \"someone who's bad at pitching,\" and the two of them walk into the room differently.",
+      },
+      {
+        kind: "callout",
+        text: "Acting as if isn't faking it — it's rehearsing the identity until it's yours. One founder who dreaded selling built a \"closer\" version of himself: a different playlist before calls, a sharper way of dressing for them, one line he repeated walking in. He wasn't pretending to be someone else; he was practising the version of himself that already showed up on his best days. The Super Self tool is the two-question shortcut to the same place.",
+      },
+      {
+        kind: "heading",
+        text: "Your mindset is the team's weather",
+      },
+      {
+        kind: "paragraph",
+        text: "The moment you lead, your mindset stops being private. Teams read your state faster than your words: come back from a hard week with clarity and the energy in the room lifts; carry scarcity or self-judgment in and the team quietly inherits both. This is why managing your own head is part of the job, not a distraction from it — everyone else is working inside the weather you bring, and a founder operating from possibility gives them permission to do the same.",
+      },
+    ],
+  },
 };
 
 export function getCapabilityContent(
