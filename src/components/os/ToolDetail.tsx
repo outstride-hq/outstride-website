@@ -34,7 +34,7 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
       : relatedCapabilities;
 
   return (
-    <article>
+    <article className="os-prose">
       <OsPageHeader
         eyebrow={formatToolType(tool.type)}
         title={tool.title}

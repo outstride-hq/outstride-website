@@ -42,7 +42,7 @@ export default function OsPageHeader({
           {eyebrow ? <p className="ui-kicker mb-3">{eyebrow}</p> : null}
           <h1 className="text-10 fw-700 mb-3">{title}</h1>
           {description ? (
-            <p className="text-5 text-muted mb-0">{description}</p>
+            <p className="os-prose-lead os-prose-muted mb-0">{description}</p>
           ) : null}
         </div>
         {children ? (
@@ -84,7 +84,7 @@ export function OsSectionHeader({
         {eyebrow ? <p className="ui-kicker mb-2">{eyebrow}</p> : null}
         <h2 className="text-8 fw-700 mb-3">{title}</h2>
         {description ? (
-          <p className="text-5 text-muted mb-0">{description}</p>
+          <p className="os-prose-body os-prose-muted mb-0">{description}</p>
         ) : null}
       </div>
     </div>

@@ -22,14 +22,14 @@ export default function OSHowItRuns() {
         {howOsRunsTrainingPoints.map((point) => (
           <div key={point.label} className="col-md-6">
             <div className="ui-surface p-4 h-100">
-              <h3 className="text-5 fw-700 mb-2">{point.label}</h3>
-              <p className="text-muted mb-0">{point.text}</p>
+              <h3 className="os-prose-card-title mb-2">{point.label}</h3>
+              <p className="os-prose-body os-prose-muted mb-0">{point.text}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <p className="text-5 mb-5">
+      <p className="os-prose-body mb-5">
         You never start with all 26. A founder arrives with a felt problem —{" "}
         {howOsRunsFeltProblems.map((problem, index) => (
           <span key={problem}>

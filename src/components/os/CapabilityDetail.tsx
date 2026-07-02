@@ -25,12 +25,12 @@ function RelatedRhythms({
 
   return (
     <div className="mt-5 pt-4 border-top mb-0">
-      <h2 className="text-7 fw-700 mb-4">Related rhythms</h2>
+      <h2 className="os-prose-related-heading mb-4">Related rhythms</h2>
       <div className="row g-3">
         {rhythms.map((rhythm) => (
           <div key={rhythm.id} className="col-md-6">
             <div className="featured-box p-3 h-100">
-              <p className="text-5 fw-700 mb-1">{rhythm.title}</p>
+              <p className="os-prose-card-title mb-1">{rhythm.title}</p>
               <p className="text-muted small mb-0">{rhythm.description}</p>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
   const content = getCapabilityContent(capability.id);
 
   return (
-    <article>
+    <article className="os-prose">
       <OsPageHeader
         eyebrow={`Capability ${capability.number}${
           groupTitle ? ` · ${groupTitle}` : ""
@@ -63,17 +63,19 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
       </OsPageHeader>
 
       {content ? (
-        <blockquote className="os-cap-hook mb-4">
+        <blockquote className="os-cap-hook">
           <p className="ui-kicker mb-2">Founders say</p>
-          <p className="text-5 fst-italic mb-0">&ldquo;{content.hook}&rdquo;</p>
+          <p className="os-prose-lead fst-italic mb-0">
+            &ldquo;{content.hook}&rdquo;
+          </p>
         </blockquote>
       ) : null}
 
       {content ? (
-        <div className="os-cap-shift mb-4">
+        <div className="os-cap-shift">
           <div className="os-cap-shift-cell">
             <p className="ui-kicker mb-2">Where you are today</p>
-            <ul className="os-cap-shift-list text-5 mb-0">
+            <ul className="os-cap-shift-list mb-0">
               {content.beforeAfter.today.map((line) => (
                 <li key={line}>{line}</li>
               ))}
@@ -84,7 +86,7 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
           </span>
           <div className="os-cap-shift-cell os-cap-shift-cell-success">
             <p className="ui-kicker mb-2">Where you&rsquo;re headed</p>
-            <ul className="os-cap-shift-list text-5 mb-0">
+            <ul className="os-cap-shift-list mb-0">
               {content.beforeAfter.success.map((line) => (
                 <li key={line}>{line}</li>
               ))}
@@ -94,19 +96,17 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
       ) : null}
 
       {content ? (
-        <div className="mb-4">
+        <div>
           <p className="ui-kicker mb-2">Why this matters</p>
-          <p className="text-5 text-muted mb-0">{content.why}</p>
+          <p className="os-prose-body os-prose-muted mb-0">{content.why}</p>
         </div>
       ) : null}
 
       <div className="ui-surface p-4 p-lg-5">
         <p className="ui-kicker mb-3">What this means</p>
-        <ul className="text-5 ps-3 mb-0">
+        <ul className="os-prose-list mb-0">
           {capability.bullets.map((bullet) => (
-            <li key={bullet} className="mb-2">
-              {bullet}
-            </li>
+            <li key={bullet}>{bullet}</li>
           ))}
         </ul>
       </div>

@@ -24,7 +24,7 @@ export default function OSForceFormFlow() {
         ))}
       </div>
       <div className="ui-surface p-4 p-lg-5">
-        <p className="text-5 text-muted mb-0">
+        <p className="os-prose-body os-prose-muted mb-0">
           Everything in a young company starts on Force. Scaling <em>is</em> the
           work of moving things — an area of the business, a key relationship,
           your own role — from Force to Form to Flow. Hold it over any part of

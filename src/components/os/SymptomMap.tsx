@@ -15,26 +15,24 @@ export default function SymptomMap() {
         className="mb-5"
       />
       <div className="table-responsive os-table-wrap">
-        <table className="table align-middle">
+        <table className="table align-middle mb-0">
           <thead>
             <tr>
-              <th className="fw-700">What you&apos;re saying</th>
-              <th className="fw-700">What it usually points to</th>
+              <th scope="col">What you&apos;re saying</th>
+              <th scope="col">What it usually points to</th>
             </tr>
           </thead>
           <tbody>
             {symptomMap.map((entry) => (
               <tr key={entry.id}>
-                <td className="text-5">&ldquo;{entry.symptom}&rdquo;</td>
-                <td className="text-5 text-muted">
-                  {entry.capabilityTitles.join(" · ")}
-                </td>
+                <td>&ldquo;{entry.symptom}&rdquo;</td>
+                <td className="text-muted">{entry.capabilityTitles.join(" · ")}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <p className="text-5 text-muted mt-4 mb-0">{symptomMapOutro}</p>
+      <p className="os-prose-body os-prose-muted mt-4 mb-0">{symptomMapOutro}</p>
     </div>
   );
 }

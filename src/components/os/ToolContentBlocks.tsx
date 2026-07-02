@@ -8,59 +8,59 @@ type ToolContentBlocksProps = {
 
 export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
   return (
-    <div>
+    <div className="os-prose-blocks">
       {blocks.map((block, index) => {
         switch (block.kind) {
           case "paragraph":
             return (
-              <p key={index} className="text-5 text-muted mb-4">
+              <p key={index} className="os-prose-body os-prose-muted">
                 {block.text}
               </p>
             );
           case "heading":
             return (
-              <h2 key={index} className="text-7 fw-700 mb-3 mt-4">
+              <h2 key={index} className="os-prose-heading">
                 {block.text}
               </h2>
             );
           case "list":
             return (
-              <ul key={index} className="text-muted mb-4 ps-3">
+              <ul key={index} className="os-prose-list os-prose-muted">
                 {block.items.map((item) => (
-                  <li key={item} className="mb-2">
-                    {item}
-                  </li>
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             );
           case "table":
             return (
-              <div key={index} className="table-responsive mb-4">
-                <table className="table table-sm align-middle mb-0">
-                  <thead>
-                    <tr>
-                      {block.columns.map((column) => (
-                        <th key={column} scope="col">
-                          {column}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {block.rows.map((row, rowIndex) => (
-                      <tr key={`${rowIndex}-${row.join("-")}`}>
-                        {row.map((cell, cellIndex) => (
-                          <td key={`${cellIndex}-${cell}`}>{cell}</td>
+              <div key={index} className="os-table-wrap">
+                <div className="table-responsive">
+                  <table className="table align-middle mb-0">
+                    <thead>
+                      <tr>
+                        {block.columns.map((column) => (
+                          <th key={column} scope="col">
+                            {column}
+                          </th>
                         ))}
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row, rowIndex) => (
+                        <tr key={`${rowIndex}-${row.join("-")}`}>
+                          {row.map((cell, cellIndex) => (
+                            <td key={`${cellIndex}-${cell}`}>{cell}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             );
           case "steps":
             return (
-              <div key={index} className="mb-4">
+              <div key={index}>
                 <div className="row g-3">
                   {block.steps.map((step, stepIndex) => (
                     <div key={step.title} className="col-md-6">
@@ -68,10 +68,12 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                         <span className="os-number-badge mb-3">
                           {stepIndex + 1}
                         </span>
-                        <h3 className="text-6 fw-700 mb-2">{step.title}</h3>
-                        <p className="text-muted mb-2">{step.note}</p>
+                        <h3 className="os-prose-card-title mb-2">{step.title}</h3>
+                        <p className="os-prose-body os-prose-muted mb-2">
+                          {step.note}
+                        </p>
                         {step.example ? (
-                          <p className="mb-0 fst-italic">
+                          <p className="os-prose-body mb-0 fst-italic">
                             &ldquo;{step.example}&rdquo;
                           </p>
                         ) : null}
@@ -83,22 +85,19 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
             );
           case "callout":
             return (
-              <div
-                key={index}
-                className="os-tool-callout p-4 mb-4"
-              >
+              <div key={index} className="os-tool-callout p-4">
                 <p className="mb-0">{block.text}</p>
               </div>
             );
           case "diagram":
             return (
-              <div key={index} className="mb-4">
+              <div key={index}>
                 <DiagramRenderer diagramId={block.diagramId} variant="svg" />
               </div>
             );
           case "image":
             return (
-              <div key={index} className="mb-4 text-center">
+              <div key={index} className="text-center">
                 <img
                   src={block.src}
                   alt={block.alt}
@@ -117,7 +116,7 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
             }
 
             return (
-              <div key={index} className="row g-3 mb-4">
+              <div key={index} className="row g-3">
                 {refs.map((tool) => (
                   <div key={tool.id} className="col-md-6">
                     <a
@@ -128,7 +127,7 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                         <span className="os-card-meta d-block mb-1">
                           {formatToolType(tool.type)}
                         </span>
-                        <span className="text-5 fw-700 d-block mb-1">
+                        <span className="os-prose-card-title d-block mb-1">
                           {tool.title}
                         </span>
                         <span className="text-muted small d-block">
