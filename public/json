@@ -1,7 +1,7 @@
 {
   "meta": {
     "site": "outstride.co",
-    "generatedAt": "2026-07-02T15:25:41.011Z",
+    "generatedAt": "2026-07-02T15:34:52.657Z",
     "version": 1
   },
   "homepage": {
@@ -956,15 +956,16 @@
         "title": "Manage My Energy System",
         "layerId": "human",
         "groupId": "human-system",
-        "summary": "",
+        "summary": "A founder who planned every hour of his week wondered why he ended every Friday depleted — until he started planning only 80% of it and let the inevitable chaos fill the rest.",
         "bullets": [
           "Understand what creates, drains and restores founder energy.",
           "Build a rhythm that does not depend on permanent overextension.",
           "Design work around sustainable performance, not just availability."
         ],
         "toolIds": [
-          "human-9",
+          "seven-founder-needs",
           "energy-audit",
+          "human-9",
           "habit-stacks"
         ],
         "rhythmIds": [
@@ -2078,6 +2079,35 @@
           "build-my-growth-system"
         ],
         "description": "Map the coach, mentors, peers and advisors who support your growth."
+      },
+      {
+        "id": "seven-founder-needs",
+        "title": "7 Core Founder Needs",
+        "categoryId": "human-tools",
+        "type": "framework",
+        "format": [
+          "solo",
+          "one-to-one"
+        ],
+        "layerIds": [
+          "human"
+        ],
+        "capabilityIds": [
+          "manage-my-energy-system"
+        ],
+        "description": "Seven inputs that keep a founder running — exercise, eating, sleep, friends & family, solitude, training and vacation — each feeding a different capacity, with a target cadence for every one.",
+        "diagramId": "seven-founder-needs",
+        "accreditation": {
+          "originator": "Dave Bailey",
+          "source": "Core Needs Check-in, “How to Support a Team Under Pressure”",
+          "sourceUrl": "https://www.dave-bailey.com/blog/check-ins",
+          "note": "Adapted for Outstride OS with founder purposes and cadences"
+        },
+        "relatedToolIds": [
+          "energy-audit",
+          "habit-stacks",
+          "two-equilibria-map"
+        ]
       },
       {
         "id": "two-equilibria-map",
@@ -3656,6 +3686,42 @@
           }
         ]
       },
+      "seven-founder-needs": {
+        "intro": "Seven inputs that keep a founder running, each feeding a different capacity — with a target cadence for every one.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "What makes this more than a wellness checklist: each need funds a specific capacity. Exercise buys willpower. Sleep buys patience. Solitude buys clarity. Vacation buys perspective. Skip one and you don't just feel worse — a particular capability degrades, usually in the week you need it most."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "seven-founder-needs"
+          },
+          {
+            "kind": "heading",
+            "text": "How to use it"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "Score each need out of 10 for the last month. The chronically low ones are your energy leaks.",
+              "Set your own cadences — the ones shown are starting points, not prescriptions.",
+              "Put the two biggest gaps into your habit stack or straight into the calendar this week, then check them in your weekly energy review.",
+              "Under pressure, defend these first — they fund exactly the capacities that pressure taxes."
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "Cheat meals are on the list on purpose: sustainable beats perfect. A diet with three cheats a week is one you'll still be running next year."
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "manage-my-energy-system"
+            ]
+          }
+        ]
+      },
       "two-equilibria-map": {
         "intro": "A one-page map of your two stable states — the good equilibrium that keeps you sharp, the bad one that quietly runs you — with the triggers that tip you over and the recovery moves that bring you back.",
         "blocks": [
@@ -5124,7 +5190,7 @@
               {
                 "label": "20. Manage My Energy System",
                 "href": "/os/capabilities/manage-my-energy-system/",
-                "status": "draft"
+                "status": "ready"
               },
               {
                 "label": "21. Build Resilience & Recovery",
@@ -5328,6 +5394,11 @@
             "label": "Personal Board",
             "href": "/os/tools/personal-board/",
             "status": "draft"
+          },
+          {
+            "label": "7 Core Founder Needs",
+            "href": "/os/tools/seven-founder-needs/",
+            "status": "ready"
           },
           {
             "label": "Two Equilibria Map",

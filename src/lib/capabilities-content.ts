@@ -21,12 +21,19 @@ export type CapabilityToolBridge = {
   toolIds: string[];
 };
 
+export type CapabilityAction = {
+  action: string;
+  note: string;
+  toolId?: string;
+};
+
 export type CapabilityContent = {
   hook: string;
   beforeAfter: CapabilityBeforeAfter;
   why: string;
   whatGoodLooksLike: string[];
   whereFoundersGoWrong: string[];
+  doNow?: CapabilityAction[];
   toolBridge: CapabilityToolBridge;
   blocks?: ToolBlock[];
 };
@@ -56,6 +63,21 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       "Generic values — \"transparency\", \"integrity\" — that commit you to nothing, because no one would ever claim the opposite.",
       "Values on the wall but absent from hiring, feedback and reviews, so they carry no real consequences.",
       "Treating culture as morale — keeping everyone happy — rather than alignment: keeping everyone pointed the same way when it is hard.",
+    ],
+    doNow: [
+      {
+        action: "Run the intern test on yourself",
+        note: "Write the three words you'd want a new hire to say after day one — then the three they'd actually say today. The gap is your work list.",
+      },
+      {
+        action: "Name one value in feedback this week",
+        note: "Next time you praise or correct someone, tie it to a value by name. If no value fits, that's a finding too.",
+      },
+      {
+        action: "Pressure-test each value",
+        note: "Would a credible competitor ever claim the opposite? Strike or sharpen any that fail.",
+        toolId: "values-deck",
+      },
     ],
     toolBridge: {
       text: "Turn this into practice: make each value concrete with the Values Deck, then hold people to them with the Performance × Culture Grid.",
@@ -106,6 +128,88 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "manage-my-energy-system": {
+    hook:
+      "My calendar is full of everyone else's priorities. By Thursday I'm running on caffeine, and the work I actually love hasn't happened in weeks.",
+    beforeAfter: {
+      today: [
+        "The week is planned to 100%, so every surprise gets paid for in evenings.",
+        "Sleep, exercise and friends are the first things cut when pressure rises.",
+        "The work that used to give you energy has quietly disappeared from your calendar.",
+      ],
+      success: [
+        "You plan 80% of the week and let the inevitable chaos fill the rest.",
+        "Each of your seven core needs has a cadence — and most of them actually happen.",
+        "Deep work owns your mornings, and one slot a week is reserved for the work you love.",
+      ],
+    },
+    why:
+      "Energy is not a mood — it is a system with inputs you can design. The anchor here is founder coach Dave Bailey's core-needs check-in: exercise, eating, sleep, people, solitude, learning and real time off, where each need funds a different capacity. Exercise buys willpower, sleep buys patience, solitude buys clarity, vacation buys perspective. That is why you can't substitute one for another — and why cutting them under pressure is a loan against exactly the capacities the pressure will demand.",
+    whatGoodLooksLike: [
+      "Weekly planning starts with how much — capacity honestly assessed, slack deliberately left — before deciding what goes in.",
+      "The seven core needs each have a cadence you actually track: three workouts, three meetups, three walks a week.",
+      "The shape of the day matches your energy: planning first thing Monday, deep work before lunch, meetings after it.",
+    ],
+    whereFoundersGoWrong: [
+      "Planning 100% of the week. The unplanned 20% always arrives, and it collects from your evenings and weekends.",
+      "Cutting the needs first under pressure — sleep, exercise, friends — precisely the inputs that fund willpower and patience when you need them most.",
+      "Treating energy-giving work as an indulgence to delegate away. If you're a technical founder who loves to code, the weekly coding afternoon isn't a guilty pleasure — it's fuel.",
+    ],
+    doNow: [
+      {
+        action: "Cut next week's plan to 80%",
+        note: "Open next week's calendar and remove or shrink commitments until a fifth of it is genuinely empty. The random 20% is coming either way — decide now that it lands in slack, not in your evenings.",
+      },
+      {
+        action: "Score your seven needs out of 10",
+        note: "Two minutes: exercise, eating, sleep, friends & family, solitude, training, vacation. The two lowest scores are next week's calendar edits.",
+        toolId: "seven-founder-needs",
+      },
+      {
+        action: "Move one meeting out of tomorrow morning",
+        note: "Reclaim the morning for deep work and push the check-ins and quick calls to after lunch. One swap is enough to feel the difference.",
+      },
+      {
+        action: "Book the slot for the work you love",
+        note: "If coding charges you, one afternoon a week, recurring. Treat it like an investor meeting: it doesn't move.",
+      },
+    ],
+    toolBridge: {
+      text: "Start by giving each of your seven core needs a cadence with 7 Core Founder Needs, then find your personal drains and chargers with the Energy Audit.",
+      toolIds: ["seven-founder-needs", "energy-audit"],
+    },
+    blocks: [
+      {
+        kind: "heading",
+        text: "Plan the week: how much, then what",
+      },
+      {
+        kind: "paragraph",
+        text: "Most founders plan what goes into the week and never ask how much should. Decide your real capacity first, then fill it — and leave deliberate slack, because the interruptions are not an exception, they are a known quantity.",
+      },
+      {
+        kind: "callout",
+        text: "\"I only plan 80% of my week. The other 20% gets filled with random stuff whether I plan it or not — this way it doesn't cost me my evenings.\" — Series A founder",
+      },
+      {
+        kind: "paragraph",
+        text: "Then look at what fills it, through two lenses. Leverage: is this work only you can do? (That is its own capability — Operate at the Right Altitude.) And balance: does the week contain work that gives energy back, not just work that matters? Optimising every hour for leverage until nothing in the week charges you is how high performers hollow themselves out.",
+      },
+      {
+        kind: "heading",
+        text: "Match the day to your energy",
+      },
+      {
+        kind: "list",
+        items: [
+          "Monday, first thing: plan the week before the week plans you.",
+          "Mornings: deep work, while the tank is full.",
+          "Afternoons: meetings, quick wins and the short-term dopamine work.",
+          "Guard the boundary: a 9am \"quick call\" costs a full deep-work block, not thirty minutes.",
+        ],
+      },
+    ],
+  },
   "build-resilience-and-recovery": {
     hook:
       "I know I'm in a bad place when every Slack ping makes me flinch. I'm wired all day, and the only off switch I've found is a drink in the evening.",
@@ -132,6 +236,21 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       "Treating recovery as a reward for finishing. The work never finishes, so the recovery never comes.",
       "Running the startup as one long sprint. Continuous sprinting isn't intensity — it's a slow crash with a delay on it.",
       "Keeping the struggle private from cofounders, so nobody can catch the slide into bad equilibrium until it shows up in your decisions.",
+    ],
+    doNow: [
+      {
+        action: "Score your burnout right now, out of 10",
+        note: "Ten seconds. Then add it to your daily habit stack so tomorrow's score exists too.",
+        toolId: "habit-stacks",
+      },
+      {
+        action: "Book one piece of recovery before Friday",
+        note: "The long run, the spa day, the offline weekend — in the calendar, not on the someday list.",
+      },
+      {
+        action: "Text your cofounder your top trigger",
+        note: "One message: \"when X stacks up, I slide — if you see it, call it.\" Accountability starts that simply.",
+      },
     ],
     toolBridge: {
       text: "Start by mapping your two states with the Two Equilibria Map, then pre-commit your responses with the Burnout Playbook.",
@@ -199,6 +318,22 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       "Treating consumption as growth: more books, more podcasts, more notes, no system.",
       "Building a support network around prestige or convenience rather than truth, challenge and real perspective.",
       "Having good insights but never turning them into reps, so the same lesson comes back in a different disguise.",
+    ],
+    doNow: [
+      {
+        action: "Name your current growth edge in one sentence",
+        note: "Not \"get better at leadership\" — the specific behaviour or pattern that keeps costing you.",
+      },
+      {
+        action: "List the five people you actually learn from",
+        note: "Next to each: what you ask of them today, and what you should ask. That's the first draft of your personal board.",
+        toolId: "personal-board",
+      },
+      {
+        action: "Put one rep in next week's calendar",
+        note: "A habit stack, a feedback moment or a reading block tied to the edge. Growth that isn't scheduled loses to whatever is.",
+        toolId: "habit-stacks",
+      },
     ],
     toolBridge: {
       text: "Start by designing the people around your growth with the Personal Board, then turn one real growth edge into weekly reps with Habit Stacks.",
@@ -284,6 +419,25 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       "Reporting instead of storytelling: all-hands as metrics readouts that inform everyone and move no one.",
       "Saying it once and assuming it landed. People need to hear things more than once — over-communication beats under-communication every time.",
     ],
+    doNow: [
+      {
+        action: "Tell your origin story out loud tonight",
+        note: "To a mirror, or record 90 seconds on your phone and watch it back once. You'll hear exactly where the story goes flat.",
+      },
+      {
+        action: "Draft one three-ingredient story",
+        note: "Fifteen minutes: the mission, one customer moment from this month, one teammate worth naming. That's your next all-hands opener.",
+      },
+      {
+        action: "Put a story slot on the all-hands agenda",
+        note: "A standing five minutes, at least one story every two weeks — and rotate the teller so it isn't always you.",
+      },
+      {
+        action: "Rewrite the first paragraph of your next investor update as a story",
+        note: "Future first, metrics second. The update is a monthly rep for the investor version of your story.",
+        toolId: "investor-update",
+      },
+    ],
     toolBridge: {
       text: "Make it a discipline: build the over-communication habit with the Four Disciplines, then keep investors sold on the future with the Investor Update.",
       toolIds: ["four-disciplines", "investor-update"],
@@ -326,10 +480,6 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
             note: "\"So what's the most important thing for us to focus on next quarter?\" A rhetorical question tells the room a section just ended — and pulls their attention into the next one.",
           },
         ],
-      },
-      {
-        kind: "callout",
-        text: "Storytelling only compounds with reps. Make it a standing commitment: someone tells a story at every all-hands, at least one every two weeks — and every pitch, interview and investor call counts as practice.",
       },
     ],
   },

@@ -1,6 +1,7 @@
 import {
   getAdjacentCapabilities,
   getRhythmsForCapability,
+  getToolBySlug,
   getToolsForCapability,
   type Capability,
 } from "@/lib/os";
@@ -120,6 +121,43 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
               { kind: "heading", text: "Where founders get it wrong" },
               { kind: "list", items: content.whereFoundersGoWrong },
               ...(content.blocks ?? []),
+            ]}
+          />
+        </div>
+      ) : null}
+
+      {content?.doNow?.length ? (
+        <div className="ui-surface p-4 p-lg-5 mt-5">
+          <p className="ui-kicker mb-3">What you can do right now</p>
+          <ul className="os-prose-list mb-0">
+            {content.doNow.map((item) => {
+              const tool = item.toolId ? getToolBySlug(item.toolId) : undefined;
+              return (
+                <li key={item.action}>
+                  <strong>{item.action}.</strong> {item.note}
+                  {tool ? (
+                    <>
+                      {" "}
+                      <a
+                        href={`/os/tools/${tool.id}/`}
+                        className="fw-700 text-decoration-none text-nowrap"
+                      >
+                        {tool.title} →
+                      </a>
+                    </>
+                  ) : null}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ) : null}
+
+      {content ? (
+        <div className="mt-5">
+          <p className="ui-kicker mb-3">Where to start</p>
+          <ToolContentBlocks
+            blocks={[
               { kind: "callout", text: content.toolBridge.text },
               { kind: "toolRef", toolIds: content.toolBridge.toolIds },
             ]}
