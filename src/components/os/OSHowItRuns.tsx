@@ -1,7 +1,5 @@
 import {
   howOsRunsFeltProblems,
-  howOsRunsQuarterlyIntro,
-  howOsRunsQuarterlySteps,
   howOsRunsTrainingPoints,
 } from "@/lib/os";
 import { OsSectionHeader } from "./OsPageHeader";
@@ -43,18 +41,6 @@ export default function OSHowItRuns() {
         capabilities actually causing it. The full map is for the coach, not the
         first conversation.
       </p>
-
-      <p className="ui-kicker mb-3">{howOsRunsQuarterlyIntro}</p>
-      <div className="row g-3">
-        {howOsRunsQuarterlySteps.map((step) => (
-          <div key={step.title} className="col-md-6">
-            <div className="featured-box p-4 h-100">
-              <h3 className="text-5 fw-700 mb-2">{step.title}</h3>
-              <p className="text-muted mb-0">{step.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }

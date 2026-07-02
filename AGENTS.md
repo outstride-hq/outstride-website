@@ -60,6 +60,27 @@ Topology: layers -> capability groups -> capabilities -> tools/rhythms.
 - Tools support `accreditation` (`src/lib/accreditation.ts`) to credit external frameworks.
 - Tool detail pages at `/os/tools/[slug]` render from `os.ts` + `tools-content.ts`.
 
+### Capability pages
+
+Rich capability content lives in `src/lib/capabilities-content.ts`, keyed by capability id. The reference implementation is `build-a-culture-that-compounds` — match its shape and tone. Capabilities without an entry fall back to summary + bullets, which is an acceptable state; do not pad a capability with generic content just to fill the slots.
+
+**Always present** (typed slots, in this order on the page):
+
+- `hook` — a verbatim, anonymized founder quote naming the pain. Must sound like something a founder actually said, not marketing copy.
+- `beforeAfter` — the centerpiece. 3–4 vivid lines each for `today` (the felt, day-to-day cost) and `success` (the observable after-state). This is what sells the capability: a founder should recognise themselves in `today` and want `success`.
+- `why` — why this matters, anchored by one credible authority, story or stake. No generic stakes.
+- `whatGoodLooksLike` — 3 bullets describing the end state in observable terms.
+- `whereFoundersGoWrong` — 3 bullets naming real failure modes (the credibility section; specific beats comprehensive).
+- `toolBridge` — one callout sentence telling the founder where to start, plus 1–2 `toolIds` in the order they should be used.
+
+**Sometimes present** (`blocks`, rendered between the fixed sections and the tool bridge; 0–2 items, only when genuinely earned):
+
+- Starter questions as a `steps` block (like the culture page's intern test) — only genuinely diagnostic questions.
+- One deep-dive section (heading + paragraph/callout) carrying a distinctive point of view.
+- A named-example callout — only when the story is real and sourced.
+
+**Intake before drafting.** A capability entry should not be drafted from thin air. Get answers (from Ben, ideally via `content/capability-intake.md`) to: (1) what founders literally say when this is broken, (2) what conventional advice gets wrong, (3) a real anonymized before→after, (4) which tool he reaches for first and why, (5) failure modes he has personally seen, (6) the first question he asks in a session, (7) one authority anchor he believes. Questions 1, 2 and 5 are non-negotiable; without them, leave the capability on fallback rendering.
+
 ### Adding OS tools
 
 Add tool metadata in `src/lib/os.ts`: `id`, `title`, `type`, `format`, `layerIds`, `capabilityIds`, `description`, and optionally `diagramId`, `relatedToolIds`, and `accreditation`.
@@ -98,6 +119,8 @@ Custom visual canvases (strategy grid, dial, flow, pyramid) are defined as data 
   - `src/components/diagram/ResponsiveGridRenderer.tsx` (Candidate C - Responsive Grid)
 
 For diagrams, we should prefer Candidate A — SVG Canvas, but keep the other two as fallback options.
+
+When you add or materially change a diagram, verify it in-browser before finishing using `browser_snapshot` plus at least one screenshot from the relevant page.
 
 ## Repo rules (always apply)
 

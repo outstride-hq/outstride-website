@@ -1,5 +1,6 @@
 import type { ToolBlock } from "@/lib/tools-content";
 import DiagramRenderer from "@/components/diagram/DiagramRenderer";
+import { formatToolType, getToolBySlug } from "@/lib/os";
 
 type ToolContentBlocksProps = {
   blocks: ToolBlock[];
@@ -106,6 +107,43 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                 />
               </div>
             );
+          case "toolRef": {
+            const refs = block.toolIds
+              .map((toolId) => getToolBySlug(toolId))
+              .filter((tool): tool is NonNullable<typeof tool> => Boolean(tool));
+
+            if (refs.length === 0) {
+              return null;
+            }
+
+            return (
+              <div key={index} className="row g-3 mb-4">
+                {refs.map((tool) => (
+                  <div key={tool.id} className="col-md-6">
+                    <a
+                      href={`/os/tools/${tool.id}/`}
+                      className="text-decoration-none"
+                    >
+                      <div className="os-tool-ref featured-box p-3 h-100">
+                        <span className="os-card-meta d-block mb-1">
+                          {formatToolType(tool.type)}
+                        </span>
+                        <span className="text-5 fw-700 d-block mb-1">
+                          {tool.title}
+                        </span>
+                        <span className="text-muted small d-block">
+                          {tool.description}
+                        </span>
+                        <span className="text-primary fw-700 small d-block mt-2">
+                          Open tool →
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            );
+          }
           case "capabilityRefs":
             return null;
           default: {

@@ -1,7 +1,9 @@
 import type { DiagramDefinition } from "./schema";
 import { accountabilityDialDefinition } from "./definitions/accountability-dial";
 import { alignmentAutonomyDefinition } from "./definitions/alignment-autonomy";
+import { culturePerformanceGridDefinition } from "./definitions/culture-performance-grid";
 import { fiveDysfunctionsDefinition } from "./definitions/five-dysfunctions";
+import { human9MiroDefinition } from "./definitions/human-9-miro";
 import { nvcFlowDefinition } from "./definitions/nvc-flow";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
@@ -11,10 +13,12 @@ const definitions: Record<string, DiagramDefinition> = {
   [strategyGridDefinition.id]: strategyGridDefinition,
   [accountabilityDialDefinition.id]: accountabilityDialDefinition,
   [alignmentAutonomyDefinition.id]: alignmentAutonomyDefinition,
+  [culturePerformanceGridDefinition.id]: culturePerformanceGridDefinition,
   [nvcFlowDefinition.id]: nvcFlowDefinition,
   [nvcOfnrDefinition.id]: nvcOfnrDefinition,
   [sbiFeedbackDefinition.id]: sbiFeedbackDefinition,
   [fiveDysfunctionsDefinition.id]: fiveDysfunctionsDefinition,
+  [human9MiroDefinition.id]: human9MiroDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -68,6 +72,12 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: alignmentAutonomyDefinition,
+  },
+  {
+    definition: culturePerformanceGridDefinition,
+  },
+  {
+    definition: human9MiroDefinition,
   },
 ];
 

@@ -38,6 +38,7 @@ export type OsPageLink = {
 
 export const osPages: OsPageLink[] = [
   { href: "/os/", label: "Home" },
+  { href: "/os/layers/", label: "Three Layers" },
   { href: "/os/process/", label: "The Four D's" },
   { href: "/os/force-form-flow/", label: "Force, Form, Flow" },
   { href: "/os/capabilities/", label: "Capabilities" },
@@ -70,7 +71,7 @@ function buildCapabilitySubGroups(): OsNavSubGroup[] {
 export const osNavGroups: OsNavGroup[] = [
   {
     label: "Overview",
-    items: osPages.slice(0, 3).map((page) => ({
+    items: osPages.slice(0, 4).map((page) => ({
       label: page.label,
       href: page.href,
       status: page.status,

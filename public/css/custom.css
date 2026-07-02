@@ -532,6 +532,72 @@ section.bg-primary a {
 	box-shadow: 0 10px 28px rgba(118, 47, 36, 0.08);
 }
 
+.os-cap-hook {
+	border-left: 3px solid var(--out-coral-400);
+	padding: 0.25rem 0 0.25rem 1.25rem;
+	margin-left: 0;
+}
+
+.os-cap-shift {
+	align-items: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.os-cap-shift-cell {
+	background: var(--out-coral-100);
+	border: 1px solid var(--out-coral-200);
+	border-radius: var(--out-radius);
+	flex: 1 1 240px;
+	padding: 1rem 1.25rem;
+}
+
+.os-cap-shift-cell-success {
+	background: var(--out-card);
+	border-color: var(--out-coral-300);
+}
+
+.os-cap-shift-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.os-cap-shift-list li {
+	margin-bottom: 0.5rem;
+	padding-left: 1.1rem;
+	position: relative;
+}
+
+.os-cap-shift-list li:last-child {
+	margin-bottom: 0;
+}
+
+.os-cap-shift-list li::before {
+	color: var(--out-coral-500);
+	content: "•";
+	left: 0;
+	position: absolute;
+}
+
+.os-cap-shift-arrow {
+	align-self: center;
+	color: var(--out-coral-500);
+	font-size: 1.6rem;
+	font-weight: 800;
+}
+
+.os-tool-ref {
+	border-color: var(--out-coral-200);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.os-tool-ref:hover {
+	box-shadow: 0 10px 28px rgba(118, 47, 36, 0.08);
+	transform: translateY(-2px);
+}
+
 .os-number-badge {
 	align-items: center;
 	background: var(--out-coral-100);

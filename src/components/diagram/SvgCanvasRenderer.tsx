@@ -40,6 +40,26 @@ function SvgCard({
   theme: ReturnType<typeof getTheme>;
   textColor?: string;
 }) {
+  const titleLines = title
+    ? title
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0)
+    : [];
+  const subtitleLines = subtitle
+    ? subtitle
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0)
+    : [];
+  const titleLineHeight = 20;
+  const subtitleLineHeight = 16;
+  const totalTextHeight =
+    titleLines.length * titleLineHeight +
+    (subtitleLines.length > 0 && titleLines.length > 0 ? 8 : 0) +
+    subtitleLines.length * subtitleLineHeight;
+  const textStartY = y + height / 2 - totalTextHeight / 2 + titleLineHeight * 0.8;
+
   const content = (
     <g>
       <rect
@@ -48,31 +68,47 @@ function SvgCard({
         width={width}
         height={height}
         fill={fill}
-        filter="url(#cardShadow)"
+        filter={width <= 4 || height <= 4 ? undefined : "url(#cardShadow)"}
       />
-      {title ? (
+      {titleLines.length > 0 ? (
         <text
           x={x + width / 2}
-          y={subtitle ? y + height / 2 - 8 : y + height / 2 + 5}
+          y={textStartY}
           textAnchor="middle"
           fill={textColor}
           fontSize={theme.cardTitleFontSize}
           fontFamily={theme.fontFamily}
           fontWeight={600}
         >
-          {title}
+          {titleLines.map((line, index) => (
+            <tspan key={`${line}-${index}`} x={x + width / 2} dy={index === 0 ? 0 : titleLineHeight}>
+              {line}
+            </tspan>
+          ))}
         </text>
       ) : null}
-      {subtitle ? (
+      {subtitleLines.length > 0 ? (
         <text
           x={x + width / 2}
-          y={y + height / 2 + 14}
+          y={
+            textStartY +
+            titleLines.length * titleLineHeight +
+            (titleLines.length > 0 ? 8 : 0)
+          }
           textAnchor="middle"
           fill={theme.cardSubtitleColor}
           fontSize={theme.cardSubtitleFontSize}
           fontFamily={theme.fontFamily}
         >
-          {subtitle}
+          {subtitleLines.map((line, index) => (
+            <tspan
+              key={`${line}-${index}`}
+              x={x + width / 2}
+              dy={index === 0 ? 0 : subtitleLineHeight}
+            >
+              {line}
+            </tspan>
+          ))}
         </text>
       ) : null}
     </g>

@@ -1,11 +1,7 @@
 import { formatAccreditation } from "@/lib/accreditation";
 import {
-  formatToolDepth,
   formatToolFormat,
-  formatToolFrequency,
-  formatToolMoment,
   formatToolType,
-  getToolLibraryCategoryLabel,
   getRelatedCapabilities,
   getRelatedTools,
   type Tool,
@@ -36,38 +32,6 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
           capabilityRefsFromContent.includes(capability.id),
         )
       : relatedCapabilities;
-  const taxonomyRows = [
-    {
-      label: "Category",
-      value: tool.categoryId ? getToolLibraryCategoryLabel(tool.categoryId) : null,
-    },
-    { label: "Layer", value: tool.layerIds.map((layer) => layer[0].toUpperCase() + layer.slice(1)).join(" / ") },
-    {
-      label: "Moment",
-      value:
-        tool.moments && tool.moments.length > 0
-          ? tool.moments.map((moment) => formatToolMoment(moment)).join(" / ")
-          : null,
-    },
-    { label: "Type", value: formatToolType(tool.type) },
-    { label: "Format", value: tool.format.map((format) => formatToolFormat(format)).join(" / ") },
-    {
-      label: "Depth",
-      value:
-        tool.depth && tool.depth.length > 0
-          ? tool.depth.map((depth) => formatToolDepth(depth)).join(" / ")
-          : null,
-    },
-    {
-      label: "Frequency",
-      value:
-        tool.frequency && tool.frequency.length > 0
-          ? tool.frequency
-              .map((frequency) => formatToolFrequency(frequency))
-              .join(" / ")
-          : null,
-    },
-  ].filter((row): row is { label: string; value: string } => Boolean(row.value));
 
   return (
     <article>
@@ -77,8 +41,10 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
         description={content?.intro ?? tool.description}
       />
 
+      {content ? <ToolContentBlocks blocks={content.blocks} /> : null}
+
       {tool.accreditation ? (
-        <div className="ui-surface p-4 mb-4">
+        <div className="mt-4 mb-4">
           <p className="ui-kicker mb-2">Source / credit</p>
           <p className="mb-0 small">
             {tool.accreditation.sourceUrl ? (
@@ -95,28 +61,6 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
           </p>
         </div>
       ) : null}
-
-      {taxonomyRows.length > 0 ? (
-        <div className="ui-surface p-4 mb-4">
-          <p className="ui-kicker mb-3">Tags</p>
-          <div className="table-responsive">
-            <table className="table table-sm mb-0">
-              <tbody>
-                {taxonomyRows.map((row) => (
-                  <tr key={row.label}>
-                    <th scope="row" className="text-nowrap pe-3">
-                      {row.label}
-                    </th>
-                    <td>{row.value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      ) : null}
-
-      {content ? <ToolContentBlocks blocks={content.blocks} /> : null}
 
       <RelatedCapabilities capabilities={displayCapabilities} />
       <RelatedTools tools={relatedTools} />

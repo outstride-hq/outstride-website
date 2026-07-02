@@ -10,62 +10,19 @@ import { hasToolContent } from "@/lib/tools-content";
 import { OsSectionHeader } from "./OsPageHeader";
 
 const flagshipToolIds = new Set([
-  "three-emotions-check-in",
   "symptom-map",
   "company-health-scorecard",
-  "founder-role-time-split",
-  "force-form-flow-audit",
   "two-hour-constraint",
   "ownership-map",
   "leadership-hats",
   "relationship-design-canvas",
-  "life-worth-scaling-for-canvas",
 ]);
 
 export default function ToolPreview() {
-  const getCategoryId = (tool: (typeof tools)[number]) => {
-    if (tool.categoryId) {
-      return tool.categoryId;
-    }
-    switch (tool.type) {
-      case "diagnostic":
-        return "diagnostic-tools";
-      case "conversation":
-        return "relationship-tools";
-      case "rhythm":
-        return "operating-tools";
-      case "exercise":
-        return tool.layerIds.includes("human")
-          ? "human-tools"
-          : "leadership-tools";
-      case "framework":
-      case "template":
-        if (
-          tool.id.includes("investor") ||
-          tool.id.includes("board") ||
-          tool.id.includes("capital")
-        ) {
-          return "capital-tools";
-        }
-        if (
-          tool.id.includes("strategy") ||
-          tool.id.includes("north-star") ||
-          tool.id.includes("okr")
-        ) {
-          return "direction-tools";
-        }
-        return "operating-tools";
-      default: {
-        const _exhaustive: never = tool.type;
-        return _exhaustive;
-      }
-    }
-  };
-
   const toolsByCategory = toolLibraryCategories
     .map((category) => {
       const items = tools
-        .filter((tool) => getCategoryId(tool) === category.id)
+        .filter((tool) => tool.categoryId === category.id)
         .sort((a, b) => {
           const aFlagship = flagshipToolIds.has(a.id);
           const bFlagship = flagshipToolIds.has(b.id);

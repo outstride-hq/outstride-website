@@ -4,9 +4,11 @@ import {
   getToolsForCapability,
   type Capability,
 } from "@/lib/os";
+import { getCapabilityContent } from "@/lib/capabilities-content";
 import { getCapabilityGroupTitle } from "@/lib/os-nav";
 import OsPageHeader from "./OsPageHeader";
 import { RelatedTools } from "./RelatedCapabilities";
+import ToolContentBlocks from "./ToolContentBlocks";
 
 type CapabilityDetailProps = {
   capability: Capability;
@@ -43,6 +45,7 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
   const rhythms = getRhythmsForCapability(capability.id);
   const { prev, next } = getAdjacentCapabilities(capability.id);
   const groupTitle = getCapabilityGroupTitle(capability.groupId);
+  const content = getCapabilityContent(capability.id);
 
   return (
     <article>
@@ -59,6 +62,44 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
         </span>
       </OsPageHeader>
 
+      {content ? (
+        <blockquote className="os-cap-hook mb-4">
+          <p className="ui-kicker mb-2">Founders say</p>
+          <p className="text-5 fst-italic mb-0">&ldquo;{content.hook}&rdquo;</p>
+        </blockquote>
+      ) : null}
+
+      {content ? (
+        <div className="os-cap-shift mb-4">
+          <div className="os-cap-shift-cell">
+            <p className="ui-kicker mb-2">Where you are today</p>
+            <ul className="os-cap-shift-list text-5 mb-0">
+              {content.beforeAfter.today.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+          </div>
+          <span className="os-cap-shift-arrow" aria-hidden="true">
+            →
+          </span>
+          <div className="os-cap-shift-cell os-cap-shift-cell-success">
+            <p className="ui-kicker mb-2">Where you&rsquo;re headed</p>
+            <ul className="os-cap-shift-list text-5 mb-0">
+              {content.beforeAfter.success.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ) : null}
+
+      {content ? (
+        <div className="mb-4">
+          <p className="ui-kicker mb-2">Why this matters</p>
+          <p className="text-5 text-muted mb-0">{content.why}</p>
+        </div>
+      ) : null}
+
       <div className="ui-surface p-4 p-lg-5">
         <p className="ui-kicker mb-3">What this means</p>
         <ul className="text-5 ps-3 mb-0">
@@ -69,6 +110,22 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
           ))}
         </ul>
       </div>
+
+      {content ? (
+        <div className="mt-5">
+          <ToolContentBlocks
+            blocks={[
+              { kind: "heading", text: "What good looks like" },
+              { kind: "list", items: content.whatGoodLooksLike },
+              { kind: "heading", text: "Where founders get it wrong" },
+              { kind: "list", items: content.whereFoundersGoWrong },
+              ...(content.blocks ?? []),
+              { kind: "callout", text: content.toolBridge.text },
+              { kind: "toolRef", toolIds: content.toolBridge.toolIds },
+            ]}
+          />
+        </div>
+      ) : null}
 
       <RelatedTools tools={tools} />
       <RelatedRhythms rhythms={rhythms} />
