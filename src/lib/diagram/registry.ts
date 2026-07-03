@@ -6,6 +6,8 @@ import { fiveDysfunctionsDefinition } from "./definitions/five-dysfunctions";
 import { human9MiroDefinition } from "./definitions/human-9-miro";
 import { operatingCadenceDefinition } from "./definitions/operating-cadence";
 import { nvcFlowDefinition } from "./definitions/nvc-flow";
+import { developmentPipelineDefinition } from "./definitions/development-pipeline";
+import { opportunityThreatMapDefinition } from "./definitions/opportunity-threat-map";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
 import { sevenFounderNeedsDefinition } from "./definitions/seven-founder-needs";
@@ -33,6 +35,8 @@ const definitions: Record<string, DiagramDefinition> = {
   [threeCsDecisionDefinition.id]: threeCsDecisionDefinition,
   [zoneOfGeniusDefinition.id]: zoneOfGeniusDefinition,
   [operatingCadenceDefinition.id]: operatingCadenceDefinition,
+  [developmentPipelineDefinition.id]: developmentPipelineDefinition,
+  [opportunityThreatMapDefinition.id]: opportunityThreatMapDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -66,7 +70,7 @@ const sandboxEntries: DiagramSandboxEntry[] = [
     definition: nvcFlowDefinition,
     referenceImage: {
       src: "/images/diagrams/nvc-flow-original.png",
-      alt: "Original NVC Intention-Action-Reaction reference",
+      alt: "Original Crossing the Line (intention-action-reaction) reference",
     },
   },
   {
@@ -113,6 +117,12 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: operatingCadenceDefinition,
+  },
+  {
+    definition: developmentPipelineDefinition,
+  },
+  {
+    definition: opportunityThreatMapDefinition,
   },
 ];
 

@@ -134,9 +134,8 @@ _(Captured from Ben's voice memo, 2026-07-03.)_
 7. Capabilities: chart-the-path, make-the-right-calls, raise-the-talent-bar. Related:
    premortem, seven-powers, strategy-one-pager.
 
-**Open question (Ben, 2026-07-03):** "We can combine these two into one tool" — premortem +
-opportunity/threat map as one combined tool, or two tools cross-linked as related? Current
-lean: two tools (premortem is a ritual, the map is a canvas), tightly cross-linked.
+**Resolved (Ben, 2026-07-03):** two tools, cross-linked as related — built as `premortem`
+and `opportunity-threat-map`.
 
 ### 30-60-90 Plan (`thirty-sixty-ninety`) — NEW, thin for now
 
@@ -155,8 +154,8 @@ we expand later or weave it into the content.")_
    before crediting.
 7. Capabilities: raise-the-talent-bar. Related: performance-culture-grid, premortem.
 
-**Open question:** enough material to ship as a tool, or hold until Ben adds his own 30-60-90
-structure?
+**Resolved (Ben, 2026-07-03):** added to `os.ts` as a metadata-only draft
+(`thirty-sixty-ninety`); page content waits for Ben's own 30-60-90 structure.
 
 ### Crossing the Line — placement TBD
 
@@ -168,8 +167,10 @@ intention, and I don't assume your reaction. Story: the first-time manager at he
 desk every day (intention: maximum support; received as: "she doesn't trust me, she's
 micromanaging me"). Origin/accreditation to check.
 
-**Open question:** standalone mini-tool vs a block on the conflict capability page or the NVC
-tool page. Current lean: block, not tool.
+**Resolved (Ben, 2026-07-03):** both — built as standalone tool `crossing-the-line`
+(reusing the intention→action→reaction flow diagram, retitled and re-credited "Outstride
+adaptation — original source unverified"), and to be embedded on the conflict capability
+page when it gets drafted.
 
 ### Enrichments to existing tools (from the 2026-07-03 voice memo)
 
@@ -185,9 +186,9 @@ tool page. Current lean: block, not tool.
 - **sbi-feedback** — Ben confirms the model (his shorthand "SPI" = Situation, Behaviour,
   Impact); his Martha example is captured in capability intake. Anti-pattern to include:
   "you always do this" → "no I don't" defensiveness.
-- **leadership-hats** — Ben's canonical set is FOUR hats (coach / mentor / empower / manager)
-  with when-to-use guidance; current page shows six (adds Operator, CEO). Decide: trim or
-  mark the core four. His self-check line: "Which manager hat am I wearing right now?"
+- **leadership-hats** — RESOLVED (Ben, 2026-07-03): trimmed to Ben's four hats
+  (coach / mentor / empower / manager) with when-to-wear guidance and the self-check line
+  "Which manager hat am I wearing right now?"
 - **relationship-design-canvas / relationship-one-pager** — add: the conflict protocol row
   (magic word → stop → whiteboard session within 24h); decision rights incl. the salary rule
   (all salary/personal decisions in the management group); meeting cadence (monthly strategy
@@ -209,8 +210,8 @@ tool page. Current lean: block, not tool.
 ### CTO hiring example (anonymized) — placement TBD
 
 _(Source: Ben's real CTO hiring process; company renamed and stats changed per Ben's request,
-2026-07-03. Open question: standalone tool/resource page ("what a serious senior-hire process
-looks like") vs blocks inside Raise the Talent Bar.)_
+2026-07-03. Resolved same day: built as standalone tool `senior-hire-process`, linked to the
+new capability `hire-and-onboard-the-right-people`.)_
 
 **Interview process:**
 

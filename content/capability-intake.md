@@ -609,16 +609,26 @@ so per ground rules this page stays on fallback rendering until they exist.)_
    `content/tool-intake.md`) as the worked example of a serious process: "you can strip back
    from there."
 
-**Open questions from the 2026-07-03 memo (Ben invited reorganisation discussion):**
+**Open questions from the 2026-07-03 memo — RESOLVED with Ben same day (implemented):**
 
-- Leadership Hats: Ben's set is 4 hats (coach, mentor, empower, manager); the live tool page
-  has 6 (adds Operator and CEO/founder). Trim to Ben's 4, or keep 6 and mark Ben's core 4?
-- Premortem + opportunities-vs-threats (magnitude × likelihood): one combined tool or two
-  linked tools? Ben mused "we can combine these two into one tool."
-- Crossing the Line: standalone mini-tool, or a block on the conflict capability page / NVC
-  tool page?
-- Where does empowerment material live: Build Leaders, Not Dependencies (1:1 leadership) vs
-  Make Ownership Stick (company-level systems)? Current lean: personal co-creation here,
-  company-wide systems there.
-- CTO hiring example: standalone tool/resource page vs blocks inside Raise the Talent Bar.
-- 30-60-90: real tool now, or wait until Ben supplies more onboarding material?
+- Leadership Hats: **trimmed to Ben's 4** (coach, mentor, empower, manager) with
+  when-to-wear guidance; Operator and CEO/founder rows removed.
+- Premortem + opportunities-vs-threats: **two tools, cross-linked as related** (`premortem`,
+  `opportunity-threat-map`).
+- Crossing the Line: **both** — standalone tool (`crossing-the-line`, reusing the
+  intention→action→reaction flow diagram) AND to be embedded on the conflict capability page
+  when that page gets drafted.
+- CTO hiring example: **new capability created** — `hire-and-onboard-the-right-people`
+  (Company System, capability 8; capabilities 8+ renumbered to 9+). The example lives as a
+  standalone linked tool (`senior-hire-process`). Raise the Talent Bar keeps the
+  ongoing evaluate-and-develop system for people already inside.
+- 30-60-90: added as **metadata-only draft tool** (`thirty-sixty-ninety`) — page content
+  waits for more material from Ben.
+
+**Still open:**
+
+- Where empowerment material lives when drafting pages: Build Leaders, Not Dependencies
+  (1:1 co-creation) vs Make Ownership Stick (company-level systems). Current lean: personal
+  co-creation in Build Leaders, company-wide systems in Make Ownership Stick.
+- Verbatim founder quotes (Q1) still missing for all five Lead Others capabilities — pages
+  not yet drafted; hooks will be crafted composites unless Ben supplies real lines.

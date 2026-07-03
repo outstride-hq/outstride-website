@@ -2,8 +2,8 @@ import { validateDiagramDefinition, type FlowDiagramDefinition } from "../schema
 
 export const nvcFlowDefinition: FlowDiagramDefinition = validateDiagramDefinition({
   type: "flow",
-  id: "nvc-flow",
-  title: "NVC: Intention → Action → Reaction",
+  id: "crossing-the-line",
+  title: "Crossing the Line: Intention → Action → Reaction",
   theme: "pastel-retro",
   canvas: {
     width: 960,
@@ -11,9 +11,7 @@ export const nvcFlowDefinition: FlowDiagramDefinition = validateDiagramDefinitio
     background: "#f5f5f5",
   },
   accreditation: {
-    originator: "Marshall Rosenberg",
-    source: "Nonviolent Communication",
-    note: "Adapted for Outstride OS",
+    note: "Outstride adaptation — original source unverified",
   },
   showDividers: true,
   showArrows: true,

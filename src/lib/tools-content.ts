@@ -304,6 +304,15 @@ export const toolsContent: Record<string, ToolContent> = {
         text: "Move through the dial in order. Skipping steps erodes trust; staying on Mention when you need Boundary avoids the problem.",
       },
       {
+        kind: "callout",
+        text: "Put a number and a date on it: \"Your pull-request reviews are at a five — I need a seven by the end of the month, or we move up the dial.\" The dial exists because the default founder path is one vague mention, months of silence, then a firing that surprises everyone.",
+      },
+      {
+        kind: "paragraph",
+        text: "This is the unhappy path of performance improvement. Its happy-path twin is the Development Pipeline — reach for that first when the person is willing but stuck.",
+      },
+      { kind: "toolRef", toolIds: ["development-pipeline"] },
+      {
         kind: "capabilityRefs",
         capabilityIds: ["give-feedback-and-hold-the-standard"],
       },
@@ -363,6 +372,10 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "callout",
         text: "Lead with situation and behaviour, not impact on your feelings. \"I feel like you don't respect me\" before naming what happened invites defensiveness. Name what you saw first — then the effect.",
+      },
+      {
+        kind: "callout",
+        text: "The opposite of SBI is \"you always\": \"You always do this. You always think you're right.\" The only available answer is \"no I don't\" — generalisations trigger defence. One situation, one behaviour, one impact.",
       },
       {
         kind: "capabilityRefs",
@@ -425,6 +438,10 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "callout",
         text: "KSS is not a softer way to avoid hard feedback. It is a clearer way to hold standards while preserving trust.",
+      },
+      {
+        kind: "callout",
+        text: "Make it a standing ritual with the key people in your orbit — cofounders and direct reports. Both sides show up with a short doc prepared and split the session bilaterally: your KSSs, then mine, in about 50 minutes. Run on a regular cadence it normalises feedback — it stops being the thing that only happens when something went wrong.",
       },
       {
         kind: "capabilityRefs",
@@ -1300,6 +1317,10 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "callout",
         text: "Delegation is a timeline, not an event. One deliberate handoff per month beats a heroic purge that collapses in week two.",
+      },
+      {
+        kind: "callout",
+        text: "Ask it every quarter: \"What are you doing today that you shouldn't be doing at the end of the quarter?\" Then aim the handoffs at people's growth edges — \"my growth edge is people management\" becomes \"you lead the weekly product check-ins.\" And remember delegation is an investment: not faster tomorrow, faster in a month or two — delegate, don't abdicate.",
       },
       {
         kind: "capabilityRefs",
@@ -2204,15 +2225,33 @@ export const toolsContent: Record<string, ToolContent> = {
       { kind: "heading", text: "How it works" },
       {
         kind: "table",
-        columns: ["Hat", "Primary move"],
+        columns: ["Hat", "The move", "When to wear it"],
         rows: [
-          ["Coach", "Help the person think for themselves"],
-          ["Mentor", "Share pattern recognition and experience"],
-          ["Manager", "Set expectations, standards and accountability"],
-          ["Empowerer", "Transfer ownership and decision rights"],
-          ["Operator", "Jump in directly to solve"],
-          ["CEO / founder", "Set direction, context and constraints"],
+          [
+            "Coach",
+            "\"What do you think?\" — ask awesome questions, stay curious, help them reach their own answer",
+            "A smart employee who wants to grow — never when something is on fire",
+          ],
+          [
+            "Mentor",
+            "Share your experience: advice, guidance, recommendations",
+            "They face something you have genuinely lived through before",
+          ],
+          [
+            "Empower",
+            "Co-create goals and build the systems for success and accountability together",
+            "Handing over an outcome, not a task",
+          ],
+          [
+            "Manager",
+            "Set expectations, run the formal stuff, and sometimes say no",
+            "Performance reviews, salaries, vacations and sick days — and holding the line",
+          ],
         ],
+      },
+      {
+        kind: "callout",
+        text: "There is no right or wrong management style — direct or collaborative can both work. The skill is the mid-conversation check: \"Which manager hat am I wearing right now — and which one does this moment actually need?\" If the production server is down, the coaching hat goes back on the shelf: \"how do you feel about this?\" is not the move.",
       },
       {
         kind: "list",
@@ -2308,6 +2347,10 @@ export const toolsContent: Record<string, ToolContent> = {
         kind: "table",
         columns: ["Layer", "Moment", "Type", "Format", "Depth", "Frequency"],
         rows: [["Founder / Human", "Diagnose / Design / Deliver", "Framework / Conversation / Template", "1:1 / Cofounder / Team", "Operating / Inner work", "Quarterly / As needed"]],
+      },
+      {
+        kind: "callout",
+        text: "Field notes from real contracts: a hard rule that all salary and personal decisions go to the management group together; a \"magic word\" either cofounder can say to stop a heating argument, with a whiteboard session booked within 24 hours; a monthly rhythm of one strategy offsite, one check-in and one social dinner; and a shared don't — nothing critical over Slack, ever.",
       },
       {
         kind: "capabilityRefs",
@@ -2442,6 +2485,249 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "capabilityRefs",
         capabilityIds: ["know-my-special-ability", "take-command-of-my-role"],
+      },
+    ],
+  },
+  "development-pipeline": {
+    intro:
+      "A five-condition diagnostic — insight, motivation, capabilities, real-world practice, accountability — that finds where someone's development is actually stuck.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Reach for this when someone needs to improve and generic feedback is not moving them. Development flows at the rate of the tightest constraint — and most managers pour effort into training when the real blockage is insight or motivation.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "development-pipeline",
+      },
+      {
+        kind: "heading",
+        text: "The five conditions",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Insight",
+            note: "Do they know they need to improve — and on what, specifically?",
+          },
+          {
+            title: "Motivation",
+            note: "Are they willing to improve? Are they actually prioritising it?",
+          },
+          {
+            title: "Capabilities",
+            note: "Do they have the knowledge and skills, or is there a genuine gap to train?",
+          },
+          {
+            title: "Real-world practice",
+            note: "Are they getting real reps at work — not just courses and books?",
+          },
+          {
+            title: "Accountability",
+            note: "What holds them to it, internally and externally?",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "A lot of the time it is the insight and motivation piece. Don't tell — coax: \"What is the number one thing you want to improve right now?\" · \"Have you thought about this?\" · \"What happens if nothing changes?\" Then connect it to their own ambition: \"Where do you see yourself in this company — and what is the main gap between here and there?\"",
+      },
+      {
+        kind: "paragraph",
+        text: "This is the happy path of performance improvement. When someone knows, is willing and still does not move, switch to the unhappy path — the Accountability Dial.",
+      },
+      { kind: "toolRef", toolIds: ["accountability-dial", "kss-feedback"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "give-feedback-and-hold-the-standard",
+          "build-leaders-not-dependencies",
+        ],
+      },
+    ],
+  },
+  premortem: {
+    intro:
+      "Before you commit — to a hire, a strategy, a launch — imagine it has already failed and work backwards from the wreckage.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use it whenever optimism is quietly doing the risk assessment: an offer about to be signed, a big strategic bet, a launch date everyone is excited about. Declaring failure as a fact — not a possibility — gives people permission to say what they actually fear.",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Assume it failed",
+            note: "Set the scene as fact, not hypothesis.",
+            example:
+              "It's twelve months from now and this went wrong. What happened?",
+          },
+          {
+            title: "List the failure modes",
+            note: "Everyone writes independently first, then share. Independent lists surface the quiet doubts.",
+          },
+          {
+            title: "Rank by likelihood",
+            note: "Order the list. If it is a strategic bet, add magnitude and plot it on the Opportunity & Threat Map.",
+          },
+          {
+            title: "Mitigate the top two or three",
+            note: "Each top risk gets a mitigation or an early-warning signal you will actually watch.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Everyone premortems projects; almost nobody premortems a hire. Before a senior hire starts, run it with their manager: \"If this hire fails, how did it fail?\" — \"He couldn't turn his network into pipeline.\" \"Her lack of people experience meant the team drifted.\" Rank them, then watch for them during onboarding.",
+      },
+      { kind: "toolRef", toolIds: ["opportunity-threat-map", "performance-culture-grid"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "hire-and-onboard-the-right-people",
+          "make-the-right-calls",
+        ],
+      },
+    ],
+  },
+  "opportunity-threat-map": {
+    intro:
+      "One grid — magnitude × likelihood — for everything that could help or hurt, so strategy conversations rank instead of list.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use it in strategy sessions, quarterly planning or board prep — or as the canvas a premortem's output lands on. Most teams keep risks in one doc and ideas in another; this puts them on the same axes and makes them compete for attention honestly.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "opportunity-threat-map",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "list",
+        items: [
+          "Brainstorm opportunities and threats as two separate lists first.",
+          "Score each item for magnitude (how much would this help or hurt?) and likelihood.",
+          "Plot both on one grid — one colour per side.",
+          "The high-magnitude, high-likelihood corner gets named owners and next steps; revisit the map quarterly.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Threats and opportunities deserve the same rigour. Seeing them on one canvas forces the trade-off conversation: the biggest threat mitigation and the biggest opportunity bet are competing for the same quarter.",
+      },
+      { kind: "toolRef", toolIds: ["premortem", "strategy-one-pager"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["chart-the-path", "make-the-right-calls"],
+      },
+    ],
+  },
+  "crossing-the-line": {
+    intro:
+      "Three zones in every exchange — my intention, my words and behaviour, your reaction — and a line neither side can see across.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use it mid-conflict, or in the post-mortem of one. Most escalations contain a line-crossing: one person asserting what the other intended, or what the other must be feeling.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "crossing-the-line",
+      },
+      {
+        kind: "heading",
+        text: "The model",
+      },
+      {
+        kind: "list",
+        items: [
+          "My intention is accessible only to me.",
+          "My speech and behaviour are accessible to both of us.",
+          "Your reaction is accessible only to you.",
+          "Crossing the line means assuming what only the other person can know.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "A first-time manager visited her direct report's desk every day — looking over her shoulder, correcting, suggesting. Her intention: be an awesome, supportive manager. What landed: \"She doesn't trust me. She's micromanaging me.\" Neither said a word about it — both had crossed the line in private, and the conflict arrived on schedule.",
+      },
+      {
+        kind: "paragraph",
+        text: "The repair move is to talk across the line instead of assuming across it: share your intention out loud, and ask about their reaction — which is exactly what SBI and Nonviolent Communication are built to do.",
+      },
+      { kind: "toolRef", toolIds: ["non-violent-communication", "sbi-feedback"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "navigate-conflict-and-create-psychological-safety",
+          "build-incredible-relationships",
+        ],
+      },
+    ],
+  },
+  "senior-hire-process": {
+    intro:
+      "A worked example of a serious senior-hire process — four phases ending in a strategy task presented to the C-level — to strip back for smaller roles.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "This is the real process behind a CTO hire at a scaling fintech (company and numbers anonymised). The shape matters more than the specifics: every phase answers a different question, and no single interviewer can green-light the hire alone.",
+      },
+      {
+        kind: "heading",
+        text: "The interview loop",
+      },
+      {
+        kind: "table",
+        columns: ["Phase", "Time", "Purpose", "Who"],
+        rows: [
+          ["Phase 0", "—", "Screening", "Head of HR"],
+          ["Phase 1", "30 mins", "Leadership angle", "CEO"],
+          ["Phase 2", "30 mins", "Product angle", "CPO"],
+          ["", "30 mins", "Engineering angle", "VP Engineering"],
+          ["Phase 3", "1.5 h", "Strategy task — presentation + Q&A", "C-level"],
+          ["", "Lunch", "Cultural evaluation", "Team leads"],
+          ["", "45 mins", "External check", "External tech advisor"],
+          ["", "30 mins", "VC check", "Investor"],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "The task",
+      },
+      {
+        kind: "paragraph",
+        text: "\"Define a strategy to scale our tech over the next two years.\" The candidate gets real context — team size and structure, growth targets (roughly 80k accounts to 600k in two years), major product launches, known quality debt, and a planned migration off a white-label banking provider — and 45 minutes to present, 45 for questions.",
+      },
+      {
+        kind: "list",
+        items: [
+          "Asked to cover: organisation structure, engineering culture and best practices, architecture, make vs buy and vendor choices, collaboration with product, in-house vs near-shore vs external scaling, recruiting strategy and employer branding.",
+          "Plus the open invitation that reveals judgment: \"and whatever you think is important.\"",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The task is the centrepiece: it tests the actual job — strategy, prioritisation, communication under questioning — not interview trivia. For smaller roles, strip phases, not rigour: keep a work sample, a culture read and one outside check.",
+      },
+      {
+        kind: "paragraph",
+        text: "Debrief candidates on the Performance × Culture Grid, premortem the hire before day one, and land them with a 30-60-90 plan.",
+      },
+      { kind: "toolRef", toolIds: ["performance-culture-grid", "premortem"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["hire-and-onboard-the-right-people"],
       },
     ],
   },
