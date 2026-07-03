@@ -1015,7 +1015,8 @@ export const capabilities: Capability[] = [
     title: "Build a Life Worth Scaling For",
     layerId: "human",
     groupId: "human-system",
-    summary: "",
+    summary:
+      "One founder said the sacrifice was all for \"Champagne at 40\" — then couldn't describe what that looked like. Picture the life you're building toward, then start living the parts of it you can already reach.",
     bullets: [
       "Define what the company is meant to make possible in life.",
       "Make the business serve the human, not consume them.",
