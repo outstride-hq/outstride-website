@@ -38,6 +38,11 @@ rough beats polished); an LLM session then drafts the page to the format spec in
 
 ### 1. Make Ownership Stick (`make-ownership-stick`)
 
+_(Partial material exists in the 2026-07-03 people-management voice memo — see "Build Leaders,
+Not Dependencies" below: goal co-creation, traffic-lighting quarterly goals, co-created
+accountability. Open question: which of that lands here (company-level systems) vs there
+(1:1 leadership).)_
+
 1.
 2.
 3.
@@ -80,13 +85,45 @@ _(Captured from Ben's chat notes, 2026-07-02. Q1 and Q5 use anonymized composite
 
 ### 5. Give Feedback & Hold the Standard (`give-feedback-and-hold-the-standard`)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+_(Captured from Ben's voice memo, 2026-07-03 — the people-management dump. Q1 has no verbatim
+founder quotes yet; hook will be a crafted composite until Ben supplies real lines.)_
+
+1. (No verbatim quotes captured yet.) The felt state Ben describes: feedback is a dirty word —
+   associated with negativity, you only get it when something bad has happened. And the classic
+   founder failure: indirectly mention something once ("I noticed you didn't really make any
+   sales last month"), then say nothing else for a month, two months, and eventually just fire
+   the employee. We avoid difficult conversations, so we go from almost-nothing to fired.
+2. Feedback is a dirty word only because it's rare and negative. You get rid of that by
+   normalising it: a regular cadence and a regular structure. Also: people respond better to
+   painting the picture of a positive future than to fixing a broken present — "next month is
+   going to be our best month ever because you're going to make more calls than ever before"
+   beats "you haven't been doing a good job and you need to change" (rephrase the example
+   sensitively).
+3. Before: difficult conversations avoided; silence, then firing. After: a regular bilateral
+   feedback session with the key people in your orbit (cofounders, direct reports) — both show
+   up with a brief doc prepared, ~50 minutes split between your KSSs and mine. It normalises
+   feedback, gives it structure so it stops being only negative, unlocks positivity and
+   insights, and makes as many assumptions as explicit as possible.
+4. KSS (Keep / Start / Stop) for the regular session. SBI (Situation, Behaviour, Impact) for
+   delivering a specific piece — Ben's example: Situation: the product meeting last week.
+   Behaviour: when Martha suggested an idea you said "we're not going to talk about that today,"
+   very directly. Impact: Martha seemed shut down and didn't contribute for the rest of the
+   meeting. Development Pipeline (new tool) as the happy path of performance improvement;
+   Accountability Dial as the unhappy path — and attach the dial to a timeline with a
+   quantified bar: "Ben's ability to review pull requests is currently at a five. I need him at
+   a seven by the end of the month. If it hasn't happened, I move to the next step on the dial
+   (e.g. the boundary)."
+5. Avoiding the difficult conversation entirely — the nothing-to-fired jump. Feedback only when
+   something bad happens (so it stays a dirty word). "You always do this" feedback — "you're
+   always contradicting me, you always think you're right" — which triggers pure defensiveness
+   ("No I don't"). Giving critical feedback over Slack: the characters don't carry the same
+   emotional weight as a call.
+6. (Not captured yet.) Working candidate: "When did this person last hear how they're actually
+   doing — from you, in a structured way?"
+7. Two types of feedback: (1) deliver immediately or within 24 hours — someone is rude in a
+   meeting, you don't wait until next month; (2) pattern feedback (proactivity, attention to
+   detail) — don't jump down someone's throat the first time; build the profile over time and
+   bring it to the regular session. Development Pipeline is Peterson & Hicks (see tool intake).
 
 ### 6. Install the Operating Rhythm (`install-the-operating-rhythm`)
 
@@ -379,3 +416,209 @@ and mindset capabilities from this page. Replace the hook with a real founder li
      protect your runway and your mindset. Take a vacation before you start; make the company
      resilient without you (watch culture/execution while you're in investor meetings); look after
      yourself throughout. Cross-link to `build-resilience-and-recovery` and `master-my-mindset`.
+
+---
+
+## People-management voice memo (2026-07-03)
+
+_(One long voice memo covering the whole Lead Others group plus hiring/onboarding. Group-level
+framing below; per-capability sections follow. Ben explicitly opened the organisation question:
+happy to split or merge capabilities — see open questions at the end of this block.)_
+
+**Group-level framing (usable as `why` material on any of these pages):**
+
+- What an honour it is to manage people. Ben's line, keep close to verbatim: "The most
+  meaningful part of my startup journey was the lives I've changed by being an amazing boss and
+  creating an amazing environment to work in." Whatever happens to your startup, you'll be
+  changing lives if you're giving good people good opportunities and a good space to grow.
+- Acknowledge it's scary to manage people for the first time, and it's a real responsibility.
+- The root-cause quote Ben loves: **"The majority of conflict comes from implicit
+  assumptions."** You're assuming something, the other person is assuming something else, and
+  conflict happens in the gap. Example: I assume you'll let me know when you're stuck; you
+  assume you need to figure it out by yourself.
+- If there were one piece of advice for new managers: **proactively define your relationship.**
+  Decide together: how you'll communicate, how frequently, which regular meetings and for what,
+  how you want to give and receive feedback (i.e. not by Slack). Side note from Ben: this works
+  for friends and romantic relationships too.
+
+### Know & Use the Right Leadership Hat (`know-and-use-the-right-leadership-hat`)
+
+_(Captured from Ben's voice memo, 2026-07-03. Q1 has no verbatim quotes yet.)_
+
+1. (No verbatim quotes captured yet.) Implied pain: always telling people what to do — they
+   don't grow, and you can't scale.
+2. There's no right or wrong management style — some are direct and authoritative, some
+   collaborative; a lot of it is gut feeling. The skill isn't picking a style, it's the
+   reflection: "Which manager hat am I wearing right now?"
+3. Before: defaulting to advice and instructions in every conversation. After: consciously
+   choosing the hat per person and per situation.
+4. Leadership Hats. **Ben's canonical set is four hats** (the current tool page lists six —
+   open question below):
+   - **Coaching hat** — summed up by "What do you think?" Help the person by asking awesome
+     questions, being really curious, leading them to their own answer. Use with a smart
+     employee who wants to grow. Do NOT use when something is on fire — production server down
+     is not the moment for "how do you feel about this?"
+   - **Mentor hat** — you have more experience; share it: advice, guidance, recommendations.
+   - **Empower hat** — setting goals, ideally co-creating them, and building the systems for
+     success and accountability together.
+   - **Manager hat** — sometimes you have to say no. Formal performance reviews, the legal
+     stuff, approving vacation and sick days, salary negotiations. Important to recognise this
+     hat is part of the job too.
+5. Always telling people the next step (they don't grow, you don't scale). Coaching when the
+   building is on fire. Pretending the manager hat doesn't exist — avoiding the formal no's.
+6. "Which manager hat am I wearing right now?" (the self-check; also the question Ben would
+   put to a founder about a specific conversation).
+7. (Not captured — the hats model itself is the anchor; origin/accreditation to check.)
+
+### Build Incredible Relationships (`build-incredible-relationships`)
+
+_(Captured from Ben's voice memo, 2026-07-03. Q1 has no verbatim quotes yet.)_
+
+1. (No verbatim quotes captured yet.) The pattern Ben describes: founders who have a weekly
+   meeting but only ever discuss operations — no time for strategy, no time for the
+   relationship itself. And unnecessary conflicts everywhere, all traceable to mismatched
+   assumptions.
+2. "The majority of conflict comes from implicit assumptions" — so don't wait for friction:
+   proactively define the relationship, before you need it. If you create an explicit
+   agreement between the two of you, you dramatically reduce the number of unnecessary
+   conflicts.
+3. Before: assumptions collide (I assume you'll ask when stuck; you assume you must solve it
+   alone); salary/bonus decided unilaterally and triggering resentment across the org. After:
+   a relationship contract covering —
+   - Which things we discuss together, which one person can decide, which are sole
+     responsibilities. Ben's startup hard rule: **any salary or personal decisions had to be
+     discussed in the management group** — one cofounder saying yes to a raise while the others
+     didn't was too triggering and unfair to the rest of the org.
+   - What accountability looks like; how often we exchange feedback; which meetings we have.
+     Ben's preferred cofounder cadence: **a monthly deep strategy session offsite (at least a
+     couple of hours thinking about the future), at least one check-in, and one social dinner
+     a month.**
+   - Do's and don'ts: don't give feedback over Slack (characters don't carry the emotional
+     weight of a call); praise in public, anything remotely critical over the phone or in
+     person.
+   - "What do you need from me, and what do I need from you?" — including be/do lists: always
+     be as clear as possible with objectives; always give me the resources you think will be
+     useful; be proactive, be assertive.
+4. Relationship Design Canvas / Relationship One-Pager first — the contract is the tool.
+5. The ops-only weekly meeting (no strategy time, no relationship time). Unilateral salary and
+   personal decisions. Assuming the working agreement is obvious and never making it explicit.
+6. (Not captured yet.) Working candidate: "What have you and your cofounder explicitly agreed
+   about how you work together — and how much of it is still assumption?"
+7. The implicit-assumptions quote is the anchor. Ben's note that the same move works in
+   friendships and romantic relationships gives it reach beyond the office.
+
+### Navigate Conflict & Create Psychological Safety (`navigate-conflict-and-create-psychological-safety`)
+
+_(Captured from Ben's voice memo, 2026-07-03. Q1 has no verbatim quotes yet. The cofounder
+"magic word" story is real but anonymized.)_
+
+1. (No verbatim quotes captured yet.) Context Ben names: startups are fast-moving and chaotic,
+   often smart young people with limited experience, emotions run high — so you need a good
+   way of resolving conflict. Real scenario: two cofounders with a long history who sometimes
+   ended up fighting in front of the rest of the team.
+2. Define how you fight before you fight. It's way easier to proactively decide how you should
+   argue — while you're calm — than to improvise mid-conflict. Put a "how we resolve conflict"
+   section in your relationship document.
+3. Before: the two cofounders fighting in front of the team. After: their self-made rule — if
+   we find ourselves going back and forth and our voices beginning to rise, one of us says a
+   **magic word**, the conversation stops, and within 24 hours we book a whiteboard session in
+   the meeting room and hash it out together. Ben: "I thought that was amazing."
+4. Nonviolent Communication when emotions are really tight — a way of expressing yourself with
+   a very low chance of triggering the other person. Plus the **crossing the line** model:
+   - My intention is accessible to me.
+   - My speech and behaviour are accessible to both of us.
+   - Your reaction is only accessible to you.
+   "Don't cross the line" = you can't assume my intention, and I can't assume your reaction.
+5. Fighting in front of the team. Crossing the line — the first-time manager who went to her
+   direct report's desk every single day, looking over her shoulder, correcting and suggesting.
+   Her intention: be an awesome, supportive manager. The report's reading: "This person
+   doesn't trust me. They think I'm a baby. They're micromanaging me. This is awful." Root
+   cause, again: unexpressed assumptions. Third failure mode: no agreed off-ramp, so arguments
+   just escalate.
+6. (Not captured yet.) Working candidate: "How do you two argue — and did you ever agree on
+   how you'd do it?"
+7. NVC is Marshall Rosenberg (already credited on the tool). The magic-word cofounder story is
+   the lived anchor. Crossing-the-line origin to check (placement open question below).
+
+### Build Leaders, Not Dependencies (`build-leaders-not-dependencies`)
+
+_(Captured from Ben's voice memo, 2026-07-03. Q1 has no verbatim quotes yet. Covers both
+empowerment and delegation.)_
+
+1. (No verbatim quotes captured yet.) Ben's framing: "delegate or die." If you delegate
+   nothing, everything comes crashing down.
+2. Delegation is an investment, not a time-save: it's not going to be faster tomorrow, but
+   it's going to be faster in a month or two for sure. And: **delegate, don't abdicate.**
+3. Before: founder holds all goals and hands teams top-down targets. After:
+   - **Goals connected to mission first**: employees' and teams' goals connect to the overall
+     mission of the company.
+   - **Co-created goals**: easier with senior people. Example: head of growth, company goal
+     100k active subscribers — "Tom, you're a smart strategic person. Based on where we are
+     and the company's goal, what should the growth team's goals be? The strategic
+     initiatives? The risks and pitfalls?" Run the strategy work at the team level. Co-created
+     goals create a tremendous sense of ownership.
+   - **Traffic-light accountability**: teams RAG their quarterly goals in the regular meeting.
+     Red or amber is never bad in itself (externals happen — someone's sick, the market
+     shifted) — but **if it's not green you come with a plan**: "Subscriptions is orange, but
+     I've spoken to three agencies this week and I'm revamping our creative strategy."
+   - **Co-created accountability**: ask "Would it be useful if I held you accountable?"
+     (nearly always yes — you hire ambitious people). "What does accountability look like?"
+     They define it — "check in on me, ask what happens if I haven't done it, be tough on me,
+     push me." They've done your job for you, and they can't object when you execute it.
+   - **Delegation planned, quarterly**: "What are you doing today that you shouldn't be doing
+     at the end of the quarter?" Use the Delegation Ladder (degrees of delegation) and the
+     Delegation Timeline (different responsibilities at different levels at different times).
+   - **Delegation aligned with growth edges**: "What's your growth edge? What do you want to
+     focus on?" — "People management." — "Awesome: from now on you lead the weekly product
+     check-ins." Ben: that works like magic — you're helping them grow in the way they
+     defined, by handing off the things you were doing.
+4. Delegation Ladder + Delegation Timeline; Development Pipeline for growing people;
+   traffic lights live inside the operating-rhythm meetings.
+5. Delegate-then-abdicate: people will not be as good as you at the beginning — provide
+   support, regular check-ins and touch points, review the first few iterations, make sure
+   you're on the same page. Never delegating because it's slower today. Shoving top-down
+   goals onto the next team instead of collaborating.
+6. (Not captured yet.) Working candidate: "What are you doing today that you shouldn't be
+   doing at the end of the quarter?"
+7. You'll have to scale yourself and your business the whole time — often forcing an area
+   until you get it to forming and then to flowing (ties to the OS Force → Form → Flow
+   stages). Claude to propose concrete delegation-over-time examples when drafting.
+
+### Raise the Talent Bar (`raise-the-talent-bar`) — hiring & onboarding material
+
+_(Captured from Ben's voice memo, 2026-07-03. Ben's own caveat: "this is a little bit of a
+start — maybe we expand it later or just weave it into the content." Q1 and Q5 not captured,
+so per ground rules this page stays on fallback rendering until they exist.)_
+
+1. (Not captured yet.)
+2. Working contrarian angles: rank every hire on performance × culture — and run a premortem
+   on the hire before they start, which almost nobody does.
+3. (Partial.) Hiring flow Ben described: (1) look at what the organisation really needs, then
+   check the job description and level of seniority against that; (2) performance vs culture
+   as the main way of ranking candidates; (3) with new hires, run a **premortem**: "If this
+   were to go wrong, how would it go wrong?" — e.g. "Ali wasn't able to turn his network into
+   leads"; "Ali's lack of people-management experience meant the team malfunctioned" — ranked
+   by likelihood.
+4. Performance × Culture Grid; Premortem (new, neutral tool); 30-60-90 day plans for
+   onboarding, with very transparent evaluations early on. A low score on the quadrant early
+   is OK — they're new.
+5. (Not captured yet.)
+6. (Not captured yet.) Working candidate: "What does the organisation actually need — and
+   does this job description still describe it?"
+7. The anonymized CTO hiring example (interview process + task doc — captured in
+   `content/tool-intake.md`) as the worked example of a serious process: "you can strip back
+   from there."
+
+**Open questions from the 2026-07-03 memo (Ben invited reorganisation discussion):**
+
+- Leadership Hats: Ben's set is 4 hats (coach, mentor, empower, manager); the live tool page
+  has 6 (adds Operator and CEO/founder). Trim to Ben's 4, or keep 6 and mark Ben's core 4?
+- Premortem + opportunities-vs-threats (magnitude × likelihood): one combined tool or two
+  linked tools? Ben mused "we can combine these two into one tool."
+- Crossing the Line: standalone mini-tool, or a block on the conflict capability page / NVC
+  tool page?
+- Where does empowerment material live: Build Leaders, Not Dependencies (1:1 leadership) vs
+  Make Ownership Stick (company-level systems)? Current lean: personal co-creation here,
+  company-wide systems there.
+- CTO hiring example: standalone tool/resource page vs blocks inside Raise the Talent Bar.
+- 30-60-90: real tool now, or wait until Ben supplies more onboarding material?
