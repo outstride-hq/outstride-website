@@ -1030,6 +1030,22 @@ export const capabilities: Capability[] = [
     rhythmIds: [],
     order: 25,
   },
+  {
+    id: "embrace-the-ai-revolution",
+    number: 26,
+    emoji: "🤖",
+    title: "Embrace the AI Revolution",
+    layerId: "founder",
+    groupId: "lead-the-game",
+    summary: "",
+    bullets: [
+      "Placeholder — content to be drafted.",
+    ],
+    toolIds: [],
+    rhythmIds: [],
+    order: 26,
+    status: "draft",
+  },
 ];
 
 export const symptomMap: SymptomMapEntry[] = [

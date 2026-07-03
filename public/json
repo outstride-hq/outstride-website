@@ -1,7 +1,7 @@
 {
   "meta": {
     "site": "outstride.co",
-    "generatedAt": "2026-07-02T17:18:33.961Z",
+    "generatedAt": "2026-07-03T19:53:44.374Z",
     "version": 1
   },
   "homepage": {
@@ -1074,7 +1074,7 @@
         "title": "Build a Life Worth Scaling For",
         "layerId": "human",
         "groupId": "human-system",
-        "summary": "",
+        "summary": "One founder said the sacrifice was all for \"Champagne at 40\" — then couldn't describe what that looked like. Picture the life you're building toward, then start living the parts of it you can already reach.",
         "bullets": [
           "Define what the company is meant to make possible in life.",
           "Make the business serve the human, not consume them.",
@@ -1087,6 +1087,22 @@
         ],
         "rhythmIds": [],
         "order": 25
+      },
+      {
+        "id": "embrace-the-ai-revolution",
+        "number": 26,
+        "emoji": "🤖",
+        "title": "Embrace the AI Revolution",
+        "layerId": "founder",
+        "groupId": "lead-the-game",
+        "summary": "",
+        "bullets": [
+          "Placeholder — content to be drafted."
+        ],
+        "toolIds": [],
+        "rhythmIds": [],
+        "order": 26,
+        "status": "draft"
       }
     ],
     "symptomMap": [
@@ -5969,6 +5985,11 @@
                 "label": "19. Find New Capital",
                 "href": "/os/capabilities/find-new-capital/",
                 "status": "ready"
+              },
+              {
+                "label": "26. Embrace the AI Revolution",
+                "href": "/os/capabilities/embrace-the-ai-revolution/",
+                "status": "draft"
               }
             ]
           },
