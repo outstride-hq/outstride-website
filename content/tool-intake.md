@@ -273,3 +273,46 @@ new capability `hire-and-onboard-the-right-people`.)_
 > - Cross-departmental working approach
 > - Recruiting strategy and employer branding
 > - Plus whatever you think is important
+
+### Chapters & Squads (`chapters-and-squads`) — NEW
+
+_(Captured from Ben's voice memo, 2026-07-04. "My favourite way of scaling a company,
+especially in the product and tech department.")_
+
+1. Cross-functional squads that own one slice of the user journey, with chapters keeping
+   each craft consistent across squads.
+2. When the product org is scaling past one team and coordination starts eating delivery —
+   around 40 people at Ben's startup; explicitly not too early.
+3. Squad composition example: 3 engineers, 1 product manager, 1 designer, 1 business
+   analyst — owning one part of the user journey. Ben's startup (crypto neobank): banking &
+   cards / crypto trading / onboarding & growth. Growth pattern: start with one big squad;
+   above ~7 people, split it like a cell (mitosis — Ben said meiosis and asked; mitosis is
+   the right word) — partially split for a while, then fully; keep evolving teams over time.
+4. Squads own journeys, not features; chapters stop the crafts drifting apart. Don't
+   squadify too early.
+5. Yes — the classic squads (columns) × chapters (rows) matrix. Grid diagram.
+6. Henrik Kniberg & Anders Ivarsson, "Scaling Agile @ Spotify" (2012) — accredit; Outstride
+   adaptation.
+7. design-the-org. Related: team-traffic-lighting, ownership-map, okrs.
+
+### Team Traffic Lighting (`team-traffic-lighting`) — NEW
+
+_(Captured from Ben's voice memo, 2026-07-04. Ben: "let's build this out into a new tool
+called team traffic lighting and reference it.")_
+
+1. Rate every team green, amber or red on delivery, self-improvement and ability to scale —
+   so org attention goes where the org is actually blocked.
+2. Org reviews, quarterly planning, and deciding where the founder dives in next.
+3. Ben's definitions, close to verbatim:
+   - **Green** — excelling: getting stuff done, self-improving, has the ability to scale
+     itself for the next period.
+   - **Amber** — able to deliver on some things but not reliably; team is not
+     self-improving; unsure about ability to scale for the next period.
+   - **Red** — failing: wasting a lot of time, not getting things done, perhaps infighting.
+4. This rates the TEAM, not its goals — pair with OKRs ("I love OKRs plus traffic
+   lighting") where the goals get their own RAG. The founder is the roving repair crew:
+   dive into red, force → form → flow, leave when it runs without you.
+5. Maybe a simple 3-band visual; a table probably carries it. No diagram needed initially.
+6. Outstride original.
+7. design-the-org, make-ownership-stick, install-the-operating-rhythm. Related:
+   chapters-and-squads, okrs, company-health-scorecard.

@@ -640,3 +640,133 @@ so per ground rules this page stays on fallback rendering until they exist.)_
 - Verbatim founder quotes (Q1) still missing for all five Lead Others capabilities. Pages
   DRAFTED 2026-07-04 with crafted composite hooks (all five marked here as "no verbatim
   quotes captured yet") — swap in real founder lines when Ben supplies them.
+
+---
+
+## AI voice memo (2026-07-04)
+
+_(Feeds `embrace-the-ai-revolution` — currently a placeholder, cap 26, lead-the-game group.
+Ben's own framing: "it's almost too simple to talk about AI as a separate capability" — the
+material spans three altitudes: strategy, organisation, individual. Structure question open —
+see end of this block. No verbatim founder quotes (Q1) captured yet.)_
+
+**1. Strategy level:**
+
+- Enormous money going into "AI for X" startups (AI for law, real estate, medicine…) promising
+  to completely change how something is done. Whatever startup you have or are thinking of
+  building, AI will be core to the strategy.
+- The exercise Ben prescribes: go back to the **7 Powers** tool, extrapolate each power under
+  AI, and ask what long-term value you're actually building. Then **traffic-light each power**
+  — how is it changing? — and map **threats and opportunities** for your company going forward.
+  Really imagine the world in 5 and 7 years and ask whether AI is helping or hurting you.
+- AI makes you operationally far more effective and lets you build (make money) much faster —
+  but some moats are diminished. Example: a complicated tech setup as a moat "will just go."
+- On the "AI will eat SaaS" panic from a few months back: Ben doesn't think it's entirely true
+  — even OpenAI still buys typical SaaS rather than building it themselves — but the moat that
+  once existed there is now largely gone.
+- Reference to include (verified 2026-07-04): the **Lean AI Native Companies Leaderboard**
+  (leanaileaderboard.com, maintained by Henry Shi, ex-Super.com). Tracks lean AI-native
+  companies (>$5M ARR, <50 employees, <5 years old) by revenue per employee, racing toward
+  Sam Altman's prediction of the first **1-person billion-dollar company**. Top of the board:
+  Cursor/Anysphere at roughly $40M revenue per employee. (Note: Ben described it as "a billion
+  dollars per employee" — the actual framing is revenue-per-employee progress toward a
+  one-person $1B company; page copy should use the accurate version.) The point it makes: we
+  can scale dramatically more efficiently with AI.
+
+**2. Organisational level:**
+
+- TLDR: we should all be much more efficient at scaling our businesses now.
+- Ben first-person (CTO experience): being a CTO now is completely different — "I don't need
+  to hire as many engineers. I don't need to hire as many juniors, because AI does so many of
+  those jobs."
+- The discipline: before any hire, think aggressively about whether you actually need the hire
+  or whether you need to increase the efficiency of the existing team. Default to efficiency;
+  make growing headcount the option that has to justify itself.
+- Cautionary story (anonymize per Granola rules — friend-of-a-friend's company): good team,
+  good money, big B2B deals; Series A, ~$2M ARR, 40 people. Couldn't raise the next round —
+  it just didn't look efficient enough. VCs increasingly judge whether you can **scale
+  efficiently**.
+- Push the leadership team: challenge every function — operations, product, tech, customer
+  support — on how they'll use AI to build more efficiently.
+- Tactic Ben recommends: **internal AI champions.** Find the people who are naturally most
+  enthusiastic (can be junior), elevate them, name them AI champions. They take responsibility
+  for trying the big new tools, act as internal AI consultants going department to department,
+  and share the cool stuff with the whole team — spreads adoption through the company.
+
+**3. Individual (and org) practice — the cadence:**
+
+- Periodic review and implementation: once a month or once every few months, deliberately stop
+  and deep-dive into what's changing in the industry, spend time exploring it, then choose
+  what to implement.
+- The failure modes on both sides: chase shiny things daily → permanently distracted; never
+  look up → left behind.
+- The cadence: **explore → trial → execute.** Works at the personal level and the company
+  level.
+
+**Proposed tools from this memo (not yet agreed with Ben):**
+
+- AI strategy stress test — traffic-light the 7 Powers under AI + 5/7-year threats &
+  opportunities. Natural companion to `seven-powers` and `opportunity-threat-map`.
+- AI adoption cadence — the explore/trial/execute loop on a monthly-to-quarterly rhythm.
+- AI champions — the internal-champions playbook (could be a tool or just page content).
+
+**Open structure questions for Ben:**
+
+- One capability vs. several? Memo's own framing ("too simple to treat AI as separate")
+  suggests ONE capability page structured around the three levels, plus cross-references.
+- Cross-mentions: strategy material → Chart the Path (7 Powers AI traffic light as related
+  tool); efficiency-before-headcount + Series A story → Hire & Raise the Talent Bar and/or
+  Design the Org; VC-efficiency angle could also touch Find New Capital.
+- The placeholder sits in lead-the-game but is numbered 26 (last), so it lists out of numeric
+  order in nav — decide whether to renumber while touching it.
+
+### Design the Org (`design-the-org`)
+
+_(Captured from Ben's voice memo, 2026-07-04. Q1 has no verbatim founder quotes yet — hook will
+be a crafted composite. Q5 failure modes are partly derived from Ben's do/don't guidance rather
+than named war stories — firm up when he supplies them. This memo RESOLVES the "merge 3+5?"
+question: Design the Org fills its own page without touching Make Ownership Stick's material
+(ownership map, decision rights, alignment-autonomy) — the two stay separate, cross-linked.)_
+
+1. (No verbatim quotes captured yet.)
+2. Contrarian angles: the design question isn't "what does a proper org look like" — it's
+   "what is the bottleneck for the company?" We know where we need to go (e.g. next funding
+   round): is the blocker our ability to build, our ability to sell, or our ability to
+   operationally deliver what we promised? What's the blocker now, and what will the blockers
+   be over the next period? Structure around that. Also: in the age of AI, be conservative
+   with hiring — VCs are looking for highly effective companies that operate at a higher
+   level of efficiency than they could five years ago.
+3. The typical journey: founder-led team → add some people → two layers of management →
+   maybe three, growing and scaling over time. Ben's own startup (crypto neobank, ~40
+   people): squads owning slices of the user journey — one team for banking & cards, one for
+   crypto trading, one for onboarding & growth.
+4. Chapters & Squads (NEW tool — Ben's favourite way of scaling a company, especially product
+   & tech). Team Traffic Lighting (NEW tool — Ben: "let's build this out into a new tool").
+   OKRs — "I love OKRs plus traffic lighting." Company Health Scorecard already linked.
+5. (Partly derived.) Squadifying too early — ~40 people is where it earned its keep; before
+   that it's overhead. Hiring ahead of the bottleneck / not conservative enough in the AI
+   age. Complex, inconsistent structures — keep it as simple and consistent as possible
+   (at ~30 people: three layers — C-level = founders + CPO etc., heads-of = head of growth,
+   head of product etc., then employees).
+6. "What is the bottleneck for the company?" (Ben called this the selling-point question —
+   is it our ability to build, to sell, or to deliver?)
+7. The Spotify squad & chapter model is the anchor framework (accredit: Henrik Kniberg &
+   Anders Ivarsson, "Scaling Agile @ Spotify"). Plus Ben's cell-division picture: one big
+   squad at first (osmosis), then above ~7 people it splits like a cell — partially split
+   for a while, then fully — and you keep evolving the teams over time. (Ben asked: "meiosis
+   — is that the right word?" → mitosis is the straight cell-split; use mitosis.)
+
+**Other material in the memo (cross-links, not this page's spine):**
+
+- C-level ownership: each founder/C-level owns one thing (CEO → sales, COO → operations &
+  support, CTO → building), with VPs/heads reporting in.
+- Ownership emphasis: clearly divided responsibilities + co-created team goals (from company
+  goals) + the right accountability rituals → cross-link Make Ownership Stick and Build
+  Leaders, Not Dependencies.
+- The founder bounces between teams, especially early: customer support desperately needs
+  help → founder dives in and FORCES it, moves to FORMING, leaves when it FLOWS
+  independently. Traffic lighting tells you where to dive next. Reference Force → Form →
+  Flow explicitly.
+- Reference the operating rhythm: when do you meet the leadership team, etc.
+- Hiring for the right seniority: hire someone good for at least the next two years, who can
+  grow into the role and scale with the team → cross-link Hire & Raise the Talent Bar.

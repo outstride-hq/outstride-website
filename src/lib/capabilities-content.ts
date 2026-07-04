@@ -1644,6 +1644,84 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "design-the-org": {
+    hook:
+      "We just closed the round and I know exactly what we need to build. What I don't know is who we need — I keep sketching org charts on napkins and none of them survives a month.",
+    beforeAfter: {
+      today: [
+        "The org grew by accretion — every hire solved last quarter's fire; nobody designed the shape.",
+        "You couldn't say which team is the bottleneck between you and the next milestone.",
+        "Structure changes only happen in a crisis, so every one of them feels like a betrayal.",
+      ],
+      success: [
+        "The org is designed backwards from the next milestone: bottleneck named, structure built around it.",
+        "Three layers, simple and consistent — anyone on the team can draw the org from memory.",
+        "Every team has a traffic light, so you know where the founder dives in next — and where to leave well alone.",
+      ],
+    },
+    why:
+      "You've founded the cult, charted the path and named the next big milestone — now it's time to build the capability to actually get there. The design question is not \"what does a proper org look like?\" It's: what is the bottleneck for the company? You know where you need to go — the next funding round, the next milestone — so is the blocker your ability to build, your ability to sell, or your ability to operationally deliver what you promised? Structure around that answer, and keep asking it: today's bottleneck won't be next period's. And in the age of AI, be conservative with hiring — investors are looking for highly effective companies that operate at a level of efficiency they couldn't have five years ago.",
+    whatGoodLooksLike: [
+      "The org journey is deliberate: founder-led team → first hires → two layers of management → maybe three — each step triggered by need, not fashion.",
+      "Each founder or C-level owns one clear area — sales, operations, building — with heads and VPs reporting in, and the structure stays simple and consistent (at ~30 people: C-level, heads-of, employees).",
+      "Every team carries a traffic light and the colour drives action: green scales itself, amber gets support, red gets the founder.",
+    ],
+    whereFoundersGoWrong: [
+      "Squadifying too early. Cross-functional squads earned their keep at around 40 people — before that, the coordination machinery costs more than it returns.",
+      "Hiring ahead of the bottleneck: adding heads where it's comfortable while the real constraint — build, sell or deliver — stays starved. Doubly costly when efficiency is the pitch.",
+      "Clever structures: matrix reporting at 25 people, titles nobody can explain. If the team can't draw the org from memory, it isn't a structure — it's a diagram.",
+    ],
+    doNow: [
+      {
+        action: "Name the bottleneck",
+        note: "Between here and the next milestone: is it your ability to build, to sell, or to deliver what you sold? Write it down — it decides your next two or three hires.",
+      },
+      {
+        action: "Traffic-light every team",
+        note: "Green, amber or red on delivery, self-improvement and ability to scale. The board tells you where the founder goes next.",
+        toolId: "team-traffic-lighting",
+      },
+      {
+        action: "Draw the two-year org on one page",
+        note: "Simple, consistent layers, and one owned area per founder or C-level. If it needs a legend, simplify it.",
+      },
+      {
+        action: "Hire for two years out",
+        note: "For each open role, ask whether this person is good for at least the next two years — someone who grows into the role and scales with the team.",
+        toolId: "senior-hire-process",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Scaling the product org: chapters & squads",
+      },
+      {
+        kind: "diagram",
+        diagramId: "chapters-squads",
+      },
+      {
+        kind: "paragraph",
+        text: "My favourite way of scaling product, engineering and design: cross-functional squads that own one slice of the user journey, with chapters keeping each craft consistent across them. Teams grow like cells — one big squad at first, and when it passes about seven people it divides: partially split for a while, then fully. You're never done; the squads keep evolving as the company grows.",
+      },
+      {
+        kind: "callout",
+        text: "The founder is the org's roving repair crew. When a team goes red — say customer support is drowning — you dive in and force it, build the system until it's forming, and leave when it flows without you. In the early years you'll bounce around the org like this constantly. The skill is leaving every team more independent than you found it.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["chapters-and-squads", "team-traffic-lighting"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "make-ownership-stick",
+          "install-the-operating-rhythm",
+          "hire-and-raise-the-talent-bar",
+        ],
+      },
+    ],
+  },
 };
 
 export function getCapabilityContent(

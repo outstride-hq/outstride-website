@@ -2729,6 +2729,86 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "chapters-and-squads": {
+    intro:
+      "Cross-functional squads own one slice of the user journey; chapters keep each craft consistent across squads.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Reach for this when the product org is scaling past one team and coordination starts eating delivery. It earned its keep around 40 people at my own startup — before that, it's overhead. Don't squadify too early.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "chapters-squads",
+      },
+      {
+        kind: "heading",
+        text: "How it works",
+      },
+      {
+        kind: "list",
+        items: [
+          "A squad is a small cross-functional team — e.g. three engineers, a product manager, a designer, a business analyst — that owns one part of the user journey end to end.",
+          "Squads own journeys, not features: at a banking product that meant one squad for banking & cards, one for trading, one for onboarding & growth.",
+          "Chapters run across squads — engineering, product, design — so each craft keeps shared standards, career paths and peer learning while people sit in different squads.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Teams grow like cells. Start with one big squad; when it passes about seven people, let it divide — mitosis, not reorg: partially split for a while, then fully separate. You're never done — squads keep evolving as the product and the org grow.",
+      },
+      { kind: "toolRef", toolIds: ["team-traffic-lighting", "ownership-map"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["design-the-org"],
+      },
+    ],
+  },
+  "team-traffic-lighting": {
+    intro:
+      "Rate every team green, amber or red — delivery, self-improvement, ability to scale — so org attention goes where the company is actually blocked.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Run it in org reviews and quarterly planning, and whenever you're deciding where the founder dives in next. This rates the team itself, not its goals — pair it with OKRs and let the goals carry their own colours.",
+      },
+      {
+        kind: "heading",
+        text: "The three lights",
+      },
+      {
+        kind: "table",
+        columns: ["Light", "What it looks like"],
+        rows: [
+          [
+            "Green",
+            "Excelling: getting stuff done, self-improving, able to scale itself for the next period.",
+          ],
+          [
+            "Amber",
+            "Delivers on some things but not reliably; not self-improving; unsure about its ability to scale for the next period.",
+          ],
+          [
+            "Red",
+            "Failing: wasting a lot of time, not getting things done — perhaps infighting.",
+          ],
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The lights tell the founder where to go. Dive into the red team and force it, build the system until it's forming, leave when it flows — then check the board and pick the next one. In the early years you'll bounce around the org like this constantly; the skill is leaving every team more independent than you found it.",
+      },
+      { kind: "toolRef", toolIds: ["okrs", "chapters-and-squads"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "design-the-org",
+          "make-ownership-stick",
+          "install-the-operating-rhythm",
+        ],
+      },
+    ],
+  },
 };
 
 export function getToolContent(toolId: string): ToolContent | undefined {

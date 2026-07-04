@@ -8,6 +8,7 @@ import { operatingCadenceDefinition } from "./definitions/operating-cadence";
 import { nvcFlowDefinition } from "./definitions/nvc-flow";
 import { developmentPipelineDefinition } from "./definitions/development-pipeline";
 import { opportunityThreatMapDefinition } from "./definitions/opportunity-threat-map";
+import { chaptersSquadsDefinition } from "./definitions/chapters-squads";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
 import { sevenFounderNeedsDefinition } from "./definitions/seven-founder-needs";
@@ -37,6 +38,7 @@ const definitions: Record<string, DiagramDefinition> = {
   [operatingCadenceDefinition.id]: operatingCadenceDefinition,
   [developmentPipelineDefinition.id]: developmentPipelineDefinition,
   [opportunityThreatMapDefinition.id]: opportunityThreatMapDefinition,
+  [chaptersSquadsDefinition.id]: chaptersSquadsDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -123,6 +125,9 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: opportunityThreatMapDefinition,
+  },
+  {
+    definition: chaptersSquadsDefinition,
   },
 ];
 
