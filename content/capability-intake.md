@@ -77,13 +77,33 @@ _(Captured from Ben's chat notes, 2026-07-02. Q1 and Q5 use anonymized composite
 
 ### 4. Operate at the Right Altitude (`operate-at-the-right-altitude`)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+_(Partial capture from Ben's voice memo, 2026-07-04. Ben's own framing: "I'm not sure if this
+is a full separate capability or not." OPEN QUESTION: merge with Take Command of My Role
+(cap 9, still no material) into one founder-role capability — the standing 9+10 merge
+candidate. This memo alone is roughly half a page and overlaps heavily with the Design the
+Org spine (traffic lighting, bottleneck question, roving founder).)_
+
+1. (No verbatim quotes captured yet.) Existing symptom-map line already points here:
+   "I'm still in every decision."
+2. The founder's job is vertical movement, not a fixed altitude: as the company grows its
+   needs change, and a team that was green can go red through no fault of its own — the
+   product team that was amazing at stage one suddenly struggles when the work becomes
+   heavy B2B implementation. You step in and solve it (through hiring, or by forcing it
+   yourself), then step back out.
+3. The picture Ben paints: scaling a company is watching spinning plates — keeping things
+   green, preparing for the next hurdle. When everybody's good, you can sit back and decide
+   what is going to be the bottleneck in the future.
+4. Existing tools: Calendar Audit, Two-Hour Constraint, CEO Test. Cross-links: Team Traffic
+   Lighting (which plate needs you), Force → Form → Flow (how you enter and leave a team).
+5. (Not captured yet.)
+6. Candidate from the memo: "What is going to be the bottleneck next — and are you already
+   preparing for it, or still stuck inside a team that no longer needs you?"
+7. Ben asked to check "the IBM president's book on effective management and kinds of
+   bottlenecks" → almost certainly Andy Grove (Intel president/CEO), *High Output
+   Management* (1983): the limiting step — identify the bottleneck first and build the rest
+   of the process around it (the breakfast-factory egg). The other canonical bottleneck
+   source is Goldratt's *The Goal* (Theory of Constraints). Grove is the better founder
+   anchor here.
 
 ### 5. Give Feedback & Hold the Standard (`give-feedback-and-hold-the-standard`)
 
