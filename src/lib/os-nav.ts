@@ -8,6 +8,7 @@ import {
   getToolEffectiveStatus,
   layers,
   resolveOsContentStatus,
+  toolLibraryCategories,
   tools,
   type OsContentStatus,
 } from "@/lib/os";
@@ -68,6 +69,46 @@ function buildCapabilitySubGroups(): OsNavSubGroup[] {
   });
 }
 
+const flagshipToolIds = new Set([
+  "symptom-map",
+  "company-health-scorecard",
+  "two-hour-constraint",
+  "ownership-map",
+  "leadership-hats",
+  "relationship-design-canvas",
+]);
+
+function compareToolsForNav(
+  a: (typeof tools)[number],
+  b: (typeof tools)[number],
+): number {
+  const aFlagship = flagshipToolIds.has(a.id);
+  const bFlagship = flagshipToolIds.has(b.id);
+  if (aFlagship !== bFlagship) {
+    return aFlagship ? -1 : 1;
+  }
+  return a.title.localeCompare(b.title);
+}
+
+function buildToolSubGroups(): OsNavSubGroup[] {
+  return toolLibraryCategories
+    .map((category) => {
+      const categoryTools = tools
+        .filter((tool) => tool.categoryId === category.id)
+        .sort(compareToolsForNav);
+
+      return {
+        label: `Category ${category.letter}: ${category.title}`,
+        items: categoryTools.map((tool) => ({
+          label: tool.title,
+          href: `/os/tools/${tool.id}/`,
+          status: getToolEffectiveStatus(tool),
+        })),
+      };
+    })
+    .filter((group) => group.items.length > 0);
+}
+
 export const osNavGroups: OsNavGroup[] = [
   {
     label: "Overview",
@@ -85,11 +126,7 @@ export const osNavGroups: OsNavGroup[] = [
   {
     label: "Tools",
     href: "/os/tools/",
-    items: tools.map((tool) => ({
-      label: tool.title,
-      href: `/os/tools/${tool.id}/`,
-      status: getToolEffectiveStatus(tool),
-    })),
+    subGroups: buildToolSubGroups(),
   },
 ];
 

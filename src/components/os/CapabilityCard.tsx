@@ -2,9 +2,21 @@ import type { Capability } from "@/lib/os";
 
 type CapabilityCardProps = {
   capability: Capability;
+  variant?: "full" | "compact";
 };
 
-export default function CapabilityCard({ capability }: CapabilityCardProps) {
+function capabilitySummary(capability: Capability): string {
+  if (capability.summary.trim()) {
+    return capability.summary;
+  }
+
+  return capability.bullets[0] ?? "";
+}
+
+export default function CapabilityCard({
+  capability,
+  variant = "full",
+}: CapabilityCardProps) {
   return (
     <div>
       <div className="d-flex align-items-center gap-3 mb-3">
@@ -13,13 +25,17 @@ export default function CapabilityCard({ capability }: CapabilityCardProps) {
           {capability.emoji} {capability.title}
         </h4>
       </div>
-      <ul className="text-muted mb-0 ps-3">
-        {capability.bullets.map((bullet) => (
-          <li key={bullet} className="mb-1">
-            {bullet}
-          </li>
-        ))}
-      </ul>
+      {variant === "compact" ? (
+        <p className="text-muted small mb-0">{capabilitySummary(capability)}</p>
+      ) : (
+        <ul className="text-muted mb-0 ps-3">
+          {capability.bullets.map((bullet) => (
+            <li key={bullet} className="mb-1">
+              {bullet}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

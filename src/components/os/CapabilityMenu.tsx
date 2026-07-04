@@ -37,13 +37,13 @@ export default function CapabilityMenu() {
                       <div
                         key={capability.id}
                         id={`capability-${capability.id}`}
-                        className="col-12"
+                        className="col-md-6 col-lg-4"
                       >
                         <a
                           href={`/os/capabilities/${capability.id}/`}
                           className="text-decoration-none d-block featured-box p-4 h-100"
                         >
-                          <CapabilityCard capability={capability} />
+                          <CapabilityCard capability={capability} variant="compact" />
                           <p className="text-primary fw-700 small mb-0 mt-3">
                             View capability →
                           </p>
