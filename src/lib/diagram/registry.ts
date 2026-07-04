@@ -9,6 +9,9 @@ import { nvcFlowDefinition } from "./definitions/nvc-flow";
 import { developmentPipelineDefinition } from "./definitions/development-pipeline";
 import { opportunityThreatMapDefinition } from "./definitions/opportunity-threat-map";
 import { chaptersSquadsDefinition } from "./definitions/chapters-squads";
+import { company7Definition } from "./definitions/company-7";
+import { stakeholderMapDefinition } from "./definitions/stakeholder-map";
+import { tenMinuteRetroDefinition } from "./definitions/ten-minute-retro";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
 import { sevenFounderNeedsDefinition } from "./definitions/seven-founder-needs";
@@ -39,6 +42,9 @@ const definitions: Record<string, DiagramDefinition> = {
   [developmentPipelineDefinition.id]: developmentPipelineDefinition,
   [opportunityThreatMapDefinition.id]: opportunityThreatMapDefinition,
   [chaptersSquadsDefinition.id]: chaptersSquadsDefinition,
+  [company7Definition.id]: company7Definition,
+  [stakeholderMapDefinition.id]: stakeholderMapDefinition,
+  [tenMinuteRetroDefinition.id]: tenMinuteRetroDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -128,6 +134,15 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: chaptersSquadsDefinition,
+  },
+  {
+    definition: company7Definition,
+  },
+  {
+    definition: stakeholderMapDefinition,
+  },
+  {
+    definition: tenMinuteRetroDefinition,
   },
 ];
 

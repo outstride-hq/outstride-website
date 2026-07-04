@@ -1,7 +1,7 @@
 {
   "meta": {
     "site": "outstride.co",
-    "generatedAt": "2026-07-03T19:53:44.374Z",
+    "generatedAt": "2026-07-04T12:40:09.128Z",
     "version": 1
   },
   "homepage": {
@@ -334,8 +334,6 @@
         "question": "What is going on?",
         "items": [
           "RAG Company Status",
-          "Energy + Nervous-System Score",
-          "Function Scorecard",
           "Human 9 / Life Wheel"
         ]
       },
@@ -345,9 +343,7 @@
         "question": "Where are we going?",
         "items": [
           "Strategy One-Pager",
-          "North Star + Health Metrics",
-          "Quarterly Look-Back / Look-Forward",
-          "S / A / B Priority Tiers"
+          "North Star + Health Metrics"
         ]
       },
       {
@@ -389,14 +385,9 @@
         "title": "Capital",
         "question": "How do we manage belief, money and stakeholders?",
         "items": [
-          "Stakeholder Map",
           "Investor Update Template",
           "Board Pack Template",
-          "Cash-Floor Trigger",
-          "Options-on-the-Table Map",
-          "Investor Hell Yes Test",
-          "Fundraising Pipeline",
-          "Funnel Math"
+          "Investor Hell Yes Test"
         ]
       },
       {
@@ -409,7 +400,6 @@
           "Council Exercise",
           "Cycle Mapping",
           "Inner Critic / Saboteur Diagnostic",
-          "Principles of Fulfilment",
           "Vision Board",
           "Burnout Playbook",
           "Recovery Anchors",
@@ -548,6 +538,7 @@
           "seven-powers",
           "six-critical-questions",
           "company-health-scorecard",
+          "company-7",
           "symptom-map"
         ],
         "rhythmIds": [
@@ -569,9 +560,12 @@
           "Write OKRs that measure outcomes, connecting the North Star Metric to supporting KPIs and team goals."
         ],
         "toolIds": [
+          "opportunity-threat-map",
           "north-star-metric",
           "okrs",
-          "company-health-scorecard"
+          "ai-strategy-stress-test",
+          "company-health-scorecard",
+          "company-7"
         ],
         "rhythmIds": [],
         "order": 2
@@ -583,14 +577,17 @@
         "title": "Design the Org",
         "layerId": "company",
         "groupId": "company-system",
-        "summary": "",
+        "summary": "One founder redrew his org backwards from the next milestone — bottleneck named, squads owning slices of the user journey, every team traffic-lit — and stopped being the org chart himself.",
         "bullets": [
           "Identify the roles, structure and leadership capacity needed for the next milestone.",
           "Spot where the current org will break before it actually breaks.",
-          "Decide what needs to be hired, promoted, delegated or redesigned."
+          "Decide what needs to be hired, promoted, delegated or redesigned — and challenge every hire against making the existing team more effective with AI first."
         ],
         "toolIds": [
-          "company-health-scorecard"
+          "chapters-and-squads",
+          "team-traffic-lighting",
+          "company-health-scorecard",
+          "company-7"
         ],
         "rhythmIds": [],
         "order": 3
@@ -609,9 +606,11 @@
           "Reduce reactive chaos by giving planning, review and accountability a home."
         ],
         "toolIds": [
+          "commitment-loop",
           "operating-cadence",
           "okrs",
           "quarterly-retro",
+          "ten-minute-retro",
           "three-cs-decision",
           "company-health-scorecard"
         ],
@@ -628,18 +627,18 @@
         "title": "Make Ownership Stick",
         "layerId": "company",
         "groupId": "company-system",
-        "summary": "",
+        "summary": "\"Nothing gets done unless I personally make sure it gets done\" — until results got single visible owners, explicit decision rights and a weekly review, and the founder stopped being the company's follow-up system.",
         "bullets": [
-          "Set ownership up for success: co-create goals with the owner instead of handing them down.",
-          "Co-create what accountability looks like — how progress is seen and how misses get raised — while being honest that not everything is negotiable.",
-          "Scale through delegation: hand over results rather than tasks, delegate without abdicating, and move up the levels of delegation over time."
+          "Create the org-level system for ownership: every important result has one visible owner on the ownership map.",
+          "Make decision rights and autonomy explicit — what an owner decides alone, what needs alignment, and where escalation is expected.",
+          "Build a culture of accountability: progress is visible in the operating rhythm, and anything not green arrives with a plan."
         ],
         "toolIds": [
+          "commitment-loop",
           "ownership-map",
-          "delegation-ladder",
-          "delegation-timeline",
+          "team-traffic-lighting",
+          "five-dysfunctions",
           "alignment-autonomy",
-          "accountability-dial",
           "company-health-scorecard"
         ],
         "rhythmIds": [
@@ -665,29 +664,31 @@
           "four-disciplines",
           "six-critical-questions",
           "performance-culture-grid",
-          "company-health-scorecard"
+          "company-health-scorecard",
+          "company-7"
         ],
         "rhythmIds": [],
         "order": 6
       },
       {
-        "id": "raise-the-talent-bar",
+        "id": "hire-and-raise-the-talent-bar",
         "number": 7,
-        "emoji": "📈",
-        "title": "Raise the Talent Bar",
+        "emoji": "🧲",
+        "title": "Hire & Raise the Talent Bar",
         "layerId": "company",
         "groupId": "company-system",
-        "summary": "",
+        "summary": "A serious hire deserves a serious process — work out what the organisation needs, select with evidence, onboard deliberately, and keep the evaluation rhythm running so the bar rises over time.",
         "bullets": [
-          "Build a consistent, simple way of evaluating performance and potential.",
-          "Give people the tools, feedback and support to improve.",
-          "Create a talent system that raises the level of the company over time."
+          "Work out what the organisation really needs before writing the job description — including whether AI and the existing team could close the gap without a hire.",
+          "Rank candidates on performance × culture, and pressure-test the hire with a premortem before day one.",
+          "Onboard with a 30-60-90 plan and transparent early evaluations — low early scores are fine; trajectory matters.",
+          "Keep the bar rising: run performance × culture as a regular talent rhythm, with the feedback and support to improve."
         ],
         "toolIds": [
+          "senior-hire-process",
           "performance-culture-grid",
-          "values-deck",
-          "four-disciplines",
-          "company-health-scorecard"
+          "premortem",
+          "thirty-sixty-ninety"
         ],
         "rhythmIds": [],
         "order": 7
@@ -718,15 +719,19 @@
         "title": "Take Command of My Role",
         "layerId": "founder",
         "groupId": "lead-myself",
-        "summary": "",
+        "summary": "One CEO stopped asking \"am I doing enough?\", wrote his job backwards from the next round — fires, risks, future, only-you work — and rebuilt his calendar to match. Six months later, he wrote it again.",
         "bullets": [
           "Define the founder/CEO job for this stage — strategy, people, capital — plus the one flavour only you bring (e.g. product).",
           "Write your role like a job description: the outcomes you own, the decisions you make, and what is explicitly no longer your job.",
-          "Protect the time the role needs: deep work first, and a calendar that matches the job description."
+          "Protect the time the role needs: deep work first, and a calendar that matches the job description.",
+          "Move between altitudes on purpose: dive where a team needs force, build the form, climb out at flow — and keep asking what the next bottleneck will be."
         ],
         "toolIds": [
+          "founder-job-description",
+          "ceo-test",
           "calendar-audit",
-          "two-hour-constraint"
+          "two-hour-constraint",
+          "company-7"
         ],
         "rhythmIds": [
           "calendar-audit",
@@ -735,29 +740,8 @@
         "order": 9
       },
       {
-        "id": "operate-at-the-right-altitude",
-        "number": 10,
-        "emoji": "🪂",
-        "title": "Operate at the Right Altitude",
-        "layerId": "founder",
-        "groupId": "lead-myself",
-        "summary": "",
-        "bullets": [
-          "Find the bottlenecks where everything waits on you — that is an altitude problem, not an effort problem.",
-          "Dive deep where the company needs Force, then deliberately build the Form and Flow that let you climb back out.",
-          "Scale yourself to scale the org: keep turning things only you can do into things the system does."
-        ],
-        "toolIds": [
-          "calendar-audit"
-        ],
-        "rhythmIds": [
-          "weekly-planning"
-        ],
-        "order": 10
-      },
-      {
         "id": "make-the-right-calls",
-        "number": 11,
+        "number": 10,
         "emoji": "⚖️",
         "title": "Make the Right Calls",
         "layerId": "founder",
@@ -769,6 +753,7 @@
           "Cut decision congestion — no repeated debates, no unclear ownership, no calls stuck waiting on you."
         ],
         "toolIds": [
+          "premortem",
           "three-cs-decision",
           "six-thinking-hats",
           "double-diamond",
@@ -779,16 +764,16 @@
           "super-self"
         ],
         "rhythmIds": [],
-        "order": 11
+        "order": 10
       },
       {
         "id": "know-and-use-the-right-leadership-hat",
-        "number": 12,
+        "number": 11,
         "emoji": "🎩",
         "title": "Know & Use the Right Leadership Hat",
         "layerId": "founder",
         "groupId": "lead-others",
-        "summary": "",
+        "summary": "A first-time founder ran every 1:1 in advice mode until the hats reframe — now his smartest engineer arrives with options and leaves with her own plan.",
         "bullets": [
           "Switch deliberately between coach, mentor, empowerer and manager, depending on the person and the situation.",
           "Default to coaching where you can: help people think for themselves and leave them more capable after each conversation, rather than handing over answers.",
@@ -799,22 +784,23 @@
           "leadership-hats"
         ],
         "rhythmIds": [],
-        "order": 12
+        "order": 11
       },
       {
         "id": "give-feedback-and-hold-the-standard",
-        "number": 13,
+        "number": 12,
         "emoji": "📣",
         "title": "Give Feedback & Hold the Standard",
         "layerId": "founder",
         "groupId": "lead-others",
-        "summary": "",
+        "summary": "One founder went from a single sideways comment and months of silence to a standing feedback rhythm — the firing that was quietly brewing became a turnaround instead.",
         "bullets": [
           "Make positive and corrective feedback a normal part of your operating cadence.",
           "Challenge missed commitments clearly and early, in a way that changes behaviour.",
           "Separate care for the person from clarity about the standard — and catch issues before they become resentment, politics or performance problems."
         ],
         "toolIds": [
+          "development-pipeline",
           "sbi-feedback",
           "kss-feedback",
           "accountability-dial",
@@ -823,16 +809,16 @@
           "ownership-map"
         ],
         "rhythmIds": [],
-        "order": 13
+        "order": 12
       },
       {
         "id": "build-incredible-relationships",
-        "number": 14,
+        "number": 13,
         "emoji": "💬",
         "title": "Build Incredible Relationships",
         "layerId": "founder",
         "groupId": "lead-others",
-        "summary": "",
+        "summary": "Two cofounders replaced their ops-only weekly with a relationship contract, a monthly strategy offsite and a social dinner — the arguments stopped being about the wrong things.",
         "bullets": [
           "Proactively design your most important working relationships.",
           "Clarify expectations, cadence, communication preferences and decision rights.",
@@ -841,6 +827,7 @@
         "toolIds": [
           "relationship-design-canvas",
           "one-to-one-structure",
+          "stakeholder-map",
           "kss-feedback",
           "non-violent-communication",
           "leadership-hats"
@@ -848,22 +835,23 @@
         "rhythmIds": [
           "monthly-relationship-review"
         ],
-        "order": 14
+        "order": 13
       },
       {
         "id": "navigate-conflict-and-create-psychological-safety",
-        "number": 15,
+        "number": 14,
         "emoji": "🛡️",
         "title": "Navigate Conflict & Create Psychological Safety",
         "layerId": "founder",
         "groupId": "lead-others",
-        "summary": "",
+        "summary": "Two cofounders who kept fighting in front of the team agreed a magic word that stops any heating argument — and books a whiteboard session within 24 hours.",
         "bullets": [
           "Build enough trust that people can say hard truths early, disagree openly and admit mistakes without fear.",
           "Turn tension into clarity instead of politics, avoidance or resentment, and prepare for hard conversations with structure and emotional discipline.",
           "Spot when safety is missing and rebuild it deliberately."
         ],
         "toolIds": [
+          "crossing-the-line",
           "psychological-safety-diagnostic",
           "non-violent-communication",
           "five-dysfunctions",
@@ -872,36 +860,38 @@
           "relationship-design-canvas"
         ],
         "rhythmIds": [],
-        "order": 15
+        "order": 14
       },
       {
         "id": "build-leaders-not-dependencies",
-        "number": 16,
+        "number": 15,
         "emoji": "🌳",
         "title": "Build Leaders, Not Dependencies",
         "layerId": "founder",
         "groupId": "lead-others",
-        "summary": "",
+        "summary": "A growth lead who co-created her own goals and accountability now traffic-lights the quarter herself — the founder stopped being the company's only engine.",
         "bullets": [
           "Teach the capabilities you have built in yourself to the leaders around you, instead of hoarding them.",
           "Develop people who can lead their domain — make the calls, hold the standard, coach their own teams — without constant founder input.",
           "Move from managing everyone to managing managers and leaders."
         ],
         "toolIds": [
+          "development-pipeline",
           "ownership-map",
-          "leadership-hats"
+          "leadership-hats",
+          "company-7"
         ],
         "rhythmIds": [],
-        "order": 16
+        "order": 15
       },
       {
         "id": "be-storyteller-in-chief",
-        "number": 17,
+        "number": 16,
         "emoji": "📖",
         "title": "Be Storyteller in Chief",
         "layerId": "founder",
         "groupId": "lead-the-game",
-        "summary": "",
+        "summary": "A founder who'd gone quiet because no single story felt big enough committed to one story at every all-hands — within a quarter, candidates were quoting it back in interviews.",
         "bullets": [
           "Communicate the company's direction in a way people believe, remember and act on.",
           "Adapt the story for team, candidates, customers, investors and board.",
@@ -914,11 +904,11 @@
         "rhythmIds": [
           "monthly-all-hands"
         ],
-        "order": 17
+        "order": 16
       },
       {
         "id": "manage-capital-and-stakeholders",
-        "number": 18,
+        "number": 17,
         "emoji": "💼",
         "title": "Manage Capital and Stakeholders",
         "layerId": "founder",
@@ -933,14 +923,15 @@
           "board-pack",
           "investor-update",
           "company-health-scorecard",
+          "stakeholder-map",
           "relationship-design-canvas"
         ],
         "rhythmIds": [],
-        "order": 18
+        "order": 17
       },
       {
         "id": "find-new-capital",
-        "number": 19,
+        "number": 18,
         "emoji": "💰",
         "title": "Find New Capital",
         "layerId": "founder",
@@ -952,7 +943,30 @@
           "Turn company progress into the capital required for the next stage."
         ],
         "toolIds": [
-          "company-health-scorecard"
+          "company-health-scorecard",
+          "company-7"
+        ],
+        "rhythmIds": [],
+        "order": 18
+      },
+      {
+        "id": "embrace-the-ai-revolution",
+        "number": 19,
+        "emoji": "🤖",
+        "title": "Embrace the AI Revolution",
+        "layerId": "founder",
+        "groupId": "lead-the-game",
+        "summary": "A founder re-ran his moats through the 7 Powers with AI in mind and realised the \"complex tech setup\" he'd spent years building had quietly stopped being a barrier — and that his next five hires probably shouldn't happen.",
+        "bullets": [
+          "Stress-test the strategy for the AI era: traffic-light each of your 7 Powers and map the threats and opportunities five years out.",
+          "Scale the org efficiently: challenge every proposed hire against making the existing team more effective with AI first.",
+          "Install the adoption rhythm — explore, trial, execute — and the internal AI champions who spread it through the company."
+        ],
+        "toolIds": [
+          "ai-strategy-stress-test",
+          "ai-adoption-cadence",
+          "ai-champions",
+          "seven-powers"
         ],
         "rhythmIds": [],
         "order": 19
@@ -1020,7 +1034,8 @@
           "personal-board",
           "habit-stacks",
           "anti-wasteman-system",
-          "relationship-design-canvas"
+          "relationship-design-canvas",
+          "ten-minute-retro"
         ],
         "rhythmIds": [],
         "order": 22
@@ -1087,22 +1102,6 @@
         ],
         "rhythmIds": [],
         "order": 25
-      },
-      {
-        "id": "embrace-the-ai-revolution",
-        "number": 26,
-        "emoji": "🤖",
-        "title": "Embrace the AI Revolution",
-        "layerId": "founder",
-        "groupId": "lead-the-game",
-        "summary": "",
-        "bullets": [
-          "Placeholder — content to be drafted."
-        ],
-        "toolIds": [],
-        "rhythmIds": [],
-        "order": 26,
-        "status": "draft"
       }
     ],
     "symptomMap": [
@@ -1120,7 +1119,7 @@
         "symptom": "I'm still in every decision.",
         "capabilityTitles": [
           "Make Ownership Stick",
-          "Operate at the Right Altitude",
+          "Take Command of My Role",
           "Make the Right Calls"
         ]
       },
@@ -1128,7 +1127,7 @@
         "id": "bottleneck",
         "symptom": "Everything waits on me — I'm the bottleneck.",
         "capabilityTitles": [
-          "Operate at the Right Altitude",
+          "Take Command of My Role",
           "Build Leaders, Not Dependencies"
         ]
       },
@@ -1159,7 +1158,7 @@
         "id": "delegation-comes-back",
         "symptom": "I delegate and it comes back worse.",
         "capabilityTitles": [
-          "Make Ownership Stick",
+          "Build Leaders, Not Dependencies",
           "Know & Use the Right Leadership Hat"
         ]
       },
@@ -1243,10 +1242,9 @@
           "install-the-operating-rhythm",
           "make-ownership-stick",
           "build-a-culture-that-compounds",
-          "raise-the-talent-bar",
+          "hire-and-raise-the-talent-bar",
           "know-my-special-ability",
           "take-command-of-my-role",
-          "operate-at-the-right-altitude",
           "make-the-right-calls",
           "know-and-use-the-right-leadership-hat",
           "give-feedback-and-hold-the-standard",
@@ -1280,7 +1278,8 @@
         ],
         "capabilityIds": [
           "map-the-destination",
-          "chart-the-path"
+          "chart-the-path",
+          "take-command-of-my-role"
         ],
         "description": "Score yourself 1–5 on four questions that check destination, plan, team alignment and execution confidence.",
         "accreditation": {
@@ -1291,6 +1290,120 @@
           "six-critical-questions",
           "okrs",
           "north-star-metric"
+        ]
+      },
+      {
+        "id": "founder-job-description",
+        "title": "Founder Job Description",
+        "categoryId": "operating-tools",
+        "type": "template",
+        "format": [
+          "solo"
+        ],
+        "moments": [
+          "define",
+          "design"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "quarterly"
+        ],
+        "layerIds": [
+          "founder"
+        ],
+        "capabilityIds": [
+          "take-command-of-my-role",
+          "know-my-special-ability"
+        ],
+        "description": "Writes the founder's job for this stage — zone of genius crossed with what the company needs, worked backwards from the next milestone — and rewrites it every six months.",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "ceo-test",
+          "calendar-audit",
+          "zone-of-genius"
+        ]
+      },
+      {
+        "id": "premortem",
+        "title": "Premortem",
+        "categoryId": "diagnostic-tools",
+        "type": "exercise",
+        "format": [
+          "solo",
+          "cofounder",
+          "team"
+        ],
+        "moments": [
+          "diagnose",
+          "define"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "as-needed"
+        ],
+        "layerIds": [
+          "company",
+          "founder"
+        ],
+        "capabilityIds": [
+          "hire-and-raise-the-talent-bar",
+          "make-the-right-calls"
+        ],
+        "description": "Imagines a decision has already failed and lists how it went wrong, ranked by likelihood, so the top risks get mitigated while it is still cheap.",
+        "accreditation": {
+          "originator": "Gary Klein",
+          "source": "Performing a Project Premortem (Harvard Business Review, 2007)",
+          "sourceUrl": "https://hbr.org/2007/09/performing-a-project-premortem",
+          "note": "Adapted for Outstride OS"
+        },
+        "relatedToolIds": [
+          "opportunity-threat-map",
+          "performance-culture-grid",
+          "senior-hire-process"
+        ]
+      },
+      {
+        "id": "opportunity-threat-map",
+        "title": "Opportunity & Threat Map",
+        "categoryId": "direction-tools",
+        "type": "framework",
+        "format": [
+          "cofounder",
+          "team"
+        ],
+        "moments": [
+          "diagnose",
+          "define"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "quarterly",
+          "as-needed"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "chart-the-path",
+          "make-the-right-calls"
+        ],
+        "description": "Plots opportunities and threats on one magnitude × likelihood grid so strategy conversations rank what could help or hurt instead of listing everything equally.",
+        "diagramId": "opportunity-threat-map",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "premortem",
+          "strategy-one-pager",
+          "seven-powers"
         ]
       },
       {
@@ -1336,6 +1449,7 @@
           "company"
         ],
         "capabilityIds": [
+          "embrace-the-ai-revolution",
           "map-the-destination"
         ],
         "description": "A framework for identifying durable competitive advantage — the benefit and barrier that let a business sustain superior returns.",
@@ -1349,6 +1463,47 @@
           "strategy-one-pager",
           "north-star-metric",
           "ceo-test"
+        ]
+      },
+      {
+        "id": "ai-strategy-stress-test",
+        "title": "AI Strategy Stress Test",
+        "categoryId": "direction-tools",
+        "type": "framework",
+        "format": [
+          "solo",
+          "cofounder",
+          "team"
+        ],
+        "moments": [
+          "diagnose",
+          "define"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "quarterly",
+          "annually"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "embrace-the-ai-revolution",
+          "chart-the-path"
+        ],
+        "description": "Traffic-lights each of your 7 Powers under AI and maps the five-to-seven-year threats and opportunities, so strategy accounts for the moats AI erodes and the ones it lets you build.",
+        "accreditation": {
+          "originator": "Hamilton Helmer",
+          "source": "7 Powers: The Foundations of Business Strategy",
+          "sourceUrl": "https://7powers.com/",
+          "note": "AI-era extension of 7 Powers — Outstride adaptation"
+        },
+        "relatedToolIds": [
+          "seven-powers",
+          "opportunity-threat-map",
+          "strategy-one-pager"
         ]
       },
       {
@@ -1395,7 +1550,7 @@
         ],
         "capabilityIds": [
           "build-a-culture-that-compounds",
-          "raise-the-talent-bar"
+          "hire-and-raise-the-talent-bar"
         ],
         "description": "Makes each company value practical with examples of too little, right amount and too much behaviour.",
         "accreditation": {
@@ -1423,6 +1578,125 @@
           "install-the-operating-rhythm"
         ],
         "description": "Connect annual and quarterly goals to team priorities and measurable outcomes."
+      },
+      {
+        "id": "chapters-and-squads",
+        "title": "Chapters & Squads",
+        "categoryId": "operating-tools",
+        "type": "framework",
+        "format": [
+          "team",
+          "company"
+        ],
+        "moments": [
+          "design"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "quarterly",
+          "as-needed"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "design-the-org"
+        ],
+        "description": "Scales a product org with cross-functional squads that own one slice of the user journey, while chapters keep each craft consistent across squads.",
+        "diagramId": "chapters-squads",
+        "accreditation": {
+          "originator": "Henrik Kniberg & Anders Ivarsson",
+          "source": "Scaling Agile @ Spotify (2012)",
+          "sourceUrl": "https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf",
+          "note": "Adapted for Outstride OS"
+        },
+        "relatedToolIds": [
+          "team-traffic-lighting",
+          "ownership-map",
+          "okrs"
+        ]
+      },
+      {
+        "id": "team-traffic-lighting",
+        "title": "Team Traffic Lighting",
+        "categoryId": "diagnostic-tools",
+        "type": "diagnostic",
+        "format": [
+          "team",
+          "company"
+        ],
+        "moments": [
+          "diagnose"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "monthly",
+          "quarterly"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "design-the-org",
+          "make-ownership-stick",
+          "install-the-operating-rhythm"
+        ],
+        "description": "Rates every team green, amber or red on delivery, self-improvement and ability to scale, so org attention goes where the company is actually blocked.",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "chapters-and-squads",
+          "okrs",
+          "company-health-scorecard"
+        ]
+      },
+      {
+        "id": "company-7",
+        "title": "Company 7",
+        "categoryId": "diagnostic-tools",
+        "type": "diagnostic",
+        "format": [
+          "solo",
+          "one-to-one",
+          "team"
+        ],
+        "moments": [
+          "diagnose"
+        ],
+        "depth": [
+          "surface"
+        ],
+        "frequency": [
+          "monthly",
+          "quarterly"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "map-the-destination",
+          "chart-the-path",
+          "design-the-org",
+          "build-a-culture-that-compounds",
+          "find-new-capital",
+          "take-command-of-my-role",
+          "build-leaders-not-dependencies"
+        ],
+        "description": "A ten-minute company diagnostic: score seven areas 0–10 — business growth, strategy, fundraising & runway, culture, hiring & org structure, founder performance, management performance — to find where to dig next.",
+        "diagramId": "company-7",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "company-health-scorecard",
+          "human-9",
+          "team-traffic-lighting"
+        ]
       },
       {
         "id": "company-health-scorecard",
@@ -1455,7 +1729,7 @@
           "install-the-operating-rhythm",
           "make-ownership-stick",
           "build-a-culture-that-compounds",
-          "raise-the-talent-bar",
+          "hire-and-raise-the-talent-bar",
           "manage-capital-and-stakeholders",
           "find-new-capital"
         ],
@@ -1484,6 +1758,113 @@
         "relatedToolIds": [
           "okrs",
           "quarterly-retro"
+        ]
+      },
+      {
+        "id": "commitment-loop",
+        "title": "Commitment Loop",
+        "categoryId": "operating-tools",
+        "type": "rhythm",
+        "format": [
+          "team",
+          "cofounder",
+          "one-to-one"
+        ],
+        "moments": [
+          "deliver"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "weekly"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "make-ownership-stick",
+          "install-the-operating-rhythm"
+        ],
+        "description": "A meeting ritual that opens with how the last commitments went and closes with new measurable, time-bound commitments — so accountability lives in the system, not in the founder's follow-up.",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "operating-cadence",
+          "five-dysfunctions",
+          "okrs"
+        ]
+      },
+      {
+        "id": "ai-adoption-cadence",
+        "title": "AI Adoption Cadence",
+        "categoryId": "operating-tools",
+        "type": "rhythm",
+        "format": [
+          "solo",
+          "team",
+          "company"
+        ],
+        "moments": [
+          "design",
+          "deliver"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "monthly",
+          "quarterly"
+        ],
+        "layerIds": [
+          "company",
+          "founder"
+        ],
+        "capabilityIds": [
+          "embrace-the-ai-revolution"
+        ],
+        "description": "A recurring explore → trial → execute review that keeps you and the company current on AI — deliberate enough to avoid falling behind, bounded enough to stop daily shiny-thing chasing.",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "operating-cadence",
+          "ai-champions"
+        ]
+      },
+      {
+        "id": "ai-champions",
+        "title": "AI Champions",
+        "categoryId": "operating-tools",
+        "type": "template",
+        "format": [
+          "team",
+          "company"
+        ],
+        "moments": [
+          "design",
+          "deliver"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "as-needed"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "embrace-the-ai-revolution"
+        ],
+        "description": "A playbook for naming your most AI-enthusiastic people as internal champions who trial new tools, consult across departments and spread adoption through the company.",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "ai-adoption-cadence",
+          "ai-strategy-stress-test"
         ]
       },
       {
@@ -1546,8 +1927,6 @@
         ],
         "capabilityIds": [
           "take-command-of-my-role",
-          "operate-at-the-right-altitude",
-          "make-ownership-stick",
           "build-leaders-not-dependencies"
         ],
         "description": "A hard prioritisation drill that reveals highest-leverage founder work by constraining time to two hours a day."
@@ -1608,7 +1987,7 @@
           "company"
         ],
         "capabilityIds": [
-          "make-ownership-stick"
+          "build-leaders-not-dependencies"
         ],
         "description": "A framework for moving from task delegation to full ownership.",
         "accreditation": {
@@ -1700,7 +2079,8 @@
         ],
         "capabilityIds": [
           "make-the-right-calls",
-          "make-ownership-stick"
+          "build-leaders-not-dependencies",
+          "install-the-operating-rhythm"
         ],
         "description": "A three-mode model for running a decision — how much you create yourself, who you collaborate with, and how you communicate it — so people know whether they're shaping a call or hearing one.",
         "diagramId": "three-cs-decision",
@@ -1781,7 +2161,7 @@
           "company"
         ],
         "capabilityIds": [
-          "make-ownership-stick"
+          "build-leaders-not-dependencies"
         ],
         "description": "A proactive plan to hand off more work at higher levels of responsibility over time.",
         "accreditation": {
@@ -1819,7 +2199,7 @@
         "capabilityIds": [
           "install-the-operating-rhythm",
           "make-ownership-stick",
-          "raise-the-talent-bar",
+          "hire-and-raise-the-talent-bar",
           "make-the-right-calls",
           "give-feedback-and-hold-the-standard",
           "build-leaders-not-dependencies"
@@ -1850,8 +2230,50 @@
           "note": "Adapted for Outstride OS"
         },
         "relatedToolIds": [
+          "development-pipeline",
           "sbi-feedback",
           "kss-feedback"
+        ]
+      },
+      {
+        "id": "development-pipeline",
+        "title": "Development Pipeline",
+        "categoryId": "leadership-tools",
+        "type": "diagnostic",
+        "format": [
+          "one-to-one"
+        ],
+        "moments": [
+          "diagnose",
+          "design"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "quarterly",
+          "as-needed"
+        ],
+        "layerIds": [
+          "founder",
+          "company"
+        ],
+        "capabilityIds": [
+          "give-feedback-and-hold-the-standard",
+          "build-leaders-not-dependencies"
+        ],
+        "description": "Finds where someone's development is actually stuck — insight, motivation, capabilities, real-world practice or accountability — so effort goes to the constriction instead of defaulting to training.",
+        "diagramId": "development-pipeline",
+        "accreditation": {
+          "originator": "David B. Peterson & Mary Dee Hicks",
+          "source": "Leader as Coach (Personnel Decisions International)",
+          "sourceUrl": "https://www.dave-bailey.com/blog/development-pipeline",
+          "note": "Adapted for Outstride OS"
+        },
+        "relatedToolIds": [
+          "accountability-dial",
+          "kss-feedback",
+          "coaching-questions"
         ]
       },
       {
@@ -1880,8 +2302,47 @@
           "note": "Adapted for Outstride OS"
         },
         "relatedToolIds": [
+          "crossing-the-line",
           "sbi-feedback",
           "accountability-dial",
+          "relationship-design-canvas"
+        ]
+      },
+      {
+        "id": "crossing-the-line",
+        "title": "Crossing the Line",
+        "categoryId": "relationship-tools",
+        "type": "framework",
+        "format": [
+          "one-to-one",
+          "cofounder"
+        ],
+        "moments": [
+          "diagnose",
+          "deliver"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "as-needed"
+        ],
+        "layerIds": [
+          "founder",
+          "human"
+        ],
+        "capabilityIds": [
+          "navigate-conflict-and-create-psychological-safety",
+          "build-incredible-relationships"
+        ],
+        "description": "A three-zone model of any exchange — my intention, my words and behaviour, your reaction — that stops both sides assuming what only the other person can know.",
+        "diagramId": "crossing-the-line",
+        "accreditation": {
+          "note": "Outstride adaptation — original source unverified"
+        },
+        "relatedToolIds": [
+          "non-violent-communication",
+          "sbi-feedback",
           "relationship-design-canvas"
         ]
       },
@@ -1980,11 +2441,10 @@
         ],
         "capabilityIds": [
           "know-and-use-the-right-leadership-hat",
-          "make-ownership-stick",
+          "build-leaders-not-dependencies",
           "give-feedback-and-hold-the-standard",
           "build-incredible-relationships",
-          "navigate-conflict-and-create-psychological-safety",
-          "build-leaders-not-dependencies"
+          "navigate-conflict-and-create-psychological-safety"
         ],
         "description": "Choose the right leadership mode for the person and moment instead of defaulting to advice, control or rescue."
       },
@@ -2015,7 +2475,7 @@
         ],
         "capabilityIds": [
           "build-a-culture-that-compounds",
-          "raise-the-talent-bar",
+          "hire-and-raise-the-talent-bar",
           "give-feedback-and-hold-the-standard"
         ],
         "description": "Scores role performance and values behaviour, then maps each person to a clear talent decision quadrant.",
@@ -2027,6 +2487,70 @@
           "ownership-map",
           "accountability-dial",
           "sbi-feedback"
+        ]
+      },
+      {
+        "id": "senior-hire-process",
+        "title": "Senior Hire Process",
+        "categoryId": "leadership-tools",
+        "type": "template",
+        "format": [
+          "team",
+          "company"
+        ],
+        "moments": [
+          "design",
+          "deliver"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "as-needed"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "hire-and-raise-the-talent-bar"
+        ],
+        "description": "A worked example of a serious senior-hire process — a four-phase interview loop ending in a strategy task presented to the C-level — designed to be stripped back for smaller roles.",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "performance-culture-grid",
+          "premortem",
+          "thirty-sixty-ninety"
+        ]
+      },
+      {
+        "id": "thirty-sixty-ninety",
+        "title": "30-60-90 Plan",
+        "categoryId": "leadership-tools",
+        "type": "template",
+        "format": [
+          "one-to-one"
+        ],
+        "moments": [
+          "deliver"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "as-needed"
+        ],
+        "layerIds": [
+          "company"
+        ],
+        "capabilityIds": [
+          "hire-and-raise-the-talent-bar"
+        ],
+        "description": "A written plan for a new hire's first 30, 60 and 90 days with transparent evaluation checkpoints from day one.",
+        "relatedToolIds": [
+          "performance-culture-grid",
+          "premortem"
         ]
       },
       {
@@ -2116,6 +2640,45 @@
           "relationship-one-pager",
           "one-to-one-structure",
           "non-violent-communication"
+        ]
+      },
+      {
+        "id": "stakeholder-map",
+        "title": "Stakeholder Map",
+        "categoryId": "relationship-tools",
+        "type": "diagnostic",
+        "format": [
+          "solo",
+          "one-to-one"
+        ],
+        "moments": [
+          "diagnose"
+        ],
+        "depth": [
+          "surface",
+          "operating"
+        ],
+        "frequency": [
+          "quarterly",
+          "as-needed"
+        ],
+        "layerIds": [
+          "founder"
+        ],
+        "capabilityIds": [
+          "build-incredible-relationships",
+          "manage-capital-and-stakeholders"
+        ],
+        "description": "Maps the people the company most depends on — cofounder, direct reports, board — and scores each on relationship quality and performance confidence, so people-risk gets a location instead of staying a vague feeling.",
+        "diagramId": "stakeholder-map",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "relationship-design-canvas",
+          "performance-culture-grid",
+          "one-to-one-structure",
+          "kss-feedback"
         ]
       },
       {
@@ -2237,6 +2800,48 @@
           "anti-wasteman-system",
           "human-9",
           "calendar-audit"
+        ]
+      },
+      {
+        "id": "ten-minute-retro",
+        "title": "The 10-Minute Retro",
+        "categoryId": "human-tools",
+        "type": "exercise",
+        "format": [
+          "solo",
+          "one-to-one",
+          "cofounder",
+          "team"
+        ],
+        "moments": [
+          "diagnose",
+          "deliver"
+        ],
+        "depth": [
+          "surface",
+          "operating"
+        ],
+        "frequency": [
+          "quarterly",
+          "monthly"
+        ],
+        "layerIds": [
+          "human",
+          "founder"
+        ],
+        "capabilityIds": [
+          "build-my-growth-system",
+          "install-the-operating-rhythm"
+        ],
+        "description": "A ten-minute quarterly reflection — three wins, three lowlights, three learnings — that turns the quarter into rules you actually act on.",
+        "diagramId": "ten-minute-retro",
+        "accreditation": {
+          "note": "Outstride original — a founder-sized cut of the classic team retrospective"
+        },
+        "relatedToolIds": [
+          "quarterly-retro",
+          "human-9",
+          "kss-feedback"
         ]
       },
       {
@@ -2519,7 +3124,7 @@
           "build-a-culture-that-compounds",
           "navigate-conflict-and-create-psychological-safety",
           "be-storyteller-in-chief",
-          "raise-the-talent-bar"
+          "hire-and-raise-the-talent-bar"
         ],
         "description": "Four sequential disciplines — cohesive team, clarity, over-communication, and systems — that turn organizational health into competitive advantage.",
         "accreditation": {
@@ -2548,6 +3153,7 @@
           "founder"
         ],
         "capabilityIds": [
+          "make-ownership-stick",
           "navigate-conflict-and-create-psychological-safety",
           "build-incredible-relationships",
           "give-feedback-and-hold-the-standard"
@@ -2668,8 +3274,7 @@
           "founder"
         ],
         "capabilityIds": [
-          "take-command-of-my-role",
-          "operate-at-the-right-altitude"
+          "take-command-of-my-role"
         ],
         "description": "Review priorities, calendar, bottlenecks and the founder's highest-leverage work for the week."
       },
@@ -3024,7 +3629,7 @@
             "kind": "capabilityRefs",
             "capabilityIds": [
               "build-a-culture-that-compounds",
-              "raise-the-talent-bar"
+              "hire-and-raise-the-talent-bar"
             ]
           }
         ]
@@ -3073,6 +3678,20 @@
           {
             "kind": "callout",
             "text": "Move through the dial in order. Skipping steps erodes trust; staying on Mention when you need Boundary avoids the problem."
+          },
+          {
+            "kind": "callout",
+            "text": "Put a number and a date on it: \"Your pull-request reviews are at a five — I need a seven by the end of the month, or we move up the dial.\" The dial exists because the default founder path is one vague mention, months of silence, then a firing that surprises everyone."
+          },
+          {
+            "kind": "paragraph",
+            "text": "This is the unhappy path of performance improvement. Its happy-path twin is the Development Pipeline — reach for that first when the person is willing but stuck."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "development-pipeline"
+            ]
           },
           {
             "kind": "capabilityRefs",
@@ -3134,6 +3753,10 @@
             "text": "Lead with situation and behaviour, not impact on your feelings. \"I feel like you don't respect me\" before naming what happened invites defensiveness. Name what you saw first — then the effect."
           },
           {
+            "kind": "callout",
+            "text": "The opposite of SBI is \"you always\": \"You always do this. You always think you're right.\" The only available answer is \"no I don't\" — generalisations trigger defence. One situation, one behaviour, one impact."
+          },
+          {
             "kind": "capabilityRefs",
             "capabilityIds": [
               "give-feedback-and-hold-the-standard"
@@ -3192,6 +3815,10 @@
           {
             "kind": "callout",
             "text": "KSS is not a softer way to avoid hard feedback. It is a clearer way to hold standards while preserving trust."
+          },
+          {
+            "kind": "callout",
+            "text": "Make it a standing ritual with the key people in your orbit — cofounders and direct reports. Both sides show up with a short doc prepared and split the session bilaterally: your KSSs, then mine, in about 50 minutes. Run on a regular cadence it normalises feedback — it stops being the thing that only happens when something went wrong."
           },
           {
             "kind": "capabilityRefs",
@@ -3353,6 +3980,171 @@
             "kind": "capabilityRefs",
             "capabilityIds": [
               "map-the-destination"
+            ]
+          }
+        ]
+      },
+      "ai-strategy-stress-test": {
+        "intro": "Run your strategy through the 7 Powers with AI in mind: traffic-light each power, then map what could help or hurt you over the next five to seven years.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Enormous money is flowing into \"AI for X\" companies promising to change how whole industries work. Whatever you're building, AI is now part of your strategy whether you chose it or not — it makes you operationally faster and cheaper to scale, but it also erodes moats you may be counting on. A complicated tech setup used to be a barrier; increasingly, it just isn't."
+          },
+          {
+            "kind": "heading",
+            "text": "Step 1 — Traffic-light your 7 Powers"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Take each of Hamilton Helmer's seven powers and ask how AI changes it for you against named competitors. Green: this power holds or strengthens under AI. Amber: it holds for now, but the barrier is thinning. Red: AI has eroded or will erode it — stop counting on it."
+          },
+          {
+            "kind": "table",
+            "columns": [
+              "Power",
+              "The AI-era question"
+            ],
+            "rows": [
+              [
+                "Scale Economies",
+                "Does volume still lower your unit costs faster than a lean AI-native rival can drop theirs?"
+              ],
+              [
+                "Network Economies",
+                "Does more usage still compound value, or can AI synthesise what your network used to be needed for?"
+              ],
+              [
+                "Counter-Positioning",
+                "Could an AI-native entrant run a model you can't copy without breaking your existing business?"
+              ],
+              [
+                "Switching Costs",
+                "How much of your lock-in survives when AI makes migration, integration and retraining nearly free?"
+              ],
+              [
+                "Branding",
+                "Trust and preference may matter more in a world of infinite AI-generated alternatives — is yours real?"
+              ],
+              [
+                "Cornered Resource",
+                "Proprietary data, distribution and relationships get more valuable; scarce technical talent gets less scarce. Which do you hold?"
+              ],
+              [
+                "Process Power",
+                "Is your embedded way of working still hard to replicate, or is it exactly the kind of process AI commoditises?"
+              ]
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Step 2 — Map threats and opportunities, five to seven years out"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Really imagine your market in five and seven years. Where is AI helping you — and where is it hurting? Plot the biggest of each on the Opportunity & Threat Map so the strategy conversation ranks them instead of listing them. A useful calibration: the panic that \"AI will eat SaaS\" turned out to be overdone — even the top AI labs still buy SaaS rather than build it — but the moat that made SaaS defensible has genuinely thinned. Neither doom nor denial; look power by power."
+          },
+          {
+            "kind": "callout",
+            "text": "The output isn't a score — it's a decision. Which one or two powers will you deliberately build because AI strengthens them, and which will you stop leaning on because it doesn't?"
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "seven-powers",
+              "opportunity-threat-map"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "embrace-the-ai-revolution",
+              "chart-the-path"
+            ]
+          }
+        ]
+      },
+      "ai-adoption-cadence": {
+        "intro": "A recurring rhythm — explore, trial, execute — that keeps you and the company current on AI without chasing every shiny thing.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "There are two ways to lose here. Chase every new tool the day it launches and you'll be permanently distracted; never look up from the roadmap and you'll be left behind. The answer is a cadence: a deliberate, bounded review — monthly if you're in a fast-moving corner, quarterly otherwise — run at both the personal and the company level."
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Explore",
+                "note": "Stop and do a genuine deep dive into what's changed in the industry since last time. What are the new tools, models and workflows? What are companies like yours doing with them?"
+              },
+              {
+                "title": "Trial",
+                "note": "Pick the two or three most promising and actually spend time with them — real work, not a demo. Your AI champions are the natural owners of this step."
+              },
+              {
+                "title": "Execute",
+                "note": "Choose what to implement, roll it out properly, and ignore everything else until the next review. A decision to skip something is a valid output."
+              }
+            ]
+          },
+          {
+            "kind": "paragraph",
+            "text": "At the company level, use the same review to challenge the leadership team: how will each function — operations, product, tech, customer support — use AI to build more efficiently this quarter? Make it a standing question in the operating rhythm, not a one-off initiative."
+          },
+          {
+            "kind": "callout",
+            "text": "Between reviews, keep a running list of things worth exploring — then leave them alone. The list is what lets you stay focused today without worrying you're missing the future."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "ai-champions",
+              "operating-cadence"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "embrace-the-ai-revolution"
+            ]
+          }
+        ]
+      },
+      "ai-champions": {
+        "intro": "Name the people in your company who are most enthusiastic about AI, give them the mandate, and let them spread adoption for you.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "You already have people who spend their evenings playing with new AI tools — often not the most senior ones. Instead of letting that energy stay private, elevate it: name them your AI champions and make the enthusiasm an official role. Adoption spreads much faster through peers showing each other cool things than through top-down mandates."
+          },
+          {
+            "kind": "heading",
+            "text": "The mandate"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "Trial the big new tools as they land, so the rest of the company doesn't have to.",
+              "Act as internal consultants: go department to department and recommend concretely how AI could change how each team works.",
+              "Share what's working — demos, wins and cool discoveries — with the whole team on a regular beat.",
+              "Feed the explore and trial steps of the AI adoption cadence."
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "Seniority is not the qualification — enthusiasm is. Giving a passionate junior person the AI champion badge is also a cheap, high-leverage development opportunity."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "ai-adoption-cadence"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "embrace-the-ai-revolution"
             ]
           }
         ]
@@ -3859,7 +4651,7 @@
             "kind": "capabilityRefs",
             "capabilityIds": [
               "make-the-right-calls",
-              "make-ownership-stick"
+              "build-leaders-not-dependencies"
             ]
           }
         ]
@@ -4033,10 +4825,22 @@
             "text": "Run this quarterly in calibration meetings and force one clear action per person: scale, invest, manage out, or exit."
           },
           {
+            "kind": "heading",
+            "text": "Worked example (anonymised)"
+          },
+          {
+            "kind": "paragraph",
+            "text": "A sales lead at a seed-stage startup. Culture, scored against the company's values: hunger 6.5, proactivity 4, reliability 5. Performance, scored against the three outcomes in the job description: generate qualified calls — 3/10; represent the company at industry events — no score yet; lift the team's close rate — 6/10. Averaged and plotted: middling culture, low performance — the \"invest if capacity allows\" quadrant, with a focused development plan and a deadline."
+          },
+          {
+            "kind": "callout",
+            "text": "Notice the criterion with no score. A \"?\" is not a neutral mark — it means you lack evidence for a core part of the role. Go collect it before the next calibration; don't average around it or guess."
+          },
+          {
             "kind": "capabilityRefs",
             "capabilityIds": [
               "build-a-culture-that-compounds",
-              "raise-the-talent-bar",
+              "hire-and-raise-the-talent-bar",
               "give-feedback-and-hold-the-standard"
             ]
           }
@@ -4085,7 +4889,7 @@
           {
             "kind": "capabilityRefs",
             "capabilityIds": [
-              "make-ownership-stick"
+              "build-leaders-not-dependencies"
             ]
           }
         ]
@@ -4134,9 +4938,13 @@
             "text": "Delegation is a timeline, not an event. One deliberate handoff per month beats a heroic purge that collapses in week two."
           },
           {
+            "kind": "callout",
+            "text": "Ask it every quarter: \"What are you doing today that you shouldn't be doing at the end of the quarter?\" Then aim the handoffs at people's growth edges — \"my growth edge is people management\" becomes \"you lead the weekly product check-ins.\" And remember delegation is an investment: not faster tomorrow, faster in a month or two — delegate, don't abdicate."
+          },
+          {
             "kind": "capabilityRefs",
             "capabilityIds": [
-              "make-ownership-stick"
+              "build-leaders-not-dependencies"
             ]
           }
         ]
@@ -4199,7 +5007,7 @@
               "build-a-culture-that-compounds",
               "navigate-conflict-and-create-psychological-safety",
               "be-storyteller-in-chief",
-              "raise-the-talent-bar"
+              "hire-and-raise-the-talent-bar"
             ]
           }
         ]
@@ -4235,6 +5043,7 @@
           {
             "kind": "capabilityRefs",
             "capabilityIds": [
+              "make-ownership-stick",
               "navigate-conflict-and-create-psychological-safety",
               "build-incredible-relationships",
               "give-feedback-and-hold-the-standard"
@@ -4891,11 +5700,11 @@
               ],
               [
                 "I'm still in every decision.",
-                "Make Ownership Stick / Operate at the Right Altitude / Make the Right Calls"
+                "Make Ownership Stick / Take Command of My Role / Make the Right Calls"
               ],
               [
                 "Everything waits on me.",
-                "Operate at the Right Altitude / Build Leaders, Not Dependencies"
+                "Take Command of My Role / Build Leaders, Not Dependencies"
               ],
               [
                 "Things are tense with my cofounder.",
@@ -4907,7 +5716,7 @@
               ],
               [
                 "I delegate and it comes back worse.",
-                "Make Ownership Stick / Know & Use the Right Leadership Hat"
+                "Build Leaders, Not Dependencies / Know & Use the Right Leadership Hat"
               ],
               [
                 "I need to raise and we're not ready.",
@@ -4983,10 +5792,9 @@
               "install-the-operating-rhythm",
               "make-ownership-stick",
               "build-a-culture-that-compounds",
-              "raise-the-talent-bar",
+              "hire-and-raise-the-talent-bar",
               "know-my-special-ability",
               "take-command-of-my-role",
-              "operate-at-the-right-altitude",
               "make-the-right-calls",
               "know-and-use-the-right-leadership-hat",
               "give-feedback-and-hold-the-standard",
@@ -5174,7 +5982,7 @@
               "install-the-operating-rhythm",
               "make-ownership-stick",
               "build-a-culture-that-compounds",
-              "raise-the-talent-bar",
+              "hire-and-raise-the-talent-bar",
               "manage-capital-and-stakeholders",
               "find-new-capital"
             ]
@@ -5281,8 +6089,6 @@
             "kind": "capabilityRefs",
             "capabilityIds": [
               "take-command-of-my-role",
-              "operate-at-the-right-altitude",
-              "make-ownership-stick",
               "build-leaders-not-dependencies"
             ]
           }
@@ -5396,7 +6202,7 @@
             "capabilityIds": [
               "install-the-operating-rhythm",
               "make-ownership-stick",
-              "raise-the-talent-bar",
+              "hire-and-raise-the-talent-bar",
               "make-the-right-calls",
               "give-feedback-and-hold-the-standard",
               "build-leaders-not-dependencies"
@@ -5431,34 +6237,35 @@
             "kind": "table",
             "columns": [
               "Hat",
-              "Primary move"
+              "The move",
+              "When to wear it"
             ],
             "rows": [
               [
                 "Coach",
-                "Help the person think for themselves"
+                "\"What do you think?\" — ask awesome questions, stay curious, help them reach their own answer",
+                "A smart employee who wants to grow — never when something is on fire"
               ],
               [
                 "Mentor",
-                "Share pattern recognition and experience"
+                "Share your experience: advice, guidance, recommendations",
+                "They face something you have genuinely lived through before"
+              ],
+              [
+                "Empower",
+                "Co-create goals and build the systems for success and accountability together",
+                "Handing over an outcome, not a task"
               ],
               [
                 "Manager",
-                "Set expectations, standards and accountability"
-              ],
-              [
-                "Empowerer",
-                "Transfer ownership and decision rights"
-              ],
-              [
-                "Operator",
-                "Jump in directly to solve"
-              ],
-              [
-                "CEO / founder",
-                "Set direction, context and constraints"
+                "Set expectations, run the formal stuff, and sometimes say no",
+                "Performance reviews, salaries, vacations and sick days — and holding the line"
               ]
             ]
+          },
+          {
+            "kind": "callout",
+            "text": "There is no right or wrong management style — direct or collaborative can both work. The skill is the mid-conversation check: \"Which manager hat am I wearing right now — and which one does this moment actually need?\" If the production server is down, the coaching hat goes back on the shelf: \"how do you feel about this?\" is not the move."
           },
           {
             "kind": "list",
@@ -5524,11 +6331,10 @@
             "kind": "capabilityRefs",
             "capabilityIds": [
               "know-and-use-the-right-leadership-hat",
-              "make-ownership-stick",
+              "build-leaders-not-dependencies",
               "give-feedback-and-hold-the-standard",
               "build-incredible-relationships",
-              "navigate-conflict-and-create-psychological-safety",
-              "build-leaders-not-dependencies"
+              "navigate-conflict-and-create-psychological-safety"
             ]
           }
         ]
@@ -5650,6 +6456,10 @@
                 "Quarterly / As needed"
               ]
             ]
+          },
+          {
+            "kind": "callout",
+            "text": "Field notes from real contracts: a hard rule that all salary and personal decisions go to the management group together; a \"magic word\" either cofounder can say to stop a heating argument, with a whiteboard session booked within 24 hours; a monthly rhythm of one strategy offsite, one check-in and one social dinner; and a shared don't — nothing critical over Slack, ever."
           },
           {
             "kind": "capabilityRefs",
@@ -5793,6 +6603,691 @@
             ]
           }
         ]
+      },
+      "development-pipeline": {
+        "intro": "A five-condition diagnostic — insight, motivation, capabilities, real-world practice, accountability — that finds where someone's development is actually stuck.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Reach for this when someone needs to improve and generic feedback is not moving them. Development flows at the rate of the tightest constraint — and most managers pour effort into training when the real blockage is insight or motivation."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "development-pipeline"
+          },
+          {
+            "kind": "heading",
+            "text": "The five conditions"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Insight",
+                "note": "Do they know they need to improve — and on what, specifically?"
+              },
+              {
+                "title": "Motivation",
+                "note": "Are they willing to improve? Are they actually prioritising it?"
+              },
+              {
+                "title": "Capabilities",
+                "note": "Do they have the knowledge and skills, or is there a genuine gap to train?"
+              },
+              {
+                "title": "Real-world practice",
+                "note": "Are they getting real reps at work — not just courses and books?"
+              },
+              {
+                "title": "Accountability",
+                "note": "What holds them to it, internally and externally?"
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "A lot of the time it is the insight and motivation piece. Don't tell — coax: \"What is the number one thing you want to improve right now?\" · \"Have you thought about this?\" · \"What happens if nothing changes?\" Then connect it to their own ambition: \"Where do you see yourself in this company — and what is the main gap between here and there?\""
+          },
+          {
+            "kind": "paragraph",
+            "text": "This is the happy path of performance improvement. When someone knows, is willing and still does not move, switch to the unhappy path — the Accountability Dial."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "accountability-dial",
+              "kss-feedback"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "give-feedback-and-hold-the-standard",
+              "build-leaders-not-dependencies"
+            ]
+          }
+        ]
+      },
+      "premortem": {
+        "intro": "Before you commit — to a hire, a strategy, a launch — imagine it has already failed and work backwards from the wreckage.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Use it whenever optimism is quietly doing the risk assessment: an offer about to be signed, a big strategic bet, a launch date everyone is excited about. Declaring failure as a fact — not a possibility — gives people permission to say what they actually fear."
+          },
+          {
+            "kind": "heading",
+            "text": "How to run it"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Assume it failed",
+                "note": "Set the scene as fact, not hypothesis.",
+                "example": "It's twelve months from now and this went wrong. What happened?"
+              },
+              {
+                "title": "List the failure modes",
+                "note": "Everyone writes independently first, then share. Independent lists surface the quiet doubts."
+              },
+              {
+                "title": "Rank by likelihood",
+                "note": "Order the list. If it is a strategic bet, add magnitude and plot it on the Opportunity & Threat Map."
+              },
+              {
+                "title": "Mitigate the top two or three",
+                "note": "Each top risk gets a mitigation or an early-warning signal you will actually watch."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "Everyone premortems projects; almost nobody premortems a hire. Before a senior hire starts, run it with their manager: \"If this hire fails, how did it fail?\" — \"He couldn't turn his network into pipeline.\" \"Her lack of people experience meant the team drifted.\" Rank them, then watch for them during onboarding."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "opportunity-threat-map",
+              "performance-culture-grid"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "hire-and-raise-the-talent-bar",
+              "make-the-right-calls"
+            ]
+          }
+        ]
+      },
+      "opportunity-threat-map": {
+        "intro": "One grid — magnitude × likelihood — for everything that could help or hurt, so strategy conversations rank instead of list.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Use it in strategy sessions, quarterly planning or board prep — or as the canvas a premortem's output lands on. Most teams keep risks in one doc and ideas in another; this puts them on the same axes and makes them compete for attention honestly."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "opportunity-threat-map"
+          },
+          {
+            "kind": "heading",
+            "text": "How to run it"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "Brainstorm opportunities and threats as two separate lists first.",
+              "Score each item for magnitude (how much would this help or hurt?) and likelihood.",
+              "Plot both on one grid — one colour per side.",
+              "The high-magnitude, high-likelihood corner gets named owners and next steps; revisit the map quarterly."
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "Threats and opportunities deserve the same rigour. Seeing them on one canvas forces the trade-off conversation: the biggest threat mitigation and the biggest opportunity bet are competing for the same quarter."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "premortem",
+              "strategy-one-pager"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "chart-the-path",
+              "make-the-right-calls"
+            ]
+          }
+        ]
+      },
+      "crossing-the-line": {
+        "intro": "Three zones in every exchange — my intention, my words and behaviour, your reaction — and a line neither side can see across.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Use it mid-conflict, or in the post-mortem of one. Most escalations contain a line-crossing: one person asserting what the other intended, or what the other must be feeling."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "crossing-the-line"
+          },
+          {
+            "kind": "heading",
+            "text": "The model"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "My intention is accessible only to me.",
+              "My speech and behaviour are accessible to both of us.",
+              "Your reaction is accessible only to you.",
+              "Crossing the line means assuming what only the other person can know."
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "A first-time manager visited her direct report's desk every day — looking over her shoulder, correcting, suggesting. Her intention: be an awesome, supportive manager. What landed: \"She doesn't trust me. She's micromanaging me.\" Neither said a word about it — both had crossed the line in private, and the conflict arrived on schedule."
+          },
+          {
+            "kind": "paragraph",
+            "text": "The repair move is to talk across the line instead of assuming across it: share your intention out loud, and ask about their reaction — which is exactly what SBI and Nonviolent Communication are built to do."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "non-violent-communication",
+              "sbi-feedback"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "navigate-conflict-and-create-psychological-safety",
+              "build-incredible-relationships"
+            ]
+          }
+        ]
+      },
+      "senior-hire-process": {
+        "intro": "A worked example of a serious senior-hire process — four phases ending in a strategy task presented to the C-level — to strip back for smaller roles.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "This is the real process behind a CTO hire at a scaling fintech (company and numbers anonymised). The shape matters more than the specifics: every phase answers a different question, and no single interviewer can green-light the hire alone."
+          },
+          {
+            "kind": "heading",
+            "text": "The interview loop"
+          },
+          {
+            "kind": "table",
+            "columns": [
+              "Phase",
+              "Time",
+              "Purpose",
+              "Who"
+            ],
+            "rows": [
+              [
+                "Phase 0",
+                "—",
+                "Screening",
+                "Head of HR"
+              ],
+              [
+                "Phase 1",
+                "30 mins",
+                "Leadership angle",
+                "CEO"
+              ],
+              [
+                "Phase 2",
+                "30 mins",
+                "Product angle",
+                "CPO"
+              ],
+              [
+                "",
+                "30 mins",
+                "Engineering angle",
+                "VP Engineering"
+              ],
+              [
+                "Phase 3",
+                "1.5 h",
+                "Strategy task — presentation + Q&A",
+                "C-level"
+              ],
+              [
+                "",
+                "Lunch",
+                "Cultural evaluation",
+                "Team leads"
+              ],
+              [
+                "",
+                "45 mins",
+                "External check",
+                "External tech advisor"
+              ],
+              [
+                "",
+                "30 mins",
+                "VC check",
+                "Investor"
+              ]
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "The task"
+          },
+          {
+            "kind": "paragraph",
+            "text": "\"Define a strategy to scale our tech over the next two years.\" The candidate gets real context — team size and structure, growth targets (roughly 80k accounts to 600k in two years), major product launches, known quality debt, and a planned migration off a white-label banking provider — and 45 minutes to present, 45 for questions."
+          },
+          {
+            "kind": "list",
+            "items": [
+              "Asked to cover: organisation structure, engineering culture and best practices, architecture, make vs buy and vendor choices, collaboration with product, in-house vs near-shore vs external scaling, recruiting strategy and employer branding.",
+              "Plus the open invitation that reveals judgment: \"and whatever you think is important.\""
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "The task is the centrepiece: it tests the actual job — strategy, prioritisation, communication under questioning — not interview trivia. For smaller roles, strip phases, not rigour: keep a work sample, a culture read and one outside check."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Debrief candidates on the Performance × Culture Grid, premortem the hire before day one, and land them with a 30-60-90 plan."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "performance-culture-grid",
+              "premortem"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "hire-and-raise-the-talent-bar"
+            ]
+          }
+        ]
+      },
+      "chapters-and-squads": {
+        "intro": "Cross-functional squads own one slice of the user journey; chapters keep each craft consistent across squads.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Reach for this when the product org is scaling past one team and coordination starts eating delivery. It earned its keep around 40 people at my own startup — before that, it's overhead. Don't squadify too early."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "chapters-squads"
+          },
+          {
+            "kind": "heading",
+            "text": "How it works"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "A squad is a small cross-functional team — e.g. three engineers, a product manager, a designer, a business analyst — that owns one part of the user journey end to end.",
+              "Squads own journeys, not features: at a banking product that meant one squad for banking & cards, one for trading, one for onboarding & growth.",
+              "Chapters run across squads — engineering, product, design — so each craft keeps shared standards, career paths and peer learning while people sit in different squads."
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "Teams grow like cells. Start with one big squad; when it passes about seven people, let it divide — mitosis, not reorg: partially split for a while, then fully separate. You're never done — squads keep evolving as the product and the org grow."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "team-traffic-lighting",
+              "ownership-map"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "design-the-org"
+            ]
+          }
+        ]
+      },
+      "team-traffic-lighting": {
+        "intro": "Rate every team green, amber or red — delivery, self-improvement, ability to scale — so org attention goes where the company is actually blocked.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Run it in org reviews and quarterly planning, and whenever you're deciding where the founder dives in next. This rates the team itself, not its goals — pair it with OKRs and let the goals carry their own colours."
+          },
+          {
+            "kind": "heading",
+            "text": "The three lights"
+          },
+          {
+            "kind": "table",
+            "columns": [
+              "Light",
+              "What it looks like"
+            ],
+            "rows": [
+              [
+                "Green",
+                "Excelling: getting stuff done, self-improving, able to scale itself for the next period."
+              ],
+              [
+                "Amber",
+                "Delivers on some things but not reliably; not self-improving; unsure about its ability to scale for the next period."
+              ],
+              [
+                "Red",
+                "Failing: wasting a lot of time, not getting things done — perhaps infighting."
+              ]
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "The lights tell the founder where to go. Dive into the red team and force it, build the system until it's forming, leave when it flows — then check the board and pick the next one. In the early years you'll bounce around the org like this constantly; the skill is leaving every team more independent than you found it."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "okrs",
+              "chapters-and-squads"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "design-the-org",
+              "make-ownership-stick",
+              "install-the-operating-rhythm"
+            ]
+          }
+        ]
+      },
+      "founder-job-description": {
+        "intro": "Write the founder's job for this stage — your zone of genius crossed with what the company needs — and rewrite it every six months.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Use it when you can't tell whether you're doing enough, when the calendar is full but the important things aren't moving, or at every half-year mark — because the job you were doing six months ago is not the job the company needs now."
+          },
+          {
+            "kind": "heading",
+            "text": "How to write it"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Work backwards from the next milestone",
+                "note": "Usually the next funding round. What does the company need to be true by then — and what is your role in getting there?"
+              },
+              {
+                "title": "Name the four ingredients",
+                "note": "The founder job is a mixture: putting out fires, mitigating risks, planning for the future, and the things only you can do.",
+                "example": "Only-you work: speaking to investors, convincing a new executive to join."
+              },
+              {
+                "title": "Find the happy medium",
+                "note": "Your role sits between your zone of genius and what the company really needs. All genius and no need is a hobby; all need and no genius burns you out."
+              },
+              {
+                "title": "Put numbers on it",
+                "note": "For each ingredient: how much time should it get — and how much does it actually get? Run the calendar audit against your answer."
+              },
+              {
+                "title": "Rewrite it every six months",
+                "note": "The company's needs change, so the role changes. Giving away pieces you love is how the company's capacity grows — give away your Legos."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "At least once a quarter, zoom out and ask the two big questions: what does the company need, and what do I need to do to get there? Then plan the calendar and block the time. One founder I work with books a recurring half-day completely off phone and Slack purely for deep strategic thinking — invaluable, and it only happens because he fights for it. Unless you actively make the time, it's not going to happen."
+          },
+          {
+            "kind": "paragraph",
+            "text": "Simple hacks carry the discipline: meetings only in the afternoons, one no-meeting day, the first two hours blocked for deep thinking. The \"give away your Legos\" framing is Molly Graham's — worth reading in full."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "ceo-test",
+              "calendar-audit",
+              "zone-of-genius"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "take-command-of-my-role",
+              "know-my-special-ability"
+            ]
+          }
+        ]
+      },
+      "stakeholder-map": {
+        "intro": "Map the people the company most depends on — cofounder, direct reports, board — and score each of them twice: how the relationship is working, and how confident you are in their performance.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Use it quarterly, or whenever you feel people-risk but can't say where it sits. Founders carry an implicit version of this map in their head; drawing it makes the implicit rankings visible — and usually surfaces one relationship or one performance score that has been quietly avoided."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "stakeholder-map"
+          },
+          {
+            "kind": "heading",
+            "text": "How to run it"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Put yourself in the middle",
+                "note": "Add the people the company runs through: cofounder(s), each direct report, and any board member or investor who materially shapes your quarter."
+              },
+              {
+                "title": "Score the relationship",
+                "note": "0–10 on the arrow: how well is the working relationship itself going — trust, candour, cadence? For the important ones, also guess how they would score it. A big gap between your score and your guess is its own finding."
+              },
+              {
+                "title": "Score your confidence in their performance",
+                "note": "0–10 under their name: how confident are you that they will deliver what their role needs this stage? Score the role they hold now, not the person you hired."
+              },
+              {
+                "title": "Read the gaps and pick one move",
+                "note": "Low relationship score → design the relationship deliberately. Low performance score → go deeper with the Performance × Culture Grid. Both high → tell them; people rarely hear it."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "Watch for the split score: a warm relationship number sitting on top of a very low performance number. That pairing is the signature of a hard conversation being avoided — and the friendliness is often exactly what's protecting the underperformance."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "relationship-design-canvas",
+              "performance-culture-grid"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "build-incredible-relationships",
+              "manage-capital-and-stakeholders"
+            ]
+          }
+        ]
+      },
+      "company-7": {
+        "intro": "A ten-minute company diagnostic: seven stickies, seven scores out of 10, and a clear answer to \"where do we look next?\"",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "This is the company-layer sibling of the Human 9. Use it in coaching check-ins, monthly reviews or quarterly planning — anywhere \"how's the company?\" would otherwise get a vague answer. It trades depth for honesty: seven numbers you'll actually write down beat forty you won't."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "company-7"
+          },
+          {
+            "kind": "heading",
+            "text": "How to run it"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "Score each of the seven areas 0–10: business growth, strategy, fundraising & runway, culture, hiring & org structure, founder / C-level performance, management's performance.",
+              "For each score, answer two questions: why that number, and what would move it one point up?",
+              "Circle the lowest one or two areas and go deep there — with the Company Health Scorecard for the full picture, or the specific tool the area points to.",
+              "Re-run monthly or quarterly and watch the trend, not the absolute numbers."
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "Founder and management performance are on the board on purpose. Most founders will happily score everything except themselves — and the score they avoid writing down is usually the one doing the most damage."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "company-health-scorecard",
+              "human-9"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "map-the-destination",
+              "chart-the-path",
+              "design-the-org",
+              "build-a-culture-that-compounds",
+              "find-new-capital",
+              "take-command-of-my-role",
+              "build-leaders-not-dependencies"
+            ]
+          }
+        ]
+      },
+      "ten-minute-retro": {
+        "intro": "Nine stickies, ten minutes: three wins, three lowlights, three learnings — a retro small enough that you actually run it.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Run it at the end of every quarter — solo, with your coach, or with a cofounder. It works monthly too. Quarters blur together when they're never reviewed; ten minutes of structured looking-back is usually all it takes to stop repeating the same one."
+          },
+          {
+            "kind": "diagram",
+            "diagramId": "ten-minute-retro"
+          },
+          {
+            "kind": "heading",
+            "text": "How to run it"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Three wins",
+                "note": "Personal counts as much as company — \"started therapy\" belongs next to \"we hit the revenue milestone\". If all three wins are company metrics, that is itself a finding."
+              },
+              {
+                "title": "Three lowlights",
+                "note": "Name them without fixing them yet. Look for the pattern underneath: not enough focus time, the same conversation avoided twice, energy spent managing instead of building."
+              },
+              {
+                "title": "Three learnings, written as rules",
+                "note": "Not observations — rules you can act on next quarter.",
+                "example": "\"Hard conversations don't fix themselves.\" · \"Short-term pain is preferable to long-term suffering — the choice is mine.\" · \"Some things are harder to do than to say.\""
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "The learnings are the product; wins and lowlights are just the evidence. And ten minutes is the point — the retro you actually run beats the perfect one you skip."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "quarterly-retro",
+              "human-9"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "build-my-growth-system",
+              "install-the-operating-rhythm"
+            ]
+          }
+        ]
+      },
+      "commitment-loop": {
+        "intro": "Open every meeting with how the last commitments went; close it with new hard commitments — accountability built into the room, not chased between rooms.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Use it in any recurring meeting that produces updates but no movement — and anywhere follow-up still routes through the founder. The loop turns the meeting itself into the accountability system."
+          },
+          {
+            "kind": "heading",
+            "text": "The loop"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Open with the last commitments",
+                "note": "Each person, briefly, no slides: what I committed last time, and how it went. Done or not done — and if not, what happens next."
+              },
+              {
+                "title": "Run the meeting",
+                "note": "The actual agenda. The loop wraps it; it doesn't replace it."
+              },
+              {
+                "title": "Close with hard commitments",
+                "note": "Each person states what they will do by when — measurable and time-bound. Sharpen vague ones in the room.",
+                "example": "\"I'll talk to some customers\" becomes \"five customer calls booked by Friday.\""
+              },
+              {
+                "title": "Write them where everyone can see them",
+                "note": "They open the next meeting. That's the whole trick."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "The loop does the chasing. If commitments open the next meeting, nobody needs reminding — the system remembers, so the founder doesn't have to. This is the antidote to status theatre: a meeting where things are promised, not just reported."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "operating-cadence",
+              "five-dysfunctions"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "make-ownership-stick",
+              "install-the-operating-rhythm"
+            ]
+          }
+        ]
       }
     },
     "osPages": [
@@ -5866,6 +7361,14 @@
           {
             "label": "Force, Form, Flow",
             "href": "/os/force-form-flow/"
+          },
+          {
+            "label": "Capabilities",
+            "href": "/os/capabilities/"
+          },
+          {
+            "label": "68 Tools",
+            "href": "/os/tools/"
           }
         ]
       },
@@ -5889,7 +7392,7 @@
               {
                 "label": "3. Design the Org",
                 "href": "/os/capabilities/design-the-org/",
-                "status": "draft"
+                "status": "ready"
               },
               {
                 "label": "4. Install the Operating Rhythm",
@@ -5899,7 +7402,7 @@
               {
                 "label": "5. Make Ownership Stick",
                 "href": "/os/capabilities/make-ownership-stick/",
-                "status": "draft"
+                "status": "ready"
               },
               {
                 "label": "6. Build a Culture That Compounds",
@@ -5907,9 +7410,9 @@
                 "status": "ready"
               },
               {
-                "label": "7. Raise the Talent Bar",
-                "href": "/os/capabilities/raise-the-talent-bar/",
-                "status": "draft"
+                "label": "7. Hire & Raise the Talent Bar",
+                "href": "/os/capabilities/hire-and-raise-the-talent-bar/",
+                "status": "ready"
               }
             ]
           },
@@ -5924,15 +7427,10 @@
               {
                 "label": "9. Take Command of My Role",
                 "href": "/os/capabilities/take-command-of-my-role/",
-                "status": "draft"
+                "status": "ready"
               },
               {
-                "label": "10. Operate at the Right Altitude",
-                "href": "/os/capabilities/operate-at-the-right-altitude/",
-                "status": "draft"
-              },
-              {
-                "label": "11. Make the Right Calls",
+                "label": "10. Make the Right Calls",
                 "href": "/os/capabilities/make-the-right-calls/",
                 "status": "ready"
               }
@@ -5942,29 +7440,29 @@
             "label": "Lead Others",
             "items": [
               {
-                "label": "12. Know & Use the Right Leadership Hat",
+                "label": "11. Know & Use the Right Leadership Hat",
                 "href": "/os/capabilities/know-and-use-the-right-leadership-hat/",
-                "status": "draft"
+                "status": "ready"
               },
               {
-                "label": "13. Give Feedback & Hold the Standard",
+                "label": "12. Give Feedback & Hold the Standard",
                 "href": "/os/capabilities/give-feedback-and-hold-the-standard/",
-                "status": "draft"
+                "status": "ready"
               },
               {
-                "label": "14. Build Incredible Relationships",
+                "label": "13. Build Incredible Relationships",
                 "href": "/os/capabilities/build-incredible-relationships/",
-                "status": "draft"
+                "status": "ready"
               },
               {
-                "label": "15. Navigate Conflict & Create Psychological Safety",
+                "label": "14. Navigate Conflict & Create Psychological Safety",
                 "href": "/os/capabilities/navigate-conflict-and-create-psychological-safety/",
-                "status": "draft"
+                "status": "ready"
               },
               {
-                "label": "16. Build Leaders, Not Dependencies",
+                "label": "15. Build Leaders, Not Dependencies",
                 "href": "/os/capabilities/build-leaders-not-dependencies/",
-                "status": "draft"
+                "status": "ready"
               }
             ]
           },
@@ -5972,24 +7470,24 @@
             "label": "Lead the Game",
             "items": [
               {
-                "label": "17. Be Storyteller in Chief",
+                "label": "16. Be Storyteller in Chief",
                 "href": "/os/capabilities/be-storyteller-in-chief/",
                 "status": "ready"
               },
               {
-                "label": "18. Manage Capital and Stakeholders",
+                "label": "17. Manage Capital and Stakeholders",
                 "href": "/os/capabilities/manage-capital-and-stakeholders/",
                 "status": "ready"
               },
               {
-                "label": "19. Find New Capital",
+                "label": "18. Find New Capital",
                 "href": "/os/capabilities/find-new-capital/",
                 "status": "ready"
               },
               {
-                "label": "26. Embrace the AI Revolution",
+                "label": "19. Embrace the AI Revolution",
                 "href": "/os/capabilities/embrace-the-ai-revolution/",
-                "status": "draft"
+                "status": "ready"
               }
             ]
           },
@@ -6027,272 +7525,6 @@
                 "status": "ready"
               }
             ]
-          }
-        ]
-      },
-      {
-        "label": "Tools",
-        "href": "/os/tools/",
-        "items": [
-          {
-            "label": "Symptom Map",
-            "href": "/os/tools/symptom-map/",
-            "status": "ready"
-          },
-          {
-            "label": "CEO Test",
-            "href": "/os/tools/ceo-test/",
-            "status": "ready"
-          },
-          {
-            "label": "Strategy One-Pager",
-            "href": "/os/tools/strategy-one-pager/",
-            "status": "ready"
-          },
-          {
-            "label": "7 Powers",
-            "href": "/os/tools/seven-powers/",
-            "status": "ready"
-          },
-          {
-            "label": "North Star Metric",
-            "href": "/os/tools/north-star-metric/",
-            "status": "draft"
-          },
-          {
-            "label": "Values Deck",
-            "href": "/os/tools/values-deck/",
-            "status": "ready"
-          },
-          {
-            "label": "OKRs",
-            "href": "/os/tools/okrs/",
-            "status": "draft"
-          },
-          {
-            "label": "Company Health Scorecard",
-            "href": "/os/tools/company-health-scorecard/",
-            "status": "ready"
-          },
-          {
-            "label": "Operating Cadence",
-            "href": "/os/tools/operating-cadence/",
-            "status": "draft"
-          },
-          {
-            "label": "Quarterly Retro",
-            "href": "/os/tools/quarterly-retro/",
-            "status": "draft"
-          },
-          {
-            "label": "Calendar Audit",
-            "href": "/os/tools/calendar-audit/",
-            "status": "draft"
-          },
-          {
-            "label": "Two-Hour Constraint",
-            "href": "/os/tools/two-hour-constraint/",
-            "status": "ready"
-          },
-          {
-            "label": "Zone of Genius",
-            "href": "/os/tools/zone-of-genius/",
-            "status": "ready"
-          },
-          {
-            "label": "Delegation Ladder",
-            "href": "/os/tools/delegation-ladder/",
-            "status": "ready"
-          },
-          {
-            "label": "Alignment vs. Autonomy",
-            "href": "/os/tools/alignment-autonomy/",
-            "status": "ready"
-          },
-          {
-            "label": "Six Thinking Hats",
-            "href": "/os/tools/six-thinking-hats/",
-            "status": "ready"
-          },
-          {
-            "label": "Create, Collaborate, Communicate",
-            "href": "/os/tools/three-cs-decision/",
-            "status": "ready"
-          },
-          {
-            "label": "Double Diamond",
-            "href": "/os/tools/double-diamond/",
-            "status": "ready"
-          },
-          {
-            "label": "First Principles Thinking",
-            "href": "/os/tools/first-principles-thinking/",
-            "status": "ready"
-          },
-          {
-            "label": "Delegation Timeline",
-            "href": "/os/tools/delegation-timeline/",
-            "status": "ready"
-          },
-          {
-            "label": "Ownership Map",
-            "href": "/os/tools/ownership-map/",
-            "status": "ready"
-          },
-          {
-            "label": "Accountability Dial",
-            "href": "/os/tools/accountability-dial/",
-            "status": "ready"
-          },
-          {
-            "label": "Nonviolent Communication",
-            "href": "/os/tools/non-violent-communication/",
-            "status": "ready"
-          },
-          {
-            "label": "1:1 Structure",
-            "href": "/os/tools/one-to-one-structure/",
-            "status": "draft"
-          },
-          {
-            "label": "Relationship One-Pager",
-            "href": "/os/tools/relationship-one-pager/",
-            "status": "ready"
-          },
-          {
-            "label": "Coaching Questions",
-            "href": "/os/tools/coaching-questions/",
-            "status": "draft"
-          },
-          {
-            "label": "Leadership Hats",
-            "href": "/os/tools/leadership-hats/",
-            "status": "ready"
-          },
-          {
-            "label": "Performance × Culture Grid",
-            "href": "/os/tools/performance-culture-grid/",
-            "status": "ready"
-          },
-          {
-            "label": "SBI Feedback",
-            "href": "/os/tools/sbi-feedback/",
-            "status": "ready"
-          },
-          {
-            "label": "KSS Feedback",
-            "href": "/os/tools/kss-feedback/",
-            "status": "ready"
-          },
-          {
-            "label": "Relationship Design Canvas",
-            "href": "/os/tools/relationship-design-canvas/",
-            "status": "ready"
-          },
-          {
-            "label": "Psychological Safety Diagnostic",
-            "href": "/os/tools/psychological-safety-diagnostic/",
-            "status": "draft"
-          },
-          {
-            "label": "Board Pack",
-            "href": "/os/tools/board-pack/",
-            "status": "draft"
-          },
-          {
-            "label": "Investor Update",
-            "href": "/os/tools/investor-update/",
-            "status": "draft"
-          },
-          {
-            "label": "Human 9",
-            "href": "/os/tools/human-9/",
-            "status": "ready"
-          },
-          {
-            "label": "Energy Audit",
-            "href": "/os/tools/energy-audit/",
-            "status": "draft"
-          },
-          {
-            "label": "Habit Stacks",
-            "href": "/os/tools/habit-stacks/",
-            "status": "ready"
-          },
-          {
-            "label": "Personal Board",
-            "href": "/os/tools/personal-board/",
-            "status": "draft"
-          },
-          {
-            "label": "7 Core Founder Needs",
-            "href": "/os/tools/seven-founder-needs/",
-            "status": "ready"
-          },
-          {
-            "label": "Two Equilibria Map",
-            "href": "/os/tools/two-equilibria-map/",
-            "status": "ready"
-          },
-          {
-            "label": "Burnout Playbook",
-            "href": "/os/tools/burnout-playbook/",
-            "status": "draft"
-          },
-          {
-            "label": "Anti-Wasteman System",
-            "href": "/os/tools/anti-wasteman-system/",
-            "status": "ready"
-          },
-          {
-            "label": "Live It Today",
-            "href": "/os/tools/live-it-today/",
-            "status": "ready"
-          },
-          {
-            "label": "Super Self",
-            "href": "/os/tools/super-self/",
-            "status": "ready"
-          },
-          {
-            "label": "Saboteurs Quiz",
-            "href": "/os/tools/saboteurs-quiz/",
-            "status": "ready"
-          },
-          {
-            "label": "Strength in Shadow",
-            "href": "/os/tools/strength-in-shadow/",
-            "status": "ready"
-          },
-          {
-            "label": "Council of Me",
-            "href": "/os/tools/council-of-me/",
-            "status": "ready"
-          },
-          {
-            "label": "Four Disciplines of Organizational Health",
-            "href": "/os/tools/four-disciplines/",
-            "status": "ready"
-          },
-          {
-            "label": "Five Dysfunctions of a Team",
-            "href": "/os/tools/five-dysfunctions/",
-            "status": "ready"
-          },
-          {
-            "label": "Six Critical Questions",
-            "href": "/os/tools/six-critical-questions/",
-            "status": "ready"
-          },
-          {
-            "label": "Personal Histories + Trust",
-            "href": "/os/tools/personal-histories-trust/",
-            "status": "ready"
-          },
-          {
-            "label": "Blob Tree",
-            "href": "/os/tools/blob-tree/",
-            "status": "ready"
           }
         ]
       }
