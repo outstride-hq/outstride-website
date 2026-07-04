@@ -161,13 +161,6 @@ export type Rhythm = {
   description: string;
 };
 
-export type ToolBacklogCategory = {
-  id: ToolLibraryCategoryId;
-  title: string;
-  question: string;
-  items: string[];
-};
-
 export type SymptomMapEntry = {
   id: string;
   symptom: string;
@@ -282,71 +275,6 @@ export const toolLibraryCategories: Array<{
     letter: "G",
     title: "Human tools",
     question: "How do I stay whole and grow?",
-  },
-];
-
-export const futureToolBacklog: ToolBacklogCategory[] = [
-  {
-    id: "diagnostic-tools",
-    title: "Diagnostic",
-    question: "What is going on?",
-    items: [
-      "RAG Company Status",
-      "Human 9 / Life Wheel",
-    ],
-  },
-  {
-    id: "direction-tools",
-    title: "Direction",
-    question: "Where are we going?",
-    items: [
-      "Strategy One-Pager",
-      "North Star + Health Metrics",
-    ],
-  },
-  {
-    id: "operating-tools",
-    title: "Operating",
-    question: "How does this run?",
-    items: [
-      "Operating Cadence Map",
-      "Meeting Jobs Map",
-      "Decision Gate / Shots on Goal",
-      "30/60/90 Performance Plan",
-    ],
-  },
-  {
-    id: "leadership-tools",
-    title: "Leadership",
-    question: "How do I lead others?",
-    items: [
-      "Delegation Ladder",
-      "Drive vs Hold-Accountable Map",
-      "SBI Feedback",
-      "KSS Feedback",
-      "Performance × Culture Quadrant",
-      "Dependency Map",
-    ],
-  },
-  {
-    id: "relationship-tools",
-    title: "Relationship",
-    question: "How do we work together?",
-    items: [
-      "Cofounder Rules of Engagement",
-      "Psychological Safety Diagnostic",
-      "Repair Conversation Script",
-    ],
-  },
-  {
-    id: "capital-tools",
-    title: "Capital",
-    question: "How do we manage belief, money and stakeholders?",
-    items: [
-      "Investor Update Template",
-      "Board Pack Template",
-      "Investor Hell Yes Test",
-    ],
   },
 ];
 
@@ -952,7 +880,8 @@ export const capabilities: Capability[] = [
     ],
     toolIds: [
       "two-equilibria-map",
-      "burnout-playbook",
+      "personal-manual",
+      "personal-playbook",
       "habit-stacks",
     ],
     rhythmIds: [],
@@ -1020,7 +949,7 @@ export const capabilities: Capability[] = [
     toolIds: [
       "saboteurs-quiz",
       "strength-in-shadow",
-      "council-of-me",
+      "parts-work",
       "habit-stacks",
     ],
     rhythmIds: [],
@@ -1042,6 +971,7 @@ export const capabilities: Capability[] = [
     ],
     toolIds: [
       "live-it-today",
+      "vision-board",
       "anti-wasteman-system",
       "habit-stacks",
     ],
@@ -2189,10 +2119,21 @@ export const tools: Tool[] = [
     categoryId: "human-tools",
     type: "framework",
     format: ["solo"],
+    moments: ["design", "deliver"],
+    depth: ["operating"],
+    frequency: ["quarterly", "as-needed"],
     layerIds: ["human"],
     capabilityIds: ["build-my-growth-system", "make-the-right-calls"],
     description:
-      "Map the coach, mentors, peers and advisors who support your growth.",
+      "Assemble a board of people you know and trust — deliberately wide in backgrounds — that supports your growth and gets called on when you face big decisions.",
+    accreditation: {
+      note: "Widely used \"personal board of directors\" concept — adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "relationship-design-canvas",
+      "super-self",
+      "premortem",
+    ],
   },
   {
     id: "seven-founder-needs",
@@ -2230,19 +2171,83 @@ export const tools: Tool[] = [
     accreditation: {
       note: "Outstride original",
     },
-    relatedToolIds: ["burnout-playbook", "habit-stacks", "energy-audit"],
+    relatedToolIds: [
+      "personal-manual",
+      "personal-playbook",
+      "habit-stacks",
+      "energy-audit",
+    ],
   },
   {
-    id: "burnout-playbook",
-    title: "Burnout Playbook",
+    id: "personal-manual",
+    title: "Personal Manual",
     categoryId: "human-tools",
     type: "template",
     format: ["solo", "one-to-one"],
+    moments: ["diagnose", "design"],
+    depth: ["operating", "inner-work"],
+    frequency: ["quarterly", "as-needed"],
+    layerIds: ["human"],
+    capabilityIds: [
+      "build-resilience-and-recovery",
+      "manage-my-energy-system",
+    ],
+    description:
+      "A written manual of how you work: what your good-good and bad-bad states look like, the triggers that tip you from good to bad, and the recovery methods that bring you back.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: [
+      "two-equilibria-map",
+      "personal-playbook",
+      "energy-audit",
+      "seven-founder-needs",
+    ],
+  },
+  {
+    id: "personal-playbook",
+    title: "Personal Playbook",
+    categoryId: "human-tools",
+    type: "template",
+    format: ["solo", "one-to-one"],
+    moments: ["design", "deliver"],
+    depth: ["operating", "inner-work"],
+    frequency: ["as-needed"],
     layerIds: ["human"],
     capabilityIds: ["build-resilience-and-recovery"],
     description:
-      "Playbooks for recognising burnout early and recovering deliberately.",
-    relatedToolIds: ["two-equilibria-map", "habit-stacks"],
+      "Pre-committed if-then rules for running yourself — \"if my burnout score is above 7, I book a vacation\" — written while you're well so you don't negotiate with yourself when you're not.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: [
+      "personal-manual",
+      "two-equilibria-map",
+      "habit-stacks",
+    ],
+  },
+  {
+    id: "vision-board",
+    title: "Vision Board",
+    categoryId: "human-tools",
+    type: "template",
+    format: ["solo"],
+    moments: ["define", "deliver"],
+    depth: ["inner-work"],
+    frequency: ["annually", "weekly"],
+    layerIds: ["human"],
+    capabilityIds: ["build-a-life-worth-scaling-for"],
+    description:
+      "A visual board of how life should look five years from now — with end-of-year versions if that feels closer — reviewed on a rhythm through your habit stacks so the destination stays in view.",
+    accreditation: {
+      note: "Widely used visualisation practice — adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "live-it-today",
+      "human-9",
+      "habit-stacks",
+      "anti-wasteman-system",
+    ],
   },
   {
     id: "anti-wasteman-system",
@@ -2319,7 +2324,7 @@ export const tools: Tool[] = [
     },
     relatedToolIds: [
       "strength-in-shadow",
-      "council-of-me",
+      "parts-work",
       "habit-stacks",
       "super-self",
     ],
@@ -2340,23 +2345,26 @@ export const tools: Tool[] = [
       sourceUrl: "https://www.corequality.nl/trainingen?lang=en",
       note: "Outstride adaptation of the overused-strength insight; renamed here because the trademarked model is reserved for certified commercial use",
     },
-    relatedToolIds: ["saboteurs-quiz", "council-of-me", "habit-stacks"],
+    relatedToolIds: ["saboteurs-quiz", "parts-work", "habit-stacks"],
   },
   {
-    id: "council-of-me",
-    title: "Council of Me",
+    id: "parts-work",
+    title: "Parts Work",
     categoryId: "human-tools",
     type: "exercise",
     format: ["solo", "one-to-one"],
+    moments: ["diagnose", "design"],
+    depth: ["inner-work"],
+    frequency: ["as-needed"],
     layerIds: ["human"],
     capabilityIds: ["face-my-shadow"],
     description:
-      "Personify your recurring selves, hear what each is trying to protect, and choose which version of you gets the microphone.",
+      "Give each of your inner parts a name and a seat — the self-critic, the striver, the vacationer — let each say what it wants for you, and stay in charge of the final call.",
     accreditation: {
       originator: "Richard C. Schwartz",
       source: "Internal Family Systems / No Bad Parts",
       sourceUrl: "https://ifs-institute.com/nobadparts",
-      note: "Light-touch founder reflection exercise inspired by parts-work; not therapy",
+      note: "Light-touch founder reflection exercise inspired by parts work; not therapy",
     },
     relatedToolIds: [
       "saboteurs-quiz",
@@ -2495,6 +2503,83 @@ export const tools: Tool[] = [
       "psychological-safety-diagnostic",
       "non-violent-communication",
     ],
+  },
+  {
+    id: "rag-company-status",
+    title: "RAG Company Status",
+    categoryId: "diagnostic-tools",
+    type: "diagnostic",
+    format: ["team", "company"],
+    layerIds: ["company"],
+    capabilityIds: ["install-the-operating-rhythm", "chart-the-path"],
+    description:
+      "A red-amber-green traffic-light view of company health and quarterly goals that surfaces where the founder needs to rove and repair.",
+  },
+  {
+    id: "meeting-jobs-map",
+    title: "Meeting Jobs Map",
+    categoryId: "operating-tools",
+    type: "framework",
+    format: ["team", "company"],
+    layerIds: ["company"],
+    capabilityIds: ["install-the-operating-rhythm"],
+    description:
+      "Clarifies what each recurring meeting is for — and what it is not — so the operating calendar does real work.",
+    relatedToolIds: ["operating-cadence", "calendar-audit"],
+  },
+  {
+    id: "decision-gate",
+    title: "Decision Gate / Shots on Goal",
+    categoryId: "operating-tools",
+    type: "framework",
+    format: ["team", "company"],
+    layerIds: ["company", "founder"],
+    capabilityIds: ["make-the-right-calls", "install-the-operating-rhythm"],
+    description:
+      "A gate for major decisions and a cap on simultaneous bets so the company takes focused shots instead of scattering effort.",
+  },
+  {
+    id: "dependency-map",
+    title: "Dependency Map",
+    categoryId: "leadership-tools",
+    type: "diagnostic",
+    format: ["solo", "one-to-one", "team"],
+    layerIds: ["founder", "company"],
+    capabilityIds: ["build-leaders-not-dependencies"],
+    description:
+      "Maps where the company still depends on specific people — especially the founder — so delegation targets become visible.",
+    relatedToolIds: ["ownership-map", "delegation-ladder"],
+  },
+  {
+    id: "repair-conversation-script",
+    title: "Repair Conversation Script",
+    categoryId: "relationship-tools",
+    type: "conversation",
+    format: ["one-to-one", "cofounder"],
+    layerIds: ["founder"],
+    capabilityIds: [
+      "navigate-conflict-and-create-psychological-safety",
+      "build-incredible-relationships",
+    ],
+    description:
+      "A structured script for repairing a relationship after rupture — timing, language and moves that rebuild trust without re-litigating the fight.",
+    relatedToolIds: [
+      "non-violent-communication",
+      "crossing-the-line",
+      "relationship-design-canvas",
+    ],
+  },
+  {
+    id: "investor-hell-yes-test",
+    title: "Investor Hell Yes Test",
+    categoryId: "capital-tools",
+    type: "diagnostic",
+    format: ["solo", "one-to-one"],
+    layerIds: ["founder"],
+    capabilityIds: ["find-new-capital", "manage-capital-and-stakeholders"],
+    description:
+      "A pre-fundraise filter that defines what would make the next round a hell yes — for you, your cofounder and the market — before you start the process.",
+    relatedToolIds: ["investor-update", "premortem"],
   },
 ];
 

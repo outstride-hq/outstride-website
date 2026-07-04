@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import {
   formatToolType,
-  futureToolBacklog,
+  getToolEffectiveStatus,
   toolLibraryCategories,
   tools,
   toolsHowToUse,
@@ -11,7 +11,6 @@ import {
   type Tool,
   type ToolType,
 } from "@/lib/os";
-import { hasToolContent } from "@/lib/tools-content";
 import { OsSectionHeader } from "./OsPageHeader";
 
 const flagshipToolIds = new Set([
@@ -52,16 +51,48 @@ function groupToolsByCategory(filteredTools: Tool[]) {
     .filter((group) => group.items.length > 0);
 }
 
+function renderToolCard(tool: Tool, variant: "ready" | "draft") {
+  const isFlagship = flagshipToolIds.has(tool.id);
+  const isDraft = variant === "draft";
+
+  return (
+    <div className="featured-box p-4 h-100">
+      {isFlagship ? <p className="ui-kicker mb-2">Flagship tool</p> : null}
+      {isDraft ? (
+        <p className="os-draft-banner-label mb-2">Draft</p>
+      ) : null}
+      <h4 className="text-5 fw-700 mb-1">{tool.title}</h4>
+      <p className="os-card-meta mb-2">{formatToolType(tool.type)}</p>
+      <p className="text-muted small mb-0">{tool.description}</p>
+      <p
+        className={`${isDraft ? "text-muted" : "text-primary"} fw-700 small mb-0 mt-3`}
+      >
+        {isDraft ? "View draft →" : "View tool →"}
+      </p>
+    </div>
+  );
+}
+
 export default function ToolPreview() {
   const [activeType, setActiveType] = useState<ToolType | "all">("all");
 
+  const readyTools = useMemo(
+    () => tools.filter((tool) => getToolEffectiveStatus(tool) === "ready"),
+    [],
+  );
+
+  const draftTools = useMemo(
+    () => tools.filter((tool) => getToolEffectiveStatus(tool) === "draft"),
+    [],
+  );
+
   const typeCounts = useMemo(() => {
     const counts = new Map<ToolType, number>();
-    for (const tool of tools) {
+    for (const tool of readyTools) {
       counts.set(tool.type, (counts.get(tool.type) ?? 0) + 1);
     }
     return counts;
-  }, []);
+  }, [readyTools]);
 
   const availableTypes = useMemo(
     () => toolTypeOrder.filter((type) => (typeCounts.get(type) ?? 0) > 0),
@@ -71,14 +102,19 @@ export default function ToolPreview() {
   const filteredTools = useMemo(
     () =>
       activeType === "all"
-        ? tools
-        : tools.filter((tool) => tool.type === activeType),
-    [activeType],
+        ? readyTools
+        : readyTools.filter((tool) => tool.type === activeType),
+    [activeType, readyTools],
   );
 
   const toolsByCategory = useMemo(
     () => groupToolsByCategory(filteredTools),
     [filteredTools],
+  );
+
+  const draftToolsByCategory = useMemo(
+    () => groupToolsByCategory(draftTools),
+    [draftTools],
   );
 
   const totalVisible = filteredTools.length;
@@ -94,7 +130,7 @@ export default function ToolPreview() {
         <OsSectionHeader
           eyebrow="Filter"
           title="Browse by type"
-          description={`${totalVisible} tool${totalVisible === 1 ? "" : "s"} shown`}
+          description={`${totalVisible} published tool${totalVisible === 1 ? "" : "s"} shown`}
         />
         <div
           className="os-filter-bar d-flex flex-wrap gap-2"
@@ -108,7 +144,7 @@ export default function ToolPreview() {
             onClick={() => setActiveType("all")}
           >
             All
-            <span className="os-filter-chip-count">{tools.length}</span>
+            <span className="os-filter-chip-count">{readyTools.length}</span>
           </button>
           {availableTypes.map((type) => (
             <button
@@ -147,68 +183,50 @@ export default function ToolPreview() {
               } - ${group.category.question}`}
             />
             <div className="row g-3">
-              {group.items.map((tool) => {
-                const isFlagship = flagshipToolIds.has(tool.id);
-                const card = (
-                  <div className="featured-box p-4 h-100">
-                    {isFlagship ? (
-                      <p className="ui-kicker mb-2">Flagship tool</p>
-                    ) : null}
-                    <h4 className="text-5 fw-700 mb-1">{tool.title}</h4>
-                    <p className="os-card-meta mb-2">
-                      {formatToolType(tool.type)}
-                    </p>
-                    <p className="text-muted small mb-0">{tool.description}</p>
-                    {hasToolContent(tool.id) ? (
-                      <p className="text-primary fw-700 small mb-0 mt-3">
-                        View tool →
-                      </p>
-                    ) : null}
-                  </div>
-                );
-
-                return (
-                  <div key={tool.id} className="col-md-6 col-lg-4">
-                    {hasToolContent(tool.id) ? (
-                      <a
-                        href={`/os/tools/${tool.id}/`}
-                        className="text-decoration-none"
-                      >
-                        {card}
-                      </a>
-                    ) : (
-                      card
-                    )}
-                  </div>
-                );
-              })}
+              {group.items.map((tool) => (
+                <div key={tool.id} className="col-md-6 col-lg-4">
+                  <a
+                    href={`/os/tools/${tool.id}/`}
+                    className="text-decoration-none"
+                  >
+                    {renderToolCard(tool, "ready")}
+                  </a>
+                </div>
+              ))}
             </div>
           </section>
         ))
       )}
 
-      <section className="os-content-card p-4 p-lg-5 mb-5">
-        <OsSectionHeader
-          eyebrow="Future backlog"
-          title="Next tools to build"
-          description="Shortlist grouped by library category."
-        />
-        <div className="row g-3">
-          {futureToolBacklog.map((group) => (
-            <div key={group.id} className="col-lg-6">
-              <div className="featured-box p-4 h-100">
-                <h3 className="text-6 fw-700 mb-2">{group.title}</h3>
-                <p className="text-muted small mb-3">{group.question}</p>
-                <ul className="text-muted mb-0 ps-3">
-                  {group.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+      {draftToolsByCategory.length > 0 ? (
+        <section className="os-content-card p-4 p-lg-5 mb-5">
+          <OsSectionHeader
+            eyebrow="Draft tools"
+            title="Tools to build"
+            description={`${draftTools.length} draft tool${
+              draftTools.length === 1 ? "" : "s"
+            } grouped by library category.`}
+          />
+          {draftToolsByCategory.map((group) => (
+            <div key={group.category.id} className="mb-4">
+              <h3 className="text-6 fw-700 mb-1">{group.category.title}</h3>
+              <p className="text-muted small mb-3">{group.category.question}</p>
+              <div className="row g-3">
+                {group.items.map((tool) => (
+                  <div key={tool.id} className="col-md-6 col-lg-4">
+                    <a
+                      href={`/os/tools/${tool.id}/`}
+                      className="text-decoration-none"
+                    >
+                      {renderToolCard(tool, "draft")}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <div className="ui-surface p-4">
         <p className="ui-kicker mb-2">Tagging</p>

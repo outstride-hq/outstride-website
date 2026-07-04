@@ -6,7 +6,6 @@ import { articles, services, testimonials } from "../src/lib/data";
 import {
   capabilities,
   capabilityGroups,
-  futureToolBacklog,
   howOsRunsFeltProblems,
   howOsRunsQuarterlyIntro,
   howOsRunsQuarterlySteps,
@@ -59,7 +58,6 @@ async function main() {
       toolsTaggingNote,
       toolsHowToUse,
       toolLibraryCategories,
-      futureToolBacklog,
       layers,
       stages,
       processSteps,
