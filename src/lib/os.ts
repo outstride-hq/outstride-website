@@ -292,8 +292,6 @@ export const futureToolBacklog: ToolBacklogCategory[] = [
     question: "What is going on?",
     items: [
       "RAG Company Status",
-      "Energy + Nervous-System Score",
-      "Function Scorecard",
       "Human 9 / Life Wheel",
     ],
   },
@@ -844,7 +842,8 @@ export const capabilities: Capability[] = [
     title: "Be Storyteller in Chief",
     layerId: "founder",
     groupId: "lead-the-game",
-    summary: "",
+    summary:
+      "A founder who'd gone quiet because no single story felt big enough committed to one story at every all-hands — within a quarter, candidates were quoting it back in interviews.",
     bullets: [
       "Communicate the company's direction in a way people believe, remember and act on.",
       "Adapt the story for team, candidates, customers, investors and board.",
@@ -891,11 +890,7 @@ export const capabilities: Capability[] = [
       "Build and manage a fundraising pipeline with discipline.",
       "Turn company progress into the capital required for the next stage.",
     ],
-    toolIds: [
-      "chapters-and-squads",
-      "team-traffic-lighting",
-      "company-health-scorecard",
-    ],
+    toolIds: ["company-health-scorecard"],
     rhythmIds: [],
     order: 18,
   },
@@ -1298,7 +1293,8 @@ export const tools: Tool[] = [
     type: "framework",
     format: ["solo", "one-to-one", "team", "company"],
     layerIds: ["company"],
-    capabilityIds: ["map-the-destination"],
+    capabilityIds: [
+      "embrace-the-ai-revolution","map-the-destination"],
     description:
       "A framework for identifying durable competitive advantage — the benefit and barrier that let a business sustain superior returns.",
     accreditation: {
@@ -1635,7 +1631,11 @@ export const tools: Tool[] = [
     type: "framework",
     format: ["solo", "team", "company"],
     layerIds: ["founder", "company"],
-    capabilityIds: ["make-the-right-calls", "build-leaders-not-dependencies"],
+    capabilityIds: [
+      "make-the-right-calls",
+      "build-leaders-not-dependencies",
+      "install-the-operating-rhythm",
+    ],
     description:
       "A three-mode model for running a decision — how much you create yourself, who you collaborate with, and how you communicate it — so people know whether they're shaping a call or hearing one.",
     diagramId: "three-cs-decision",
