@@ -1934,7 +1934,8 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         action: "Install the weekly ownership review",
-        note: "Owners bring their own traffic lights. Red or amber is fine — arriving without a plan is not. Run it two weeks in a row and watch the chasing stop.",
+        note: "Owners bring their own traffic lights, the meeting opens with last week's commitments and closes with new hard ones — measurable, time-bound. Run it two weeks in a row and watch the chasing stop.",
+        toolId: "commitment-loop",
       },
       {
         action: "Run the pyramid check",

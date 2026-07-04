@@ -348,22 +348,6 @@ export const futureToolBacklog: ToolBacklogCategory[] = [
       "Investor Hell Yes Test",
     ],
   },
-  {
-    id: "human-tools",
-    title: "Human",
-    question: "How do I stay whole and grow?",
-    items: [
-      "Parts Work / Sub-Personas",
-      "Protector Voices",
-      "Council Exercise",
-      "Cycle Mapping",
-      "Inner Critic / Saboteur Diagnostic",
-      "Vision Board",
-      "Burnout Playbook",
-      "Recovery Anchors",
-      "Personal Board",
-    ],
-  },
 ];
 
 export const layers: Layer[] = [
@@ -576,6 +560,7 @@ export const capabilities: Capability[] = [
       "Reduce reactive chaos by giving planning, review and accountability a home.",
     ],
     toolIds: [
+      "commitment-loop",
       "operating-cadence",
       "okrs",
       "quarterly-retro",
@@ -601,6 +586,7 @@ export const capabilities: Capability[] = [
       "Build a culture of accountability: progress is visible in the operating rhythm, and anything not green arrives with a plan.",
     ],
     toolIds: [
+      "commitment-loop",
       "ownership-map",
       "team-traffic-lighting",
       "five-dysfunctions",
@@ -1498,6 +1484,27 @@ export const tools: Tool[] = [
       note: "Outstride original",
     },
     relatedToolIds: ["okrs", "quarterly-retro"],
+  },
+  {
+    id: "commitment-loop",
+    title: "Commitment Loop",
+    categoryId: "operating-tools",
+    type: "rhythm",
+    format: ["team", "cofounder", "one-to-one"],
+    moments: ["deliver"],
+    depth: ["operating"],
+    frequency: ["weekly"],
+    layerIds: ["company"],
+    capabilityIds: [
+      "make-ownership-stick",
+      "install-the-operating-rhythm",
+    ],
+    description:
+      "A meeting ritual that opens with how the last commitments went and closes with new measurable, time-bound commitments — so accountability lives in the system, not in the founder's follow-up.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: ["operating-cadence", "five-dysfunctions", "okrs"],
   },
   {
     id: "ai-adoption-cadence",

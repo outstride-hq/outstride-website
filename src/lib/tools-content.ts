@@ -3171,6 +3171,52 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "commitment-loop": {
+    intro:
+      "Open every meeting with how the last commitments went; close it with new hard commitments — accountability built into the room, not chased between rooms.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use it in any recurring meeting that produces updates but no movement — and anywhere follow-up still routes through the founder. The loop turns the meeting itself into the accountability system.",
+      },
+      {
+        kind: "heading",
+        text: "The loop",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Open with the last commitments",
+            note: "Each person, briefly, no slides: what I committed last time, and how it went. Done or not done — and if not, what happens next.",
+          },
+          {
+            title: "Run the meeting",
+            note: "The actual agenda. The loop wraps it; it doesn't replace it.",
+          },
+          {
+            title: "Close with hard commitments",
+            note: "Each person states what they will do by when — measurable and time-bound. Sharpen vague ones in the room.",
+            example:
+              "\"I'll talk to some customers\" becomes \"five customer calls booked by Friday.\"",
+          },
+          {
+            title: "Write them where everyone can see them",
+            note: "They open the next meeting. That's the whole trick.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The loop does the chasing. If commitments open the next meeting, nobody needs reminding — the system remembers, so the founder doesn't have to. This is the antidote to status theatre: a meeting where things are promised, not just reported.",
+      },
+      { kind: "toolRef", toolIds: ["operating-cadence", "five-dysfunctions"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["make-ownership-stick", "install-the-operating-rhythm"],
+      },
+    ],
+  },
 };
 
 export function getToolContent(toolId: string): ToolContent | undefined {

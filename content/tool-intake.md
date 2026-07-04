@@ -318,6 +318,195 @@ called team traffic lighting and reference it.")_
    chapters-and-squads, okrs, company-health-scorecard.
 
 
+### Stakeholder Map (`stakeholder-map`) — NEW
+
+_(Captured from Ben's whiteboard screenshots, 2026-07-04. "First it's a mapping of key
+stakeholders + scoring them each. You can include e.g. your co-founder and also your direct
+reports." All names on the original board stripped; roles and numbers changed.)_
+
+1. Map the people the company most depends on — cofounder, direct reports, board — and give
+   each two scores: how the relationship is working, and how confident you are in their
+   performance. The gaps tell you where to invest next.
+2. Quarterly reviews, or whenever the founder feels people-risk but can't name where it sits.
+3. From the board: "You" sticky in the middle; cofounder to the side, direct reports below;
+   one score written on the arrow to each person, a second score written under their sticky.
+   One report carried a goat emoji (GOAT). One person scored high on the arrow but very low
+   under the sticky — that same person was the subject of the Performance × Culture deep-dive
+   board captured the same day.
+4. Two scores, not one: a warm relationship score sitting on top of a very low performance
+   score is the signature of a hard conversation being avoided.
+5. Yes — sticky-note org-map: You (teal) with arrows to cofounder and reports (blue), two
+   scores per person. Grid diagram built as `stakeholder-map`.
+6. Outstride original.
+7. build-incredible-relationships, manage-capital-and-stakeholders. Related:
+   relationship-design-canvas, performance-culture-grid, one-to-one-structure, kss-feedback.
+
+**Open questions:**
+
+- Exact meaning of the two scores is inferred from the board (arrow = relationship quality,
+  under-sticky = performance confidence). Confirm with Ben; the drafted page uses this
+  reading.
+- Should board members / investors get both scores or relationship-only?
+
+### Company 7 (`company-7`) — NEW
+
+_(Captured from Ben's whiteboard screenshots, 2026-07-04. The company-layer sibling of
+Human 9.)_
+
+1. A ten-minute company diagnostic: score seven areas 0–10 — business growth, strategy,
+   fundraising / runway, culture, hiring & org structure, founder / C-level performance,
+   management's performance — to find where to look next.
+2. Coaching check-ins, monthly reviews, quarterly planning; whenever "how's the company?"
+   gets a vague answer.
+3. Seven yellow stickies (verbatim from the board): Business growth · Strategy ·
+   Fundraising / Runway · Culture · Hiring & Org structure · Founder / C-level Performance ·
+   Management's Performance. Score each 0–10, then go deep on the lowest one or two.
+4. Founder and management performance are scored like everything else — most founders will
+   happily score everything except themselves.
+5. Yes — the sticky board itself. Grid diagram built as `company-7`, matching the Human 9
+   Miro style.
+6. Outstride original.
+7. Maps area-by-area to: chart-the-path (growth), map-the-destination (strategy),
+   find-new-capital (fundraising/runway), build-a-culture-that-compounds (culture),
+   design-the-org (hiring & org), take-command-of-my-role (founder performance),
+   build-leaders-not-dependencies (management performance). Related:
+   company-health-scorecard (the deeper version), human-9, team-traffic-lighting.
+
+### The 10-Minute Retro (`ten-minute-retro`) — NEW
+
+_(Captured from Ben's whiteboard screenshots, 2026-07-04. "The 10 minute retro (3 wins,
+3 lowlights, 3 learnings)." The example board was Ben's own Q2 retro; one personal lowlight
+replaced with a composite, the rest kept close to verbatim.)_
+
+1. A ten-minute quarterly reflection — three wins, three lowlights, three learnings — that
+   turns the quarter into rules you actually act on.
+2. End of every quarter (works monthly too); solo, with a coach, or with a cofounder.
+3. Nine stickies, ten minutes: 3 wins (personal counts as much as company — "starting somatic
+   therapy" sat next to "we hit revenue"), 3 lowlights (name them, don't fix them yet),
+   3 learnings written as rules. Learnings from the source board, kept near-verbatim:
+   "Hard conversations don't fix themselves" · "Short term pain preferable to long term
+   suffering — the choice is mine" · "Some things are harder to do than say / startup
+   culture."
+4. The learnings are the product; wins and lowlights are just the evidence. And ten minutes
+   is the point — the retro you actually run beats the perfect one you skip.
+5. Yes — 3×3 sticky board (wins blue, lowlights orange, learnings green). Grid diagram built
+   as `ten-minute-retro` with a composite example.
+6. Outstride original — a founder-sized cut of the classic team retrospective.
+7. build-my-growth-system, install-the-operating-rhythm. Related: quarterly-retro, human-9,
+   kss-feedback.
+
+**Anonymization note:** the original board's lowlight referencing a family member's health
+("# Isy deregulations") was replaced with a composite ("sleep and training fell apart").
+
+### Notes from the 2026-07-04 whiteboard batch (existing tools)
+
+- **human-9** — Ben's real scored board captured (Relationships 7+/2/5+, Health 3+/7,
+  Lifestyle 2/8, Money ?/?). Matches the existing tool and `human-9-miro` diagram; no site
+  changes needed. Real scores intentionally NOT carried onto the site.
+- **performance-culture-grid** — worked-usage board captured: one person plotted mid-culture /
+  low-performance, with 3 culture criteria (hunger 6.5, proactive 4, reliable 5) and 3
+  performance outcomes (get calls — 3/10, excel at conferences — ?, help a teammate close —
+  6/10). Enrichment shipped: anonymized worked example added to the tool page, including the
+  insight that a "?" score means you lack evidence — collect it, don't guess. Named
+  individuals stripped.
+
+### Human-tools batch (2026-07-04) — Parts Work, Personal Manual, Vision Board, Personal Playbook, Personal Board + kills
+
+_(Captured from Ben's chat notes, 2026-07-04. Ben: "we need to build out these tools. you can
+look for the context in the linked capabilities. feel free to fill out if too short." Raw dump
+kept close to verbatim below; drafting decisions noted after each.)_
+
+#### Parts Work / Sub-Personas (`parts-work`) — combine with Protector Voices
+
+Raw: "idea is to give names and space to all your parts e.g. 'self-critical ben' 'ambitious
+ben' 'vacation ben'. give them all time and space to express what they want but understand
+that you're in charge. undersatnd that even the parts of yourself that you don't like still
+want the best for you, but that they might have learend some behaviour that was useful in the
+past, but no no longer."
+
+1. Give each of your inner parts a name and a seat — the self-critic, the striver, the
+   protector — hear what each wants for you, and stay in charge of the final call.
+2. When the same inner voices keep hijacking you and you can't tell them apart; pairs with
+   the Saboteurs Quiz output.
+3. Name the parts ("self-critical Ben", "ambitious Ben", "vacation Ben") → give each time and
+   space to say what it wants → remember you're in charge → understand that even disliked
+   parts want the best for you; they learned a behaviour that was useful once but no longer.
+4. Even the parts you don't like are on your side — they're running an old protection script.
+   You don't exile them; you thank them and keep the chair at the head of the table.
+5. No new diagram.
+6. Richard C. Schwartz — Internal Family Systems / No Bad Parts (accreditation carried over
+   from `council-of-me`).
+7. face-my-shadow. Related: saboteurs-quiz, strength-in-shadow, super-self, habit-stacks.
+
+**Drafting decision:** built by renaming/absorbing `council-of-me` (same IFS territory,
+content merged) since Ben killed the Council framing ("Council Exercise - kill"). Old slug
+`/os/tools/council-of-me/` no longer exists.
+
+#### Personal Manual (`personal-manual`) — "My Equilibriums"
+
+Raw: "My Equilibriums — understand what good-good and bad-bad looks like. undersatnd what
+triggers cause us to go from good to bad adn what recovery methods from bad to good."
+
+1. A written manual of how you work: what good-good and bad-bad look like, the triggers that
+   tip you from good to bad, and the recovery methods that bring you back.
+2. Drafted around the existing Two Equilibria Map (same underlying model) — the manual is the
+   written artefact; the map is the picture. Cross-linked rather than merged.
+3–7. See drafted page. Outstride original. build-resilience-and-recovery,
+   manage-my-energy-system. Related: two-equilibria-map, personal-playbook, energy-audit,
+   seven-founder-needs.
+
+#### Vision Board (`vision-board`)
+
+Raw: "creaet a board of how life should look in 5 years from now. you can also do end of the
+yeras. Look at human 9 tool for inspiration. Add checking your vision board to your habit
+stacks."
+
+1. A visual board of how life should look five years from now (end-of-year versions work
+   too), reviewed on a rhythm through your habit stacks.
+2. Human 9 domains used as the structure prompt per Ben's note. Habit-stack tie-in is
+   explicit — the weekly/monthly stacks already include "Vision board".
+6. Widely used visualisation practice — no single owner; noted as adapted for Outstride OS.
+7. build-a-life-worth-scaling-for. Related: live-it-today, human-9, habit-stacks,
+   anti-wasteman-system.
+
+#### Personal Playbook (`personal-playbook`)
+
+Raw: "you know yourself best of all. you can begin to craft a playbook with things like your
+triggers, your rules e.g. if I'm >7 burnout I'll book a vacation. fill out pls."
+
+1. Pre-committed if-then rules for running yourself — "if my burnout score is above 7, I book
+   a vacation" — decided while you're well so you don't negotiate with yourself when you're
+   not.
+2. Ben asked to "fill out" — page drafted beyond the raw dump; rules examples are crafted
+   composites extending Ben's one verbatim rule.
+6. Outstride original.
+7. build-resilience-and-recovery. Related: personal-manual, two-equilibria-map, habit-stacks.
+   Supersedes Burnout Playbook + Recovery Anchors (killed below).
+
+#### Personal Board (`personal-board`) — build out existing thin tool
+
+Raw: "create a board of people you know and trust with a wide range of backrounds. call on
+them when you need to make big decisions."
+
+Existing tool enriched; content also draws on the build-my-growth-system capability page
+(peers / family & friends ingredients). Outstride original.
+
+#### Kills (Ben, 2026-07-04)
+
+- Council Exercise — killed (folded into `parts-work`, see above).
+- Cycle Mapping — killed.
+- Inner Critic / Saboteur Diagnostic — killed ("we have saboteur test" = `saboteurs-quiz`).
+- Burnout Playbook — killed; existing `burnout-playbook` tool removed, superseded by
+  `personal-playbook` + `personal-manual`.
+- Recovery Anchors — killed; recovery-methods material lives in `personal-manual`.
+- The human-tools future-backlog group is now empty and was removed from `futureToolBacklog`.
+
+**Open questions:**
+
+- Personal Manual vs Two Equilibria Map overlap: kept as two cross-linked tools (map =
+  picture, manual = written artefact). Merge later if it feels redundant.
+- Vision Board format: physical board, Miro, or slide? Page stays format-agnostic for now.
+
 ### Founder Job Description (`founder-job-description`) — NEW
 
 _(Captured from Ben's voice memo, 2026-07-04. Ben: "the most important tool here is defining
@@ -340,3 +529,26 @@ your job description... let's start off with that.")_
    Horowitz. Grove's High Output Management limiting step anchors the altitude block.
 7. take-command-of-my-role, know-my-special-ability. Related: ceo-test, calendar-audit,
    zone-of-genius.
+
+### Commitment Loop (`commitment-loop`) — NEW
+
+_(Captured from Ben's chat note, 2026-07-04: "running good meetings where everyone starts off
+by saying how the commitments they made went. At the end of the meeting, everyone makes hard
+commitments (measurable, time-bound) — building accountability into your systems, such as the
+meetings that you run.")_
+
+1. A meeting ritual that opens with how the last commitments went and closes with new hard
+   commitments — measurable and time-bound — so accountability lives in the system, not in
+   the founder's follow-up.
+2. Recurring meetings that produce updates but no movement; any org where follow-up still
+   routes through the founder.
+3. Open the loop (each person, briefly: what I committed, how it went) → run the meeting →
+   close with hard commitments (measurable, time-bound; sharpen vague ones in the room) →
+   write them down; they open the next meeting.
+4. Accountability built into the room, not chased between rooms — the system remembers so
+   the founder doesn't have to.
+5. No diagram needed.
+6. Outstride original (commitment-review meeting closes are common practice; no single
+   owner to credit).
+7. make-ownership-stick, install-the-operating-rhythm. Related: operating-cadence,
+   five-dysfunctions, okrs.
