@@ -1292,7 +1292,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         kind: "capabilityRefs",
         capabilityIds: [
           "design-the-org",
-          "raise-the-talent-bar",
+          "hire-and-raise-the-talent-bar",
           "make-ownership-stick",
           "take-command-of-my-role",
         ],

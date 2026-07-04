@@ -38,10 +38,12 @@ rough beats polished); an LLM session then drafts the page to the format spec in
 
 ### 1. Make Ownership Stick (`make-ownership-stick`)
 
-_(Partial material exists in the 2026-07-03 people-management voice memo — see "Build Leaders,
-Not Dependencies" below: goal co-creation, traffic-lighting quarterly goals, co-created
-accountability. Open question: which of that lands here (company-level systems) vs there
-(1:1 leadership).)_
+_(RESOLVED with Ben 2026-07-04: two-level split. Make Ownership Stick = org-level systems +
+culture for ownership/accountability (ownership map of results, decision rights, alignment vs
+autonomy, weekly ownership review, red-comes-with-a-plan norm). Build Leaders, Not
+Dependencies = the same thing at individual level (co-created goals/accountability,
+delegation). os.ts bullets and toolIds re-scoped accordingly; delegation tools re-homed to
+Build Leaders. Rich page for this capability still needs Ben's org-level material.)_
 
 1.
 2.
@@ -163,7 +165,7 @@ crafted composite; Q6 not captured; replace when Ben supplies them.)_
 ## Remaining capabilities (add sections as you get to them)
 
 Company System: Map the Destination · Chart the Path · Design the Org · Build a Culture That
-Compounds (done) · Raise the Talent Bar
+Compounds (done) · Hire & Raise the Talent Bar (see section below)
 
 Lead Myself: Make the Right Calls
 
@@ -584,7 +586,11 @@ empowerment and delegation.)_
    until you get it to forming and then to flowing (ties to the OS Force → Form → Flow
    stages). Claude to propose concrete delegation-over-time examples when drafting.
 
-### Raise the Talent Bar (`raise-the-talent-bar`) — hiring & onboarding material
+### Hire & Raise the Talent Bar (`hire-and-raise-the-talent-bar`) — hiring & onboarding material
+
+_(2026-07-04: Raise the Talent Bar retired as a separate capability — its surviving scope
+(ongoing performance × culture evaluation rhythm) merged into the hiring capability, which
+was retitled from "Hire & Onboard the Right People" and re-slugged.)_
 
 _(Captured from Ben's voice memo, 2026-07-03. Ben's own caveat: "this is a little bit of a
 start — maybe we expand it later or just weave it into the content." Q1 and Q5 not captured,
@@ -620,16 +626,17 @@ so per ground rules this page stays on fallback rendering until they exist.)_
   when that page gets drafted.
 - CTO hiring example: **new capability created** — `hire-and-onboard-the-right-people`
   (Company System, capability 8; capabilities 8+ renumbered to 9+). The example lives as a
-  standalone linked tool (`senior-hire-process`). Raise the Talent Bar keeps the
-  ongoing evaluate-and-develop system for people already inside.
+  standalone linked tool (`senior-hire-process`). (Superseded 2026-07-04: Raise the Talent
+  Bar retired entirely; capability renamed Hire & Raise the Talent Bar and now also owns the
+  ongoing evaluation rhythm.)
 - 30-60-90: added as **metadata-only draft tool** (`thirty-sixty-ninety`) — page content
   waits for more material from Ben.
 
 **Still open:**
 
-- Where empowerment material lives when drafting pages: Build Leaders, Not Dependencies
-  (1:1 co-creation) vs Make Ownership Stick (company-level systems). Current lean: personal
-  co-creation in Build Leaders, company-wide systems in Make Ownership Stick.
+- ~~Where empowerment material lives~~ — RESOLVED 2026-07-04: org-level systems + culture in
+  Make Ownership Stick, individual level in Build Leaders, Not Dependencies (Ben's framing:
+  "org level: create systems + culture for ownership/accountability; individual level: same").
 - Verbatim founder quotes (Q1) still missing for all five Lead Others capabilities. Pages
   DRAFTED 2026-07-04 with crafted composite hooks (all five marked here as "no verbatim
   quotes captured yet") — swap in real founder lines when Ben supplies them.
