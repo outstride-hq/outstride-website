@@ -823,3 +823,21 @@ question: Design the Org fills its own page without touching Make Ownership Stic
 - Reference the operating rhythm: when do you meet the leadership team, etc.
 - Hiring for the right seniority: hire someone good for at least the next two years, who can
   grow into the role and scale with the team → cross-link Hire & Raise the Talent Bar.
+
+**Make Ownership Stick — additional capture (Ben, 2026-07-04):**
+
+- Q1 REAL founder quote (use as the hook): **"Nothing gets done unless I personally make
+  sure it gets done."**
+- Q7 anchor: Lencioni, *The Five Dysfunctions of a Team* — Ben: "that talks about
+  ownership." The top of the pyramid is the org-ownership failure chain: lack of
+  commitment → avoidance of accountability → inattention to results. Tool already exists;
+  now linked to this capability.
+- Q3 before/after: Ben approved ALL THREE proposed composites (human to-do list / nobody
+  owned the launch / escalation culture) — combined into the page's today/success lines.
+  Composites, not a single real story; swap if a real one surfaces in his read-through.
+- Q5: Ben confirmed all four proposed failure modes as personally watched (founder as the
+  accountability system; shared ownership = no ownership; status theatre; owners in title
+  only) — folded into three bullets on the page.
+- Page DRAFTED 2026-07-04 — first page with a fully real hook quote.
+- Memo 2 (real founder quotes across other pages) deferred: Ben will do a read-through
+  pass in the future.

@@ -1894,6 +1894,69 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "make-ownership-stick": {
+    hook:
+      "Nothing gets done unless I personally make sure it gets done.",
+    beforeAfter: {
+      today: [
+        "Every commitment lives in your head, and things move only when you chase them.",
+        "A launch slips because three teams each assumed another one owned the integration piece.",
+        "Decision rights are fuzzy, so everything escalates up — your calendar is mostly tie-breaking.",
+      ],
+      success: [
+        "Every important result has one visible owner on the ownership map.",
+        "The weekly ownership review runs the follow-up — a two-week holiday doesn't stall the quarter.",
+        "Owners know what they decide alone and what needs alignment, and anything not green arrives with a plan.",
+      ],
+    },
+    why:
+      "Ownership isn't a personality trait you hire for — it's a system you build. Patrick Lencioni's Five Dysfunctions pyramid names the failure chain: teams that don't commit avoid accountability, and teams that avoid accountability stop attending to collective results. So the fix isn't more chasing; it's the three layers of the system — visible owners for results (not tasks), explicit decision rights, and a rhythm where accountability is normal and red is safe as long as it comes with a plan.",
+    whatGoodLooksLike: [
+      "One visible owner per important result — results, not tasks — on an ownership map anyone in the company can read.",
+      "Decision rights are explicit: what an owner decides alone, what needs alignment, where escalation is expected — so escalation becomes rare and real.",
+      "Accountability has a rhythm: owners traffic-light their results in the weekly review, and plan-less red is the only thing that's not okay.",
+    ],
+    whereFoundersGoWrong: [
+      "Being the accountability system yourself. Follow-up means you chasing — and the moment you stop asking, everything reverts. Tasks were transferred; ownership never was.",
+      "Ownership that isn't real: two names on one result, \"the team\" owning it, or an owner with no decision rights who routes everything back up anyway.",
+      "Status theatre: meetings full of updates and zero commitments. Progress gets reported, never owned — and nothing is ever red, because nothing was ever promised.",
+    ],
+    doNow: [
+      {
+        action: "Map the results, not the tasks",
+        note: "List the results that matter this quarter and put exactly one name on each. Publish it where everyone can see it.",
+        toolId: "ownership-map",
+      },
+      {
+        action: "Write the decision rights",
+        note: "For each owner: what they decide alone, what needs alignment first, and where escalation is expected. Most escalation culture is just this list not existing.",
+        toolId: "alignment-autonomy",
+      },
+      {
+        action: "Install the weekly ownership review",
+        note: "Owners bring their own traffic lights. Red or amber is fine — arriving without a plan is not. Run it two weeks in a row and watch the chasing stop.",
+      },
+      {
+        action: "Run the pyramid check",
+        note: "If accountability is missing, look one layer down: is it really a commitment problem, a conflict problem, or a trust problem?",
+        toolId: "five-dysfunctions",
+      },
+    ],
+    blocks: [
+      {
+        kind: "callout",
+        text: "This page is the org level: systems and culture that make ownership stick without you. The individual level — co-creating goals and accountability with one person, delegation that doesn't snap back — lives in Build Leaders, Not Dependencies. Same principle, two altitudes.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "build-leaders-not-dependencies",
+          "design-the-org",
+          "install-the-operating-rhythm",
+        ],
+      },
+    ],
+  },
 };
 
 export function getCapabilityContent(

@@ -1365,6 +1365,18 @@ export const toolsContent: Record<string, ToolContent> = {
         text: "Run this quarterly in calibration meetings and force one clear action per person: scale, invest, manage out, or exit.",
       },
       {
+        kind: "heading",
+        text: "Worked example (anonymised)",
+      },
+      {
+        kind: "paragraph",
+        text: "A sales lead at a seed-stage startup. Culture, scored against the company's values: hunger 6.5, proactivity 4, reliability 5. Performance, scored against the three outcomes in the job description: generate qualified calls — 3/10; represent the company at industry events — no score yet; lift the team's close rate — 6/10. Averaged and plotted: middling culture, low performance — the \"invest if capacity allows\" quadrant, with a focused development plan and a deadline.",
+      },
+      {
+        kind: "callout",
+        text: "Notice the criterion with no score. A \"?\" is not a neutral mark — it means you lack evidence for a core part of the role. Go collect it before the next calibration; don't average around it or guess.",
+      },
+      {
         kind: "capabilityRefs",
         capabilityIds: [
           "build-a-culture-that-compounds",
@@ -1574,6 +1586,7 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "capabilityRefs",
         capabilityIds: [
+          "make-ownership-stick",
           "navigate-conflict-and-create-psychological-safety",
           "build-incredible-relationships",
           "give-feedback-and-hold-the-standard",
@@ -3008,6 +3021,153 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "capabilityRefs",
         capabilityIds: ["take-command-of-my-role", "know-my-special-ability"],
+      },
+    ],
+  },
+  "stakeholder-map": {
+    intro:
+      "Map the people the company most depends on — cofounder, direct reports, board — and score each of them twice: how the relationship is working, and how confident you are in their performance.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use it quarterly, or whenever you feel people-risk but can't say where it sits. Founders carry an implicit version of this map in their head; drawing it makes the implicit rankings visible — and usually surfaces one relationship or one performance score that has been quietly avoided.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "stakeholder-map",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Put yourself in the middle",
+            note: "Add the people the company runs through: cofounder(s), each direct report, and any board member or investor who materially shapes your quarter.",
+          },
+          {
+            title: "Score the relationship",
+            note: "0–10 on the arrow: how well is the working relationship itself going — trust, candour, cadence? For the important ones, also guess how they would score it. A big gap between your score and your guess is its own finding.",
+          },
+          {
+            title: "Score your confidence in their performance",
+            note: "0–10 under their name: how confident are you that they will deliver what their role needs this stage? Score the role they hold now, not the person you hired.",
+          },
+          {
+            title: "Read the gaps and pick one move",
+            note: "Low relationship score → design the relationship deliberately. Low performance score → go deeper with the Performance × Culture Grid. Both high → tell them; people rarely hear it.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Watch for the split score: a warm relationship number sitting on top of a very low performance number. That pairing is the signature of a hard conversation being avoided — and the friendliness is often exactly what's protecting the underperformance.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["relationship-design-canvas", "performance-culture-grid"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "build-incredible-relationships",
+          "manage-capital-and-stakeholders",
+        ],
+      },
+    ],
+  },
+  "company-7": {
+    intro:
+      "A ten-minute company diagnostic: seven stickies, seven scores out of 10, and a clear answer to \"where do we look next?\"",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "This is the company-layer sibling of the Human 9. Use it in coaching check-ins, monthly reviews or quarterly planning — anywhere \"how's the company?\" would otherwise get a vague answer. It trades depth for honesty: seven numbers you'll actually write down beat forty you won't.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "company-7",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "list",
+        items: [
+          "Score each of the seven areas 0–10: business growth, strategy, fundraising & runway, culture, hiring & org structure, founder / C-level performance, management's performance.",
+          "For each score, answer two questions: why that number, and what would move it one point up?",
+          "Circle the lowest one or two areas and go deep there — with the Company Health Scorecard for the full picture, or the specific tool the area points to.",
+          "Re-run monthly or quarterly and watch the trend, not the absolute numbers.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Founder and management performance are on the board on purpose. Most founders will happily score everything except themselves — and the score they avoid writing down is usually the one doing the most damage.",
+      },
+      { kind: "toolRef", toolIds: ["company-health-scorecard", "human-9"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "map-the-destination",
+          "chart-the-path",
+          "design-the-org",
+          "build-a-culture-that-compounds",
+          "find-new-capital",
+          "take-command-of-my-role",
+          "build-leaders-not-dependencies",
+        ],
+      },
+    ],
+  },
+  "ten-minute-retro": {
+    intro:
+      "Nine stickies, ten minutes: three wins, three lowlights, three learnings — a retro small enough that you actually run it.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Run it at the end of every quarter — solo, with your coach, or with a cofounder. It works monthly too. Quarters blur together when they're never reviewed; ten minutes of structured looking-back is usually all it takes to stop repeating the same one.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "ten-minute-retro",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Three wins",
+            note: "Personal counts as much as company — \"started therapy\" belongs next to \"we hit the revenue milestone\". If all three wins are company metrics, that is itself a finding.",
+          },
+          {
+            title: "Three lowlights",
+            note: "Name them without fixing them yet. Look for the pattern underneath: not enough focus time, the same conversation avoided twice, energy spent managing instead of building.",
+          },
+          {
+            title: "Three learnings, written as rules",
+            note: "Not observations — rules you can act on next quarter.",
+            example:
+              "\"Hard conversations don't fix themselves.\" · \"Short-term pain is preferable to long-term suffering — the choice is mine.\" · \"Some things are harder to do than to say.\"",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The learnings are the product; wins and lowlights are just the evidence. And ten minutes is the point — the retro you actually run beats the perfect one you skip.",
+      },
+      { kind: "toolRef", toolIds: ["quarterly-retro", "human-9"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "build-my-growth-system",
+          "install-the-operating-rhythm",
+        ],
       },
     ],
   },
