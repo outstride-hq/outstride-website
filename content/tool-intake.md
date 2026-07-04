@@ -316,3 +316,27 @@ called team traffic lighting and reference it.")_
 6. Outstride original.
 7. design-the-org, make-ownership-stick, install-the-operating-rhythm. Related:
    chapters-and-squads, okrs, company-health-scorecard.
+
+
+### Founder Job Description (`founder-job-description`) — NEW
+
+_(Captured from Ben's voice memo, 2026-07-04. Ben: "the most important tool here is defining
+your job description... let's start off with that.")_
+
+1. Writes the founder's job for this stage — zone of genius crossed with what the company
+   needs, worked backwards from the next milestone — and rewrites it every six months.
+2. When a founder can't tell if they're doing enough; when the calendar is full but the
+   important things aren't moving; at every half-year mark.
+3. Work backwards from the next funding round (what does the company need / what is your
+   role in getting there) → name the four ingredients (fires, risk mitigation, future
+   planning, only-you work: investors, executive hires) → find the genius × needs happy
+   medium → put target time percentages on each ingredient and audit the calendar against
+   them → rewrite every six months.
+4. The role is designed like the org: backwards from the milestone. And it expires — give
+   away your Legos (credit Molly Graham) because what the company needs keeps changing.
+5. No diagram — steps carry it.
+6. Outstride original; "give away your Legos" credited in-text to Molly Graham (First Round
+   Review). Peacetime/wartime framing (used on the capability page, not this tool) is Ben
+   Horowitz. Grove's High Output Management limiting step anchors the altitude block.
+7. take-command-of-my-role, know-my-special-ability. Related: ceo-test, calendar-audit,
+   zone-of-genius.

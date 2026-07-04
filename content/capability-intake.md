@@ -67,21 +67,46 @@ _(Captured from Ben's chat notes, 2026-07-02. Q1 and Q5 use anonymized composite
 
 ### 3. Take Command of My Role (`take-command-of-my-role`)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+_(Captured from Ben's voice memo, 2026-07-04. MERGE EXECUTED same day: Operate at the Right
+Altitude (old cap 10) merged into this capability — its spinning-plates / dive-and-climb /
+next-bottleneck material is the movement half of this page; see the altitude section below
+for that capture. Q1: the "am I doing enough?" line is real — CEOs literally ask Ben this —
+but the page hook is a crafted composite built on it.)_
+
+1. Real pattern, no single verbatim quote: "Enough times I speak to CEOs and they ask me,
+   am I doing enough?"
+2. Your role is the happy medium between your zone of genius / special ability and what the
+   company really needs. Build the job like the org: look at the next funding round and work
+   backwards — what does the company need, and what is your role in getting there?
+3. Before: very, very reactive founders — things just happen to them, no time for strategy.
+   After: the founder who committed to a recurring deep-think block — four hours completely
+   off phone and Slack, purely for strategic work — "invaluable... unless you can actively
+   make time for it and fight for it, it's just not gonna happen." (Client story —
+   anonymized in page/tool copy to "a recurring half-day".)
+4. NEW tool: Founder Job Description — "the most important tool here." Then CEO Test ("if
+   you can answer all of these questions with at least an 8/10 confidence that you're doing
+   enough, go outside and play"), Calendar Audit (how much time should each part get vs how
+   much it actually gets), Two-Hour Constraint, Habit Stacks. KSS from cofounders as inputs
+   to your job.
+5. Purely reactive calendars. (Others derived: stuck at one altitude; role frozen while the
+   company's needs change.)
+6. Candidate: "What does the company need to be true by the next round — and what's your
+   role in getting there?"
+7. The role is a mixture: putting out fires, mitigating risks, planning for the future, and
+   the things only you can do (speaking to investors, convincing new executives to join).
+   Peacetime vs wartime founder (Ben Horowitz) — ask which you are today. "Giving away your
+   Legos" (Molly Graham, First Round Review) — the founder's role changes every six months,
+   so you constantly evolve it to increase the company's capacity for the next hurdle.
+   Simple hacks: meetings only in the afternoons, no-meeting days, first two hours blocked
+   for deep thinking. Quarterly ritual: zoom out on "what the company needs / what I need to
+   do to get there", then plan the calendar and block time.
 
 ### 4. Operate at the Right Altitude (`operate-at-the-right-altitude`)
 
-_(Partial capture from Ben's voice memo, 2026-07-04. Ben's own framing: "I'm not sure if this
-is a full separate capability or not." OPEN QUESTION: merge with Take Command of My Role
-(cap 9, still no material) into one founder-role capability — the standing 9+10 merge
-candidate. This memo alone is roughly half a page and overlaps heavily with the Design the
-Org spine (traffic lighting, bottleneck question, roving founder).)_
+_(Partial capture from Ben's voice memo, 2026-07-04. RESOLVED same day: capability MERGED
+into Take Command of My Role (Ben supplied the take-command memo and left the call to us —
+this material became the "founder who moves" half of that page; Grove's limiting step is the
+anchor). The capability id `operate-at-the-right-altitude` no longer exists in os.ts.)_
 
 1. (No verbatim quotes captured yet.) Existing symptom-map line already points here:
    "I'm still in every decision."

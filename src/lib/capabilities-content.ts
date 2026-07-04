@@ -1819,6 +1819,81 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "take-command-of-my-role": {
+    hook:
+      "Am I doing enough? I'm flat out from seven to seven, every day — I just can't tell if any of it is the actual job.",
+    beforeAfter: {
+      today: [
+        "The day is purely reactive — things happen to you, and strategy time never survives the week.",
+        "You couldn't say what percentage of your calendar goes to the things only you can do.",
+        "You're still living inside a team that stopped needing you months ago.",
+      ],
+      success: [
+        "Your role is written like a job description, worked backwards from the next milestone — and you rewrite it every six months.",
+        "The calendar matches the job: deep-work blocks first, meetings corralled, one no-meeting day.",
+        "You move between altitudes on purpose — dive where a team needs force, climb out at flow, and sit back to ask what breaks next.",
+      ],
+    },
+    why:
+      "Your role is the happy medium between your zone of genius and what the company really needs — all genius and no need is a hobby; all need and no genius burns you out. A good CEO is always thinking about the next milestone, so build the job the same way we build the org: work backwards from the next round. What does the company need, and what is your role in getting there? The answer is always a mixture — putting out fires, mitigating risks, planning for the future, and the things only you can do, like winning investors and convincing executives to join. And the mixture changes every six months as the company grows, which is why Molly Graham's advice to scaling leaders is to keep giving away your Legos — handing off the pieces you love is how the company's capacity grows.",
+    whatGoodLooksLike: [
+      "The founder job description exists on paper: the four ingredients named, target time splits set, and what is explicitly no longer your job written down.",
+      "The calendar defends the role — first two hours blocked for deep thinking, meetings in the afternoons — and a quarterly zoom-out asks the two big questions: what does the company need, and what do I need to do to get there?",
+      "Your altitude is a choice: teams are traffic-lit, you dive into red and force it, build the form, and leave at flow — then look for the next limiting step.",
+    ],
+    whereFoundersGoWrong: [
+      "Running a purely reactive calendar. Strategy only happens if you actively make time and fight for it — otherwise it's just not going to happen.",
+      "Getting stuck at one altitude: living in the weeds of a team that no longer needs you, or hovering so high that a red team stays red for two quarters.",
+      "Freezing the role at founding. What the company needs changes every six months — founders who never give away their Legos become the reason the company can't grow.",
+    ],
+    doNow: [
+      {
+        action: "Write your founder job description",
+        note: "Genius × company needs, worked backwards from the next round: the four ingredients, with a target time split for each.",
+        toolId: "founder-job-description",
+      },
+      {
+        action: "Run the CEO Test",
+        note: "If you can answer every question with at least 8-out-of-10 confidence that you're doing enough — go outside and play.",
+        toolId: "ceo-test",
+      },
+      {
+        action: "Audit the calendar against the job",
+        note: "For each ingredient: how much time should it get, and how much did it actually get last fortnight? Close the worst gap first.",
+        toolId: "calendar-audit",
+      },
+      {
+        action: "Book the quarterly zoom-out",
+        note: "A recurring, protected block — off phone, off Slack — for the two questions. Bring your cofounder's KSS feedback on your role as an input.",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Peacetime or wartime?",
+      },
+      {
+        kind: "callout",
+        text: "Ben Horowitz's distinction: the wartime founder is saving the company on a daily basis; the peacetime founder is compounding what works — acquiring extra capacity and extra opportunities. Stop and ask which one you are today. The honest answer sets your altitude, your calendar and which ingredient of the job leads this quarter.",
+      },
+      {
+        kind: "heading",
+        text: "The founder who moves",
+      },
+      {
+        kind: "paragraph",
+        text: "Scaling a company is watching spinning plates. As the company grows its needs change, and a team that was green can go red through no fault of its own — the product team that was brilliant at stage one suddenly struggles when the work turns into heavy enterprise implementation. You step in and solve it, through hiring or by forcing it yourself, then hand it back and climb out. And when every plate is spinning, you don't relax — you sit back and ask Andy Grove's question from High Output Management: what is the limiting step? What will be the bottleneck next, and how do I prepare the company for it now?",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["team-traffic-lighting"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["know-my-special-ability", "design-the-org", "give-feedback-and-hold-the-standard"],
+      },
+    ],
+  },
 };
 
 export function getCapabilityContent(
