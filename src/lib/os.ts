@@ -765,7 +765,8 @@ export const capabilities: Capability[] = [
     title: "Know & Use the Right Leadership Hat",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "",
+    summary:
+      "A first-time founder ran every 1:1 in advice mode until the hats reframe — now his smartest engineer arrives with options and leaves with her own plan.",
     bullets: [
       "Switch deliberately between coach, mentor, empowerer and manager, depending on the person and the situation.",
       "Default to coaching where you can: help people think for themselves and leave them more capable after each conversation, rather than handing over answers.",
@@ -782,7 +783,8 @@ export const capabilities: Capability[] = [
     title: "Give Feedback & Hold the Standard",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "",
+    summary:
+      "One founder went from a single sideways comment and months of silence to a standing feedback rhythm — the firing that was quietly brewing became a turnaround instead.",
     bullets: [
       "Make positive and corrective feedback a normal part of your operating cadence.",
       "Challenge missed commitments clearly and early, in a way that changes behaviour.",
@@ -807,7 +809,8 @@ export const capabilities: Capability[] = [
     title: "Build Incredible Relationships",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "",
+    summary:
+      "Two cofounders replaced their ops-only weekly with a relationship contract, a monthly strategy offsite and a social dinner — the arguments stopped being about the wrong things.",
     bullets: [
       "Proactively design your most important working relationships.",
       "Clarify expectations, cadence, communication preferences and decision rights.",
@@ -830,7 +833,8 @@ export const capabilities: Capability[] = [
     title: "Navigate Conflict & Create Psychological Safety",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "",
+    summary:
+      "Two cofounders who kept fighting in front of the team agreed a magic word that stops any heating argument — and books a whiteboard session within 24 hours.",
     bullets: [
       "Build enough trust that people can say hard truths early, disagree openly and admit mistakes without fear.",
       "Turn tension into clarity instead of politics, avoidance or resentment, and prepare for hard conversations with structure and emotional discipline.",
@@ -855,7 +859,8 @@ export const capabilities: Capability[] = [
     title: "Build Leaders, Not Dependencies",
     layerId: "founder",
     groupId: "lead-others",
-    summary: "",
+    summary:
+      "A growth lead who co-created her own goals and accountability now traffic-lights the quarter herself — the founder stopped being the company's only engine.",
     bullets: [
       "Teach the capabilities you have built in yourself to the leaders around you, instead of hoarding them.",
       "Develop people who can lead their domain — make the calls, hold the standard, coach their own teams — without constant founder input.",

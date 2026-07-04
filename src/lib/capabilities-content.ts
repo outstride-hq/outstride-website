@@ -1372,6 +1372,278 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
   },
+  "know-and-use-the-right-leadership-hat": {
+    hook:
+      "I hired smart people, but somehow every conversation ends with me telling them what to do. I'm exhausted — and honestly, they've stopped thinking.",
+    beforeAfter: {
+      today: [
+        "Every 1:1 turns into you dispensing solutions — it's faster in the moment, so it keeps happening.",
+        "Your best people wait for instructions, because instructions always come.",
+        "You use the same voice for a production fire and a career conversation.",
+      ],
+      success: [
+        "You catch the moment mid-conversation: this needs the coaching hat, not the answer.",
+        "Smart people leave your 1:1s with their own plan, not your to-do list.",
+        "The formal calls — the no, the review, the salary conversation — get made cleanly instead of avoided.",
+      ],
+    },
+    why:
+      "Managing people is an honour. The most meaningful part of my own startup journey wasn't the product or the fundraise — it was the lives changed by being a good boss and building a good environment. Whatever happens to your startup, giving good people real opportunities and space to grow changes lives. And the day-to-day leverage point is smaller than it sounds: knowing which of four hats — coach, mentor, empower, manager — this person, in this moment, actually needs.",
+    whatGoodLooksLike: [
+      "You can name the four hats and know, per person and per situation, which one you're wearing.",
+      "The coaching hat gets real use: \"What do you think?\" asked with genuine curiosity — leading them to their own answer, not quizzing them toward yours.",
+      "You still wear the manager hat when it's called for — saying no, running the review, negotiating the salary — without dressing it up as something softer.",
+    ],
+    whereFoundersGoWrong: [
+      "Always telling people the next step. They don't grow, you don't scale — you've made yourself the ceiling.",
+      "Coaching while the building is on fire. The production server is down and you're asking \"how do you feel about this?\" — wrong hat.",
+      "Treating the formal side — vacation approvals, performance reviews, salary talks — as an interruption to leadership instead of part of it.",
+    ],
+    doNow: [
+      {
+        action: "Audit your last three 1:1s",
+        note: "For each: which hat were you wearing, and which did the moment actually need? Most founders discover one default hat worn everywhere.",
+        toolId: "leadership-hats",
+      },
+      {
+        action: "Ask \"What do you think?\" first",
+        note: "With your smartest report this week, hold the advice back. Three curious questions before you offer anything.",
+      },
+      {
+        action: "Name the hat out loud",
+        note: "\"I'm putting my manager hat on for a second\" tells people what kind of conversation this is — and makes the switch visible to you too.",
+      },
+    ],
+    blocks: [
+      {
+        kind: "callout",
+        text: "There's no right or wrong management style — direct and collaborative both work. A lot of it is gut feeling. The skill isn't picking a style; it's the reflection: \"Which manager hat am I wearing right now?\"",
+      },
+    ],
+  },
+  "give-feedback-and-hold-the-standard": {
+    hook:
+      "I noticed he hadn't closed anything in two months. I mentioned it once, kind of sideways… and then I didn't say anything else until the day we let him go.",
+    beforeAfter: {
+      today: [
+        "Feedback only happens when something has already gone wrong — so everyone flinches at the word.",
+        "You hint at a problem once, then go quiet; months later it ends in a firing that shocks them.",
+        "The hard conversation gets rehearsed in your head at night and never happens in the room.",
+      ],
+      success: [
+        "A standing feedback session with the key people in your orbit — structured, bilateral, normal.",
+        "In-the-moment feedback lands within 24 hours, cleanly, without a month of buildup.",
+        "Performance problems move up an explicit dial with a number and a date — no silent escalation to fired.",
+      ],
+    },
+    why:
+      "Feedback is a dirty word only because of how we use it: rarely, and only when something bad happened. You get rid of that by normalising it — a regular cadence and a regular structure — until feedback stops meaning trouble and starts meaning attention. And when you do need to course-correct, remember that people respond far better to a picture of a positive future than to an autopsy of a broken present: \"next month is going to be our best month ever, because you're going to make more calls than ever\" moves someone that \"you've been underperforming\" never will.",
+    whatGoodLooksLike: [
+      "Feedback has a rhythm and a structure — Keep / Start / Stop, both directions, short doc prepared, roughly 50 minutes split between your KSSs and theirs.",
+      "You distinguish the two types: someone rude in a meeting hears about it within 24 hours; patterns like proactivity or attention to detail are collected over time and brought to the regular session.",
+      "When someone needs to improve, you know where they're actually stuck — insight, motivation, skills, practice or accountability — and work that, instead of repeating louder feedback.",
+    ],
+    whereFoundersGoWrong: [
+      "The nothing-to-fired jump: one oblique mention, months of avoidance, then a termination that surprises everyone — including you.",
+      "\"You always do this.\" Generalisations trigger \"no I don't\" — defensiveness, not change. One situation, one behaviour, one impact.",
+      "Delivering anything critical over Slack. The characters don't carry the emotional weight of a call — praise in public, criticise in person.",
+    ],
+    doNow: [
+      {
+        action: "Book the standing KSS session",
+        note: "With your cofounder and each direct report. Both sides bring a short doc; split the time bilaterally. The cadence is what makes feedback stop being scary.",
+        toolId: "kss-feedback",
+      },
+      {
+        action: "Deliver the one you've been sitting on",
+        note: "Use Situation, Behaviour, Impact — one concrete moment, what they did, what it caused. This week, not next month.",
+        toolId: "sbi-feedback",
+      },
+      {
+        action: "Locate the stuck person on the pipeline",
+        note: "Before prescribing training, find the constriction: do they know? Are they willing? Can they? Are they getting reps? What holds them to it?",
+        toolId: "development-pipeline",
+      },
+      {
+        action: "Put a number and a date on it",
+        note: "If it's the unhappy path: \"you're at a five, I need a seven by end of month\" — and name what happens next on the dial if nothing moves.",
+        toolId: "accountability-dial",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "The two paths of performance",
+      },
+      {
+        kind: "paragraph",
+        text: "The happy path is development: find where the pipeline is constricted and coax rather than tell — \"What's the number one thing you want to improve right now?\", \"What happens if nothing changes?\", \"Where do you see yourself in this company, and what's the main gap between here and there?\" Get them excited about the gap and they do the rest. The unhappy path is accountability: an explicit, graduated dial from a casual mention to a final warning, attached to a timeline — so the difficult conversation happens in steps, instead of never and then all at once.",
+      },
+    ],
+  },
+  "build-incredible-relationships": {
+    hook:
+      "We have a weekly meeting, sure. We talk about ops for an hour. We haven't talked about how we're actually working together in about a year.",
+    beforeAfter: {
+      today: [
+        "Every working relationship runs on assumptions — you assume they'll ask for help; they assume they should figure it out alone.",
+        "Salary and personal decisions get made ad hoc, and every one of them triggers someone.",
+        "Cofounder time is 100% operations: no strategy time, no relationship time, no fun.",
+      ],
+      success: [
+        "The important relationships run on explicit agreements: what we decide together, how we communicate, how we exchange feedback.",
+        "A monthly rhythm exists — a deep strategy session away from the office, a check-in, and a social dinner.",
+        "When friction shows up, there's a shared playbook for it, agreed before you needed it.",
+      ],
+    },
+    why:
+      "The majority of conflict comes from implicit assumptions. You're assuming one thing, they're assuming another, and the conflict happens in the gap — I assume you'll tell me when you're stuck; you assume you're meant to figure it out alone. So the single highest-leverage move — for a new manager, for cofounders, honestly for friendships and romantic relationships too — is to proactively define the relationship: decide together how you'll communicate, how often, in which meetings, and how you'll give and receive feedback. Make the assumptions explicit before they collide.",
+    whatGoodLooksLike: [
+      "Each key relationship has a contract: decision rights (what needs both of you), communication do's and don'ts, feedback cadence, and \"what I need from you / what you need from me.\"",
+      "Hard rules exist where it runs hot — like every salary or personal decision going through the management group together, because one founder's solo yes is everyone else's unfairness.",
+      "The calendar shows the relationship being maintained: strategy time, check-ins and social time, not just operations.",
+    ],
+    whereFoundersGoWrong: [
+      "The ops-only weekly: a meeting that discusses everything except the strategy and the relationship itself.",
+      "The unilateral yes: one founder grants a raise or a bonus solo, and the resentment lands on the whole org.",
+      "Assuming the agreement is obvious. It never is — unexpressed expectations are pre-booked conflicts.",
+    ],
+    doNow: [
+      {
+        action: "Draft the contract with your cofounder",
+        note: "Decision rights, communication preferences, cadence, tension points, repair rules. An hour now saves a year of friction.",
+        toolId: "relationship-design-canvas",
+      },
+      {
+        action: "Ask the two questions",
+        note: "\"What do you need from me?\" and \"What do I need from you?\" Write the answers as be/do lists: be clear with objectives, give me the resources, be proactive.",
+      },
+      {
+        action: "Book the monthly three",
+        note: "One deep strategy session offsite (at least a couple of hours on the future), one check-in, one social dinner. Recurring, starting this month.",
+      },
+      {
+        action: "Agree the don'ts",
+        note: "Start with the classic: nothing critical over Slack. Praise in public; anything remotely critical over the phone or in person.",
+      },
+    ],
+  },
+  "navigate-conflict-and-create-psychological-safety": {
+    hook:
+      "We were shouting at each other in front of the whole team again. Ten years of friendship, and our engineers are watching us fight about a pricing page.",
+    beforeAfter: {
+      today: [
+        "Arguments escalate live, in front of the team, with no off-ramp.",
+        "You're sure you know what they meant by it — and they're sure they know how you took it.",
+        "After a blow-up nothing is repaired; it just goes quiet until next time.",
+      ],
+      success: [
+        "Either of you can say the magic word: the argument stops on the spot, and a whiteboard session is booked within 24 hours.",
+        "When emotions are tight, you can say what's happening for you without triggering the other person.",
+        "Disagreement happens early and safely — because the team has watched the two of you repair.",
+      ],
+    },
+    why:
+      "A startup is fast-moving and chaotic, and often staffed by smart young people with limited experience — conflict is guaranteed; unresolved conflict is optional. The move is to define how you fight before you fight. Two cofounders I worked with, long history, sometimes fighting in front of the team, made themselves a rule: if the voices start rising, either one says a magic word, the conversation stops, and within 24 hours they book a whiteboard session and hash it out. I thought that was amazing — they designed their conflict while they were calm, instead of improvising it while they were angry.",
+    whatGoodLooksLike: [
+      "Your relationship doc has a \"how we resolve conflict\" section that both of you actually invoke.",
+      "You stay on your side of the line: you don't assert what they intended, they don't assert how you reacted.",
+      "Repair is normal: stop, cool down, whiteboard it within a day — and conflict ends visibly well often enough that the team stops fearing it.",
+    ],
+    whereFoundersGoWrong: [
+      "Fighting in front of the team — the fastest way to teach everyone that conflict here is dangerous.",
+      "Crossing the line. A first-time manager at her report's desk every day meant maximum support; what landed was \"she doesn't trust me, she's micromanaging me.\" Both assumed; neither said a word; the conflict arrived on schedule.",
+      "No off-ramp: voices rise, positions harden, and the only exits left are winning or walking out.",
+    ],
+    doNow: [
+      {
+        action: "Agree your magic word",
+        note: "With your cofounder, today, while things are calm: the word that stops any heating argument, plus the 24-hour whiteboard rule.",
+      },
+      {
+        action: "Run your last conflict through the line",
+        note: "What was your intention? What did you actually say and do? What did they read into it? Find where somebody assumed across the line.",
+        toolId: "crossing-the-line",
+      },
+      {
+        action: "Learn the four-part sentence",
+        note: "Observation, feeling, need, request. For the moments when emotions are really tight and you need a very low chance of triggering the other person.",
+        toolId: "non-violent-communication",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "The line neither of you can see across",
+      },
+      {
+        kind: "diagram",
+        diagramId: "crossing-the-line",
+      },
+      {
+        kind: "paragraph",
+        text: "My intention is accessible only to me. My speech and behaviour are accessible to both of us. Your reaction is accessible only to you. Crossing the line means assuming what only the other person can know — and it's hiding inside almost every escalation.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["crossing-the-line", "non-violent-communication"],
+      },
+    ],
+  },
+  "build-leaders-not-dependencies": {
+    hook:
+      "If I stop pushing, everything stops. I have eleven employees, and somehow I'm still the only engine this company has.",
+    beforeAfter: {
+      today: [
+        "Every goal is yours: you set them, you chase them, you carry them.",
+        "Delegation feels slower than doing it yourself — so you don't, and the pile grows.",
+        "People execute tasks; nobody owns outcomes.",
+      ],
+      success: [
+        "Your leads co-create their goals from the company's — and defend them with a plan when they're not green.",
+        "Accountability is something people asked you for, in a shape they chose.",
+        "Every quarter, something you were doing becomes someone else's growth edge.",
+      ],
+    },
+    why:
+      "Delegate or die. Scaling a company means scaling yourself out of it, one responsibility at a time — forcing an area until it's forming, then letting it flow without you. And delegation is an investment, not a time-save: it will not be faster tomorrow, but it will be faster in a month or two, for sure. Refuse to make the investment and the wall arrives on schedule — everything comes crashing down on the one person who never let go.",
+    whatGoodLooksLike: [
+      "Goals connect to the mission and are co-created: \"you're a smart, strategic person — given where we are and the company's goal, what should your team's goals, initiatives and risks be?\" Ownership follows authorship.",
+      "Teams traffic-light their quarterly goals in the operating rhythm. Red or amber is never bad in itself — arriving without a plan is.",
+      "Accountability is co-designed: \"Would it be useful if I held you accountable? What should that look like?\" They define it — and then they can't resent you for executing it.",
+    ],
+    whereFoundersGoWrong: [
+      "Delegating, then abdicating. People won't be as good as you at first — skip the check-ins and the review of the first few iterations, and the handoff fails on schedule.",
+      "Never delegating because today it's slower. That's the point: it's an investment, and refusing it caps the company at the size of your calendar.",
+      "Shoving top-down goals onto the next team. Compliance looks like alignment right up until the quarter gets hard.",
+    ],
+    doNow: [
+      {
+        action: "Ask the quarterly question",
+        note: "\"What am I doing today that I shouldn't be doing at the end of the quarter?\" Then ask every one of your leads the same thing.",
+        toolId: "delegation-timeline",
+      },
+      {
+        action: "Name the level out loud",
+        note: "For your next handoff, say which degree of delegation it is — from \"do as I say\" to full ownership — so nobody guesses at the decision rights.",
+        toolId: "delegation-ladder",
+      },
+      {
+        action: "Co-create one goal this week",
+        note: "Take your most senior report, share the company goal, and ask what their team's contribution should be. Resist improving their answer for 24 hours.",
+      },
+      {
+        action: "Ask the accountability question",
+        note: "\"Would it be useful if I held you accountable — and what does that look like?\" Ambitious people nearly always say yes, and then design your job for you.",
+      },
+    ],
+    blocks: [
+      {
+        kind: "callout",
+        text: "Align delegation with growth edges and it works like magic. \"What's your growth edge?\" — \"People management.\" — \"Great: from now on, you lead the weekly product check-ins.\" You're shedding exactly what you needed to shed, in the shape of the growth they asked for.",
+      },
+    ],
+  },
 };
 
 export function getCapabilityContent(

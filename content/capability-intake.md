@@ -630,5 +630,6 @@ so per ground rules this page stays on fallback rendering until they exist.)_
 - Where empowerment material lives when drafting pages: Build Leaders, Not Dependencies
   (1:1 co-creation) vs Make Ownership Stick (company-level systems). Current lean: personal
   co-creation in Build Leaders, company-wide systems in Make Ownership Stick.
-- Verbatim founder quotes (Q1) still missing for all five Lead Others capabilities — pages
-  not yet drafted; hooks will be crafted composites unless Ben supplies real lines.
+- Verbatim founder quotes (Q1) still missing for all five Lead Others capabilities. Pages
+  DRAFTED 2026-07-04 with crafted composite hooks (all five marked here as "no verbatim
+  quotes captured yet") — swap in real founder lines when Ben supplies them.
