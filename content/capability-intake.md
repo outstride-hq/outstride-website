@@ -723,22 +723,30 @@ see end of this block. No verbatim founder quotes (Q1) captured yet.)_
 - The cadence: **explore → trial → execute.** Works at the personal level and the company
   level.
 
-**Proposed tools from this memo (not yet agreed with Ben):**
+**Proposed tools — AGREED with Ben 2026-07-04 and built same day:**
 
-- AI strategy stress test — traffic-light the 7 Powers under AI + 5/7-year threats &
-  opportunities. Natural companion to `seven-powers` and `opportunity-threat-map`.
-- AI adoption cadence — the explore/trial/execute loop on a monthly-to-quarterly rhythm.
-- AI champions — the internal-champions playbook (could be a tool or just page content).
+- `ai-strategy-stress-test` — traffic-light the 7 Powers under AI + 5/7-year threats &
+  opportunities (direction tool; accredited as AI-era extension of Helmer's 7 Powers).
+- `ai-adoption-cadence` — the explore/trial/execute loop on a monthly-to-quarterly rhythm
+  (operating rhythm).
+- `ai-champions` — the internal-champions playbook (operating template).
 
-**Open structure questions for Ben:**
+**Open structure questions — RESOLVED with Ben 2026-07-04 (implemented same day):**
 
-- One capability vs. several? Memo's own framing ("too simple to treat AI as separate")
-  suggests ONE capability page structured around the three levels, plus cross-references.
-- Cross-mentions: strategy material → Chart the Path (7 Powers AI traffic light as related
-  tool); efficiency-before-headcount + Series A story → Hire & Raise the Talent Bar and/or
-  Design the Org; VC-efficiency angle could also touch Find New Capital.
-- The placeholder sits in lead-the-game but is numbered 26 (last), so it lists out of numeric
-  order in nav — decide whether to renumber while touching it.
+- **One capability**, structured around the three altitudes (strategy / org / individual);
+  rich page drafted in `capabilities-content.ts`. Hook is a **crafted composite** (no
+  verbatim founder quotes yet — swap when Ben supplies real lines). Series A story kept
+  anonymized/composite in the `why`.
+- **Cross-references built:** `ai-strategy-stress-test` added to Chart the Path toolIds;
+  efficiency-before-headcount folded into Design the Org and Hire & Raise the Talent Bar
+  bullets; Find New Capital rich page got an investor-efficiency paragraph + capabilityRef
+  to the AI capability.
+- **Renumbered:** capability moved to number 20 (after Find New Capital, within
+  lead-the-game); human-system capabilities shifted to 21–26. Nav-order quirk resolved.
+
+**Still open:**
+
+- Verbatim founder quotes (Q1) for the AI capability — page is live with a composite hook.
 
 ### Design the Org (`design-the-org`)
 

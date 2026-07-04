@@ -537,7 +537,12 @@ export const capabilities: Capability[] = [
       "Write OKRs that measure outcomes, connecting the North Star Metric to supporting KPIs and team goals.",
     ],
     toolIds: [
-      "opportunity-threat-map","north-star-metric", "okrs", "company-health-scorecard"],
+      "opportunity-threat-map",
+      "north-star-metric",
+      "okrs",
+      "ai-strategy-stress-test",
+      "company-health-scorecard",
+    ],
     rhythmIds: [],
     order: 2,
   },
@@ -553,7 +558,7 @@ export const capabilities: Capability[] = [
     bullets: [
       "Identify the roles, structure and leadership capacity needed for the next milestone.",
       "Spot where the current org will break before it actually breaks.",
-      "Decide what needs to be hired, promoted, delegated or redesigned.",
+      "Decide what needs to be hired, promoted, delegated or redesigned — and challenge every hire against making the existing team more effective with AI first.",
     ],
     toolIds: [
       "chapters-and-squads",
@@ -642,7 +647,7 @@ export const capabilities: Capability[] = [
     summary:
       "A serious hire deserves a serious process — work out what the organisation needs, select with evidence, onboard deliberately, and keep the evaluation rhythm running so the bar rises over time.",
     bullets: [
-      "Work out what the organisation really needs before writing the job description and seniority level.",
+      "Work out what the organisation really needs before writing the job description — including whether AI and the existing team could close the gap without a hire.",
       "Rank candidates on performance × culture, and pressure-test the hire with a premortem before day one.",
       "Onboard with a 30-60-90 plan and transparent early evaluations — low early scores are fine; trajectory matters.",
       "Keep the bar rising: run performance × culture as a regular talent rhythm, with the feedback and support to improve.",

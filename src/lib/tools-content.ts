@@ -617,6 +617,156 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "ai-strategy-stress-test": {
+    intro:
+      "Run your strategy through the 7 Powers with AI in mind: traffic-light each power, then map what could help or hurt you over the next five to seven years.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Enormous money is flowing into \"AI for X\" companies promising to change how whole industries work. Whatever you're building, AI is now part of your strategy whether you chose it or not — it makes you operationally faster and cheaper to scale, but it also erodes moats you may be counting on. A complicated tech setup used to be a barrier; increasingly, it just isn't.",
+      },
+      {
+        kind: "heading",
+        text: "Step 1 — Traffic-light your 7 Powers",
+      },
+      {
+        kind: "paragraph",
+        text: "Take each of Hamilton Helmer's seven powers and ask how AI changes it for you against named competitors. Green: this power holds or strengthens under AI. Amber: it holds for now, but the barrier is thinning. Red: AI has eroded or will erode it — stop counting on it.",
+      },
+      {
+        kind: "table",
+        columns: ["Power", "The AI-era question"],
+        rows: [
+          [
+            "Scale Economies",
+            "Does volume still lower your unit costs faster than a lean AI-native rival can drop theirs?",
+          ],
+          [
+            "Network Economies",
+            "Does more usage still compound value, or can AI synthesise what your network used to be needed for?",
+          ],
+          [
+            "Counter-Positioning",
+            "Could an AI-native entrant run a model you can't copy without breaking your existing business?",
+          ],
+          [
+            "Switching Costs",
+            "How much of your lock-in survives when AI makes migration, integration and retraining nearly free?",
+          ],
+          [
+            "Branding",
+            "Trust and preference may matter more in a world of infinite AI-generated alternatives — is yours real?",
+          ],
+          [
+            "Cornered Resource",
+            "Proprietary data, distribution and relationships get more valuable; scarce technical talent gets less scarce. Which do you hold?",
+          ],
+          [
+            "Process Power",
+            "Is your embedded way of working still hard to replicate, or is it exactly the kind of process AI commoditises?",
+          ],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Step 2 — Map threats and opportunities, five to seven years out",
+      },
+      {
+        kind: "paragraph",
+        text: "Really imagine your market in five and seven years. Where is AI helping you — and where is it hurting? Plot the biggest of each on the Opportunity & Threat Map so the strategy conversation ranks them instead of listing them. A useful calibration: the panic that \"AI will eat SaaS\" turned out to be overdone — even the top AI labs still buy SaaS rather than build it — but the moat that made SaaS defensible has genuinely thinned. Neither doom nor denial; look power by power.",
+      },
+      {
+        kind: "callout",
+        text: "The output isn't a score — it's a decision. Which one or two powers will you deliberately build because AI strengthens them, and which will you stop leaning on because it doesn't?",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["seven-powers", "opportunity-threat-map"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["embrace-the-ai-revolution", "chart-the-path"],
+      },
+    ],
+  },
+  "ai-adoption-cadence": {
+    intro:
+      "A recurring rhythm — explore, trial, execute — that keeps you and the company current on AI without chasing every shiny thing.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "There are two ways to lose here. Chase every new tool the day it launches and you'll be permanently distracted; never look up from the roadmap and you'll be left behind. The answer is a cadence: a deliberate, bounded review — monthly if you're in a fast-moving corner, quarterly otherwise — run at both the personal and the company level.",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Explore",
+            note: "Stop and do a genuine deep dive into what's changed in the industry since last time. What are the new tools, models and workflows? What are companies like yours doing with them?",
+          },
+          {
+            title: "Trial",
+            note: "Pick the two or three most promising and actually spend time with them — real work, not a demo. Your AI champions are the natural owners of this step.",
+          },
+          {
+            title: "Execute",
+            note: "Choose what to implement, roll it out properly, and ignore everything else until the next review. A decision to skip something is a valid output.",
+          },
+        ],
+      },
+      {
+        kind: "paragraph",
+        text: "At the company level, use the same review to challenge the leadership team: how will each function — operations, product, tech, customer support — use AI to build more efficiently this quarter? Make it a standing question in the operating rhythm, not a one-off initiative.",
+      },
+      {
+        kind: "callout",
+        text: "Between reviews, keep a running list of things worth exploring — then leave them alone. The list is what lets you stay focused today without worrying you're missing the future.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["ai-champions", "operating-cadence"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["embrace-the-ai-revolution"],
+      },
+    ],
+  },
+  "ai-champions": {
+    intro:
+      "Name the people in your company who are most enthusiastic about AI, give them the mandate, and let them spread adoption for you.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "You already have people who spend their evenings playing with new AI tools — often not the most senior ones. Instead of letting that energy stay private, elevate it: name them your AI champions and make the enthusiasm an official role. Adoption spreads much faster through peers showing each other cool things than through top-down mandates.",
+      },
+      {
+        kind: "heading",
+        text: "The mandate",
+      },
+      {
+        kind: "list",
+        items: [
+          "Trial the big new tools as they land, so the rest of the company doesn't have to.",
+          "Act as internal consultants: go department to department and recommend concretely how AI could change how each team works.",
+          "Share what's working — demos, wins and cool discoveries — with the whole team on a regular beat.",
+          "Feed the explore and trial steps of the AI adoption cadence.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Seniority is not the qualification — enthusiasm is. Giving a passionate junior person the AI champion badge is also a cheap, high-leverage development opportunity.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["ai-adoption-cadence"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["embrace-the-ai-revolution"],
+      },
+    ],
+  },
   "anti-wasteman-system": {
     intro:
       "A nine-step execution framework that turns reflection into commitment — name the dream, make it concrete, pre-mortem the failure modes, stack the deck, then take the first action.",

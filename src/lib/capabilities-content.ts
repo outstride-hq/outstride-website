@@ -1199,6 +1199,10 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         text: "When an investor passes, don't accept \"wrong stage\" or \"needs more traction\" — those are non-answers. Ask the one question that gets a real one: \"What three things would have had to be different for this to go from a no to a hell yes?\"",
       },
       {
+        kind: "paragraph",
+        text: "One more thing investors now read closely: efficiency. Revenue per head has become a screen, and a good team with real revenue can still fail to raise if the headcount maths doesn't look like the future. Before you go out, stress-test your efficiency story — it's part of the narrative now, not a diligence footnote.",
+      },
+      {
         kind: "heading",
         text: "Protect yourself and the company before you start",
       },
@@ -1208,7 +1212,100 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "capabilityRefs",
-        capabilityIds: ["build-resilience-and-recovery", "master-my-mindset"],
+        capabilityIds: [
+          "build-resilience-and-recovery",
+          "master-my-mindset",
+          "embrace-the-ai-revolution",
+        ],
+      },
+    ],
+  },
+  "embrace-the-ai-revolution": {
+    hook:
+      "I watched a five-person team ship in a quarter what took us forty people two years. We're supposed to be the technical advantage in our market — and I honestly can't tell any more whether we're ahead or being lapped.",
+    beforeAfter: {
+      today: [
+        "AI is all over your feed and nowhere in your operating plan — you're either chasing every launch or quietly ignoring the whole thing.",
+        "Your strategy deck still lists moats that AI has already thinned, and nobody has re-run the maths.",
+        "Headcount is still the default answer to every capacity problem, and the hiring plan looks like it was written in 2021.",
+      ],
+      success: [
+        "You've traffic-lit your 7 Powers under AI — you know which moats you're deliberately building and which you've stopped counting on.",
+        "Every proposed hire has to beat the question: could the existing team do this with better tools?",
+        "A named rhythm — explore, trial, execute — keeps you and the company current without the daily distraction.",
+      ],
+    },
+    why:
+      "This isn't a technology trend to delegate — it's a repricing of how companies get built. There's now a public leaderboard of lean AI-native companies (leanaileaderboard.com) racing toward Sam Altman's predicted one-person billion-dollar company; the current leaders generate tens of millions of dollars of revenue per employee. That is the efficiency bar your next round will quietly be marked against — I've seen a company with a genuinely good team, real revenue and serious B2B contracts fail to raise, simply because forty people at that revenue no longer looked like the future. And I know it from the inside: being a CTO today is completely different from a few years ago — I don't need as many engineers, and I barely need juniors, because AI does so much of that work. The founders who win this decade will treat AI as a strategy question, an org question and a personal discipline — not a tooling decision.",
+    whatGoodLooksLike: [
+      "Strategy explicitly accounts for AI: each of your powers has a colour, the five-year threats and opportunities are mapped, and one or two AI-strengthened moats are being deliberately built.",
+      "The org scales output faster than headcount — and you could show an investor the efficiency curve tomorrow.",
+      "Every function can answer \"how are you using AI to build more efficiently?\" — and named AI champions keep the answers fresh.",
+    ],
+    whereFoundersGoWrong: [
+      "Chasing shiny things daily — every model launch becomes a detour, and the roadmap dies of distraction.",
+      "Never looking up — skipping the periodic review and waking up eighteen months behind, still defending moats that no longer exist.",
+      "Hiring on autopilot — solving every capacity gap with headcount and building exactly the ratio VCs now read as \"can't scale efficiently\".",
+    ],
+    doNow: [
+      {
+        action: "Traffic-light your 7 Powers under AI",
+        note: "Take an hour with your cofounder: green, amber or red for each power against named competitors. The reds are strategy homework, not bad news.",
+        toolId: "ai-strategy-stress-test",
+      },
+      {
+        action: "Book the first AI review",
+        note: "Put a recurring explore → trial → execute block in the calendar — monthly or quarterly. Between reviews, park everything on a list and stay focused.",
+        toolId: "ai-adoption-cadence",
+      },
+      {
+        action: "Name your AI champions",
+        note: "You already know who they are — the people trying every new tool for fun. Give them the badge and the mandate this week.",
+        toolId: "ai-champions",
+      },
+      {
+        action: "Re-justify your next hire",
+        note: "Before the next role goes out, write down why AI plus the existing team can't close the gap. If the answer is thin, don't hire — invest in efficiency instead.",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "One question, three altitudes",
+      },
+      {
+        kind: "paragraph",
+        text: "It's almost too simple to treat AI as a separate capability — it cuts through everything. The work is the same question asked at three altitudes.",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Strategy — does the plan survive AI?",
+            note: "Whatever you're building, AI is core to the strategy now. Re-run your powers with AI in mind, and really imagine the market in five and seven years: where is AI helping you, and where is it hurting?",
+          },
+          {
+            title: "Organisation — are we scaling efficiently?",
+            note: "Be aggressively honest about hire vs. efficiency, and challenge every function — operations, product, tech, support — on how it will use AI to build more with the team it has.",
+          },
+          {
+            title: "You — are you keeping up deliberately?",
+            note: "Run your own explore → trial → execute cadence. Your personal leverage as a founder is being repriced too — the tools you master change what you can do without anyone's help.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "A calibration for the panic cycles: \"AI will eat SaaS\" turned out to be overdone — even the top AI labs still buy SaaS rather than build it. But the moat that once made SaaS defensible has genuinely thinned. Neither doom nor denial; look power by power.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "chart-the-path",
+          "design-the-org",
+          "hire-and-raise-the-talent-bar",
+          "find-new-capital",
+        ],
       },
     ],
   },
