@@ -554,12 +554,52 @@ afternoon · conferences are a trigger for me, so afterards I'm going to xxx"
 - **Personal Board** and **Vision Board** pages drafted from the 2026-07-04 raw captures
   above (no new raw material in this dump beyond "build out these tools").
 
+_Follow-up (Ben, 2026-07-05):_ "vision board is pretty standard - I suggest doing a
+visualisaiton runnning through the human 9 topics of your life in 5 years, then share
+with someone." Page reworked: the guided visualisation through the Human 9 domains is
+now step one (reusing Live It Today's drop-into-an-ordinary-day prompts), and "share it
+with someone" added as its own step — partner / cofounder / personal-board member, so
+one person can hold you to it. `personal-board` added to the page's tool links.
+
 **Open questions:**
 
 - Confirm the "can be folder" reading — if Ben meant a folder/group rather than a merge,
   the playbook is easy to split back out.
 - The manual page's recovery completions (spa day / long run after conferences, vacation
   rule specifics) are composites pending Ben's real playbook rules.
+
+### Company Pulse Check (`company-pulse-check`) — replaces `psychological-safety-diagnostic`
+
+_(Captured from Ben's chat note, 2026-07-05, against a screenshot of the Psychological
+Safety Diagnostic tool page: "maybe instead of this - a company pulse check e.g. enps.")_
+
+1. A recurring anonymous company-wide survey — eNPS plus a few pulse questions — that
+   tracks how people actually feel about working here before problems surface elsewhere.
+2. (Not captured.)
+3. (Not captured — Ben's cadence, question set and how he acts on the scores needed
+   before drafting a page.)
+4. (Not captured.)
+5. (None yet.)
+6. eNPS derives from Fred Reichheld's Net Promoter Score (Bain & Company) — accredited
+   on the metadata; confirm exact wording when the page gets drafted.
+7. navigate-conflict-and-create-psychological-safety (took the old tool's slot),
+   build-a-culture-that-compounds. Related: happiness-check, company-health-scorecard,
+   team-traffic-lighting.
+
+**Drafting decisions (2026-07-05):** metadata-only swap — the old
+`psychological-safety-diagnostic` shell (never had page content) removed from `os-data.ts`;
+old slug `/os/tools/psychological-safety-diagnostic/` no longer exists. New tool stays a
+draft until Ben answers Q2–Q4. References updated: five-dysfunctions and blob-tree related
+lists, both capabilities' toolIds, happiness-check related list (company-scale sibling of
+the 1:1 happiness check). The open accreditation item in `content/review-2026-07.md`
+(Amy Edmondson's survey items) is moot now the psych-safety diagnostic is gone.
+
+**Open questions:**
+
+- Ben's actual pulse question set and cadence (monthly? quarterly?) — needed before a page.
+- eNPS only, or eNPS + a small rotating question set?
+- Does psychological safety still deserve its own measurement tool later, or does the
+  pulse check carry it?
 
 ### Founder Job Description (`founder-job-description`) — NEW
 

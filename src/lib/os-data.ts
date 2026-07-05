@@ -2293,9 +2293,9 @@ export const tools: Tool[] = [
     layerIds: ["human"],
     capabilityIds: ["build-a-life-worth-scaling-for"],
     description:
-      "A visual board of how life should look five years from now — with end-of-year versions if that feels closer — reviewed on a rhythm through your habit stacks so the destination stays in view.",
+      "A guided visualisation through the Human 9 domains of life five years from now, captured as a visual board, shared with someone, and reviewed on a rhythm through your habit stacks.",
     accreditation: {
-      note: "Widely used visualisation practice — adapted for Outstride OS",
+      note: "Widely used visualisation practice — adapted for Outstride OS with the Human 9 walk and the sharing step",
     },
     relatedToolIds: [
       "live-it-today",

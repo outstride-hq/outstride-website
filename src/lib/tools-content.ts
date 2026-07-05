@@ -2220,30 +2220,31 @@ export const toolsContent: Record<string, ToolContent> = {
   },
   "vision-board": {
     intro:
-      "A visual board of how life should look five years from now — with end-of-year versions if that feels closer — reviewed on a rhythm so the destination stays in view while you're heads-down.",
+      "A guided visualisation through the Human 9 domains of your life five years from now, captured as a visual board, shared with someone — and reviewed on a rhythm so the destination stays in view while you're heads-down.",
     blocks: [
       {
         kind: "paragraph",
-        text: "Founders spend years heads-down building toward a life they've never actually pictured. The vision board makes the destination concrete and visual — and then, crucially, puts it on a review rhythm so it keeps steering the weeks instead of gathering dust.",
+        text: "Vision boards are a standard practice for a reason — but a collage of stock photos isn't the tool. The tool is the visualisation underneath: dropping into your life five years out and actually watching it, domain by domain, before you pin anything to a board. The Human 9 gives the walk its structure.",
       },
       {
         kind: "heading",
-        text: "How to make one",
+        text: "How to run it",
       },
       {
         kind: "steps",
         steps: [
           {
-            title: "Pick the horizon",
-            note: "Five years out is the default. If that feels too abstract, make an end-of-year version too — the five-year board sets direction, the end-of-year board sets this year's bar.",
+            title: "Run the visualisation",
+            note: "Close your eyes and drop into an ordinary day five years from now. Walk the Human 9 one domain at a time — romantic, family, friends; physical and mental health; work-life balance, travel, fun and hobbies; income and wealth. Don't design it — watch it, and let the detail fill in.",
+            example: "Where do you wake up, and who's next to you? What does your body feel like? How much are you working — all-in, advisory, something else? What are you into that's just yours?",
           },
           {
-            title: "Walk the Human 9 domains",
-            note: "Relationships, health, lifestyle and money make good prompts: where do you wake up, who's around you, how do you spend a Tuesday, what does your body feel like, what does work look like — all-in, advisory, or something else?",
+            title: "Capture it as a board",
+            note: "Images and concrete lines, one per domain. \"A house with a big kitchen where friends come for Sunday lunch\" beats \"better work-life balance\". Format doesn't matter — a physical board, a Miro, a single slide. If five years feels too abstract, add an end-of-year version: the five-year board sets direction, the end-of-year board sets this year's bar.",
           },
           {
-            title: "Make it visual and specific",
-            note: "Images beat bullet points; \"a house with a big kitchen where friends come for Sunday lunch\" beats \"better work-life balance\". Format doesn't matter — a physical board, a Miro, a single slide.",
+            title: "Share it with someone",
+            note: "A partner, a cofounder, a personal-board member. Saying the vision out loud makes it real in a way a private document never is — and it gives one person permission to ask, six months from now, what you've actually done about it.",
           },
           {
             title: "Put it on a rhythm",
@@ -2253,11 +2254,11 @@ export const toolsContent: Record<string, ToolContent> = {
       },
       {
         kind: "callout",
-        text: "A vision board you never look at is decoration. The review rhythm is the tool — and pairing it with Live It Today turns the picture into something you start living now, not just something you wait for.",
+        text: "A vision board you never look at is decoration. The visualisation is what makes it yours, the sharing is what makes it binding — and pairing it with Live It Today turns the picture into something you start living now, not just something you wait for.",
       },
       {
         kind: "toolRef",
-        toolIds: ["human-9", "live-it-today", "habit-stacks"],
+        toolIds: ["human-9", "live-it-today", "habit-stacks", "personal-board"],
       },
       {
         kind: "capabilityRefs",
