@@ -518,6 +518,49 @@ Existing tool enriched; content also draws on the build-my-growth-system capabil
   picture, manual = written artefact). Merge later if it feels redundant.
 - Vision Board format: physical board, Miro, or slide? Page stays format-agnostic for now.
 
+### Human-tools batch 2 (2026-07-05) — Energy Audit + Playbook→Manual fold + Personal Board + Vision Board
+
+_(Captured from Ben's chat notes, 2026-07-05, against a screenshot of the five DRAFT Human
+tools: Energy Audit, Personal Board, Personal Manual, Personal Playbook, Vision Board.)_
+
+Raw dump, near-verbatim: "build out these tools · wdyt we should do for energy audit? ·
+personal playbook / personal manual can be folder [read: **folded** — merged into one] ·
+let's link w. habit stacks & equilibrium tool & calendar audit and then give some good
+examples e.g. to perform at my best i need XXX · If my burntout score is above an 7/10 I
+should do this · I get my deep work done in the mornings and so I'll push metings to
+afternoon · conferences are a trigger for me, so afterards I'm going to xxx"
+
+**Drafting decisions (2026-07-05):**
+
+- **Playbook folded into Personal Manual.** The `personal-playbook` tool (metadata-only,
+  never had a page) removed from `os.ts`; its if-then rules idea and the "written while
+  you're well so you don't negotiate with yourself when you're not" line live on as the
+  rules section of the Personal Manual page. Old slug `/os/tools/personal-playbook/` no
+  longer exists.
+- **Energy Audit** built as the calendar-colouring diagnostic: colour two weeks of calendar
+  green/amber/red by energy *after* each block, then protect greens / cut, delegate or
+  redesign reds; findings feed the Personal Manual. Positioned against Calendar Audit:
+  calendar audit = does my calendar match my job; energy audit = does my calendar match my
+  battery. Accreditation checked 2026-07-05: the red/green calendar energy audit is a
+  widely used practice (many sources, incl. engineering-leadership circles); no single
+  originator found — noted as widely used, adapted for Outstride OS.
+- **Ben's four example lines** used near-verbatim on the manual page; the completions of
+  his "XXX" placeholders (which recovery move, what after conferences) are **crafted
+  composites** — replace with his real rules when supplied.
+- Cross-links wired per instruction: personal-manual ↔ habit-stacks ↔ two-equilibria-map ↔
+  calendar-audit ↔ energy-audit (burnout score lives in the daily habit stack; "What might
+  trigger me this week?" is already in the Monday stack; the deep-work-mornings rule is
+  enforced via the calendar audit).
+- **Personal Board** and **Vision Board** pages drafted from the 2026-07-04 raw captures
+  above (no new raw material in this dump beyond "build out these tools").
+
+**Open questions:**
+
+- Confirm the "can be folder" reading — if Ben meant a folder/group rather than a merge,
+  the playbook is easy to split back out.
+- The manual page's recovery completions (spa day / long run after conferences, vacation
+  rule specifics) are composites pending Ben's real playbook rules.
+
 ### Founder Job Description (`founder-job-description`) — NEW
 
 _(Captured from Ben's voice memo, 2026-07-04. Ben: "the most important tool here is defining
@@ -913,3 +956,112 @@ the **3 emotions you want to bring** to the call. Page drafted from that bullet.
   the Head of Engineering role) is a **crafted composite** — no verbatim founder example
   captured yet. Replace when Ben supplies a real one.
 - The "chosen emotions" framing in the callout is drafted, not Ben's phrasing — confirm.
+
+### Relationship Reset (`relationship-reset`) — rewrite of `repair-conversation-script`
+
+_(Captured from Ben's voice memo notes, 2026-07-05. Ben: "let's rewrite to relationship
+reset." The old Repair Conversation Script shell (metadata-only draft) is replaced —
+new slug, old slug `/os/tools/repair-conversation-script/` no longer exists.)_
+
+Ben's notes, near-verbatim:
+
+1. Co-creating a happy future > fixing a broken present.
+2. Get curious about what they want for themselves / their department.
+3. Align with what's good for company.
+4. Co-create definition of success.
+5. Co-design accountability systems — get them to ask for it.
+
+Drafting mapping:
+
+1. One-liner: a conversation that resets a strained working relationship by co-creating
+   a happy future together instead of re-litigating the broken present.
+2. When: a working relationship (report, leader, cofounder) has gone sour and every
+   conversation about it turns into arguing about what already happened.
+3. Steps: Ben's points 2–5, with point 1 as the framing move that opens the conversation.
+4. POV/callout: point 1 verbatim — "co-creating a happy future > fixing a broken present."
+   The accountability twist: get THEM to ask for the accountability system (point 5).
+5. No diagram.
+6. Outstride original.
+7. Capabilities kept from the old shell: navigate-conflict-and-create-psychological-safety,
+   build-incredible-relationships. Related: non-violent-communication, crossing-the-line,
+   relationship-design-canvas, commitment-loop (accountability-systems link).
+
+**Provenance flags:**
+
+- Step notes on the drafted page are LLM expansions of Ben's five bullets; the bullets
+  themselves are his phrasing. No verbatim founder example captured yet for a page hook.
+
+### Operating Cadence (`operating-cadence`) — page build-out 2026-07-05 + Quarterly Retro kill
+
+_(Captured from Ben's chat note + sticky-board timeline screenshot, 2026-07-05.)_
+
+Raw dump, near-verbatim:
+
+- "we can kill Quarterly retro as we have another retro" (= `ten-minute-retro`).
+- "for operating cadence you can use this example (reference: for a company of about
+  40 people)"
+- "idea is to have a retro & planning cadence + regular accountability check ins w.
+  enough space for strategy."
+- "link to calendar audit and suggest that you review every quarter to see if updates
+  needed"
+
+Sticky-board timeline transcription (three swimlanes: C-level / Management / Company;
+t-N = days before the new quarter begins):
+
+- **t-14 (C-level):** C-level offsite w. Coach — OKR review · strategy meeting · SWOT
+- **t-12 (C-level):** Draft company OKRs
+- **t-7 (Management):** Quarterly strat meetings & OKR review
+- **t-5 (Management):** Team OKRs
+- **t-4 (C-level):** Approve company & team OKRs
+- **t-2 (Company):** Communicate to the company — OKR results · new OKRs
+- **After the new quarter starts:** Check in w. management team — every 2 weeks
+
+**Drafting decisions (2026-07-05):**
+
+- `quarterly-retro` tool killed per instruction; the retro slot in the cadence is
+  carried by `ten-minute-retro`. References rewired (capability toolIds, related
+  tools, toolRef blocks).
+- Timeline built as new grid diagram `quarterly-planning-timeline` (swimlane style,
+  matching the sticky board); original screenshot kept as the diagram's reference
+  image. The "~40 people" framing kept on the page as the reference point.
+- Ben's "retro & planning cadence + regular accountability check-ins with enough
+  space for strategy" line used near-verbatim as the page's organising idea.
+- Calendar Audit linked per instruction, with the advice to review the cadence
+  itself every quarter.
+
+**Open questions:**
+
+- t-N units read as working days before the new quarter — confirm with Ben.
+- Whether the every-2-weeks management check-in is the fortnightly OKR traffic-light
+  from the existing cadence diagram or a separate 1:1-style check-in.
+
+### Investor Update (`investor-update`) — page build-out 2026-07-05
+
+_(Captured from Ben's chat note, 2026-07-05, pointing at the tool URL. Existing shell
+filled; his "favourite structure" kept verbatim below.)_
+
+1. (Existing shell filled — description tightened to reflect the structure.)
+2. Not captured — cadence not specified either; page stays cadence-agnostic.
+3. Ben's favourite structure, verbatim:
+   1. Key metrics + cash in bank + runway
+   2. Highlights e.g. big sales, new hires
+   3. Challenges e.g. X taking too long
+   4. CTA for investors e.g. looking to be connected with good growth agencies
+   5. Photo of the team
+   P.S. (verbatim): "if you're small / have a lot of angels, a quick 'Startup Name is a X
+   that does Y' as angels often have short memories!"
+4. The P.S. and the CTA carry the POV: investors are an asset to activate, and angels
+   need reminding what you do.
+5. No diagram — the numbered structure carries it.
+6. Outstride original (investor updates are common practice; this structure and ordering
+   are Ben's).
+7. be-storyteller-in-chief, manage-capital-and-stakeholders (existing links kept).
+   Related: board-pack, investor-hell-yes-test, company-health-scorecard.
+
+**Open questions:**
+
+- Cadence (monthly vs quarterly) not specified — confirm with Ben.
+- Step notes on the drafted page are LLM expansions of Ben's five bullets (his examples
+  kept verbatim); only the structure itself is his phrasing. The storytelling framing
+  ("future first, metrics second") is pulled from the existing be-storyteller-in-chief
+  capability page for consistency, not from this dump.

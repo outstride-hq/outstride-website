@@ -2036,6 +2036,235 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "energy-audit": {
+    intro:
+      "Colour two weeks of your calendar green, amber or red by how each block left your energy — the fastest way to see what your week actually costs you, and what funds you.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Reach for this when you end weeks depleted but can't name why, or when the calendar looks perfectly reasonable and you still dread Monday. It pairs with the Calendar Audit but asks a different question: the calendar audit asks whether your week matches your job; the energy audit asks whether it matches your battery.",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Take two weeks of calendar",
+            note: "Print it or screenshot it — something you can mark up. One week works in a pinch; two weeks smooths out the anomalies.",
+          },
+          {
+            title: "Colour every block as you exit it",
+            note: "Green: energy up. Red: energy down. Amber: neutral. Judge on the way out, not in the moment — a hard workout or a tough coaching conversation can drain you during and pay you back after. What matters is the net effect.",
+          },
+          {
+            title: "Read the patterns",
+            note: "What share of the week is red? When do the greens happen — mornings, after exercise, with certain people? Which meeting types are reliably red no matter the topic?",
+            example: "\"Deep work before lunch is always green; any meeting before 11am turns the whole morning red\" is a finding you can act on this week.",
+          },
+          {
+            title: "Act on the reds",
+            note: "Three options per red block: cut it, delegate it, or redesign it — change your role in the meeting, batch the admin, move it out of your peak hours. Protect the greens first; they are what the reds spend.",
+          },
+          {
+            title: "Write the findings into your Personal Manual",
+            note: "The audit is a snapshot; the manual is where the rules live. \"To perform at my best I need deep work in the mornings\" only helps if it's written down where future-you will obey it.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Most people running this for the first time find well over half their calendar is red. That's not a verdict on you — it's the diagnosis, and it's exactly why the exercise is worth two highlighters and twenty minutes.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["calendar-audit", "personal-manual", "seven-founder-needs"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["manage-my-energy-system"],
+      },
+    ],
+  },
+  "personal-manual": {
+    intro:
+      "A written manual of how you work — your best conditions, your triggers, your recovery methods — plus a playbook of pre-committed if-then rules, written while you're well so you don't negotiate with yourself when you're not.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "You know yourself better than anyone — but that knowledge only helps if it's written down where it can run your decisions. The manual has two halves: the operating notes, which describe how you work, and the playbook, which pre-commits what you'll do when specific conditions hit. The Two Equilibria Map is the picture underneath both; the manual is the written artefact you actually consult.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "two-equilibria",
+      },
+      {
+        kind: "heading",
+        text: "The operating notes: how I work",
+      },
+      {
+        kind: "list",
+        items: [
+          "To perform at my best I need eight hours of sleep, three workouts a week and at least half a day alone.",
+          "I get my deep work done in the mornings — so I push meetings to the afternoon.",
+          "Conferences are a trigger for me — travel, hotels, caffeine and late drinks stack up — so afterwards I book a full recovery day before anything else lands.",
+        ],
+      },
+      {
+        kind: "heading",
+        text: "The playbook: if-then rules",
+      },
+      {
+        kind: "list",
+        items: [
+          "If my burnout score is above 7/10, I book a vacation — that week, not next month.",
+          "If I've slept under six hours, I cancel the non-critical meetings rather than run them badly.",
+          "If a sprint is coming — a launch, a fundraise — the recovery block on the far side goes in the calendar before the sprint starts.",
+        ],
+      },
+      {
+        kind: "heading",
+        text: "How to build it and keep it alive",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Source it from evidence",
+            note: "The Energy Audit tells you when you're green and what turns you red; the Two Equilibria Map names your triggers and recovery moves; the 7 Core Founder Needs name what has to be funded. The manual collects what they find.",
+          },
+          {
+            title: "Wire the rules into your habit stacks",
+            note: "The daily burnout score gives the playbook its trigger data, and the Monday question \"what might trigger me this week?\" is the manual doing its job in advance.",
+          },
+          {
+            title: "Enforce the calendar rules through the Calendar Audit",
+            note: "\"Deep work in the mornings\" is a manual entry; meetings actually sitting in the afternoon is a calendar fact. The monthly audit is where you check the two still match.",
+          },
+          {
+            title: "Share it",
+            note: "Give your cofounder or partner the triggers and the thresholds. A rule someone else can hold you to is worth three you only promised yourself.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The whole point of pre-commitment: from inside a bad stretch you will not invent good rules — you'll negotiate. Write the playbook from the good equilibrium, and let past-you make the call.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "two-equilibria-map",
+          "energy-audit",
+          "habit-stacks",
+          "calendar-audit",
+        ],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "build-resilience-and-recovery",
+          "manage-my-energy-system",
+        ],
+      },
+    ],
+  },
+  "personal-board": {
+    intro:
+      "Assemble a board of people you know and trust — deliberately wide in backgrounds — that supports your growth and gets called on when you face big decisions.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "The company has a board; the founder usually doesn't. A personal board is a handful of people you know and trust, chosen for range rather than prestige — and it is not just famous founders. Some of the best members are not operators at all: people you respect for their joy, steadiness, courage or perspective when life and company both get hard.",
+      },
+      {
+        kind: "heading",
+        text: "How to build it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "List the five people you actually learn from",
+            note: "Next to each: what you ask of them today, and what you should ask. That list is the first draft.",
+          },
+          {
+            title: "Widen it deliberately",
+            note: "Aim for range: an operator a stage ahead of you, a true peer, a domain expert, and at least one person entirely outside business. If everyone on the board would give the same answer, it's an echo, not a board.",
+          },
+          {
+            title: "Make the role explicit",
+            note: "Tell each person what you'd like to call on them for. Most people are honoured to be asked — and an explicit ask beats hoping they'll volunteer at the right moment.",
+          },
+          {
+            title: "Actually call on them",
+            note: "Big decisions are the trigger: a pivot, a senior hire, a term sheet, a cofounder rupture. Bring the decision while it's still open — outside perspective after the call is just commentary.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The board earns its keep on the decisions you're too close to see clearly. You're not outsourcing the call — you're borrowing distance you can't manufacture alone.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["relationship-design-canvas", "three-cs-decision", "super-self"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["build-my-growth-system", "make-the-right-calls"],
+      },
+    ],
+  },
+  "vision-board": {
+    intro:
+      "A visual board of how life should look five years from now — with end-of-year versions if that feels closer — reviewed on a rhythm so the destination stays in view while you're heads-down.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Founders spend years heads-down building toward a life they've never actually pictured. The vision board makes the destination concrete and visual — and then, crucially, puts it on a review rhythm so it keeps steering the weeks instead of gathering dust.",
+      },
+      {
+        kind: "heading",
+        text: "How to make one",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Pick the horizon",
+            note: "Five years out is the default. If that feels too abstract, make an end-of-year version too — the five-year board sets direction, the end-of-year board sets this year's bar.",
+          },
+          {
+            title: "Walk the Human 9 domains",
+            note: "Relationships, health, lifestyle and money make good prompts: where do you wake up, who's around you, how do you spend a Tuesday, what does your body feel like, what does work look like — all-in, advisory, or something else?",
+          },
+          {
+            title: "Make it visual and specific",
+            note: "Images beat bullet points; \"a house with a big kitchen where friends come for Sunday lunch\" beats \"better work-life balance\". Format doesn't matter — a physical board, a Miro, a single slide.",
+          },
+          {
+            title: "Put it on a rhythm",
+            note: "Add \"vision board\" to your Monday morning and monthly habit stacks. Two minutes of looking is enough — the point is that the destination gets a vote in how you plan the week.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "A vision board you never look at is decoration. The review rhythm is the tool — and pairing it with Live It Today turns the picture into something you start living now, not just something you wait for.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["human-9", "live-it-today", "habit-stacks"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["build-a-life-worth-scaling-for"],
+      },
+    ],
+  },
   "live-it-today": {
     intro:
       "A two-part exercise: picture your life five years out in vivid detail, then find the parts of it you can start living this year instead of banking the whole thing on a future payoff.",
@@ -2451,6 +2680,62 @@ export const toolsContent: Record<string, ToolContent> = {
           "hire-and-raise-the-talent-bar",
           "manage-capital-and-stakeholders",
           "find-new-capital",
+        ],
+      },
+    ],
+  },
+  "investor-update": {
+    intro:
+      "A repeatable five-part update — metrics, highlights, challenges, an ask and a team photo — that keeps investors aligned and turns them into an asset you can call on.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Send it on a regular cadence between rounds. A consistent update does two jobs at once: it keeps the next raise warm, and it puts your investors to work — but only if you actually ask them for something.",
+      },
+      { kind: "heading", text: "The structure" },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Key metrics + cash in bank + runway",
+            note: "Same numbers, same format, every time — so readers scan the trend instead of rereading last month's email. Cash and runway are non-negotiable; investors will assume the worst about anything you omit.",
+          },
+          {
+            title: "Highlights",
+            note: "Big sales, new hires — the wins that show momentum.",
+          },
+          {
+            title: "Challenges",
+            note: "What's taking too long, what isn't working. Naming challenges honestly is what makes the highlights believable — and it's often what triggers the most useful replies.",
+          },
+          {
+            title: "CTA for investors",
+            note: "The specific help you want right now. One concrete ask beats a standing \"let me know if you can help\".",
+            example: "Looking to be connected with good growth agencies.",
+          },
+          {
+            title: "Photo of the team",
+            note: "Close with people, not numbers. Investors back teams, and the photo makes the company feel real between meetings.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "P.S. — if you're small or have a lot of angels, open with a quick \"Startup Name is a X that does Y\". Angels often have short memories, and one line of context turns a skimmed email into a reply.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "board-pack",
+          "investor-hell-yes-test",
+          "company-health-scorecard",
+        ],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "be-storyteller-in-chief",
+          "manage-capital-and-stakeholders",
         ],
       },
     ],
@@ -3026,6 +3311,65 @@ export const toolsContent: Record<string, ToolContent> = {
         text: "The repair move is to talk across the line instead of assuming across it: share your intention out loud, and ask about their reaction — which is exactly what SBI and Nonviolent Communication are built to do.",
       },
       { kind: "toolRef", toolIds: ["non-violent-communication", "sbi-feedback"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "navigate-conflict-and-create-psychological-safety",
+          "build-incredible-relationships",
+        ],
+      },
+    ],
+  },
+  "relationship-reset": {
+    intro:
+      "A conversation that resets a strained working relationship by co-creating a happy future together — instead of trying to fix a broken present.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Reach for it when a working relationship — a direct report, a leader, a cofounder — has gone sour, and every conversation about it turns into arguing over what already happened. Fixing the past means litigating blame; both sides dig in and the relationship gets worse. The reset skips the trial entirely and asks a different question: what would working together well actually look like from here?",
+      },
+      {
+        kind: "callout",
+        text: "Co-creating a happy future > fixing a broken present. You don't have to agree on what went wrong to agree on where you're going.",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Get curious about what they want",
+            note: "For themselves and for their department. Not what they did wrong, not what you need from them — what do they actually want? Most strained relationships have never had this conversation.",
+          },
+          {
+            title: "Align it with what's good for the company",
+            note: "Connect their ambition to the company's needs. When what they want and what the company needs point the same way, the relationship has a shared direction instead of a standoff.",
+          },
+          {
+            title: "Co-create the definition of success",
+            note: "Write it together, out loud: what does success look like for them, for their department, for the two of you? Co-created means they own it — it isn't your standard being imposed on them.",
+          },
+          {
+            title: "Co-design the accountability systems",
+            note: "Check-ins, metrics, commitments — designed together. The move that makes it stick: get them to ask for it. Accountability they requested is support; accountability you imposed is surveillance.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The last step is the tell. If they're asking you to hold them accountable, the reset worked. If you're still the one chasing, you've fixed the words but not the relationship.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "commitment-loop",
+          "crossing-the-line",
+          "non-violent-communication",
+          "relationship-design-canvas",
+        ],
+      },
       {
         kind: "capabilityRefs",
         capabilityIds: [
@@ -3869,6 +4213,168 @@ export const toolsContent: Record<string, ToolContent> = {
           "build-incredible-relationships",
           "hire-and-raise-the-talent-bar",
         ],
+      },
+    ],
+  },
+  "how-to-let-someone-go": {
+    intro:
+      "The decision is made. This playbook is for the conversation — stated cleanly, reasons concrete, dignity intact, and the risks planned before you walk in.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "The bar for the decision itself sits upstream of this page: if it's not a hell yeah, it's a no (Derek Sivers's rule). And the Accountability Dial is the road that should have led here — explicit stages, a number and a date, so nobody in this meeting is surprised, including you. Once you're through that bar, the worst thing you can do is treat the conversation as one more discussion.",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Prep the call",
+            note: "Write the three things you want to get across and the three emotions you want to bring into the room — the 2-Minute Hard Convo Prep.",
+          },
+          {
+            title: "Protect the company first",
+            note: "If there's any risk of harm — a developer with production access, a seller holding the client relationships — make the plan before the meeting: access ready to cut, handovers mapped. Quietly, and hopefully never needed.",
+          },
+          {
+            title: "State that the decision has been made",
+            note: "Open with it, clearly. Do not give them any reason to think this is still being considered — false hope in this meeting is cruelty, not kindness.",
+          },
+          {
+            title: "Give the why, concretely",
+            note: "Your prepared bullet points, delivered as SBI — situation, behaviour, impact. \"You didn't perform well\" is an opinion; concrete examples are reasons.",
+          },
+          {
+            title: "Offer questions now — and a debrief tomorrow",
+            note: "They can ask anything now, but suggest they take a day to process the news and book a proper debrief call for the next day. Nobody hears well in the minutes after this.",
+          },
+          {
+            title: "Co-create the narrative",
+            note: "Give them a say in how it's told: \"I'd be happy to share that this was a mutual decision with the rest of the team.\" It costs you nothing and preserves a lot for them.",
+          },
+          {
+            title: "Be generous on the way out",
+            note: "Decide what you can offer before they have to ask: gardening leave, references, introductions.",
+          },
+          {
+            title: "Run the exit interview",
+            note: "In the debrief call. Someone with nothing left to lose is one of the most unfiltered views of your company you will ever get — ask real questions and just listen.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Even if you do everything right, this might not be pleasant — expect that, and don't read it as failure. The most load-bearing sentence is your first one: this decision has been made.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["hard-convo-prep", "accountability-dial", "sbi-feedback"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "hire-and-raise-the-talent-bar",
+          "give-feedback-and-hold-the-standard",
+        ],
+      },
+    ],
+  },
+  "hard-convo-prep": {
+    intro:
+      "Two minutes before any hard conversation: write the three things you want to get across and the three emotions you want to bring into the room.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Letting someone go, challenging a cofounder, bad news for the board — any conversation you're dreading. You will not follow a script under pressure, but you will remember three bullet points and a way of being.",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "The three things",
+            note: "The messages that must land even if everything else goes sideways. If the conversation derails, these are what you steer back to.",
+          },
+          {
+            title: "The three emotions",
+            note: "Name how you want to show up. Your emotional state arrives before your words do — and it's the part the other person remembers.",
+            example:
+              "Letting someone go: clear, kind, unshakeable. Bad news for the board: candid, composed, in command.",
+          },
+          {
+            title: "Check yourself at the door",
+            note: "Thirty seconds before you walk in: am I carrying the emotions I chose, or the ones the day handed me?",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Everyone preps the content of a hard conversation. Almost nobody preps the emotional state — and that's the half that decides how it goes.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "how-to-let-someone-go",
+          "crossing-the-line",
+          "non-violent-communication",
+        ],
+      },
+    ],
+  },
+  "leadership-test": {
+    intro:
+      "Six questions to run against every member of your leadership team. Four test the job; the last two test whether this is actually a team.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Most leadership teams are a collection of department heads reporting in parallel. Strong functional executives can pass the first four questions and still fail the last two — and the last two decide whether you have a leadership team or a status circle.",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Do they understand and champion the company strategy?",
+            note: "Not \"can they recite it\" — do they sell it to their own team, unprompted?",
+          },
+          {
+            title: "Does their area have a strategy that flows straight from the company's?",
+            note: "And visibly serves it. If you can't draw the line from the company strategy to their plan, neither can they.",
+          },
+          {
+            title: "Have they built the team and systems that make success likely?",
+            note: "The job is building the machine, not being the machine.",
+          },
+          {
+            title: "Do they embody the culture?",
+            note: "The company copies its leaders. Whatever this person does under pressure is the real values deck.",
+          },
+          {
+            title: "Is the company their first team?",
+            note: "When their function's interest and the company's interest split, which do they choose? Watch what happens in resourcing fights.",
+          },
+          {
+            title: "Would you fight to keep them?",
+            note: "Netflix's keeper test (Reed Hastings & Patty McCord): if they resigned tomorrow, would you fight to change their mind?",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The agreement that makes it a team: 80% commitment, 100% alignment. You might be only 80% sold on a decision after the debate — outside the room you defend it as if it were your own idea. Argue hard inside, one voice outside.",
+      },
+      {
+        kind: "paragraph",
+        text: "Run it quarterly, per person, honestly. A no isn't a firing — it's a development conversation with a named gap. But a no you keep re-scoring for a year is an answer too.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "team-traffic-lighting",
+          "development-pipeline",
+          "five-dysfunctions",
+        ],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["make-ownership-stick", "design-the-org"],
       },
     ],
   },

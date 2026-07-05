@@ -317,6 +317,7 @@ export const capabilities: Capability[] = [
     toolIds: [
       "chapters-and-squads",
       "team-traffic-lighting",
+      "leadership-test",
       "company-health-scorecard",
       "company-7",
     ],
@@ -369,6 +370,7 @@ export const capabilities: Capability[] = [
       "ownership-map",
       "team-traffic-lighting",
       "five-dysfunctions",
+      "leadership-test",
       "alignment-autonomy",
       "company-health-scorecard",
     ],
@@ -396,6 +398,7 @@ export const capabilities: Capability[] = [
       "performance-culture-grid",
       "company-health-scorecard",
       "company-7",
+      "company-pulse-check",
     ],
     rhythmIds: [],
     order: 6,
@@ -420,6 +423,7 @@ export const capabilities: Capability[] = [
       "performance-culture-grid",
       "premortem",
       "thirty-sixty-ninety",
+      "how-to-let-someone-go",
     ],
     rhythmIds: [],
     order: 7,
@@ -533,6 +537,8 @@ export const capabilities: Capability[] = [
       "sbi-feedback",
       "kss-feedback",
       "accountability-dial",
+      "hard-convo-prep",
+      "how-to-let-someone-go",
       "non-violent-communication",
       "leadership-hats",
       "ownership-map",
@@ -582,7 +588,8 @@ export const capabilities: Capability[] = [
     ],
     toolIds: [
       "crossing-the-line",
-      "psychological-safety-diagnostic",
+      "hard-convo-prep",
+      "company-pulse-check",
       "non-violent-communication",
       "five-dysfunctions",
       "personal-histories-trust",
@@ -736,7 +743,6 @@ export const capabilities: Capability[] = [
     toolIds: [
       "two-equilibria-map",
       "personal-manual",
-      "personal-playbook",
       "habit-stacks",
     ],
     rhythmIds: [],
@@ -1385,6 +1391,7 @@ export const tools: Tool[] = [
     capabilityIds: ["take-command-of-my-role", "manage-my-energy-system"],
     description:
       "Clean up the founder calendar so it reflects role, priorities and sustainable performance.",
+    relatedToolIds: ["energy-audit", "founder-job-description", "personal-manual"],
   },
   {
     id: "two-hour-constraint",
@@ -1715,7 +1722,12 @@ export const tools: Tool[] = [
     accreditation: {
       note: "Outstride original",
     },
-    relatedToolIds: ["employee-love-languages", "one-to-one-structure", "kss-feedback"],
+    relatedToolIds: [
+      "employee-love-languages",
+      "one-to-one-structure",
+      "kss-feedback",
+      "company-pulse-check",
+    ],
   },
   {
     id: "employee-love-languages",
@@ -2035,15 +2047,28 @@ export const tools: Tool[] = [
     ],
   },
   {
-    id: "psychological-safety-diagnostic",
-    title: "Psychological Safety Diagnostic",
-    categoryId: "relationship-tools",
+    id: "company-pulse-check",
+    title: "Company Pulse Check",
+    categoryId: "diagnostic-tools",
     type: "diagnostic",
-    format: ["team", "one-to-one"],
+    format: ["team", "company"],
     layerIds: ["founder", "company"],
-    capabilityIds: ["navigate-conflict-and-create-psychological-safety"],
+    capabilityIds: [
+      "navigate-conflict-and-create-psychological-safety",
+      "build-a-culture-that-compounds",
+    ],
     description:
-      "Assess whether people can speak up, disagree and admit mistakes without fear.",
+      "A recurring anonymous company-wide survey — eNPS plus a few pulse questions — that tracks how people actually feel about working here before problems surface elsewhere.",
+    accreditation: {
+      originator: "Fred Reichheld / Bain & Company",
+      source: "Net Promoter Score (eNPS adaptation)",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "happiness-check",
+      "company-health-scorecard",
+      "team-traffic-lighting",
+    ],
   },
   {
     id: "board-pack",
@@ -2068,7 +2093,15 @@ export const tools: Tool[] = [
       "manage-capital-and-stakeholders",
     ],
     description:
-      "A repeatable format for keeping investors and stakeholders aligned.",
+      "A repeatable investor update format — key metrics, cash and runway, highlights, challenges, a specific ask and a team photo — that keeps investors aligned and useful between rounds.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: [
+      "board-pack",
+      "investor-hell-yes-test",
+      "company-health-scorecard",
+    ],
   },
   {
     id: "human-9",
@@ -2087,10 +2120,22 @@ export const tools: Tool[] = [
     categoryId: "human-tools",
     type: "diagnostic",
     format: ["solo", "one-to-one"],
+    moments: ["diagnose"],
+    depth: ["surface", "operating"],
+    frequency: ["quarterly", "as-needed"],
     layerIds: ["human"],
     capabilityIds: ["manage-my-energy-system"],
     description:
-      "Assesses what creates, drains and restores founder energy.",
+      "Colour two weeks of your calendar green, amber or red by how each block left your energy — then protect the greens and cut, delegate or redesign the reds.",
+    accreditation: {
+      note: "Widely used calendar energy-audit practice — no single originator; adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "calendar-audit",
+      "personal-manual",
+      "seven-founder-needs",
+      "habit-stacks",
+    ],
   },
   {
     id: "habit-stacks",
@@ -2117,6 +2162,7 @@ export const tools: Tool[] = [
     },
     relatedToolIds: [
       "energy-audit",
+      "personal-manual",
       "anti-wasteman-system",
       "human-9",
       "calendar-audit",
@@ -2204,7 +2250,6 @@ export const tools: Tool[] = [
     },
     relatedToolIds: [
       "personal-manual",
-      "personal-playbook",
       "habit-stacks",
       "energy-audit",
     ],
@@ -2224,37 +2269,16 @@ export const tools: Tool[] = [
       "manage-my-energy-system",
     ],
     description:
-      "A written manual of how you work: what your good-good and bad-bad states look like, the triggers that tip you from good to bad, and the recovery methods that bring you back.",
+      "A written manual of how you work — your good-good and bad-bad states, triggers and recovery methods — plus pre-committed if-then rules like \"if my burnout score is above 7, I book a vacation\", written while you're well so you don't negotiate with yourself when you're not.",
     accreditation: {
       note: "Outstride original",
     },
     relatedToolIds: [
       "two-equilibria-map",
-      "personal-playbook",
       "energy-audit",
-      "seven-founder-needs",
-    ],
-  },
-  {
-    id: "personal-playbook",
-    title: "Personal Playbook",
-    categoryId: "human-tools",
-    type: "template",
-    format: ["solo", "one-to-one"],
-    moments: ["design", "deliver"],
-    depth: ["operating", "inner-work"],
-    frequency: ["as-needed"],
-    layerIds: ["human"],
-    capabilityIds: ["build-resilience-and-recovery"],
-    description:
-      "Pre-committed if-then rules for running yourself — \"if my burnout score is above 7, I book a vacation\" — written while you're well so you don't negotiate with yourself when you're not.",
-    accreditation: {
-      note: "Outstride original",
-    },
-    relatedToolIds: [
-      "personal-manual",
-      "two-equilibria-map",
       "habit-stacks",
+      "calendar-audit",
+      "seven-founder-needs",
     ],
   },
   {
@@ -2456,7 +2480,7 @@ export const tools: Tool[] = [
       "four-disciplines",
       "personal-histories-trust",
       "accountability-dial",
-      "psychological-safety-diagnostic",
+      "company-pulse-check",
     ],
   },
   {
@@ -2531,7 +2555,7 @@ export const tools: Tool[] = [
     },
     relatedToolIds: [
       "personal-histories-trust",
-      "psychological-safety-diagnostic",
+      "company-pulse-check",
       "non-violent-communication",
     ],
   },
@@ -2595,8 +2619,8 @@ export const tools: Tool[] = [
     relatedToolIds: ["ownership-map", "delegation-ladder"],
   },
   {
-    id: "repair-conversation-script",
-    title: "Repair Conversation Script",
+    id: "relationship-reset",
+    title: "Relationship Reset",
     categoryId: "relationship-tools",
     type: "conversation",
     format: ["one-to-one", "cofounder"],
@@ -2606,11 +2630,15 @@ export const tools: Tool[] = [
       "build-incredible-relationships",
     ],
     description:
-      "A structured script for repairing a relationship after rupture — timing, language and moves that rebuild trust without re-litigating the fight.",
+      "A conversation that resets a strained working relationship by co-creating a happy future together — shared success definition and accountability included — instead of re-litigating the broken present.",
+    accreditation: {
+      note: "Outstride original",
+    },
     relatedToolIds: [
       "non-violent-communication",
       "crossing-the-line",
       "relationship-design-canvas",
+      "commitment-loop",
     ],
   },
   {
