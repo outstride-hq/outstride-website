@@ -136,6 +136,10 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         text: "It's what lets a founder stand up and say: \"I want to shout out someone who sat with a customer for an hour explaining how to run their exam. That's why we get up in the morning — our mission is 1 in 10 of the world's clinicians, and we get there one at a time.\" The destination is what turns a metric into a reason.",
       },
       {
+        kind: "paragraph",
+        text: "Two checks before you call it done: score yourself honestly on the [[tool:ceo-test|CEO Test]] — its first question is exactly this capability — and pressure-test whether the destination is defensible with [[tool:seven-powers|7 Powers]]. Not sure this is your gap at all? Ten minutes with the [[tool:company-7|Company 7]] will tell you where to dig first.",
+      },
+      {
         kind: "capabilityRefs",
         capabilityIds: ["be-storyteller-in-chief", "build-a-culture-that-compounds"],
       },
@@ -157,7 +161,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       ],
     },
     why:
-      "This is where you flip from the aspirational and long-term to what matters now. Most companies run on a rhythm, and for many that rhythm is the funding round — so the next milestone is what everything else has to serve. The discipline that connects it all is OKRs: objectives that are ambitious, key results that measure outcomes rather than inputs (Andy Grove's idea, made famous by John Doerr in Measure What Matters). Done well, the whole company fits on one page — and everyone, from support to design, can see how their work ladders up to the milestone and the mission.",
+      "This is where you flip from the aspirational and long-term to what matters now. Most companies run on a rhythm, and for many that rhythm is the funding round — so the next milestone is what everything else has to serve. The discipline that connects it all is [[tool:okrs|OKRs]]: objectives that are ambitious, key results that measure outcomes rather than inputs (Andy Grove's idea, made famous by John Doerr in Measure What Matters). Done well, the whole company fits on one page — and everyone, from support to design, can see how their work ladders up to the milestone and the mission.",
     whatGoodLooksLike: [
       "A clear picture of the next milestone and what \"good\" looks like — defined with your investors, your market and yourself, not in a vacuum.",
       "Goals that cascade: long-, medium- and short-term OKRs that each ladder up to the milestone.",
@@ -196,7 +200,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "paragraph",
-        text: "Begin with the next big milestone for the company. Often this is a funding round, because that's the rhythm you operate by — but it could be a launch, a new market, or profitability. Whatever it is, define what good looks like: ask your existing investors what would make the next round a hell yes, look at your peers and the competition, and ask yourselves. Fold those into one concrete picture, then work backwards and cascade it down.",
+        text: "Begin with the next big milestone for the company. Often this is a funding round, because that's the rhythm you operate by — but it could be a launch, a new market, or profitability. Whatever it is, define what good looks like: ask your existing investors [[tool:investor-hell-yes-test|what would make the next round a hell yes]], [[tool:opportunity-threat-map|map the opportunities and threats]] against your peers and the competition, and ask yourselves. Fold those into one concrete picture, then work backwards and cascade it down.",
       },
       {
         kind: "diagram",
@@ -220,6 +224,14 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         text: "The test of a good path: a founder should be able to express the most important things about the company in a single one-page document — the long-term goal, and the pieces you need to gather to get there — clearly, concisely and enthusiastically.",
       },
       {
+        kind: "paragraph",
+        text: "One more piece: pick the single metric the whole company maximises, guarded by the health metrics that must not slip. That's your North Star — and once the quarter is running, report against the plan with a simple [[tool:rag-company-status|red-amber-green status]] rather than narrative updates.",
+      },
+      {
+        kind: "toolEmbed",
+        toolId: "north-star-metric",
+      },
+      {
         kind: "capabilityRefs",
         capabilityIds: ["map-the-destination", "make-ownership-stick"],
       },
@@ -241,7 +253,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       ],
     },
     why:
-      "Once you know where you're going and how to get there, your job shifts again: you're the one who bangs the drum. Make sure the company is marching at the right speed in the right direction. That means cascading goals from company to team to individual, and getting the right people into the planning room — not too few, or you get false alignment and the dysfunctions Patrick Lencioni describes when trust and commitment never get tested; not too many, or planning becomes a slow democracy that kills momentum. The three Cs still apply: create the view, collaborate with the few who shape it, communicate it to everyone who has to act. Cadence is how you install that rhythm — weekly, fortnightly, monthly, quarterly, annual — so planning, retrospectives, performance reviews and all-hands each happen at the frequency that matches their job.",
+      "Once you know where you're going and how to get there, your job shifts again: you're the one who bangs the drum. Make sure the company is marching at the right speed in the right direction. That means cascading goals from company to team to individual, and getting the right people into the planning room — not too few, or you get false alignment and the [[tool:five-dysfunctions|dysfunctions Patrick Lencioni describes]] when trust and commitment never get tested; not too many, or planning becomes a slow democracy that kills momentum. The [[tool:three-cs-decision|three Cs]] still apply: create the view, collaborate with the few who shape it, communicate it to everyone who has to act. [[tool:operating-cadence|Cadence]] is how you install that rhythm — weekly, fortnightly, monthly, quarterly, annual — so planning, retrospectives, performance reviews and all-hands each happen at the frequency that matches their job.",
     whatGoodLooksLike: [
       "Every recurring meeting has one job — plan, hold accountable, communicate, connect, or review — and everyone in the room knows which one it is.",
       "Strategy meetings and execution meetings are separate, so one doesn't crowd out the other.",
@@ -294,8 +306,8 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         kind: "list",
         items: [
           "Weekly strategy meeting — plan: direction, priorities and the calls that need making.",
-          "Weekly leadership meeting — hold accountable: metrics, blockers, decisions that can't wait.",
-          "Fortnightly OKR traffic-light — hold accountable: each team reports green, amber or red against agreed goals before anything else.",
+          "Weekly leadership meeting — hold accountable: metrics, blockers, decisions that can't wait — opened and closed with the [[tool:commitment-loop|commitment loop]].",
+          "Fortnightly OKR traffic-light — hold accountable: each team reports [[tool:rag-company-status|green, amber or red]] against agreed goals before anything else.",
           "Monthly all-hands — communicate: repeat the story, progress and what matters this month.",
           "Monthly founder dinner — connect: informal, off-agenda; relationships that don't happen in stand-ups.",
           "Quarterly strategy reset and OKR cascade — plan and collaborate: revisit destination, draft company goals, team OKRs, approve and communicate.",
@@ -392,8 +404,126 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         items: [
           "Hiring: screen and debrief candidates explicitly against the values, not just the skills.",
           "Feedback: reference the values by name when you praise and when you correct.",
-          "Performance reviews: score behaviour against values alongside role outcomes, so culture carries real consequences.",
+          "Performance reviews: [[tool:performance-culture-grid|score behaviour against values alongside role outcomes]], so culture carries real consequences.",
           "Rituals and stories: repeat the moments where someone lived a value at a cost — that is what makes it believable.",
+        ],
+      },
+      {
+        kind: "paragraph",
+        text: "At the leadership level, culture is organisational health — Lencioni's [[tool:four-disciplines|Four Disciplines]] is the operating system for it, and the [[tool:six-critical-questions|Six Critical Questions]] are the clarity test your leadership team should pass without contradicting each other. And don't guess whether it's landing: an anonymous [[tool:company-pulse-check|pulse check]] tells you what the culture feels like beyond the founder's earshot.",
+      },
+    ],
+  },
+  "hire-and-raise-the-talent-bar": {
+    hook:
+      "He interviewed brilliantly — everyone loved him. Six months later we're having the conversation I should have seen coming before he even started.",
+    beforeAfter: {
+      today: [
+        "Job descriptions get copied from bigger companies, describing someone else's need — or last year's.",
+        "Candidates are ranked on gut feel and interview charm, and nobody asks how the hire could go wrong.",
+        "Onboarding is a laptop and good luck; the first real evaluation happens when something breaks.",
+      ],
+      success: [
+        "Every role starts from what the organisation actually needs — and survives the question of whether the existing team could do it with better tools.",
+        "Candidates are ranked on performance × culture, and every hire gets a premortem before day one.",
+        "New hires run on a 30-60-90 with transparent checkpoints — and there's a clear, humane bar for staying.",
+      ],
+    },
+    why:
+      "Hiring is the highest-stakes recurring decision you make, and most founders run it backwards: they start from a job description instead of from the organisation. The flow that works starts one level up — what does the company actually need right now, and does this role at this seniority still describe it? Then rank every candidate on the two axes that matter, performance and culture, instead of interview charm. And do the one thing almost nobody does: run a premortem on the hire before they start. \"If this were to go wrong, how would it go wrong?\" — asked while it's still cheap to fix. The bar keeps rising after the offer, too: onboarding with transparent evaluation, and the honesty to act when someone's a six out of ten.",
+    whatGoodLooksLike: [
+      "The org need decides the role: job description and seniority are checked against what the company needs for the next two years — and against whether AI plus the existing team could close the gap instead.",
+      "Candidates are ranked on [[tool:performance-culture-grid|performance × culture]], and every serious hire gets a [[tool:premortem|premortem]] before they start.",
+      "Onboarding runs on a [[tool:thirty-sixty-ninety|30-60-90 plan]] with evaluation checkpoints that are transparent from day one — a low early score is fine; not knowing where they stand is not.",
+    ],
+    whereFoundersGoWrong: [
+      "Hiring from a copied job description — the role describes another company's org, or the company you were a year ago.",
+      "Skipping the premortem. You'd stress-test a €50k marketing spend, then make a €150k hiring decision on two good conversations.",
+      "Letting a six-out-of-ten linger: no early checkpoints, months of avoidance, then an exit that shocks everyone — slowest and cruellest for the person themselves.",
+    ],
+    doNow: [
+      {
+        action: "Ask the org-need question",
+        note: "\"What does the organisation actually need — and does this job description still describe it?\" Check the seniority against the next two years, not the next quarter.",
+      },
+      {
+        action: "Rank your live pipeline on the grid",
+        note: "Performance on one axis, culture on the other. If two finalists swap places when you score them properly, the gut feel was noise.",
+        toolId: "performance-culture-grid",
+      },
+      {
+        action: "Premortem your next hire",
+        note: "Before they start: \"If this were to go wrong, how would it go wrong?\" List the ways, rank by likelihood, and mitigate the top two while it's cheap.",
+        toolId: "premortem",
+      },
+      {
+        action: "Write the 30-60-90 before day one",
+        note: "What good looks like at each checkpoint, evaluated transparently. New hires want to know the bar — hiding it protects nobody.",
+        toolId: "thirty-sixty-ninety",
+      },
+    ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "The hiring flow",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Start from the organisation",
+            note: "What does the company actually need to reach the next milestone? Only then write — or rewrite — the job description and seniority level against that answer.",
+          },
+          {
+            title: "Challenge the hire itself",
+            note: "Could the existing team do this with better tools? In the AI era, headcount is the last resort, not the default — investors read the efficiency curve too.",
+          },
+          {
+            title: "Rank on performance × culture",
+            note: "Score every candidate on both axes. Culture isn't \"would I have a beer with them\" — it's your values, screened for explicitly.",
+          },
+          {
+            title: "Premortem before they start",
+            note: "Imagine the hire failed. How? Ranked by likelihood, the list tells you what to de-risk in the first month.",
+            example:
+              "\"He wasn't able to turn his network into leads.\" \"His lack of people-management experience meant the team malfunctioned.\"",
+          },
+          {
+            title: "Onboard on a 30-60-90",
+            note: "Transparent checkpoints from day one. A low early score is expected — they're new. The point is that both of you always know where they stand.",
+          },
+        ],
+      },
+      {
+        kind: "toolEmbed",
+        toolId: "performance-culture-grid",
+      },
+      {
+        kind: "heading",
+        text: "For senior hires, run a real process",
+      },
+      {
+        kind: "paragraph",
+        text: "The more senior the role, the more the process should look like the [[tool:senior-hire-process|Senior Hire Process]] — a four-phase interview loop ending in a strategy task presented to the C-level. You won't need all of it for every role; it's the ceiling you strip back from, not a floor you build up to.",
+      },
+      {
+        kind: "heading",
+        text: "The bar for staying",
+      },
+      {
+        kind: "paragraph",
+        text: "Raising the talent bar doesn't stop at the offer. The standard, borrowed from Derek Sivers: if it's not a hell yeah, it's a no. By the time you're seriously debating whether someone should stay, the [[tool:accountability-dial|Accountability Dial]] should already have been running — numbers, dates, real chances to turn it around. And when the answer is still no, use the [[tool:how-to-let-someone-go|playbook]]: the decision stated cleanly, the reasons concrete, dignity intact.",
+      },
+      {
+        kind: "callout",
+        text: "The talent bar is a ratchet. Every hire either raises the average or lowers it — and the team always knows which one just happened, long before you admit it to yourself.",
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "design-the-org",
+          "embrace-the-ai-revolution",
+          "give-feedback-and-hold-the-standard",
         ],
       },
     ],
@@ -452,7 +582,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "paragraph",
-        text: "Correlate the weight of a decision with the time you give it. Small, reversible calls — two-way doors you can walk back through — should be fast, or delegated outright. The big, irreversible ones deserve the opposite: space, options and real thinking. The failure mode is treating them all the same, so the trivial many drown out the vital few.",
+        text: "Correlate the weight of a decision with the time you give it. Small, reversible calls — two-way doors you can walk back through — should be fast, or delegated outright. The big, irreversible ones deserve the opposite: space, options, real thinking — and a [[tool:premortem|premortem]] before you commit, while changing course is still cheap. The failure mode is treating them all the same, so the trivial many drown out the vital few.",
       },
       {
         kind: "callout",
@@ -485,7 +615,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "paragraph",
-        text: "Aim for aligned autonomy: you define the problem and the why, and teams own the how. That's what lets a decision hold once it leaves the room — people know which direction to run without checking back on every call. The grid below is the quick diagnostic for whether you have enough shared direction and enough decision freedom.",
+        text: "Aim for [[tool:alignment-autonomy|aligned autonomy]]: you define the problem and the why, and teams own the how. That's what lets a decision hold once it leaves the room — people know which direction to run without checking back on every call. The grid below is the quick diagnostic for whether you have enough shared direction and enough decision freedom.",
       },
       {
         kind: "diagram",
@@ -590,7 +720,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "paragraph",
-        text: "Then look at what fills it, through two lenses. Leverage: is this work only you can do? (That is Take Command of My Role's territory.) And balance: does the week contain work that gives energy back, not just work that matters? Optimising every hour for leverage until nothing in the week charges you is how high performers hollow themselves out.",
+        text: "Then look at what fills it, through two lenses. Leverage: is this work only you can do? (That is Take Command of My Role's territory.) And balance: does the week contain work that gives energy back, not just work that matters? Two weeks of calendar and two highlighters — the [[tool:energy-audit|Energy Audit]] — answer both. Optimising every hour for leverage until nothing in the week charges you is how high performers hollow themselves out.",
       },
       {
         kind: "heading",
@@ -604,6 +734,10 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
           "Afternoons: meetings, quick wins and the short-term dopamine work.",
           "Guard the boundary: a 9am \"quick call\" costs a full deep-work block, not thirty minutes.",
         ],
+      },
+      {
+        kind: "paragraph",
+        text: "Then make it automatic: wire the cadences into your [[tool:habit-stacks|habit stacks]] so the workouts and walks stop depending on willpower, and score the whole system every month or two with the [[tool:human-9|Human 9]] to catch the domain that's quietly slipping.",
       },
     ],
   },
@@ -659,6 +793,10 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         text: "Resilience gets easier once you see that you have two equilibria, and both are self-reinforcing. In the good one, planning, real breaks and exercise feed each other. In the bad one, reactivity, stress and drinking to switch off feed each other just as well — which is why you don't drift back to good on your own. The work is knowing what pushes you out of the good state, and having deliberate moves that pull you back.",
       },
       {
+        kind: "toolEmbed",
+        toolId: "two-equilibria-map",
+      },
+      {
         kind: "heading",
         text: "Make it measurable",
       },
@@ -671,7 +809,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
           },
           {
             title: "Pre-agree the thresholds",
-            note: "Above 8: stop working — take at least a half day. Between 6 and 8: keep going, but the weekend is fully offline, no email, no laptop. Decide this while you're well; you won't decide it well when you're not.",
+            note: "Above 8: stop working — take at least a half day. Between 6 and 8: keep going, but the weekend is fully offline, no email, no laptop. Decide this while you're well and write it into your [[tool:personal-manual|Personal Manual]]; you won't decide it well when you're not.",
           },
           {
             title: "Enlist your cofounder",
@@ -742,7 +880,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
           },
           {
             title: "Peers",
-            note: "A personal board is not just famous founders. It is a few trusted people who challenge your thinking, widen your lens and help you grow faster than you would alone.",
+            note: "A [[tool:personal-board|personal board]] is not just famous founders. It is a few trusted people who challenge your thinking, widen your lens and help you grow faster than you would alone — and the key relationships in it are worth [[tool:relationship-design-canvas|designing on purpose]].",
           },
           {
             title: "Family & friends",
@@ -763,11 +901,11 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         steps: [
           {
             title: "Reflect",
-            note: "Gather insight from feedback, books, conversations, wins, lowlights and whatever keeps repeating. The raw material for growth is already around you if you are paying attention.",
+            note: "Gather insight from feedback, books, conversations, wins and lowlights — the [[tool:ten-minute-retro|10-Minute Retro]] harvests exactly this every quarter. The raw material for growth is already around you if you are paying attention.",
           },
           {
             title: "Identify",
-            note: "Name the real growth edge underneath the noise. Do not settle for \"I want to be better\"; get specific about the behaviour, pattern or blind spot that most needs work.",
+            note: "Name the real growth edge underneath the noise. Do not settle for \"I want to be better\"; get specific about the behaviour, pattern or blind spot that most needs work. When the edge is a goal you keep not starting, run it through the [[tool:anti-wasteman-system|Anti-Wasteman System]].",
           },
           {
             title: "Practice",
@@ -866,6 +1004,10 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
           },
         ],
       },
+      {
+        kind: "paragraph",
+        text: "The two highest-rep written venues: the monthly [[tool:investor-update|investor update]] and the [[tool:board-pack|board pack]] — both open with narrative before numbers. And inside the company, this is Lencioni's [[tool:four-disciplines|over-communication discipline]]: repeat the story until you're bored of telling it — that's roughly when it starts to land.",
+      },
     ],
   },
   "manage-capital-and-stakeholders": {
@@ -930,7 +1072,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
           },
           {
             title: "Who actually shapes the room?",
-            note: "Boards are rarely flat democracies. Most investors converge around one or two influential voices, so know where the center of gravity is.",
+            note: "Boards are rarely flat democracies. Most investors converge around one or two influential voices, so know where the center of gravity is — the [[tool:stakeholder-map|Stakeholder Map]] scores exactly this.",
           },
           {
             title: "What needs to be discussed one-to-one first?",
@@ -1138,6 +1280,10 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         kind: "paragraph",
         text: "The flip side of naming the cost is getting honest about the payoff that's real for you now, not at 40. Being a founder is a genuine engine for personal growth — but push past that: how is this true to your values, and are you still connected to your mission? For me, the most meaningful part was never the customers or the wealth. It was changing the lives of the people around me — building a working environment people loved, and giving them opportunities and skills they'd carry for the rest of their careers. Find your version of that, and you're already living part of the life you're scaling for.",
       },
+      {
+        kind: "paragraph",
+        text: "When the picture gets vivid, give it a home: the [[tool:vision-board|Vision Board]] walks the same five-year visualisation through every domain of life and captures it somewhere you'll actually revisit — wire the review into your [[tool:habit-stacks|habit stacks]]. And when one piece of the picture becomes a real goal, pressure-test it with the [[tool:anti-wasteman-system|Anti-Wasteman System]] so it survives contact with the quarter.",
+      },
     ],
   },
   "find-new-capital": {
@@ -1175,6 +1321,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       {
         action: "Run the hell-yes question",
         note: "Ask your existing investors, independently, what would make the next round a hell yes for them. Line their answers up next to your peers' rounds and your own view of success.",
+        toolId: "investor-hell-yes-test",
       },
       {
         action: "Build and rank your long list",
@@ -1208,7 +1355,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "paragraph",
-        text: "A raise takes far longer than you think, and it pulls you out of the business for months. Two things quietly break in that time: you, and the company. Look after yourself — take the vacation before you start, not after — and build enough resilience to survive a process that is genuinely unfair. Then make the company resilient without you: if you're in investor meetings all day, watch for culture and execution slipping, and stress-test now whether the business can thrive while you step back.",
+        text: "A raise takes far longer than you think, and it pulls you out of the business for months. Two things quietly break in that time: you, and the company. Look after yourself — take the vacation before you start, not after — and build enough resilience to survive a process that is genuinely unfair. Then make the company resilient without you: if you're in investor meetings all day, watch for culture and execution slipping, and stress-test now whether the business can thrive while you step back — a quick [[tool:company-7|Company 7]] shows you which areas will wobble first.",
       },
       {
         kind: "capabilityRefs",
@@ -1282,7 +1429,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         steps: [
           {
             title: "Strategy — does the plan survive AI?",
-            note: "Whatever you're building, AI is core to the strategy now. Re-run your powers with AI in mind, and really imagine the market in five and seven years: where is AI helping you, and where is it hurting?",
+            note: "Whatever you're building, AI is core to the strategy now. Re-run your [[tool:seven-powers|7 Powers]] with AI in mind, and really imagine the market in five and seven years: where is AI helping you, and where is it hurting?",
           },
           {
             title: "Organisation — are we scaling efficiently?",
@@ -1383,7 +1530,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "paragraph",
-        text: "Naming your genius is only half the job. The other half is wiring it into the company: designing the org so your genius has room, hiring people who are geniuses where you're not, and building ownership so the excellent work doesn't keep boomeranging back to you.",
+        text: "Naming your genius is only half the job. The other half is wiring it into the company: designing the org so your genius has room, hiring people who are geniuses where you're not, and building ownership so the excellent work doesn't keep boomeranging back to you. The wiring document is your [[tool:founder-job-description|Founder Job Description]] — genius crossed with what the company needs, worked backwards from the next milestone, rewritten every six months.",
       },
       {
         kind: "capabilityRefs",
@@ -1457,7 +1604,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "callout",
-        text: "Acting as if isn't faking it — it's rehearsing the identity until it's yours. One founder who dreaded selling built a \"closer\" version of himself: a different playlist before calls, a sharper way of dressing for them, one line he repeated walking in. He wasn't pretending to be someone else; he was practising the version of himself that already showed up on his best days. The Super Self tool is the two-question shortcut to the same place.",
+        text: "Acting as if isn't faking it — it's rehearsing the identity until it's yours. One founder who dreaded selling built a \"closer\" version of himself: a different playlist before calls, a sharper way of dressing for them, one line he repeated walking in. He wasn't pretending to be someone else; he was practising the version of himself that already showed up on his best days. The [[tool:super-self|Super Self]] tool is the two-question shortcut to the same place.",
       },
       {
         kind: "heading",
@@ -1516,6 +1663,14 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         kind: "callout",
         text: "There's no right or wrong management style — direct and collaborative both work. A lot of it is gut feeling. The skill isn't picking a style; it's the reflection: \"Which manager hat am I wearing right now?\"",
       },
+      {
+        kind: "paragraph",
+        text: "The hats get their reps in your [[tool:one-to-one-structure|1:1s]] — that's where you'll catch yourself defaulting to one mode. And the coaching hat comes with a cheat sheet: [[tool:coaching-questions|seven questions]] that lead people to their own answer instead of yours.",
+      },
+      {
+        kind: "toolEmbed",
+        toolId: "leadership-hats",
+      },
     ],
   },
   "give-feedback-and-hold-the-standard": {
@@ -1536,7 +1691,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
     why:
       "Feedback is a dirty word only because of how we use it: rarely, and only when something bad happened. You get rid of that by normalising it — a regular cadence and a regular structure — until feedback stops meaning trouble and starts meaning attention. And when you do need to course-correct, remember that people respond far better to a picture of a positive future than to an autopsy of a broken present: \"next month is going to be our best month ever, because you're going to make more calls than ever\" moves someone that \"you've been underperforming\" never will.",
     whatGoodLooksLike: [
-      "Feedback has a rhythm and a structure — Keep / Start / Stop, both directions, short doc prepared, roughly 50 minutes split between your KSSs and theirs.",
+      "Feedback has a rhythm and a structure — [[tool:kss-feedback|Keep / Start / Stop]], both directions, short doc prepared, roughly 50 minutes split between your KSSs and theirs.",
       "You distinguish the two types: someone rude in a meeting hears about it within 24 hours; patterns like proactivity or attention to detail are collected over time and brought to the regular session.",
       "When someone needs to improve, you know where they're actually stuck — insight, motivation, skills, practice or accountability — and work that, instead of repeating louder feedback.",
     ],
@@ -1574,7 +1729,11 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "paragraph",
-        text: "The happy path is development: find where the pipeline is constricted and coax rather than tell — \"What's the number one thing you want to improve right now?\", \"What happens if nothing changes?\", \"Where do you see yourself in this company, and what's the main gap between here and there?\" Get them excited about the gap and they do the rest. The unhappy path is accountability: an explicit, graduated dial from a casual mention to a final warning, attached to a timeline — so the difficult conversation happens in steps, instead of never and then all at once.",
+        text: "The happy path is development: find where the [[tool:development-pipeline|pipeline]] is constricted and coax rather than tell — \"What's the number one thing you want to improve right now?\", \"What happens if nothing changes?\", \"Where do you see yourself in this company, and what's the main gap between here and there?\" Get them excited about the gap and they do the rest. The unhappy path is accountability: an explicit, graduated [[tool:accountability-dial|dial]] from a casual mention to a final warning, attached to a timeline — so the difficult conversation happens in steps, instead of never and then all at once.",
+      },
+      {
+        kind: "paragraph",
+        text: "For the conversations at the hard end: two minutes of [[tool:hard-convo-prep|prep]] before any of them, the [[tool:non-violent-communication|four-part sentence]] when emotions are tight, and a clean [[tool:how-to-let-someone-go|playbook]] for the day the dial runs out.",
       },
     ],
   },
@@ -1624,6 +1783,24 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         note: "Start with the classic: nothing critical over Slack. Praise in public; anything remotely critical over the phone or in person.",
       },
     ],
+    blocks: [
+      {
+        kind: "heading",
+        text: "Write it down, then keep it alive",
+      },
+      {
+        kind: "paragraph",
+        text: "The design conversation produces an artifact: the [[tool:relationship-one-pager|Relationship One-Pager]] — purpose, expectations, working norms and repair rules on a single page you both sign off. Then maintenance: the [[tool:one-to-one-structure|1:1]] is where the agreement gets exercised, a [[tool:kss-feedback|KSS]] cadence keeps the feedback flowing both ways, and a recurring [[tool:happiness-check|Happiness Check]] catches drift before it becomes distance.",
+      },
+      {
+        kind: "paragraph",
+        text: "Beyond the inner circle, the same discipline scales: score the people the company most depends on — cofounder, reports, board — on the [[tool:stakeholder-map|Stakeholder Map]], so people-risk gets a location instead of staying a vague feeling.",
+      },
+      {
+        kind: "toolEmbed",
+        toolId: "stakeholder-map",
+      },
+    ],
   },
   "navigate-conflict-and-create-psychological-safety": {
     hook:
@@ -1643,7 +1820,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
     why:
       "A startup is fast-moving and chaotic, and often staffed by smart young people with limited experience — conflict is guaranteed; unresolved conflict is optional. The move is to define how you fight before you fight. Two cofounders I worked with, long history, sometimes fighting in front of the team, made themselves a rule: if the voices start rising, either one says a magic word, the conversation stops, and within 24 hours they book a whiteboard session and hash it out. I thought that was amazing — they designed their conflict while they were calm, instead of improvising it while they were angry.",
     whatGoodLooksLike: [
-      "Your relationship doc has a \"how we resolve conflict\" section that both of you actually invoke.",
+      "Your [[tool:relationship-design-canvas|relationship doc]] has a \"how we resolve conflict\" section that both of you actually invoke.",
       "You stay on your side of the line: you don't assert what they intended, they don't assert how you reacted.",
       "Repair is normal: stop, cool down, whiteboard it within a day — and conflict ends visibly well often enough that the team stops fearing it.",
     ],
@@ -1685,6 +1862,14 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         kind: "toolRef",
         toolIds: ["crossing-the-line", "non-violent-communication"],
       },
+      {
+        kind: "heading",
+        text: "Safety is a team sport",
+      },
+      {
+        kind: "paragraph",
+        text: "Conflict design scales past the cofounder pair. Lencioni's [[tool:five-dysfunctions|Five Dysfunctions]] names vulnerability-based trust as the foundation under productive conflict — build it deliberately with [[tool:personal-histories-trust|Personal Histories]], or the [[tool:blob-tree|Blob Tree]] when words themselves are the obstacle. And because founders always hear the polite version, run an anonymous [[tool:company-pulse-check|pulse check]] to find out whether people actually feel safe disagreeing. Before any conversation you're dreading: two minutes of [[tool:hard-convo-prep|prep]] — three things to get across, three emotions to bring into the room.",
+      },
     ],
   },
   "build-leaders-not-dependencies": {
@@ -1718,7 +1903,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       {
         action: "Ask the quarterly question",
         note: "\"What am I doing today that I shouldn't be doing at the end of the quarter?\" Then ask every one of your leads the same thing.",
-        toolId: "delegation-timeline",
+        toolId: "delegation-ladder",
       },
       {
         action: "Name the level out loud",
@@ -1738,6 +1923,22 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       {
         kind: "callout",
         text: "Align delegation with growth edges and it works like magic. \"What's your growth edge?\" — \"People management.\" — \"Great: from now on, you lead the weekly product check-ins.\" You're shedding exactly what you needed to shed, in the shape of the growth they asked for.",
+      },
+      {
+        kind: "heading",
+        text: "The toolkit for letting go",
+      },
+      {
+        kind: "paragraph",
+        text: "Delegation runs on the [[tool:delegation-ladder|Delegation Ladder]]: map where the company still depends on you, name the level of authority out loud on every handoff, and plan the moves up quarter by quarter. In the conversations themselves, swap answers for [[tool:coaching-questions|coaching questions]] and check which [[tool:leadership-hats|hat]] the moment actually needs — and remember people are paid in more than money: the [[tool:employee-love-languages|five currencies]] tell you what \"more responsibility\" is worth to this person. Publish who owns what on the [[tool:ownership-map|Ownership Map]] so delegated outcomes stay delegated.",
+      },
+      {
+        kind: "paragraph",
+        text: "When someone's growth stalls, don't repeat the feedback louder — find the constriction.",
+      },
+      {
+        kind: "toolEmbed",
+        toolId: "development-pipeline",
       },
     ],
   },
@@ -1864,7 +2065,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       {
         action: "Audit the calendar against the job",
         note: "For each ingredient: how much time should it get, and how much did it actually get last fortnight? Close the worst gap first.",
-        toolId: "calendar-audit",
+        toolId: "energy-audit",
       },
       {
         action: "Book the quarterly zoom-out",
@@ -1891,6 +2092,10 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       {
         kind: "toolRef",
         toolIds: ["team-traffic-lighting"],
+      },
+      {
+        kind: "paragraph",
+        text: "A drill for finding the signal in all of this: the [[tool:two-hour-constraint|Two-Hour Constraint]]. If you could only work two hours a day this week, what would they contain? That list is the job — defend it first, and let the rest of the calendar fight for what's left.",
       },
       {
         kind: "capabilityRefs",

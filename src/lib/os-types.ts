@@ -45,13 +45,6 @@ export type ToolLibraryCategoryId =
 
 export type OsContentStatus = "draft" | "ready";
 
-export type RhythmFrequency =
-  | "daily"
-  | "weekly"
-  | "monthly"
-  | "quarterly"
-  | "annual";
-
 export type Layer = {
   id: LayerId;
   title: string;
@@ -91,7 +84,6 @@ export type Capability = {
   bullets: string[];
   stageHint?: StageId;
   toolIds: string[];
-  rhythmIds: string[];
   featured?: boolean;
   order: number;
   status?: OsContentStatus;
@@ -113,15 +105,6 @@ export type Tool = {
   diagramId?: string;
   relatedToolIds?: string[];
   status?: OsContentStatus;
-};
-
-export type Rhythm = {
-  id: string;
-  title: string;
-  frequency: RhythmFrequency;
-  layerIds: LayerId[];
-  capabilityIds: string[];
-  description: string;
 };
 
 export type SymptomMapEntry = {

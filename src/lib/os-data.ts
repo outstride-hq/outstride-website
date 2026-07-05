@@ -1,7 +1,7 @@
 /**
  * Outstride OS taxonomy and marketing copy data.
  *
- * Topology: Layer → Capability Group → Capability → Tools + Rhythms
+ * Topology: Layer → Capability Group → Capability → Tools
  */
 
 import type {
@@ -9,7 +9,6 @@ import type {
   CapabilityGroup,
   Layer,
   ProcessStep,
-  Rhythm,
   Stage,
   SymptomMapEntry,
   Tool,
@@ -267,11 +266,9 @@ export const capabilities: Capability[] = [
       "ceo-test",
       "seven-powers",
       "six-critical-questions",
-      "company-health-scorecard",
       "company-7",
       "symptom-map",
     ],
-    rhythmIds: ["quarterly-strategy-reset"],
     order: 1,
   },
   {
@@ -294,10 +291,8 @@ export const capabilities: Capability[] = [
       "okrs",
       "rag-company-status",
       "ai-strategy-stress-test",
-      "company-health-scorecard",
       "company-7",
     ],
-    rhythmIds: [],
     order: 2,
   },
   {
@@ -315,13 +310,11 @@ export const capabilities: Capability[] = [
       "Decide what needs to be hired, promoted, delegated or redesigned — and challenge every hire against making the existing team more effective with AI first.",
     ],
     toolIds: [
-      "chapters-and-squads",
       "team-traffic-lighting",
+      "chapters-and-squads",
       "leadership-test",
-      "company-health-scorecard",
       "company-7",
     ],
-    rhythmIds: [],
     order: 3,
   },
   {
@@ -339,16 +332,14 @@ export const capabilities: Capability[] = [
       "Reduce reactive chaos by giving planning, review and accountability a home.",
     ],
     toolIds: [
-      "commitment-loop",
       "operating-cadence",
       "okrs",
+      "commitment-loop",
       "rag-company-status",
-      "quarterly-retro",
-      "ten-minute-retro",
       "three-cs-decision",
-      "company-health-scorecard",
+      "ten-minute-retro",
+      "company-7",
     ],
-    rhythmIds: ["weekly-leadership-meeting", "monthly-business-review"],
     order: 4,
   },
   {
@@ -366,15 +357,14 @@ export const capabilities: Capability[] = [
       "Build a culture of accountability: progress is visible in the operating rhythm, and anything not green arrives with a plan.",
     ],
     toolIds: [
-      "commitment-loop",
       "ownership-map",
-      "team-traffic-lighting",
-      "five-dysfunctions",
-      "leadership-test",
+      "commitment-loop",
       "alignment-autonomy",
-      "company-health-scorecard",
+      "five-dysfunctions",
+      "team-traffic-lighting",
+      "leadership-test",
+      "company-7",
     ],
-    rhythmIds: ["weekly-ownership-review"],
     order: 5,
   },
   {
@@ -396,11 +386,9 @@ export const capabilities: Capability[] = [
       "four-disciplines",
       "six-critical-questions",
       "performance-culture-grid",
-      "company-health-scorecard",
       "company-7",
       "company-pulse-check",
     ],
-    rhythmIds: [],
     order: 6,
   },
   {
@@ -419,13 +407,12 @@ export const capabilities: Capability[] = [
       "Keep the bar rising: run performance × culture as a regular talent rhythm, with the feedback and support to improve.",
     ],
     toolIds: [
-      "senior-hire-process",
       "performance-culture-grid",
       "premortem",
       "thirty-sixty-ninety",
+      "senior-hire-process",
       "how-to-let-someone-go",
     ],
-    rhythmIds: [],
     order: 7,
   },
   {
@@ -442,8 +429,7 @@ export const capabilities: Capability[] = [
       "Separate genius from mere excellence — the things you are good at are the most seductive place to waste your time.",
       "Use it as a filter: what you keep is built around your genius; the rest gets hired, delegated or designed away.",
     ],
-    toolIds: ["zone-of-genius"],
-    rhythmIds: [],
+    toolIds: ["zone-of-genius", "founder-job-description"],
     order: 8,
   },
   {
@@ -464,11 +450,10 @@ export const capabilities: Capability[] = [
     toolIds: [
       "founder-job-description",
       "ceo-test",
-      "calendar-audit",
+      "energy-audit",
       "two-hour-constraint",
       "company-7",
     ],
-    rhythmIds: ["calendar-audit", "weekly-planning"],
     order: 9,
   },
   {
@@ -486,8 +471,8 @@ export const capabilities: Capability[] = [
       "Cut decision congestion — no repeated debates, no unclear ownership, no calls stuck waiting on you.",
     ],
     toolIds: [
-      "premortem",
       "three-cs-decision",
+      "premortem",
       "six-thinking-hats",
       "double-diamond",
       "first-principles-thinking",
@@ -496,7 +481,6 @@ export const capabilities: Capability[] = [
       "personal-board",
       "super-self",
     ],
-    rhythmIds: [],
     order: 10,
   },
   {
@@ -514,8 +498,10 @@ export const capabilities: Capability[] = [
       "Notice your own default hat and where it creates bias, and choose the mode that best serves the person's growth and the outcome.",
     ],
     toolIds: [
-      "one-to-one-structure","coaching-questions", "leadership-hats"],
-    rhythmIds: [],
+      "leadership-hats",
+      "coaching-questions",
+      "one-to-one-structure",
+    ],
     order: 11,
   },
   {
@@ -533,17 +519,14 @@ export const capabilities: Capability[] = [
       "Separate care for the person from clarity about the standard — and catch issues before they become resentment, politics or performance problems.",
     ],
     toolIds: [
-      "development-pipeline",
-      "sbi-feedback",
       "kss-feedback",
+      "sbi-feedback",
+      "development-pipeline",
       "accountability-dial",
       "hard-convo-prep",
-      "how-to-let-someone-go",
       "non-violent-communication",
-      "leadership-hats",
-      "ownership-map",
+      "how-to-let-someone-go",
     ],
-    rhythmIds: [],
     order: 12,
   },
   {
@@ -561,15 +544,14 @@ export const capabilities: Capability[] = [
       "Apply this to cofounders, execs, reports, advisors and key partners.",
     ],
     toolIds: [
+      "relationship-design-canvas",
+      "relationship-one-pager",
       "one-to-one-structure",
       "happiness-check",
-      "relationship-design-canvas",
-      "stakeholder-map",
       "kss-feedback",
+      "stakeholder-map",
       "non-violent-communication",
-      "leadership-hats",
     ],
-    rhythmIds: ["monthly-relationship-review"],
     order: 13,
   },
   {
@@ -596,7 +578,6 @@ export const capabilities: Capability[] = [
       "blob-tree",
       "relationship-design-canvas",
     ],
-    rhythmIds: [],
     order: 14,
   },
   {
@@ -614,10 +595,13 @@ export const capabilities: Capability[] = [
       "Move from managing everyone to managing managers and leaders.",
     ],
     toolIds: [
+      "delegation-ladder",
       "coaching-questions",
+      "development-pipeline",
       "employee-love-languages",
-      "development-pipeline","ownership-map", "leadership-hats", "company-7"],
-    rhythmIds: [],
+      "leadership-hats",
+      "ownership-map",
+    ],
     order: 15,
   },
   {
@@ -635,7 +619,6 @@ export const capabilities: Capability[] = [
       "Use narrative to create alignment, confidence and momentum.",
     ],
     toolIds: ["investor-update", "board-pack", "four-disciplines"],
-    rhythmIds: ["monthly-all-hands"],
     order: 16,
   },
   {
@@ -655,11 +638,10 @@ export const capabilities: Capability[] = [
     toolIds: [
       "board-pack",
       "investor-update",
-      "company-health-scorecard",
+      "company-7",
       "stakeholder-map",
       "relationship-design-canvas",
     ],
-    rhythmIds: [],
     order: 17,
   },
   {
@@ -676,8 +658,7 @@ export const capabilities: Capability[] = [
       "Build and manage a fundraising pipeline with discipline.",
       "Turn company progress into the capital required for the next stage.",
     ],
-    toolIds: ["company-health-scorecard", "company-7"],
-    rhythmIds: [],
+    toolIds: ["investor-hell-yes-test", "company-7"],
     order: 18,
   },
   {
@@ -700,7 +681,6 @@ export const capabilities: Capability[] = [
       "ai-champions",
       "seven-powers",
     ],
-    rhythmIds: [],
     order: 19,
   },
   {
@@ -723,7 +703,6 @@ export const capabilities: Capability[] = [
       "human-9",
       "habit-stacks",
     ],
-    rhythmIds: ["weekly-energy-review", "calendar-audit"],
     order: 20,
   },
   {
@@ -745,7 +724,6 @@ export const capabilities: Capability[] = [
       "personal-manual",
       "habit-stacks",
     ],
-    rhythmIds: [],
     order: 21,
   },
   {
@@ -769,7 +747,6 @@ export const capabilities: Capability[] = [
       "relationship-design-canvas",
       "ten-minute-retro",
     ],
-    rhythmIds: [],
     order: 22,
   },
   {
@@ -787,10 +764,9 @@ export const capabilities: Capability[] = [
       "Catch limiting stories as they arise and reframe them into truer, more useful ones.",
     ],
     toolIds: [
-      "anti-wasteman-system",
       "super-self",
+      "anti-wasteman-system",
     ],
-    rhythmIds: [],
     order: 23,
   },
   {
@@ -813,7 +789,6 @@ export const capabilities: Capability[] = [
       "parts-work",
       "habit-stacks",
     ],
-    rhythmIds: [],
     order: 24,
   },
   {
@@ -836,7 +811,6 @@ export const capabilities: Capability[] = [
       "anti-wasteman-system",
       "habit-stacks",
     ],
-    rhythmIds: [],
     order: 25,
   },
 ];
@@ -1009,7 +983,7 @@ export const tools: Tool[] = [
     accreditation: {
       note: "Outstride original",
     },
-    relatedToolIds: ["ceo-test", "calendar-audit", "zone-of-genius"],
+    relatedToolIds: ["ceo-test", "energy-audit", "zone-of-genius"],
   },
   {
     id: "premortem",
@@ -1140,7 +1114,7 @@ export const tools: Tool[] = [
     },
     relatedToolIds: [
       "okrs",
-      "company-health-scorecard",
+      "company-7",
       "strategy-one-pager",
     ],
   },
@@ -1239,7 +1213,7 @@ export const tools: Tool[] = [
       "chapters-and-squads",
       "okrs",
       "rag-company-status",
-      "company-health-scorecard",
+      "company-7",
     ],
   },
   {
@@ -1256,46 +1230,25 @@ export const tools: Tool[] = [
       "map-the-destination",
       "chart-the-path",
       "design-the-org",
+      "install-the-operating-rhythm",
+      "make-ownership-stick",
       "build-a-culture-that-compounds",
+      "manage-capital-and-stakeholders",
       "find-new-capital",
       "take-command-of-my-role",
       "build-leaders-not-dependencies",
     ],
     description:
-      "A ten-minute company diagnostic: score seven areas 0–10 — business growth, strategy, fundraising & runway, culture, hiring & org structure, founder performance, management performance — to find where to dig next.",
+      "A ten-minute company diagnostic: score seven areas 0–10 — business growth, strategy, fundraising & runway, culture, hiring & org structure, founder performance, management performance — to find where to dig next. Includes the full health scorecard for going deeper.",
     diagramId: "company-7",
     accreditation: {
       note: "Outstride original",
     },
     relatedToolIds: [
-      "company-health-scorecard",
       "human-9",
       "team-traffic-lighting",
+      "company-pulse-check",
     ],
-  },
-  {
-    id: "company-health-scorecard",
-    title: "Company Health Scorecard",
-    categoryId: "diagnostic-tools",
-    type: "diagnostic",
-    format: ["one-to-one", "team", "board"],
-    moments: ["diagnose", "define"],
-    depth: ["operating"],
-    frequency: ["monthly", "quarterly"],
-    layerIds: ["company"],
-    capabilityIds: [
-      "map-the-destination",
-      "chart-the-path",
-      "design-the-org",
-      "install-the-operating-rhythm",
-      "make-ownership-stick",
-      "build-a-culture-that-compounds",
-      "hire-and-raise-the-talent-bar",
-      "manage-capital-and-stakeholders",
-      "find-new-capital",
-    ],
-    description:
-      "A quantified snapshot of company health that turns overwhelm into a focused operating conversation.",
   },
   {
     id: "operating-cadence",
@@ -1306,12 +1259,17 @@ export const tools: Tool[] = [
     layerIds: ["company"],
     capabilityIds: ["install-the-operating-rhythm"],
     description:
-      "The weekly, monthly, quarterly and annual rhythm that keeps the company aligned.",
+      "The weekly, monthly, quarterly and annual rhythm that keeps the company aligned — a retro and planning cadence plus regular accountability check-ins, with enough space for strategy.",
     diagramId: "operating-cadence",
     accreditation: {
       note: "Outstride original",
     },
-    relatedToolIds: ["okrs", "quarterly-retro"],
+    relatedToolIds: [
+      "okrs",
+      "ten-minute-retro",
+      "commitment-loop",
+      "energy-audit",
+    ],
   },
   {
     id: "commitment-loop",
@@ -1371,29 +1329,6 @@ export const tools: Tool[] = [
     relatedToolIds: ["ai-adoption-cadence", "ai-strategy-stress-test"],
   },
   {
-    id: "quarterly-retro",
-    title: "Quarterly Retro",
-    categoryId: "operating-tools",
-    type: "rhythm",
-    format: ["team", "company"],
-    layerIds: ["company"],
-    capabilityIds: ["install-the-operating-rhythm"],
-    description:
-      "A structured review of the previous quarter before setting the next one.",
-  },
-  {
-    id: "calendar-audit",
-    title: "Calendar Audit",
-    categoryId: "operating-tools",
-    type: "exercise",
-    format: ["solo", "one-to-one"],
-    layerIds: ["founder", "human"],
-    capabilityIds: ["take-command-of-my-role", "manage-my-energy-system"],
-    description:
-      "Clean up the founder calendar so it reflects role, priorities and sustainable performance.",
-    relatedToolIds: ["energy-audit", "founder-job-description", "personal-manual"],
-  },
-  {
     id: "two-hour-constraint",
     title: "Two-Hour Constraint",
     categoryId: "leadership-tools",
@@ -1432,7 +1367,7 @@ export const tools: Tool[] = [
     diagramId: "zone-of-genius",
     relatedToolIds: [
       "two-hour-constraint",
-      "calendar-audit",
+      "energy-audit",
       "delegation-ladder",
       "anti-wasteman-system",
       "super-self",
@@ -1447,14 +1382,14 @@ export const tools: Tool[] = [
     layerIds: ["founder", "company"],
     capabilityIds: ["build-leaders-not-dependencies"],
     description:
-      "A framework for moving from task delegation to full ownership.",
+      "A framework for moving from task delegation to full ownership — map where the company still depends on you, name the level of authority you are handing over, and plan the handoffs quarter by quarter.",
     accreditation: {
       originator: "Michael Hyatt",
       source: "The Five Levels of Delegation",
       sourceUrl: "https://fullfocus.co/the-five-levels-of-delegation/",
       note: "Adapted for Outstride OS",
     },
-    relatedToolIds: ["alignment-autonomy", "delegation-timeline", "ownership-map"],
+    relatedToolIds: ["alignment-autonomy", "ownership-map", "two-hour-constraint"],
   },
   {
     id: "alignment-autonomy",
@@ -1553,21 +1488,6 @@ export const tools: Tool[] = [
       note: "Rooted in Aristotle; popularised in startups by Elon Musk. Adapted for Outstride OS",
     },
     relatedToolIds: ["double-diamond", "six-thinking-hats"],
-  },
-  {
-    id: "delegation-timeline",
-    title: "Delegation Timeline",
-    categoryId: "leadership-tools",
-    type: "template",
-    format: ["solo", "one-to-one"],
-    layerIds: ["founder", "company"],
-    capabilityIds: ["build-leaders-not-dependencies"],
-    description:
-      "A proactive plan to hand off more work at higher levels of responsibility over time.",
-    accreditation: {
-      note: "Outstride original",
-    },
-    relatedToolIds: ["delegation-ladder", "ownership-map"],
   },
   {
     id: "ownership-map",
@@ -1766,7 +1686,7 @@ export const tools: Tool[] = [
       "manage-capital-and-stakeholders",
     ],
     description:
-      "A shared one-page brief that captures purpose, expectations, working norms and repair rules for an important relationship.",
+      "The artifact a Relationship Design Canvas session produces: a shared one-page brief of purpose, expectations, working norms and repair rules that both people sign off and revisit.",
     accreditation: {
       note: "Outstride original",
     },
@@ -2012,7 +1932,7 @@ export const tools: Tool[] = [
       "build-my-growth-system",
     ],
     description:
-      "Design key working relationships on purpose by making expectations, cadence, decision rights and repair rules explicit.",
+      "Design key working relationships on purpose by making expectations, cadence, decision rights and repair rules explicit — the working session whose output you capture in the Relationship One-Pager.",
     relatedToolIds: [
       "relationship-one-pager",
       "one-to-one-structure",
@@ -2066,7 +1986,7 @@ export const tools: Tool[] = [
     },
     relatedToolIds: [
       "happiness-check",
-      "company-health-scorecard",
+      "company-7",
       "team-traffic-lighting",
     ],
   },
@@ -2089,7 +2009,7 @@ export const tools: Tool[] = [
     relatedToolIds: [
       "investor-update",
       "hard-convo-prep",
-      "company-health-scorecard",
+      "company-7",
     ],
   },
   {
@@ -2111,7 +2031,7 @@ export const tools: Tool[] = [
     relatedToolIds: [
       "board-pack",
       "investor-hell-yes-test",
-      "company-health-scorecard",
+      "company-7",
     ],
   },
   {
@@ -2134,15 +2054,15 @@ export const tools: Tool[] = [
     moments: ["diagnose"],
     depth: ["surface", "operating"],
     frequency: ["quarterly", "as-needed"],
-    layerIds: ["human"],
-    capabilityIds: ["manage-my-energy-system"],
+    layerIds: ["founder", "human"],
+    capabilityIds: ["manage-my-energy-system", "take-command-of-my-role"],
     description:
-      "Colour two weeks of your calendar green, amber or red by how each block left your energy — then protect the greens and cut, delegate or redesign the reds.",
+      "Colour two weeks of your calendar green, amber or red by how each block left your energy — then run a second pass against your job description, and cut, delegate or redesign whatever fails either test.",
     accreditation: {
       note: "Widely used calendar energy-audit practice — no single originator; adapted for Outstride OS",
     },
     relatedToolIds: [
-      "calendar-audit",
+      "founder-job-description",
       "personal-manual",
       "seven-founder-needs",
       "habit-stacks",
@@ -2176,7 +2096,6 @@ export const tools: Tool[] = [
       "personal-manual",
       "anti-wasteman-system",
       "human-9",
-      "calendar-audit",
     ],
   },
   {
@@ -2199,7 +2118,7 @@ export const tools: Tool[] = [
     accreditation: {
       note: "Outstride original — a founder-sized cut of the classic team retrospective",
     },
-    relatedToolIds: ["quarterly-retro", "human-9", "kss-feedback"],
+    relatedToolIds: ["operating-cadence", "human-9", "kss-feedback"],
   },
   {
     id: "personal-board",
@@ -2254,7 +2173,7 @@ export const tools: Tool[] = [
       "manage-my-energy-system",
     ],
     description:
-      "Map your good and bad equilibrium states, the triggers that tip you from one into the other, and the recovery moves that bring you back.",
+      "Map your good and bad equilibrium states, the triggers that tip you from one into the other, and the recovery moves that bring you back — the mapping exercise whose findings become standing rules in your Personal Manual.",
     diagramId: "two-equilibria",
     accreditation: {
       note: "Outstride original",
@@ -2280,7 +2199,7 @@ export const tools: Tool[] = [
       "manage-my-energy-system",
     ],
     description:
-      "A written manual of how you work — your good-good and bad-bad states, triggers and recovery methods — plus pre-committed if-then rules like \"if my burnout score is above 7, I book a vacation\", written while you're well so you don't negotiate with yourself when you're not.",
+      "A written manual of how you work — plus pre-committed if-then rules like \"if my burnout score is above 7, I book a vacation\", written while you're well so you don't negotiate with yourself when you're not. The living home for what the Two Equilibria Map and Energy Audit uncover.",
     accreditation: {
       note: "Outstride original",
     },
@@ -2288,7 +2207,6 @@ export const tools: Tool[] = [
       "two-equilibria-map",
       "energy-audit",
       "habit-stacks",
-      "calendar-audit",
       "seven-founder-needs",
     ],
   },
@@ -2346,7 +2264,7 @@ export const tools: Tool[] = [
     layerIds: ["human"],
     capabilityIds: ["build-a-life-worth-scaling-for"],
     description:
-      "Picture your life five years out in vivid detail, then extract which parts of it you can start living this year instead of deferring the whole thing to a future payoff.",
+      "The Vision Board's companion move: take the five-year picture and extract which parts of it you can start living this year instead of deferring the whole thing to a future payoff.",
     accreditation: {
       note: "Outstride original; the \"build your own yacht\" reframe draws on Creating Your Own Yacht by The Real Estate God",
     },
@@ -2591,43 +2509,8 @@ export const tools: Tool[] = [
       "operating-cadence",
       "commitment-loop",
       "team-traffic-lighting",
-      "company-health-scorecard",
+      "company-7",
     ],
-  },
-  {
-    id: "meeting-jobs-map",
-    title: "Meeting Jobs Map",
-    categoryId: "operating-tools",
-    type: "framework",
-    format: ["team", "company"],
-    layerIds: ["company"],
-    capabilityIds: ["install-the-operating-rhythm"],
-    description:
-      "Clarifies what each recurring meeting is for — and what it is not — so the operating calendar does real work.",
-    relatedToolIds: ["operating-cadence", "calendar-audit"],
-  },
-  {
-    id: "decision-gate",
-    title: "Decision Gate / Shots on Goal",
-    categoryId: "operating-tools",
-    type: "framework",
-    format: ["team", "company"],
-    layerIds: ["company", "founder"],
-    capabilityIds: ["make-the-right-calls", "install-the-operating-rhythm"],
-    description:
-      "A gate for major decisions and a cap on simultaneous bets so the company takes focused shots instead of scattering effort.",
-  },
-  {
-    id: "dependency-map",
-    title: "Dependency Map",
-    categoryId: "leadership-tools",
-    type: "diagnostic",
-    format: ["solo", "one-to-one", "team"],
-    layerIds: ["founder", "company"],
-    capabilityIds: ["build-leaders-not-dependencies"],
-    description:
-      "Maps where the company still depends on specific people — especially the founder — so delegation targets become visible.",
-    relatedToolIds: ["ownership-map", "delegation-ladder"],
   },
   {
     id: "relationship-reset",
@@ -2659,92 +2542,14 @@ export const tools: Tool[] = [
     type: "diagnostic",
     format: ["solo", "one-to-one"],
     layerIds: ["founder"],
-    capabilityIds: ["find-new-capital", "manage-capital-and-stakeholders"],
+    capabilityIds: [
+      "find-new-capital",
+      "manage-capital-and-stakeholders",
+      "chart-the-path",
+    ],
     description:
       "A pre-fundraise filter that defines what would make the next round a hell yes — for you, your cofounder and the market — before you start the process.",
     relatedToolIds: ["investor-update", "premortem"],
   },
 ];
 
-export const rhythms: Rhythm[] = [
-  {
-    id: "weekly-planning",
-    title: "Weekly Planning",
-    frequency: "weekly",
-    layerIds: ["founder"],
-    capabilityIds: ["take-command-of-my-role"],
-    description:
-      "Review priorities, calendar, bottlenecks and the founder's highest-leverage work for the week.",
-  },
-  {
-    id: "weekly-leadership-meeting",
-    title: "Weekly Leadership Meeting",
-    frequency: "weekly",
-    layerIds: ["company"],
-    capabilityIds: ["install-the-operating-rhythm"],
-    description:
-      "A weekly cadence for priorities, metrics, risks, decisions and accountability.",
-  },
-  {
-    id: "weekly-ownership-review",
-    title: "Weekly Ownership Review",
-    frequency: "weekly",
-    layerIds: ["company", "founder"],
-    capabilityIds: ["make-ownership-stick"],
-    description:
-      "Review owners, outcomes, risks, blockers and decision rights.",
-  },
-  {
-    id: "weekly-energy-review",
-    title: "Weekly Energy Review",
-    frequency: "weekly",
-    layerIds: ["human"],
-    capabilityIds: ["manage-my-energy-system"],
-    description: "Review energy, recovery, stress and calendar load.",
-  },
-  {
-    id: "monthly-business-review",
-    title: "Monthly Business Review",
-    frequency: "monthly",
-    layerIds: ["company"],
-    capabilityIds: ["install-the-operating-rhythm"],
-    description:
-      "Review performance, risks, people, priorities and strategic questions.",
-  },
-  {
-    id: "calendar-audit",
-    title: "Calendar Audit",
-    frequency: "monthly",
-    layerIds: ["founder", "human"],
-    capabilityIds: ["take-command-of-my-role", "manage-my-energy-system"],
-    description:
-      "Clean up the founder calendar so it reflects role, priorities and sustainable performance.",
-  },
-  {
-    id: "monthly-relationship-review",
-    title: "Monthly Relationship Review",
-    frequency: "monthly",
-    layerIds: ["founder"],
-    capabilityIds: ["build-incredible-relationships"],
-    description:
-      "Review the health of key relationships, feedback loops and unresolved tension.",
-  },
-  {
-    id: "monthly-all-hands",
-    title: "Monthly All-Hands",
-    frequency: "monthly",
-    layerIds: ["company", "founder"],
-    capabilityIds: ["be-storyteller-in-chief"],
-    description:
-      "A monthly rhythm for repeating the company story, strategy, progress and priorities.",
-  },
-  {
-    id: "quarterly-strategy-reset",
-    title: "Quarterly Strategy Reset",
-    frequency: "quarterly",
-    layerIds: ["company"],
-    capabilityIds: ["map-the-destination"],
-    description:
-      "Revisit destination, strategy, risks and priorities before setting the next quarter.",
-  },
-];

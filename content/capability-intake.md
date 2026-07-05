@@ -909,3 +909,15 @@ and raw content below.)_
 - Ben's low-commitment lean ("hmmm... maybe"): crisis navigation lives in the
   decision-making capability — deciding under pressure, wartime calls. Parked; no
   action until Ben returns to it.
+
+### Hire & Raise the Talent Bar — page DRAFTED 2026-07-05
+
+Ben asked for suggested content in chat ("can you suggest content for this? I spoke about
+perf x culture, pre-mortem, 30 60 90 etc."), overriding the wait-for-Q1/Q5 rule. Page drafted
+from the 2026-07-03 hiring memo + the exits scope extension: hiring flow (org need → JD &
+seniority → perf × culture → premortem → 30-60-90), AI-era challenge-the-hire step,
+senior-hire-process as the strip-back-from-here ceiling, "hell yeah or no" staying bar
+(Sivers, accredited in copy) with Accountability Dial + how-to-let-someone-go. Hook is a
+CRAFTED COMPOSITE (no verbatim founder quote yet) — swap when Ben supplies Q1. Q5 failure
+modes are LLM-drafted from memo fragments (copied JD, skipped premortem, lingering 6/10) —
+Ben should confirm he's actually watched these.

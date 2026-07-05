@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { ToolBlock } from "@/lib/tools-content";
 import DiagramRenderer from "@/components/diagram/DiagramRenderer";
 import { formatToolType, getToolBySlug } from "@/lib/os";
@@ -5,6 +6,51 @@ import { formatToolType, getToolBySlug } from "@/lib/os";
 type ToolContentBlocksProps = {
   blocks: ToolBlock[];
 };
+
+// Inline tool links in any text field: [[tool:okrs]] renders the tool title as
+// a link; [[tool:okrs|the quarterly goals]] renders the custom label instead.
+const INLINE_TOOL_TOKEN = /\[\[tool:([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g;
+
+export function renderInlineText(text: string): ReactNode {
+  if (!text.includes("[[tool:")) {
+    return text;
+  }
+
+  const parts: ReactNode[] = [];
+  let lastIndex = 0;
+
+  const pattern = new RegExp(INLINE_TOOL_TOKEN.source, "g");
+  let match: RegExpExecArray | null;
+  while ((match = pattern.exec(text)) !== null) {
+    const [token, toolId, label] = match;
+    const index = match.index;
+    if (index > lastIndex) {
+      parts.push(text.slice(lastIndex, index));
+    }
+
+    const tool = getToolBySlug(toolId);
+    if (tool) {
+      parts.push(
+        <a
+          key={`${toolId}-${index}`}
+          href={`/os/tools/${tool.id}/`}
+          className="os-inline-tool-link"
+        >
+          {label ?? tool.title}
+        </a>,
+      );
+    } else {
+      parts.push(label ?? toolId);
+    }
+    lastIndex = index + token.length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts;
+}
 
 export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
   return (
@@ -14,7 +60,7 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
           case "paragraph":
             return (
               <p key={index} className="os-prose-body os-prose-muted">
-                {block.text}
+                {renderInlineText(block.text)}
               </p>
             );
           case "heading":
@@ -27,7 +73,7 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
             return (
               <ul key={index} className="os-prose-list os-prose-muted">
                 {block.items.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>{renderInlineText(item)}</li>
                 ))}
               </ul>
             );
@@ -70,7 +116,7 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                         </span>
                         <h3 className="os-prose-card-title mb-2">{step.title}</h3>
                         <p className="os-prose-body os-prose-muted mb-2">
-                          {step.note}
+                          {renderInlineText(step.note)}
                         </p>
                         {step.example ? (
                           <p className="os-prose-body mb-0 fst-italic">
@@ -86,7 +132,7 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
           case "callout":
             return (
               <div key={index} className="os-tool-callout p-4">
-                <p className="mb-0">{block.text}</p>
+                <p className="mb-0">{renderInlineText(block.text)}</p>
               </div>
             );
           case "diagram":
@@ -141,6 +187,49 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                   </div>
                 ))}
               </div>
+            );
+          }
+          case "toolEmbed": {
+            const tool = getToolBySlug(block.toolId);
+            if (!tool) {
+              return null;
+            }
+
+            return (
+              <details key={index} className="os-tool-embed">
+                <summary className="os-tool-embed-summary">
+                  <span className="os-card-meta d-block mb-1">
+                    {formatToolType(tool.type)}
+                  </span>
+                  <span className="os-prose-card-title d-block">
+                    {tool.title}
+                  </span>
+                  <span className="os-tool-embed-hint" aria-hidden="true">
+                    +
+                  </span>
+                </summary>
+                <div className="os-tool-embed-body">
+                  <p className="os-prose-body os-prose-muted">
+                    {tool.description}
+                  </p>
+                  {block.note ? (
+                    <p className="os-prose-body os-prose-muted">
+                      {renderInlineText(block.note)}
+                    </p>
+                  ) : null}
+                  {tool.diagramId ? (
+                    <DiagramRenderer diagramId={tool.diagramId} variant="svg" />
+                  ) : null}
+                  <p className="mb-0 mt-3">
+                    <a
+                      href={`/os/tools/${tool.id}/`}
+                      className="text-primary fw-700 small text-decoration-none"
+                    >
+                      Open the full tool →
+                    </a>
+                  </p>
+                </div>
+              </details>
             );
           }
           case "capabilityRefs":

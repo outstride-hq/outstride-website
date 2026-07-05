@@ -5,6 +5,7 @@ import { culturePerformanceGridDefinition } from "./definitions/culture-performa
 import { fiveDysfunctionsDefinition } from "./definitions/five-dysfunctions";
 import { human9MiroDefinition } from "./definitions/human-9-miro";
 import { operatingCadenceDefinition } from "./definitions/operating-cadence";
+import { quarterlyPlanningTimelineDefinition } from "./definitions/quarterly-planning-timeline";
 import { nvcFlowDefinition } from "./definitions/nvc-flow";
 import { developmentPipelineDefinition } from "./definitions/development-pipeline";
 import { opportunityThreatMapDefinition } from "./definitions/opportunity-threat-map";
@@ -40,6 +41,7 @@ const definitions: Record<string, DiagramDefinition> = {
   [threeCsDecisionDefinition.id]: threeCsDecisionDefinition,
   [zoneOfGeniusDefinition.id]: zoneOfGeniusDefinition,
   [operatingCadenceDefinition.id]: operatingCadenceDefinition,
+  [quarterlyPlanningTimelineDefinition.id]: quarterlyPlanningTimelineDefinition,
   [developmentPipelineDefinition.id]: developmentPipelineDefinition,
   [opportunityThreatMapDefinition.id]: opportunityThreatMapDefinition,
   [chaptersSquadsDefinition.id]: chaptersSquadsDefinition,
@@ -127,6 +129,13 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: operatingCadenceDefinition,
+  },
+  {
+    definition: quarterlyPlanningTimelineDefinition,
+    referenceImage: {
+      src: "/images/diagrams/quarterly-planning-timeline-original.png",
+      alt: "Original quarterly planning sticky-board timeline reference",
+    },
   },
   {
     definition: developmentPipelineDefinition,

@@ -1,6 +1,5 @@
 import {
   getAdjacentCapabilities,
-  getRhythmsForCapability,
   getToolBySlug,
   getToolsForCapability,
   type Capability,
@@ -15,41 +14,14 @@ import {
 import OsConversionCta from "./OsConversionCta";
 import OsPageHeader from "./OsPageHeader";
 import { RelatedTools } from "./RelatedCapabilities";
-import ToolContentBlocks from "./ToolContentBlocks";
+import ToolContentBlocks, { renderInlineText } from "./ToolContentBlocks";
 
 type CapabilityDetailProps = {
   capability: Capability;
 };
 
-function RelatedRhythms({
-  rhythms,
-}: {
-  rhythms: ReturnType<typeof getRhythmsForCapability>;
-}) {
-  if (rhythms.length === 0) {
-    return null;
-  }
-
-  return (
-    <div className="mt-5 pt-4 border-top mb-0">
-      <h2 className="os-prose-related-heading mb-4">Related rhythms</h2>
-      <div className="row g-3">
-        {rhythms.map((rhythm) => (
-          <div key={rhythm.id} className="col-md-6">
-            <div className="featured-box p-3 h-100">
-              <p className="os-prose-card-title mb-1">{rhythm.title}</p>
-              <p className="text-muted small mb-0">{rhythm.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function CapabilityDetail({ capability }: CapabilityDetailProps) {
   const tools = getToolsForCapability(capability.id);
-  const rhythms = getRhythmsForCapability(capability.id);
   const { prev, next } = getAdjacentCapabilities(capability.id);
   const groupTitle = getCapabilityGroupTitle(capability.groupId);
   const content = getCapabilityContent(capability.id);
@@ -118,7 +90,9 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
       {content ? (
         <div>
           <p className="ui-kicker mb-2">Why this matters</p>
-          <p className="os-prose-body os-prose-muted mb-0">{content.why}</p>
+          <p className="os-prose-body os-prose-muted mb-0">
+            {renderInlineText(content.why)}
+          </p>
         </div>
       ) : null}
 
@@ -153,7 +127,7 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
               const tool = item.toolId ? getToolBySlug(item.toolId) : undefined;
               return (
                 <li key={item.action}>
-                  <strong>{item.action}.</strong> {item.note}
+                  <strong>{item.action}.</strong> {renderInlineText(item.note)}
                   {tool ? (
                     <>
                       {" "}
@@ -172,8 +146,7 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
         </div>
       ) : null}
 
-      <RelatedTools tools={tools} />
-      <RelatedRhythms rhythms={rhythms} />
+      <RelatedTools tools={tools} variant="toolkit" />
       <OsConversionCta />
 
       <nav

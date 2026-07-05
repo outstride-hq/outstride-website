@@ -4,7 +4,6 @@ import type {
   FormatType,
   Layer,
   LayerId,
-  Rhythm,
   Tool,
   ToolDepth,
   ToolFrequency,
@@ -15,7 +14,6 @@ import type {
 import {
   capabilities,
   capabilityGroups,
-  rhythms,
   toolLibraryCategories,
   tools,
 } from "@/lib/os-data";
@@ -32,14 +30,17 @@ export function getCapabilitiesByGroup(groupId: string): Capability[] {
     .sort((a, b) => a.order - b.order);
 }
 
+// Capability pages show the curated, ordered capability.toolIds list — not every
+// tool that claims the capability. The reverse index (tool.capabilityIds) drives
+// the tool page's related-capabilities footer.
 export function getToolsForCapability(capabilityId: string): Tool[] {
-  return tools.filter((tool) => tool.capabilityIds.includes(capabilityId));
-}
-
-export function getRhythmsForCapability(capabilityId: string): Rhythm[] {
-  return rhythms.filter((rhythm) =>
-    rhythm.capabilityIds.includes(capabilityId),
-  );
+  const capability = capabilities.find((entry) => entry.id === capabilityId);
+  if (!capability) {
+    return [];
+  }
+  return capability.toolIds
+    .map((toolId) => tools.find((tool) => tool.id === toolId))
+    .filter((tool): tool is Tool => tool !== undefined);
 }
 
 export function getGroupsForLayer(layerId: LayerId): CapabilityGroup[] {

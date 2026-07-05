@@ -29,6 +29,11 @@ export const toolBlockSchema = z.lazy(() =>
       toolIds: z.array(z.string().min(1)).min(1),
     }),
     z.object({
+      kind: z.literal("toolEmbed"),
+      toolId: z.string().min(1),
+      note: z.string().optional(),
+    }),
+    z.object({
       kind: z.literal("capabilityRefs"),
       capabilityIds: z.array(z.string().min(1)).min(1),
     }),

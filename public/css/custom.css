@@ -731,6 +731,62 @@ section.bg-primary a {
 	transform: translateY(-2px);
 }
 
+.os-inline-tool-link {
+	color: var(--out-coral-500);
+	font-weight: 700;
+	text-decoration: none;
+	border-bottom: 1px solid var(--out-coral-300);
+}
+
+.os-inline-tool-link:hover {
+	color: var(--out-coral-800);
+	border-bottom-color: var(--out-coral-500);
+}
+
+.os-tool-embed {
+	background: rgba(255, 250, 247, 0.82);
+	border: 1px solid rgba(240, 213, 204, 0.9);
+	border-radius: var(--out-radius);
+	overflow: hidden;
+}
+
+.os-tool-embed-summary {
+	cursor: pointer;
+	list-style: none;
+	padding: 1rem 3rem 1rem 1.25rem;
+	position: relative;
+	transition: background 0.2s ease;
+}
+
+.os-tool-embed-summary::-webkit-details-marker {
+	display: none;
+}
+
+.os-tool-embed-summary:hover {
+	background: rgba(255, 243, 239, 0.84);
+}
+
+.os-tool-embed-hint {
+	color: var(--out-coral-500);
+	font-size: 1.35rem;
+	font-weight: 800;
+	line-height: 1;
+	position: absolute;
+	right: 1.25rem;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: transform 0.2s ease;
+}
+
+.os-tool-embed[open] .os-tool-embed-hint {
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.os-tool-embed-body {
+	border-top: 1px solid rgba(240, 213, 204, 0.78);
+	padding: 1.25rem;
+}
+
 .os-number-badge {
 	align-items: center;
 	background: var(--out-coral-100);

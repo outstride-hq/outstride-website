@@ -6,7 +6,6 @@ import {
 import { getAllDiagramDefinitions } from "../src/lib/diagram/registry";
 import {
   capabilities,
-  rhythms,
   tools,
 } from "../src/lib/os";
 import {
@@ -33,10 +32,7 @@ function warn(message: string) {
 
 const capabilityIds = new Set(capabilities.map((capability) => capability.id));
 const toolIds = new Set(tools.map((tool) => tool.id));
-const rhythmIds = new Set(rhythms.map((rhythm) => rhythm.id));
 const diagramIds = new Set(getAllDiagramDefinitions().map((diagram) => diagram.id));
-
-const ASYMMETRIC_LINK_ALLOWLIST = new Set(["symptom-map"]);
 
 function assertIdSet(
   label: string,
@@ -63,6 +59,9 @@ function collectBlockRefs(blocks: ToolBlock[]) {
         break;
       case "toolRef":
         toolRefs.push(...block.toolIds);
+        break;
+      case "toolEmbed":
+        toolRefs.push(block.toolId);
         break;
       case "capabilityRefs":
         capabilityRefs.push(...block.capabilityIds);
@@ -157,23 +156,21 @@ function validateCapabilityMetadata() {
       toolIds,
       `capability "${capability.id}"`,
     );
-    assertIdSet(
-      "capability.rhythmId",
-      capability.rhythmIds,
-      rhythmIds,
-      `capability "${capability.id}"`,
-    );
   }
 }
 
-function validateRhythms() {
-  for (const rhythm of rhythms) {
-    assertIdSet(
-      "rhythm.capabilityId",
-      rhythm.capabilityIds,
-      capabilityIds,
-      `rhythm "${rhythm.id}"`,
-    );
+const INLINE_TOOL_TOKEN = /\[\[tool:([a-z0-9-]+)(?:\|[^\]]+)?\]\]/g;
+
+// Inline [[tool:id]] tokens can appear in any text field, so scan the whole
+// serialised entry rather than walking block shapes.
+function validateInlineToolTokens(content: unknown, context: string) {
+  const serialised = JSON.stringify(content);
+  const pattern = new RegExp(INLINE_TOOL_TOKEN.source, "g");
+  let match: RegExpExecArray | null;
+  while ((match = pattern.exec(serialised)) !== null) {
+    if (!toolIds.has(match[1])) {
+      error(`inline tool token "${match[1]}" not found (${context})`);
+    }
   }
 }
 
@@ -183,6 +180,8 @@ function validateContentBlocks() {
     if (!parsed.success) {
       error(`toolsContent "${toolId}" failed schema validation: ${parsed.error.message}`);
     }
+
+    validateInlineToolTokens(content, `toolsContent "${toolId}"`);
 
     const refs = collectBlockRefs(content.blocks);
     assertIdSet("block toolRef", refs.toolRefs, toolIds, `toolsContent "${toolId}"`);
@@ -207,6 +206,8 @@ function validateContentBlocks() {
         `capabilitiesContent "${capabilityId}" failed schema validation: ${parsed.error.message}`,
       );
     }
+
+    validateInlineToolTokens(content, `capabilitiesContent "${capabilityId}"`);
 
     if (content.doNow) {
       for (const action of content.doNow) {
@@ -242,28 +243,17 @@ function validateContentBlocks() {
   }
 }
 
+// capability.toolIds is the curated list a capability page features, so any tool
+// it names must claim the capability back (the tool page's related-capabilities
+// footer relies on it). The reverse is intentionally allowed to be asymmetric:
+// a tool may touch a capability without earning a slot on its curated page.
 function validateBidirectionalLinks() {
-  for (const tool of tools) {
-    if (ASYMMETRIC_LINK_ALLOWLIST.has(tool.id)) {
-      continue;
-    }
-
-    for (const capabilityId of tool.capabilityIds) {
-      const capability = capabilities.find((entry) => entry.id === capabilityId);
-      if (capability && !capability.toolIds.includes(tool.id)) {
-        warn(
-          `Asymmetric link: tool "${tool.id}" → capability "${capabilityId}" but capability.toolIds does not include tool`,
-        );
-      }
-    }
-  }
-
   for (const capability of capabilities) {
     for (const toolId of capability.toolIds) {
       const tool = tools.find((entry) => entry.id === toolId);
       if (tool && !tool.capabilityIds.includes(capability.id)) {
-        warn(
-          `Asymmetric link: capability "${capability.id}" → tool "${toolId}" but tool.capabilityIds does not include capability`,
+        error(
+          `Capability "${capability.id}" features tool "${toolId}" but tool.capabilityIds does not link back`,
         );
       }
     }
@@ -275,7 +265,6 @@ function main() {
   validateCapabilitiesContentKeys();
   validateToolMetadata();
   validateCapabilityMetadata();
-  validateRhythms();
   validateContentBlocks();
   validateBidirectionalLinks();
 

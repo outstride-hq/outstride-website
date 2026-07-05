@@ -15,7 +15,7 @@ import { OsSectionHeader } from "./OsPageHeader";
 
 const flagshipToolIds = new Set([
   "symptom-map",
-  "company-health-scorecard",
+  "company-7",
   "two-hour-constraint",
   "ownership-map",
   "leadership-hats",

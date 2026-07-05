@@ -9,6 +9,7 @@ yarn-error.log*
 .next-dev/
 out/
 dist/
+tsconfig.tsbuildinfo
 
 # Environment variables
 .env
@@ -20,6 +21,8 @@ dist/
 # IDE and editor files
 .vscode/
 .idea/
+# Agent-tooling local files — anything of durable value belongs in AGENTS.md
+.claude/
 *.swp
 *.swo
 *~

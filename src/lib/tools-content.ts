@@ -14,6 +14,9 @@ export type ToolBlock =
   | { kind: "diagram"; diagramId: string }
   | { kind: "image"; src: string; alt: string }
   | { kind: "toolRef"; toolIds: string[] }
+  // Expandable inline card for one tool: description, its diagram and a link,
+  // without sending the reader away mid-article.
+  | { kind: "toolEmbed"; toolId: string; note?: string }
   | { kind: "capabilityRefs"; capabilityIds: string[] };
 
 export type ToolContent = {
@@ -309,7 +312,7 @@ export const toolsContent: Record<string, ToolContent> = {
       },
       {
         kind: "toolRef",
-        toolIds: ["okrs", "company-health-scorecard", "strategy-one-pager"],
+        toolIds: ["okrs", "company-7", "strategy-one-pager"],
       },
       {
         kind: "capabilityRefs",
@@ -1412,6 +1415,14 @@ export const toolsContent: Record<string, ToolContent> = {
         text: "In a ~30-person company, most big calls run the same way: the founders and heads collaborate, and once that's done it gets communicated to the team. Trouble starts when you skip a stage — communicating something you never collaborated on, or 'collaborating' on something you'd already decided.",
       },
       {
+        kind: "heading",
+        text: "Gate the big bets",
+      },
+      {
+        kind: "paragraph",
+        text: "For major decisions, add a gate: no big bet enters Create until the company has capacity for it. Cap the number of simultaneous bets — two or three, not seven — so the company takes focused shots on goal instead of scattering effort. The gate question is simple: \"If we say yes to this, which current bet does it slow down?\" A decision that can't answer it isn't ready to be created, let alone communicated.",
+      },
+      {
         kind: "capabilityRefs",
         capabilityIds: ["make-the-right-calls", "build-leaders-not-dependencies"],
       },
@@ -1627,39 +1638,27 @@ export const toolsContent: Record<string, ToolContent> = {
         text: "Most delegation failures are a level mismatch, not a people problem. Clarify the level on the way in — not after something goes wrong.",
       },
       {
-        kind: "capabilityRefs",
-        capabilityIds: ["build-leaders-not-dependencies"],
+        kind: "heading",
+        text: "Start with a dependency map",
       },
-    ],
-  },
-  "delegation-timeline": {
-    intro:
-      "A forward-looking plan for what you will hand off, to whom, at which level — and when — so delegation happens on purpose instead of by accident.",
-    blocks: [
       {
         kind: "paragraph",
-        text: "Use this when you know you need to let go but keep defaulting to doing it yourself, when someone is ready for more but you have not named what \"more\" means, or during quarterly planning with a direct report. Pair it with the Delegation Ladder to mark current and target levels.",
+        text: "Before choosing levels, find the targets. List everywhere the company still depends on a specific person — especially you: outcomes, decisions, relationships and recurring work that stall when that person is away. Not just tasks you dislike; anything that caps the company at the size of one calendar. That list is your delegation backlog.",
       },
       {
         kind: "heading",
-        text: "Build the timeline",
+        text: "Turn it into a timeline",
       },
       {
         kind: "steps",
         steps: [
           {
-            title: "List what you are still holding",
-            note: "Outcomes, decisions, relationships or recurring work that someone else could own — not just tasks you dislike.",
-            example:
-              "Vendor negotiations, weekly metrics review, first-draft hiring screens.",
-          },
-          {
             title: "Name the owner",
-            note: "Who will take this on — now or after a transition period? Be specific about the person or role.",
+            note: "For each item on the map: who will take this on — now or after a transition period? Be specific about the person or role.",
           },
           {
             title: "Mark current and target level",
-            note: "Use the Delegation Ladder. Where are they today on each item? Where should they be in 30, 60 or 90 days?",
+            note: "Where are they on the ladder today for this item? Where should they be in 30, 60 or 90 days?",
             example:
               "Metrics review: Level 2 today → Level 4 by end of quarter.",
           },
@@ -1671,13 +1670,9 @@ export const toolsContent: Record<string, ToolContent> = {
           },
           {
             title: "Set review dates",
-            note: "Put checkpoints on the calendar. Revisit in your Weekly Ownership Review or a dedicated 1:1 — adjust the plan if reality differs.",
+            note: "Put checkpoints on the calendar and revisit in a dedicated 1:1 — adjust the plan if reality differs. One deliberate handoff per month beats a heroic purge that collapses in week two.",
           },
         ],
-      },
-      {
-        kind: "callout",
-        text: "Delegation is a timeline, not an event. One deliberate handoff per month beats a heroic purge that collapses in week two.",
       },
       {
         kind: "callout",
@@ -2042,7 +2037,7 @@ export const toolsContent: Record<string, ToolContent> = {
     blocks: [
       {
         kind: "paragraph",
-        text: "Reach for this when you end weeks depleted but can't name why, or when the calendar looks perfectly reasonable and you still dread Monday. It pairs with the Calendar Audit but asks a different question: the calendar audit asks whether your week matches your job; the energy audit asks whether it matches your battery.",
+        text: "Reach for this when you end weeks depleted but can't name why, or when the calendar looks perfectly reasonable and you still dread Monday. It's two passes over the same two weeks: the energy pass asks whether your calendar matches your battery; the role pass asks whether it matches your job.",
       },
       {
         kind: "heading",
@@ -2075,16 +2070,24 @@ export const toolsContent: Record<string, ToolContent> = {
         ],
       },
       {
+        kind: "heading",
+        text: "The second pass: does the calendar match the job?",
+      },
+      {
+        kind: "paragraph",
+        text: "Same two weeks, different question. Take your founder job description — the outcomes you own, the decisions only you can make — and mark every block that serves it. What's left is work that belongs to someone else's job, or to nobody's. The energy pass tells you what the week costs; the role pass tells you whether you're spending it on the right job. The blocks that fail both tests go first.",
+      },
+      {
         kind: "callout",
         text: "Most people running this for the first time find well over half their calendar is red. That's not a verdict on you — it's the diagnosis, and it's exactly why the exercise is worth two highlighters and twenty minutes.",
       },
       {
         kind: "toolRef",
-        toolIds: ["calendar-audit", "personal-manual", "seven-founder-needs"],
+        toolIds: ["founder-job-description", "personal-manual", "seven-founder-needs"],
       },
       {
         kind: "capabilityRefs",
-        capabilityIds: ["manage-my-energy-system"],
+        capabilityIds: ["manage-my-energy-system", "take-command-of-my-role"],
       },
     ],
   },
@@ -2140,7 +2143,7 @@ export const toolsContent: Record<string, ToolContent> = {
             note: "The daily burnout score gives the playbook its trigger data, and the Monday question \"what might trigger me this week?\" is the manual doing its job in advance.",
           },
           {
-            title: "Enforce the calendar rules through the Calendar Audit",
+            title: "Enforce the calendar rules through the Energy Audit",
             note: "\"Deep work in the mornings\" is a manual entry; meetings actually sitting in the afternoon is a calendar fact. The monthly audit is where you check the two still match.",
           },
           {
@@ -2159,7 +2162,6 @@ export const toolsContent: Record<string, ToolContent> = {
           "two-equilibria-map",
           "energy-audit",
           "habit-stacks",
-          "calendar-audit",
         ],
       },
       {
@@ -2607,84 +2609,6 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
-  "company-health-scorecard": {
-    intro:
-      "Create a quick quantified view of company health so strategy and operating decisions start from shared reality.",
-    blocks: [
-      { kind: "heading", text: "Purpose" },
-      {
-        kind: "paragraph",
-        text: "Use score as a conversation opener, not as truth. The point is clarity and priorities, not optics.",
-      },
-      { kind: "heading", text: "When to use it" },
-      {
-        kind: "paragraph",
-        text: "Run in quarterly planning, strategy days, founder check-ins, board prep, or whenever the founder feels overwhelmed.",
-      },
-      { kind: "heading", text: "How it works" },
-      {
-        kind: "list",
-        items: [
-          "Score each dimension out of 10.",
-          "Ask why the score is what it is.",
-          "Ask what would move it +1 point.",
-          "Mark trend: up, down, or sideways.",
-          "Pick one score that matters most this quarter.",
-        ],
-      },
-      { kind: "heading", text: "Suggested dimensions" },
-      {
-        kind: "table",
-        columns: ["Dimension", "Score (0-10)", "Trend", "Notes / next action"],
-        rows: [
-          ["Growth", "", "", ""],
-          ["Strategy", "", "", ""],
-          ["Product / service quality", "", "", ""],
-          ["Sales / revenue engine", "", "", ""],
-          ["Team quality", "", "", ""],
-          ["Culture", "", "", ""],
-          ["Operating rhythm", "", "", ""],
-          ["Ownership / accountability", "", "", ""],
-          ["Cash / runway", "", "", ""],
-          ["Founder confidence", "", "", ""],
-        ],
-      },
-      { kind: "heading", text: "Coaching questions" },
-      {
-        kind: "list",
-        items: [
-          "What score would you give this area out of 10?",
-          "Why that score?",
-          "What would make it one point higher?",
-          "Is this trending up, down or sideways?",
-          "Which score matters most this quarter?",
-          "Which number, if it moved, would pull the others up?",
-        ],
-      },
-      { kind: "heading", text: "Output / artefact" },
-      { kind: "list", items: ["Health score table with trends", "Priority actions for quarter/month"] },
-      { kind: "heading", text: "Tags" },
-      {
-        kind: "table",
-        columns: ["Layer", "Moment", "Type", "Format", "Depth", "Frequency"],
-        rows: [["Company", "Diagnose / Define", "Diagnostic", "1:1 / Team / Board", "Operating", "Monthly / Quarterly"]],
-      },
-      {
-        kind: "capabilityRefs",
-        capabilityIds: [
-          "map-the-destination",
-          "chart-the-path",
-          "design-the-org",
-          "install-the-operating-rhythm",
-          "make-ownership-stick",
-          "build-a-culture-that-compounds",
-          "hire-and-raise-the-talent-bar",
-          "manage-capital-and-stakeholders",
-          "find-new-capital",
-        ],
-      },
-    ],
-  },
   "board-pack": {
     intro:
       "A pack and running order for board meetings — executive summary, metrics, plan, ask — that keeps you in control of the narrative instead of reporting into someone else's.",
@@ -2737,7 +2661,7 @@ export const toolsContent: Record<string, ToolContent> = {
       },
       {
         kind: "toolRef",
-        toolIds: ["investor-update", "hard-convo-prep", "company-health-scorecard"],
+        toolIds: ["investor-update", "hard-convo-prep", "company-7"],
       },
       {
         kind: "capabilityRefs",
@@ -2792,7 +2716,7 @@ export const toolsContent: Record<string, ToolContent> = {
         toolIds: [
           "board-pack",
           "investor-hell-yes-test",
-          "company-health-scorecard",
+          "company-7",
         ],
       },
       {
@@ -2801,6 +2725,63 @@ export const toolsContent: Record<string, ToolContent> = {
           "be-storyteller-in-chief",
           "manage-capital-and-stakeholders",
         ],
+      },
+    ],
+  },
+  "investor-hell-yes-test": {
+    intro:
+      "A pre-fundraise filter: define what would make the next round a hell yes — for your investors, the market and yourselves — before you open a single data room.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Run this months before you plan to raise, not the week you start. For most venture-backed companies the next funding round is the next big milestone — the bar the whole company is building toward — so this test does double duty: it tells you whether a raise is winnable, and it hands you the concrete target your quarterly goals should cascade from.",
+      },
+      {
+        kind: "heading",
+        text: "Three answers, one bar",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Ask your existing investors — independently",
+            note: "One question, one investor at a time: \"What would make our next round a hell yes for you?\" Independently matters — asked together they converge; asked apart they tell you what they actually believe.",
+          },
+          {
+            title: "Ask the market",
+            note: "Look at the last five raises by your closest peers: what traction, what efficiency, what story did the round actually clear at? That's the bar as the market sees it, not as your deck wishes it.",
+          },
+          {
+            title: "Ask yourselves",
+            note: "You and your cofounder each write your own hell-yes definition before comparing. If your two answers differ wildly, that's a finding worth an afternoon.",
+          },
+          {
+            title: "Fold it into one concrete bar",
+            note: "Turn the three views into numbers you'd know unambiguously if you hit.",
+            example:
+              "10,000 paying users, strong activation, CAC under €30 — with revenue per head that looks like the future.",
+          },
+          {
+            title: "Decide",
+            note: "Three honest outcomes: raise now, build to the bar first, or don't raise at all. Reaching the bar without new capital is not a consolation prize — it's the strongest negotiating position there is.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The bar you just defined is your next milestone. Work backwards from it: cascade it into [[tool:okrs|OKRs]] so every team can see how this quarter's work moves the company toward a round that's a hell yes rather than a maybe.",
+      },
+      {
+        kind: "callout",
+        text: "The test has a second life mid-raise. When an investor passes, don't accept \"wrong stage\" or \"needs more traction\" — ask: \"What three things would have had to be different for this to go from a no to a hell yes?\" Every answer sharpens the bar for the next conversation.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["investor-update", "premortem"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["find-new-capital", "chart-the-path"],
       },
     ],
   },
@@ -3836,12 +3817,67 @@ export const toolsContent: Record<string, ToolContent> = {
           "operating-cadence",
           "commitment-loop",
           "team-traffic-lighting",
-          "company-health-scorecard",
+          "company-7",
         ],
       },
       {
         kind: "capabilityRefs",
         capabilityIds: ["chart-the-path", "install-the-operating-rhythm"],
+      },
+    ],
+  },
+  "operating-cadence": {
+    intro:
+      "The recurring meetings that run the company, on one calendar: a retro and planning cadence, plus regular accountability check-ins, with enough space for strategy.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Reach for this when the calendar is full of meetings but the company still feels unplanned — direction gets re-litigated in status updates, quarters start without goals, and follow-up routes through the founder. The fix is not more meetings; it is giving planning, review and accountability each a home so the rest of the calendar can be left alone.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "operating-cadence",
+      },
+      {
+        kind: "heading",
+        text: "The quarter turn",
+      },
+      {
+        kind: "paragraph",
+        text: "The busiest stretch is the two weeks before a new quarter. Here is a worked example — the reference is a company of about 40 people. The C-level goes offsite two weeks out to review OKRs, strategy and SWOT, then drafts company OKRs. Management runs its own strategy meetings and writes team OKRs against the draft. The C-level approves company and team OKRs a few days before the line, and the results plus new OKRs are communicated to the whole company just before the quarter starts. From there, a check-in with the management team every two weeks keeps the accountability loop running.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "quarterly-planning-timeline",
+      },
+      {
+        kind: "heading",
+        text: "Give every meeting a job",
+      },
+      {
+        kind: "paragraph",
+        text: "A cadence only works if each recurring meeting has one job — and everyone knows what it is not for. Planning sets goals; review checks them against reality; the accountability check-in renews commitments; the all-hands communicates. The moment a status update starts re-litigating strategy, the meeting has lost its job and the cadence starts leaking.",
+      },
+      {
+        kind: "paragraph",
+        text: "Note the two levels. Company-level meetings — quarterly planning, the review, the all-hands — belong to the operating system and survive any one person's calendar. Founder-level meetings — your 1:1s, your deep-work blocks, your own strategy time — belong to your job description. Design both on purpose; a company rhythm that works by consuming the founder's calendar is not working.",
+      },
+      {
+        kind: "callout",
+        text: "The cadence is a product, not a fixture. Review it every quarter to see if updates are needed — a meeting that earned its slot at 15 people may be theatre at 40. Run an Energy Audit on your own week at the same time, so the rhythm you install for the company doesn't quietly destroy the calendar you need as a founder.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "okrs",
+          "ten-minute-retro",
+          "commitment-loop",
+          "energy-audit",
+        ],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["install-the-operating-rhythm"],
       },
     ],
   },
@@ -3876,7 +3912,7 @@ export const toolsContent: Record<string, ToolContent> = {
           },
           {
             title: "Put numbers on it",
-            note: "For each ingredient: how much time should it get — and how much does it actually get? Run the calendar audit against your answer.",
+            note: "For each ingredient: how much time should it get — and how much does it actually get? Run the Energy Audit's role pass against your answer.",
           },
           {
             title: "Rewrite it every six months",
@@ -3892,7 +3928,7 @@ export const toolsContent: Record<string, ToolContent> = {
         kind: "paragraph",
         text: "Simple hacks carry the discipline: meetings only in the afternoons, one no-meeting day, the first two hours blocked for deep thinking. The \"give away your Legos\" framing is Molly Graham's — worth reading in full.",
       },
-      { kind: "toolRef", toolIds: ["ceo-test", "calendar-audit", "zone-of-genius"] },
+      { kind: "toolRef", toolIds: ["ceo-test", "energy-audit", "zone-of-genius"] },
       {
         kind: "capabilityRefs",
         capabilityIds: ["take-command-of-my-role", "know-my-special-ability"],
@@ -3974,7 +4010,7 @@ export const toolsContent: Record<string, ToolContent> = {
         items: [
           "Score each of the seven areas 0–10: business growth, strategy, fundraising & runway, culture, hiring & org structure, founder / C-level performance, management's performance.",
           "For each score, answer two questions: why that number, and what would move it one point up?",
-          "Circle the lowest one or two areas and go deep there — with the Company Health Scorecard for the full picture, or the specific tool the area points to.",
+          "Circle the lowest one or two areas and go deep there — with the full scorecard below, or the specific tool the area points to.",
           "Re-run monthly or quarterly and watch the trend, not the absolute numbers.",
         ],
       },
@@ -3982,17 +4018,145 @@ export const toolsContent: Record<string, ToolContent> = {
         kind: "callout",
         text: "Founder and management performance are on the board on purpose. Most founders will happily score everything except themselves — and the score they avoid writing down is usually the one doing the most damage.",
       },
-      { kind: "toolRef", toolIds: ["company-health-scorecard", "human-9"] },
+      {
+        kind: "heading",
+        text: "Go deeper: the full scorecard",
+      },
+      {
+        kind: "paragraph",
+        text: "When a quick seven isn't enough — quarterly planning, strategy days, board prep, or whenever everything feels on fire at once — expand to the full scorecard. Same rules: score out of 10, ask why, ask what moves it +1, and mark the trend. The score is a conversation opener, not truth; the point is clarity and priorities, not optics.",
+      },
+      {
+        kind: "table",
+        columns: ["Dimension", "Score (0–10)", "Trend", "Notes / next action"],
+        rows: [
+          ["Growth", "", "", ""],
+          ["Strategy", "", "", ""],
+          ["Product / service quality", "", "", ""],
+          ["Sales / revenue engine", "", "", ""],
+          ["Team quality", "", "", ""],
+          ["Culture", "", "", ""],
+          ["Operating rhythm", "", "", ""],
+          ["Ownership / accountability", "", "", ""],
+          ["Cash / runway", "", "", ""],
+          ["Founder confidence", "", "", ""],
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The closing question, quick seven or full scorecard: which number, if it moved, would pull the others up? That's where the quarter's attention goes.",
+      },
+      { kind: "toolRef", toolIds: ["human-9", "team-traffic-lighting"] },
       {
         kind: "capabilityRefs",
         capabilityIds: [
           "map-the-destination",
           "chart-the-path",
           "design-the-org",
+          "install-the-operating-rhythm",
           "build-a-culture-that-compounds",
+          "manage-capital-and-stakeholders",
           "find-new-capital",
           "take-command-of-my-role",
           "build-leaders-not-dependencies",
+        ],
+      },
+    ],
+  },
+  "company-pulse-check": {
+    intro:
+      "A recurring anonymous survey — eNPS, two tenure-intent questions and a short question bank — that tells you how people actually feel about working here while there is still time to act on it.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Run this once the company is too big to read by walking the room — usually somewhere past twenty people. The Happiness Check covers the people you talk to every week; the pulse check covers everyone else, and it's anonymous, so it catches what nobody says to a founder's face. By the time the same signal reaches you another way, it's usually a resignation letter.",
+      },
+      {
+        kind: "heading",
+        text: "The three anchor questions",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "eNPS",
+            note: "\"How likely are you to recommend us as a great place to work?\" on a 0–10 scale. Score it the standard way: % promoters (9–10) minus % detractors (0–6). The absolute number matters less than the trend quarter over quarter.",
+          },
+          {
+            title: "Two years",
+            note: "\"How likely is it you'll still be working here in 2 years?\" on a 1–5 scale. This is your practical retention signal — the people quietly interviewing elsewhere answer this one honestly when it's anonymous.",
+          },
+          {
+            title: "Five years",
+            note: "Same question at five years. Nobody owes you five years — a low score isn't a resignation notice. What it measures is whether people can see a future here at all, and whether the company's story extends past the current roadmap in their heads.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "The question bank",
+      },
+      {
+        kind: "paragraph",
+        text: "Statements scored 1–5, strongly disagree to strongly agree, organised by level so the results tell you where to look: is this an organisation problem, a leadership problem, a manager problem or a role problem?",
+      },
+      {
+        kind: "table",
+        columns: ["Level", "Statement"],
+        rows: [
+          ["Organisation", "Our vision, mission and strategy are clearly defined and communicated."],
+          ["Organisation", "The organisation structure is clear to me."],
+          ["Organisation", "We have an open and transparent culture."],
+          ["Organisation", "With eyes closed, I could recite our values."],
+          ["Organisation", "We genuinely live by our values."],
+          ["Leadership", "The C-level contributes to a positive work culture."],
+          ["Leadership", "Leadership is transparent in what they do and tell us."],
+          ["Leadership", "I am confident in our management team."],
+          ["Leadership", "Leadership demonstrates that people are important to the company's success."],
+          ["My manager", "My 1:1s are used effectively for feedback on my work."],
+          ["My manager", "I feel supported by my manager in my work."],
+          ["My manager", "My manager is invested in my career growth."],
+          ["My manager", "I feel valued by my manager."],
+          ["My manager", "I regularly give feedback to my manager."],
+          ["My team", "I feel valued by my peers."],
+          ["My team", "We regularly exchange feedback within the team."],
+          ["My role", "I understand the responsibilities and expectations that come with my role."],
+          ["My role", "I can see clear career progression in my role."],
+          ["My role", "I'm able to reach my full potential here."],
+          ["My role", "My workload and pace are sustainable."],
+        ],
+      },
+      {
+        kind: "paragraph",
+        text: "Close with two open questions, always the same two: \"What challenges do you see, and how do you believe we can solve them together?\" and \"What do you like most about working here?\" The first phrasing matters — asking for the solution alongside the complaint keeps the free-text field constructive, and the answers seed your focus groups.",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "list",
+        items: [
+          "Quarterly, anonymous, same questions every time. The value is the trend line — changing questions resets it to zero.",
+          "Share the results with the whole company within two weeks, including the ugly ones. An unshared survey teaches people that answering honestly is pointless.",
+          "Pick the two worst-scoring items and run focus groups on those — the survey finds the where, the conversation finds the why.",
+          "Track eNPS and the two tenure-intent scores as the headline numbers; the question bank exists to explain their movement.",
+          "Don't run it if you won't act on it. One ignored survey costs more trust than never asking.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Anonymity is load-bearing. Under about twenty people, skip segmentation questions like tenure or department — if a founder can work out who wrote it, you'll get the polite version, and the polite version is worthless.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["happiness-check", "values-deck", "company-7"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "build-a-culture-that-compounds",
+          "navigate-conflict-and-create-psychological-safety",
         ],
       },
     ],
@@ -4036,7 +4200,7 @@ export const toolsContent: Record<string, ToolContent> = {
         kind: "callout",
         text: "The learnings are the product; wins and lowlights are just the evidence. And ten minutes is the point — the retro you actually run beats the perfect one you skip.",
       },
-      { kind: "toolRef", toolIds: ["quarterly-retro", "human-9"] },
+      { kind: "toolRef", toolIds: ["operating-cadence", "human-9"] },
       {
         kind: "capabilityRefs",
         capabilityIds: [
@@ -4338,47 +4502,6 @@ export const toolsContent: Record<string, ToolContent> = {
         capabilityIds: [
           "hire-and-raise-the-talent-bar",
           "give-feedback-and-hold-the-standard",
-        ],
-      },
-    ],
-  },
-  "hard-convo-prep": {
-    intro:
-      "Two minutes before any hard conversation: write the three things you want to get across and the three emotions you want to bring into the room.",
-    blocks: [
-      {
-        kind: "paragraph",
-        text: "Letting someone go, challenging a cofounder, bad news for the board — any conversation you're dreading. You will not follow a script under pressure, but you will remember three bullet points and a way of being.",
-      },
-      {
-        kind: "steps",
-        steps: [
-          {
-            title: "The three things",
-            note: "The messages that must land even if everything else goes sideways. If the conversation derails, these are what you steer back to.",
-          },
-          {
-            title: "The three emotions",
-            note: "Name how you want to show up. Your emotional state arrives before your words do — and it's the part the other person remembers.",
-            example:
-              "Letting someone go: clear, kind, unshakeable. Bad news for the board: candid, composed, in command.",
-          },
-          {
-            title: "Check yourself at the door",
-            note: "Thirty seconds before you walk in: am I carrying the emotions I chose, or the ones the day handed me?",
-          },
-        ],
-      },
-      {
-        kind: "callout",
-        text: "Everyone preps the content of a hard conversation. Almost nobody preps the emotional state — and that's the half that decides how it goes.",
-      },
-      {
-        kind: "toolRef",
-        toolIds: [
-          "how-to-let-someone-go",
-          "crossing-the-line",
-          "non-violent-communication",
         ],
       },
     ],
