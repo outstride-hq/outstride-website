@@ -3180,8 +3180,12 @@ export const toolsContent: Record<string, ToolContent> = {
         text: "The shape",
       },
       {
+        kind: "paragraph",
+        text: "Three phases, each with a handful of written goals. The examples below follow one composite hire — a first marketing lead joining a Series A B2B SaaS.",
+      },
+      {
         kind: "table",
-        columns: ["Phase", "Focus", "Example goals — first marketing lead, Series A B2B SaaS"],
+        columns: ["Phase", "Focus", "Example goals"],
         rows: [
           [
             "Days 1–30",
