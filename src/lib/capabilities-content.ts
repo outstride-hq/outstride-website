@@ -309,7 +309,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "toolRef",
-        toolIds: ["operating-cadence", "okrs", "quarterly-retro"],
+        toolIds: ["operating-cadence", "okrs", "ten-minute-retro"],
       },
     ],
   },
@@ -1807,7 +1807,11 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "toolRef",
-        toolIds: ["chapters-and-squads", "team-traffic-lighting"],
+        toolIds: [
+          "chapters-and-squads",
+          "team-traffic-lighting",
+          "leadership-test",
+        ],
       },
       {
         kind: "capabilityRefs",
@@ -1944,6 +1948,22 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
     ],
     blocks: [
+      {
+        kind: "heading",
+        text: "The first team",
+      },
+      {
+        kind: "paragraph",
+        text: "Ownership's top floor is your leadership team — and most leadership teams aren't teams. They're department heads reporting in parallel, each loyal to their function first. The test: when their function's interest and the company's interest split, which do they choose? The strongest leadership teams craft their own distinctive culture — a handful of explicit agreements about how they disagree, decide and defend decisions — and the first agreement is one voice outside the room. A decision defended with \"well, I disagreed\" undoes ownership on every floor below it.",
+      },
+      {
+        kind: "callout",
+        text: "80% commitment, 100% alignment. You might be only 80% sold on a decision after the fight — outside the room you're 100% aligned, defending it as if it were your own idea. Kin to Andy Grove's \"disagree and commit\", and the behavioural core of putting the company above the function.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["leadership-test"],
+      },
       {
         kind: "callout",
         text: "This page is the org level: systems and culture that make ownership stick without you. The individual level — co-creating goals and accountability with one person, delegation that doesn't snap back — lives in Build Leaders, Not Dependencies. Same principle, two altitudes.",

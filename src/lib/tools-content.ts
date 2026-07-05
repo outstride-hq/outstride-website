@@ -2685,6 +2685,69 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "board-pack": {
+    intro:
+      "A pack and running order for board meetings — executive summary, metrics, plan, ask — that keeps you in control of the narrative instead of reporting into someone else's.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use it for every board meeting, and especially the difficult ones. The pack is a narrative-control device, not a reporting obligation: whoever frames the quarter first owns the conversation about it, and that should be you.",
+      },
+      { kind: "heading", text: "The running order" },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Executive summary — wins and challenges",
+            note: "Always open here. Wins first, challenges named plainly — it gives you complete control of the flow rather than anyone on the board jumping in. In a hard quarter, land the headline yourself before someone lands it on you.",
+            example: "As you can see from the challenges, the standard headline is that we are not where we need to be right now.",
+          },
+          {
+            title: "Metrics, broken down",
+            note: "Go deeper than the headline number. Show the split by channel or initiative — which bets worked, which didn't — and highlight the bright spots even in a rough quarter.",
+            example: "Direct sales are growing like this; partnership sales haven't taken off. Of the initiatives we launched, the only one that has seen real success is this one.",
+          },
+          {
+            title: "The plan until the next board meeting",
+            note: "Forward-looking and specific, with the stakes named by you: what you're doing, by when, and what happens if it doesn't work. The next meeting opens by scoring this plan.",
+          },
+          {
+            title: "The ask",
+            note: "Don't just report — put the board to work. One specific request beats a general invitation to comment.",
+            example: "I would love your input on this plan — and I'd love it if you connect us with anyone you think can help.",
+          },
+          {
+            title: "AOB in seconds",
+            note: "Rebrands, housekeeping, side projects: five seconds each, not a feature slot. Don't let the footnotes eat the narrative.",
+          },
+        ],
+      },
+      { kind: "heading", text: "Before you walk in" },
+      {
+        kind: "list",
+        items: [
+          "Sync the leadership team first — the board meeting should never be the first time your own team hears the narrative.",
+          "Choose the emotions you're bringing: realism, positivity, confidence, clarity. Two minutes of prep beats an hour of winging it.",
+          "If you have metrics, lead with metrics. A product demo buys goodwill early on; numbers are what actually move investor confidence.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Present strong opinions, loosely held. Come in with a clear, confident framing and then genuinely invite input — the board responds to conviction, and hedging everything is an invitation for the room to run your meeting for you.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["investor-update", "hard-convo-prep", "company-health-scorecard"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "manage-capital-and-stakeholders",
+          "be-storyteller-in-chief",
+        ],
+      },
+    ],
+  },
   "investor-update": {
     intro:
       "A repeatable five-part update — metrics, highlights, challenges, an ask and a team photo — that keeps investors aligned and turns them into an asset you can call on.",

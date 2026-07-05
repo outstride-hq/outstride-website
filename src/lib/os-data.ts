@@ -634,7 +634,7 @@ export const capabilities: Capability[] = [
       "Adapt the story for team, candidates, customers, investors and board.",
       "Use narrative to create alignment, confidence and momentum.",
     ],
-    toolIds: ["investor-update", "four-disciplines"],
+    toolIds: ["investor-update", "board-pack", "four-disciplines"],
     rhythmIds: ["monthly-all-hands"],
     order: 16,
   },
@@ -2075,11 +2075,22 @@ export const tools: Tool[] = [
     title: "Board Pack",
     categoryId: "capital-tools",
     type: "template",
-    format: ["company"],
+    format: ["company", "board"],
     layerIds: ["founder", "company"],
-    capabilityIds: ["manage-capital-and-stakeholders"],
+    capabilityIds: [
+      "manage-capital-and-stakeholders",
+      "be-storyteller-in-chief",
+    ],
     description:
-      "A structured pack for running board meetings with clarity and strategic intent.",
+      "A board meeting pack and running order — executive summary with wins and challenges, metrics broken down, the plan, a specific ask, AOB in seconds — that keeps the founder in control of the narrative.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: [
+      "investor-update",
+      "hard-convo-prep",
+      "company-health-scorecard",
+    ],
   },
   {
     id: "investor-update",

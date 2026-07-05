@@ -888,6 +888,12 @@ and raw content below.)_
   the Leadership Test tool from both. PROMOTION TEST: when Ben has a verbatim founder
   quote about the *team itself* (Q1) and failure modes he's watched (Q5) that don't
   overlap ownership or org design, it splits out — energy/resilience precedent.
+- BUILT 2026-07-05 per Ben's "ok": `leadership-test` tool (six questions incl. both
+  approved additions); "The first team" section on Make Ownership Stick (paragraph +
+  80/100 callout + toolRef); Design the Org toolRef + toolIds now include the test.
+  Still unbuilt from this theme: leadership-team culture charter / first-team
+  agreements — waiting on Ben's voice memo (one-voice + meeting-content angles noted
+  above).
 
 ### Founder loneliness / mental strain → Master My Mindset + Build My Growth System
 

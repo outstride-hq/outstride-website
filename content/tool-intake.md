@@ -769,20 +769,28 @@ _(Captured from Ben's chat notes, 2026-07-05.)_
 
 **Open questions:**
 
-- Split the **2-Minute Hard Convo Prep** (3 things to get across × 3 emotions to bring)
-  into its own tiny tool? It's reusable for any hard conversation — conflict, cofounder,
-  board. Ben floated it as "maybe a separate tool".
+- ~~Split the 2-Minute Hard Convo Prep into its own tiny tool?~~ RESOLVED 2026-07-05:
+  yes — built as `hard-convo-prep` (own page with worked example). BOTH tools BUILT
+  2026-07-05 with capability links (hire-and-raise-the-talent-bar,
+  give-feedback-and-hold-the-standard; hard-convo-prep also
+  navigate-conflict-and-create-psychological-safety).
 - **Questions to Find Truth Quickly** — Ben's idea: a generic version of the Happiness
   Check for extracting honest signal fast (exit interviews, skip-levels, post-mortems).
   Own tool or a block inside this one? Ben's actual questions NOT captured yet — needs
-  his list before drafting.
-- "Gardening leave" is UK-flavoured — keep or generalise?
-- No verbatim founder story captured for the eventual page hook.
+  his list before drafting. STILL OPEN.
+- "Gardening leave" is UK-flavoured — kept in the built page for now.
+- No verbatim founder story captured for the page hook (tool pages don't require one,
+  but a real story would strengthen it).
 
-### Leadership Test (name TBD — "the [Company] Leadership Test"?) — NEW
+### Leadership Test (`leadership-test`) — NEW, BUILT 2026-07-05
 
 _(Captured from Ben's chat notes, 2026-07-05, alongside the leadership-team-as-a-team
-capability discussion — see capability intake.)_
+capability discussion — see capability intake. Ben approved the two proposed additions
+("I like your suggestions") and supplied the one-voice line "80% commitment, 100%
+alignment" — built same day as a six-question test titled "The Leadership Test", homed
+under make-ownership-stick + design-the-org per the hold-off decision; the 80/100
+agreement is the page's callout and also anchors the new "first team" section on the
+Make Ownership Stick capability page.)_
 
 1. A short test every leadership-team member should pass — run it per person, honestly,
    on a cadence.
@@ -1105,3 +1113,51 @@ filled; his "favourite structure" kept verbatim below.)_
   kept verbatim); only the structure itself is his phrasing. The storytelling framing
   ("future first, metrics second") is pulled from the existing be-storyteller-in-chief
   capability page for consistency, not from this dump.
+
+### Board Pack (`board-pack`) — page build-out 2026-07-05
+
+_(Ben: "I think I share a lot about board etc. via voice — do you have the notes?" Sourced
+from Granola coaching-session transcripts, 2025-12 → 2026-07, per the Granola rules: all
+client names, company names and engagement details stripped; only Ben's own frameworks and
+his own phrasing used. No standalone voice memo on board packs exists in Granola.)_
+
+1. A board meeting pack and running order — executive summary with wins and challenges,
+   metrics broken down, the plan until the next meeting, a specific ask, AOB kept to
+   seconds — that keeps the founder in control of the narrative.
+2. Any board meeting, especially a difficult one where the founder fears losing the room.
+3. Ben's structure, assembled from his coaching advice (his phrasing, verbatim where quoted):
+   - **Executive summary — wins and challenges.** "When I was leading board meetings, I
+     would always start with an executive summary, and I would always include wins and
+     challenges... it just kind of gives you complete control of the flow rather than
+     anyone in the board kind of jumping in." In a bad quarter, land the headline yourself:
+     "as you can see from the challenges... currently we are not where we need to be."
+   - **Metrics, broken down.** Not just the headline number — by channel/initiative:
+     "while direct sales are growing like this, partnership sales really haven't taken off
+     yet... out of these [initiatives], the only one that has seen any success is this one."
+     Highlight the bright spots even in a hard quarter.
+   - **The plan until the next board meeting.** Forward-looking, with stakes named ("if
+     that plan doesn't work, then we will talk about other measures").
+   - **The ask.** "I would love your inputs on this. I would love it if you connect us
+     with anyone who you think can help."
+   - **AOB in seconds.** Rebrands, housekeeping, side projects: "a five second in the next
+     board meeting and nothing else."
+   - **Before the meeting:** sync the leadership team first (the board meeting is not the
+     first time they hear the narrative), and choose the emotions to bring — realism,
+     positivity, confidence, clarity (→ hard-convo-prep).
+4. "Strong opinions, loosely held" — come in with a confident framing, then invite input.
+   The pack is a narrative-control device, not a reporting obligation. Also: demos buy
+   goodwill early; metrics move investor confidence — switch as soon as you have numbers.
+5. No diagram — the running order carries it.
+6. Outstride original ("strong opinions, loosely held" is a common aphorism, widely
+   attributed to Paul Saffo — credited in-text if needed, not as tool accreditation).
+7. manage-capital-and-stakeholders (existing), be-storyteller-in-chief (added — the pack
+   is narrative control). Related: investor-update, hard-convo-prep,
+   company-health-scorecard.
+
+**Open questions:**
+
+- Nothing captured on sending the pack in advance / pre-read timing — the one obvious gap.
+  Get Ben's rule (e.g. "send 3 days before, first 15 minutes assume it's unread"?).
+- "Not where we need to be" / channel-breakdown lines were advice given in client sessions —
+  used here as example phrasing only, fully detached from any engagement. Confirm Ben is
+  happy with them on the page.
