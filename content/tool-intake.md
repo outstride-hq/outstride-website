@@ -710,3 +710,85 @@ capability discussion — see capability intake.)_
 6. Placement TBD: make-ownership-stick / design-the-org / possible new capability —
    parked in capability intake.
 7. Related: team-traffic-lighting, five-dysfunctions, performance-culture-grid.
+
+### Habit Stacks (`habit-stacks`) — revision 2026-07-05
+
+_(Captured from Ben's chat note, 2026-07-05: "let's improve this. 1. add emojis 2. reduce
+# of habits." Plus: "Maybe mention types of habits — journalling / reflection habits e.g.
+what's the most important thing to get done today; tracking e.g. track my productivity out
+of 10; action habits — do something right now; schedule habits e.g. plan something.")_
+
+**Drafting decisions (2026-07-05):** page stacks trimmed per instruction (daily 19 → 10,
+Monday 15 → 9); Ben's full emoji-annotated lists preserved below so nothing is lost. New
+"Four kinds of habits" section added from his types idea. Monthly Retro question list
+captured here but only summarised on the page (see open questions).
+
+**Ben's full daily pre-work stack (verbatim, with his emojis):**
+
+- 💊 Have you taken thyroxine?
+- 🍅 Start pomodoro
+- 🫁 3 deep breaths
+- ✍ Exist.io reflection
+- ✍ How am I today
+- ✍ Affirmation: I am leading an awesome life and I'm just getting started
+- ✍ How excited / calm am I?
+- ✍ How can I make today 1% better?
+- ✍ How can I bring more joy to today? (to myself, to the world)
+- 🥦 Food plan
+- 📍 Check projects
+- 📅 Check calendar
+- ✍ Reflect on yesterday's goals
+- 🎯 Set goals for day
+- ✅ Set tasks for the day
+- 🕐 Schedule wind down
+- ✍ Visualise the day
+- 📣 Finish off Pomodoro with vocab
+- 💌 Share w. co-founder my traffic light for today
+
+**Ben's full Monday morning stack (verbatim, with his emojis):**
+
+- 🍅 Start pomodoro
+- 📅 Monthly retro (if first Monday of month)
+- 💭 Vision board
+- 🎯 Read through quarterly & monthly goals
+- 📌 Go through Projects
+- ✍️ This week will be a success if...
+- 💢 What might trigger me this week?
+- 📅 Set schedulers
+- ☀️ Check weather
+- 📅 Go through calendar and try to solidify as much as possible
+  - 💌 How to be romantic
+  - 👨‍💻 Work
+  - 🧑‍🤝‍🧑 Social (CouchSurfing, Meetup.com)
+  - 🍷 Alone time (min. 1/2 day)
+  - 🗽 Culture (concerts, theatre, museums)
+  - 💪 Health (sport classes e.g. Beat81, running, activities with friends)
+  - 🙊 Language lessons
+  - 🥦 Food
+- 📚 Do you have good books to read?
+- 🎯 Set weekly tasks
+- ⚖️ Set your intentions (🤹‍♂️ fun, 🧑‍🤝‍🧑 relationships, 💼 being productive, 🛋️ chilling)
+- ▶️ Pre-work stack
+
+**Ben's Monthly Retro questions (verbatim):**
+
+- What were the major events of last month?
+- General highs / what brought you joy / proud of
+- General lows / things you didn't enjoy
+- Things you wish you did / things you could have done better
+- Things you've learned
+- People with whom you spent time and how they influenced you
+- People you met who you want to keep in touch with / people who inspired you
+- Decisions made this month and why you made them
+- Big things you are contemplating / questioning
+- Things you worry about
+- Things you are really looking forward to
+- General thoughts on work, personal, health, relationships
+- Life philosophy in a sentence / title of chapter
+
+**Open questions:**
+
+- The Monthly Retro question list is substantial enough to be its own tool (alongside
+  `quarterly-retro` and `ten-minute-retro`) — currently only summarised in one line on
+  the habit-stacks page. Promote to a tool?
+- "Beat81" is a real Berlin fitness brand — generalised to "sport classes" on the page.
