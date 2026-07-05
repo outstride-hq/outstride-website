@@ -1,11 +1,14 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Referrals - Outstride",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Referrals",
   description:
     "Refer a founder to Ben's coaching program and help them grow their startup.",
-};
+  path: "/referrals/",
+});
 
 export default function ReferralsPage() {
   return (
@@ -212,5 +215,3 @@ export default function ReferralsPage() {
     </div>
   );
 }
-
-

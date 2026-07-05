@@ -1,7 +1,7 @@
 {
   "meta": {
     "site": "outstride.co",
-    "generatedAt": "2026-07-04T12:42:28.041Z",
+    "generatedAt": "2026-07-05T08:59:06.499Z",
     "version": 1
   },
   "homepage": {
@@ -700,6 +700,7 @@
           "Notice your own default hat and where it creates bias, and choose the mode that best serves the person's growth and the outcome."
         ],
         "toolIds": [
+          "one-to-one-structure",
           "coaching-questions",
           "leadership-hats"
         ],
@@ -745,8 +746,9 @@
           "Apply this to cofounders, execs, reports, advisors and key partners."
         ],
         "toolIds": [
-          "relationship-design-canvas",
           "one-to-one-structure",
+          "happiness-check",
+          "relationship-design-canvas",
           "stakeholder-map",
           "kss-feedback",
           "non-violent-communication",
@@ -796,6 +798,8 @@
           "Move from managing everyone to managing managers and leaders."
         ],
         "toolIds": [
+          "coaching-questions",
+          "employee-love-languages",
           "development-pipeline",
           "ownership-map",
           "leadership-hats",
@@ -2280,9 +2284,91 @@
           "founder"
         ],
         "capabilityIds": [
-          "build-incredible-relationships"
+          "build-incredible-relationships",
+          "know-and-use-the-right-leadership-hat",
+          "build-leaders-not-dependencies"
         ],
-        "description": "A repeatable structure for high-quality one-to-one conversations."
+        "relatedToolIds": [
+          "coaching-questions",
+          "happiness-check",
+          "commitment-loop"
+        ],
+        "description": "A repeatable structure for high-quality one-to-one conversations.",
+        "accreditation": {
+          "note": "Outstride original"
+        }
+      },
+      {
+        "id": "happiness-check",
+        "title": "Happiness Check",
+        "categoryId": "diagnostic-tools",
+        "type": "conversation",
+        "format": [
+          "one-to-one"
+        ],
+        "moments": [
+          "diagnose"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "quarterly"
+        ],
+        "layerIds": [
+          "founder",
+          "company"
+        ],
+        "capabilityIds": [
+          "build-incredible-relationships",
+          "build-leaders-not-dependencies"
+        ],
+        "description": "Three questions asked on a regular cadence that surface how someone actually feels about working here — before the resignation letter does.",
+        "accreditation": {
+          "note": "Outstride original"
+        },
+        "relatedToolIds": [
+          "employee-love-languages",
+          "one-to-one-structure",
+          "kss-feedback"
+        ]
+      },
+      {
+        "id": "employee-love-languages",
+        "title": "Employee Love Languages",
+        "categoryId": "leadership-tools",
+        "type": "framework",
+        "format": [
+          "one-to-one"
+        ],
+        "moments": [
+          "diagnose",
+          "design"
+        ],
+        "depth": [
+          "operating"
+        ],
+        "frequency": [
+          "as-needed"
+        ],
+        "layerIds": [
+          "founder",
+          "company"
+        ],
+        "capabilityIds": [
+          "build-leaders-not-dependencies",
+          "build-incredible-relationships",
+          "hire-and-raise-the-talent-bar"
+        ],
+        "description": "Five currencies of motivation — salary, upside, learning, responsibility, proximity — because people are paid in more than money and everyone weights them differently.",
+        "accreditation": {
+          "note": "Outstride original — the name riffs on Gary Chapman's The Five Love Languages"
+        },
+        "relatedToolIds": [
+          "happiness-check",
+          "development-pipeline",
+          "one-to-one-structure"
+        ]
       },
       {
         "id": "relationship-one-pager",
@@ -2333,9 +2419,20 @@
           "founder"
         ],
         "capabilityIds": [
-          "know-and-use-the-right-leadership-hat"
+          "know-and-use-the-right-leadership-hat",
+          "build-leaders-not-dependencies"
         ],
-        "description": "Questions that help people think for themselves rather than receive answers."
+        "description": "Questions that help people think for themselves rather than receive answers — the seven essential questions plus founder additions.",
+        "accreditation": {
+          "originator": "Michael Bungay Stanier",
+          "source": "The Coaching Habit (2016)",
+          "note": "The seven essential questions; founder additions are Outstride's"
+        },
+        "relatedToolIds": [
+          "leadership-hats",
+          "development-pipeline",
+          "one-to-one-structure"
+        ]
       },
       {
         "id": "leadership-hats",
@@ -4609,37 +4706,45 @@
           }
         ]
       },
-      "council-of-me": {
-        "intro": "Personify the versions of you that keep showing up, bring them into the same room, and ask what each is trying to protect.",
+      "parts-work": {
+        "intro": "Give names and space to all your parts — self-critical you, ambitious you, vacation you — let each one say what it wants, and stay in charge of the final call.",
         "blocks": [
           {
             "kind": "paragraph",
-            "text": "This is a light-touch reflection exercise for making inner patterns easier to hear. The move is not to exile a part of you; it is to understand what role it thinks it is playing, then choose more consciously which version of you gets the microphone."
+            "text": "This is a light-touch reflection exercise for making inner patterns easier to hear. You are not one blurry mood; you are a set of recurring parts, each with its own agenda. The move is not to exile the ones you dislike — it is to understand what role each thinks it is playing, then choose consciously which version of you gets the microphone."
           },
           {
             "kind": "heading",
-            "text": "Set up the room"
+            "text": "Run the exercise"
           },
           {
             "kind": "steps",
             "steps": [
               {
                 "title": "Name the characters",
-                "note": "Write down three or four recurring selves: people-pleaser you, control-freak you, backpacker you, critic you, peacemaker you, whatever is real."
+                "note": "Write down three or four recurring selves and give each a real name: self-critical you, ambitious you, vacation you, people-pleaser you, control-freak you — whatever actually shows up."
               },
               {
-                "title": "Invite them in",
-                "note": "Picture them sitting around a table. Let each one have a voice instead of trying to flatten them into one blurry mood."
+                "title": "Give each one time and space",
+                "note": "Picture them around a table and let each say what it wants for you — not just what it complains about. Even the loudest critic is asking for something."
               },
               {
-                "title": "Ask the same questions",
+                "title": "Ask the same questions of each",
                 "note": "What are you trying to protect? What are you afraid will happen if you stop? What do you need from me? What do you want for me?"
               },
               {
-                "title": "Choose the chair at the head of the table",
-                "note": "Thank each part for what it is trying to do, then decide which adult version of you makes the call now."
+                "title": "Stay in charge",
+                "note": "Every part gets heard; no part gets the wheel. Thank each one for what it is trying to do, then decide which adult version of you makes the call now."
               }
             ]
+          },
+          {
+            "kind": "heading",
+            "text": "The protectors"
+          },
+          {
+            "kind": "paragraph",
+            "text": "The parts you like least — the critic, the controller, the one that never lets you rest — deserve the most patience. They are protectors: each learned a behaviour that was genuinely useful at some point in your life and kept running it long after the situation changed. Even the parts of yourself you don't like still want the best for you. Once you see the old job a part was doing, you can thank it — and give it a smaller one."
           },
           {
             "kind": "heading",
@@ -4651,7 +4756,7 @@
               "When do you usually show up?",
               "What story do you keep telling me?",
               "What are you trying to save me from?",
-              "What do you help me do well?",
+              "What did this behaviour once make possible — and is that still needed?",
               "What cost do you create when you take over?",
               "What would help you relax a little?"
             ]
@@ -7456,6 +7561,254 @@
             ]
           }
         ]
+      },
+      "one-to-one-structure": {
+        "intro": "A repeatable structure for one-to-ones people actually look forward to — built on curiosity, listening, and resisting the urge to answer.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "The 1:1 is where most of your leadership actually happens: it's the room where the hats get worn, feedback gets exchanged and development gets coached. The mindset matters more than the agenda — it's just curiosity, it's just listening, it's just pushing back that urge to jump in with the answer."
+          },
+          {
+            "kind": "heading",
+            "text": "A structure that works"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Their agenda first",
+                "note": "Open with \"What's on your mind?\" and let them set the direction. Your topics come second."
+              },
+              {
+                "title": "Check the person, not just the work",
+                "note": "On a regular cadence, run the Happiness Check — happiness score, three-year question, favourite and least favourite things."
+              },
+              {
+                "title": "Coach before you advise",
+                "note": "Questions first; recommendations only once they've done their own thinking. If the coaching hat isn't right for this moment, name the hat you're switching to."
+              },
+              {
+                "title": "Close with commitments",
+                "note": "Both sides leave with something measurable and time-bound — and they open the next 1:1."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "If every 1:1 becomes a status update, cancel the format and start again: status lives in the operating rhythm. The 1:1 is for the person."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "coaching-questions",
+              "happiness-check",
+              "commitment-loop"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "know-and-use-the-right-leadership-hat",
+              "build-incredible-relationships",
+              "build-leaders-not-dependencies"
+            ]
+          }
+        ]
+      },
+      "coaching-questions": {
+        "intro": "Questions that help people think for themselves rather than receive answers — the working end of the coaching hat.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Reach for these with a smart person who wants to grow — never when something is on fire. The mindset is the tool: curiosity, listening, and pushing back the urge to answer."
+          },
+          {
+            "kind": "heading",
+            "text": "The seven essential questions"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "What's on your mind?",
+                "note": "The opener — straight into what actually matters to them."
+              },
+              {
+                "title": "And what else?",
+                "note": "The best coaching question in the world. The first answer is never the whole answer."
+              },
+              {
+                "title": "What's the real challenge here for you?",
+                "note": "Cuts through the situation report to the personal stake."
+              },
+              {
+                "title": "What do you want?",
+                "note": "Surprisingly hard to answer — and clarifying to be asked."
+              },
+              {
+                "title": "How can I help?",
+                "note": "Makes the request explicit instead of guessing and rescuing."
+              },
+              {
+                "title": "If you're saying yes to this, what are you saying no to?",
+                "note": "Every yes has a price; make it visible."
+              },
+              {
+                "title": "What was most useful for you?",
+                "note": "The close — turns the conversation into a lesson they keep."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Founder additions"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "What's the number one thing you want to improve right now?",
+              "Have you thought about this?",
+              "What happens if nothing changes?",
+              "Where do you see yourself in this company — and what's the main gap between here and there?"
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "The urge you're resisting is the urge to be useful by answering. Coaching bets that they'll own an answer they found far harder than one they were given."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "leadership-hats",
+              "development-pipeline"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "know-and-use-the-right-leadership-hat",
+              "build-leaders-not-dependencies"
+            ]
+          }
+        ]
+      },
+      "happiness-check": {
+        "intro": "Three questions on a regular cadence that surface how someone actually feels about working here — before the resignation letter does.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Run it inside the 1:1, roughly quarterly per person — and any time someone seems flat. Asked regularly, the questions normalise honesty; asked once after a resignation, they're an autopsy."
+          },
+          {
+            "kind": "heading",
+            "text": "The three questions"
+          },
+          {
+            "kind": "steps",
+            "steps": [
+              {
+                "title": "Out of ten — how happy are you working here right now?",
+                "note": "The number matters less than the follow-up: what would make it one point higher?"
+              },
+              {
+                "title": "How likely is it that you're still working here three years from now?",
+                "note": "Listen without flinching. Punish the honesty once and you'll never hear it again."
+              },
+              {
+                "title": "Tell me your favourite things — and your least favourite things.",
+                "note": "Favourites tell you what to protect. Least favourites tell you what to fix — or at least what to acknowledge."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "When the score dips, check the currency before the amount: unhappiness is often a love-language mismatch — plenty of salary, starved of growth; plenty of autonomy, starved of proximity."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "employee-love-languages",
+              "one-to-one-structure"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "build-incredible-relationships",
+              "build-leaders-not-dependencies"
+            ]
+          }
+        ]
+      },
+      "employee-love-languages": {
+        "intro": "Five currencies of motivation — people are paid in more than money, and everyone weights them differently.",
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Use it when someone has gone flat, is hinting at leaving or is negotiating — and when you're designing an offer. Two employees with identical packages can be a delighted hire and a flight risk, because they're being paid in the wrong currency."
+          },
+          {
+            "kind": "heading",
+            "text": "The five languages"
+          },
+          {
+            "kind": "table",
+            "columns": [
+              "Language",
+              "What it sounds like"
+            ],
+            "rows": [
+              [
+                "Salary",
+                "\"I want strong, predictable compensation — reward me now.\""
+              ],
+              [
+                "Upside",
+                "\"Pay me in the win: equity, bonuses, a real stake in the outcome.\""
+              ],
+              [
+                "Learning & growth",
+                "\"Stretch me — new skills, new scope, someone to learn from.\""
+              ],
+              [
+                "Responsibility & independence",
+                "\"Give me ownership and get out of the way.\""
+              ],
+              [
+                "Proximity to the manager",
+                "\"Time with you is the reward — access, context, being in the room.\""
+              ]
+            ]
+          },
+          {
+            "kind": "list",
+            "items": [
+              "Rank someone's top two — from what they ask for, what they complain about, and what they light up over.",
+              "Check the role and the package against those two, not against your own preferences.",
+              "Revisit at least yearly: the languages shift with life stage — upside chasers become salary people, independents start wanting proximity."
+            ]
+          },
+          {
+            "kind": "callout",
+            "text": "I've met employees genuinely motivated by every one of these. The mistake is assuming their language is yours — the founder who'd crawl over glass for upside, baffled that a great engineer just wants a calm salary and Tuesdays with their mentor."
+          },
+          {
+            "kind": "toolRef",
+            "toolIds": [
+              "happiness-check",
+              "development-pipeline"
+            ]
+          },
+          {
+            "kind": "capabilityRefs",
+            "capabilityIds": [
+              "build-leaders-not-dependencies",
+              "build-incredible-relationships",
+              "hire-and-raise-the-talent-bar"
+            ]
+          }
+        ]
       }
     },
     "osPages": [
@@ -7535,7 +7888,7 @@
             "href": "/os/capabilities/"
           },
           {
-            "label": "76 Tools",
+            "label": "78 Tools",
             "href": "/os/tools/"
           }
         ]

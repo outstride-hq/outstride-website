@@ -1,0 +1,26 @@
+# Outstride — Founder Coaching
+
+> Ben Jones is a founder-turned-coach who helps ambitious startup founders scale from pre-seed to Series C. Outstride OS is his practical operating system for company, founder and human layers.
+
+## About
+
+- [Homepage](https://www.outstride.co/): Founder coaching, services, FAQ and contact
+- [Testimonials](https://www.outstride.co/testimonials/): What founders say about working with Ben
+- [Referrals](https://www.outstride.co/referrals/): How to refer a founder
+
+## Outstride OS
+
+- [OS Home](https://www.outstride.co/os/): The operating system for scaling founders
+- [Capabilities](https://www.outstride.co/os/capabilities/): 26 founder capabilities across company, founder and human layers
+- [Tools](https://www.outstride.co/os/tools/): Diagnostics, frameworks, templates and rhythms
+- [Three Layers](https://www.outstride.co/os/layers/): Company, founder and human
+- [The Four D's](https://www.outstride.co/os/process/): Diagnose, define, design, deliver
+
+## Machine-readable context
+
+- [Full site context JSON](https://www.outstride.co/json): Complete structured dump of homepage, OS taxonomy, tools, capabilities and content blocks — updated on every build
+
+## Contact
+
+- Email: ben@outstride.co
+- Website: https://www.outstride.co/#contact

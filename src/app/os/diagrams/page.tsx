@@ -1,11 +1,17 @@
+import type { Metadata } from "next";
 import { renderDiagramDefinition } from "@/components/diagram/DiagramRenderer";
 import OsPageHeader from "@/components/os/OsPageHeader";
 import { getDiagramSandboxEntries } from "@/lib/diagram/registry";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Diagram Prototypes - Outstride OS",
-  description:
-    "Compare diagram-as-code renderer prototypes across Strategy One-Pager, Accountability Dial, NVC flow, and Five Dysfunctions pyramid.",
+export const metadata: Metadata = {
+  ...buildPageMetadata({
+    title: "Diagram Prototypes - Outstride OS",
+    description:
+      "Compare diagram-as-code renderer prototypes across Strategy One-Pager, Accountability Dial, NVC flow, and Five Dysfunctions pyramid.",
+    path: "/os/diagrams/",
+    index: false,
+  }),
 };
 
 const rendererCandidates = [

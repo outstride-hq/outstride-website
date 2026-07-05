@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ToolDetail from "@/components/os/ToolDetail";
-import { getToolBySlug, tools } from "@/lib/os";
+import {
+  getToolBySlug,
+  getToolEffectiveStatus,
+  tools,
+} from "@/lib/os";
+import { buildPageMetadata } from "@/lib/seo";
 
 type ToolPageProps = {
   params: Promise<{ slug: string }>;
@@ -21,10 +26,14 @@ export async function generateMetadata({
     return { title: "Tool not found - Outstride OS" };
   }
 
-  return {
+  const isDraft = getToolEffectiveStatus(tool) === "draft";
+
+  return buildPageMetadata({
     title: `${tool.title} - Outstride OS`,
     description: tool.description,
-  };
+    path: `/os/tools/${tool.id}/`,
+    index: !isDraft,
+  });
 }
 
 export default async function ToolPage({ params }: ToolPageProps) {

@@ -1,19 +1,41 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import {
+  DEFAULT_OG_IMAGE,
+  PERSON,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
+} from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Outstride - Founder Coaching",
-  description:
-    "Ben is a founder-turned-coach who helps entrepreneurs grow. Ben founded Nuri (prev. Bitwala) and grew it to 120 people before moving to chairman and starting his coaching journey.",
-  authors: [
-    { name: "Ben Jones", url: "https://www.twitter.com/BenPeterJones" },
-  ],
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    template: `%s — ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  authors: [{ name: PERSON.name, url: PERSON.twitter }],
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
-    title: "Outstride - Founder Coaching",
-    description:
-      "Ben is a founder-turned-coach who helps entrepreneurs grow. Ben founded Nuri (prev. Bitwala) and grew it to 120 people before moving to chairman and starting his coaching journey.",
-    images: ["https://outstride.co/images/og-image-new.png"],
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    type: "website",
+    locale: "en_GB",
+    images: [{ url: DEFAULT_OG_IMAGE, alt: `${SITE_NAME} — ${SITE_TAGLINE}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
+    creator: "@BenPeterJones",
   },
 };
 

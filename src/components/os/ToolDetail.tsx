@@ -1,12 +1,17 @@
 import { formatAccreditation } from "@/lib/accreditation";
 import {
-  formatToolFormat,
   formatToolType,
   getRelatedCapabilities,
   getRelatedTools,
   type Tool,
 } from "@/lib/os";
 import { getToolContent } from "@/lib/tools-content";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildBreadcrumbJsonLd,
+  buildToolJsonLd,
+} from "@/lib/structured-data";
+import OsConversionCta from "./OsConversionCta";
 import OsPageHeader from "./OsPageHeader";
 import { RelatedCapabilities, RelatedTools } from "./RelatedCapabilities";
 import ToolContentBlocks from "./ToolContentBlocks";
@@ -35,6 +40,16 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
 
   return (
     <article className="os-prose">
+      <JsonLd
+        data={[
+          buildToolJsonLd(tool),
+          buildBreadcrumbJsonLd([
+            { name: "Outstride OS", path: "/os/" },
+            { name: "Tools", path: "/os/tools/" },
+            { name: tool.title, path: `/os/tools/${tool.id}/` },
+          ]),
+        ]}
+      />
       <OsPageHeader
         eyebrow={formatToolType(tool.type)}
         title={tool.title}
@@ -64,6 +79,7 @@ export default function ToolDetail({ tool }: ToolDetailProps) {
 
       <RelatedCapabilities capabilities={displayCapabilities} />
       <RelatedTools tools={relatedTools} />
+      <OsConversionCta />
 
       <p className="mt-5 pt-4 border-top mb-0">
         <a href="/os/tools/" className="text-decoration-none">

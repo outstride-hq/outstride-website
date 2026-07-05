@@ -1,16 +1,22 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsList from "@/components/TestimonialsList";
+import JsonLd from "@/components/JsonLd";
+import { buildPageMetadata } from "@/lib/seo";
+import { buildReviewJsonLd } from "@/lib/structured-data";
 
-export const metadata = {
-  title: "Testimonials - Outstride",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Testimonials",
   description:
-    "What founders say about working with Ben - founder coaching testimonials and success stories.",
-};
+    "What founders say about working with Ben — founder coaching testimonials and success stories.",
+  path: "/testimonials/",
+});
 
 export default function TestimonialsPage() {
   return (
     <div id="main-wrapper">
+      <JsonLd data={buildReviewJsonLd()} />
       <Header />
       <main id="content" role="main">
         {/* Testimonials */}

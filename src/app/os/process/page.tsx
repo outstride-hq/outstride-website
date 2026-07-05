@@ -1,14 +1,17 @@
+import type { Metadata } from "next";
 import OSHowItRuns from "@/components/os/OSHowItRuns";
 import OsPageHeader, { OsSectionHeader } from "@/components/os/OsPageHeader";
 import ProcessStepCard from "@/components/os/ProcessStepCard";
 import SymptomMap from "@/components/os/SymptomMap";
 import { processSteps } from "@/lib/os";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "The Four D's - Outstride OS",
   description:
     "Diagnose, Define, Design and Deliver — the coaching cadence that turns the Outstride OS into quarterly work.",
-};
+  path: "/os/process/",
+});
 
 export default function ProcessPage() {
   return (

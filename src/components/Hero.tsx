@@ -6,10 +6,13 @@ export default function Hero() {
       id="home"
       className="bg-primary d-flex fullscreen-with-header position-relative"
     >
+      <h1 className="visually-hidden">
+        Founder coaching for scaling startup founders — Outstride
+      </h1>
       <div className="container my-auto py-5 py-lg-0">
         <div className="row py-4">
           <div className="col-lg-7 text-center text-lg-start align-self-center order-1 order-lg-0">
-            <h1 className="text-12 fw-300 mb-0 text-uppercase">I coach</h1>
+            <p className="text-12 fw-300 mb-0 text-uppercase">I coach</p>
             <h2 className="text-21 fw-600 text-uppercase mb-0 ms-n1">
               <TypedText strings={["FOUNDERS"]} loop={false} backDelay={5000} />
             </h2>

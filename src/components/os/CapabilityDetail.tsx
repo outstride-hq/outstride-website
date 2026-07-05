@@ -7,6 +7,12 @@ import {
 } from "@/lib/os";
 import { getCapabilityContent } from "@/lib/capabilities-content";
 import { getCapabilityGroupTitle } from "@/lib/os-nav";
+import JsonLd from "@/components/JsonLd";
+import {
+  buildBreadcrumbJsonLd,
+  buildCapabilityJsonLd,
+} from "@/lib/structured-data";
+import OsConversionCta from "./OsConversionCta";
 import OsPageHeader from "./OsPageHeader";
 import { RelatedTools } from "./RelatedCapabilities";
 import ToolContentBlocks from "./ToolContentBlocks";
@@ -50,6 +56,19 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
 
   return (
     <article className="os-prose">
+      <JsonLd
+        data={[
+          buildCapabilityJsonLd(capability),
+          buildBreadcrumbJsonLd([
+            { name: "Outstride OS", path: "/os/" },
+            { name: "Capabilities", path: "/os/capabilities/" },
+            {
+              name: capability.title,
+              path: `/os/capabilities/${capability.id}/`,
+            },
+          ]),
+        ]}
+      />
       <OsPageHeader
         eyebrow={`Capability ${capability.number}${
           groupTitle ? ` · ${groupTitle}` : ""
@@ -155,6 +174,7 @@ export default function CapabilityDetail({ capability }: CapabilityDetailProps) 
 
       <RelatedTools tools={tools} />
       <RelatedRhythms rhythms={rhythms} />
+      <OsConversionCta />
 
       <nav
         className="os-cap-nav d-flex flex-sm-row justify-content-sm-between align-items-sm-center border-top pt-4 mt-5"

@@ -1,12 +1,15 @@
+import type { Metadata } from "next";
 import LayerCard from "@/components/os/LayerCard";
 import OsPageHeader, { OsSectionHeader } from "@/components/os/OsPageHeader";
 import { layers } from "@/lib/os";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Three Layers - Outstride OS",
   description:
     "The Outstride OS map across company, founder and human layers.",
-};
+  path: "/os/layers/",
+});
 
 export default function LayersPage() {
   return (

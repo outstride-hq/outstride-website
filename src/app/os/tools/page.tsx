@@ -1,12 +1,15 @@
+import type { Metadata } from "next";
 import OsPageHeader from "@/components/os/OsPageHeader";
 import ToolPreview from "@/components/os/ToolPreview";
 import { toolsIntro } from "@/lib/os";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Tools - Outstride OS",
   description:
     "Diagnostics, frameworks, templates and rhythms that help diagnose, practise, install or review a capability.",
-};
+  path: "/os/tools/",
+});
 
 export default function ToolsPage() {
   return (

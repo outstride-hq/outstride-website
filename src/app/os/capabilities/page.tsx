@@ -1,11 +1,14 @@
+import type { Metadata } from "next";
 import CapabilityMenu from "@/components/os/CapabilityMenu";
 import OsPageHeader from "@/components/os/OsPageHeader";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Capabilities - Outstride OS",
   description:
     "Twenty-six capabilities across company, founder and human layers — the full map of what has to work to scale.",
-};
+  path: "/os/capabilities/",
+});
 
 export default function CapabilitiesPage() {
   return (

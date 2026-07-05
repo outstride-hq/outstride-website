@@ -1,12 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import OSHero from "@/components/os/OSHero";
 import { OsSectionHeader } from "@/components/os/OsPageHeader";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Outstride OS - Outstride",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Outstride OS",
   description:
     "A practical operating system for founders scaling themselves, their teams and their companies.",
-};
+  path: "/os/",
+});
 
 export default function OSPage() {
   return (
@@ -50,6 +53,9 @@ export default function OSPage() {
           </Link>
           <Link href="/os/process/" className="btn btn-outline-primary rounded-pill">
             See how the process runs
+          </Link>
+          <Link href="/#contact" className="btn btn-primary rounded-pill">
+            Work with Ben
           </Link>
         </div>
       </div>
