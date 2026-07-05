@@ -590,7 +590,7 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
       },
       {
         kind: "paragraph",
-        text: "Then look at what fills it, through two lenses. Leverage: is this work only you can do? (That is its own capability — Operate at the Right Altitude.) And balance: does the week contain work that gives energy back, not just work that matters? Optimising every hour for leverage until nothing in the week charges you is how high performers hollow themselves out.",
+        text: "Then look at what fills it, through two lenses. Leverage: is this work only you can do? (That is Take Command of My Role's territory.) And balance: does the week contain work that gives energy back, not just work that matters? Optimising every hour for leverage until nothing in the week charges you is how high performers hollow themselves out.",
       },
       {
         kind: "heading",
@@ -991,9 +991,9 @@ export const capabilitiesContent: Record<string, CapabilityContent> = {
         toolId: "strength-in-shadow",
       },
       {
-        action: "Run a Council of Me meeting",
-        note: "List three versions of you — people-pleaser you, control-freak you, backpacker you — invite them into the same room, and ask what each is trying to protect.",
-        toolId: "council-of-me",
+        action: "Run a Parts Work session",
+        note: "Name three or four of your parts — people-pleaser you, control-freak you, vacation you — give each a voice, and ask what it is trying to protect.",
+        toolId: "parts-work",
       },
       {
         action: "Install one noticing rep",
