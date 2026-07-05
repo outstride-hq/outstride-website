@@ -658,7 +658,8 @@ export const capabilities: Capability[] = [
       "Default to coaching where you can: help people think for themselves and leave them more capable after each conversation, rather than handing over answers.",
       "Notice your own default hat and where it creates bias, and choose the mode that best serves the person's growth and the outcome.",
     ],
-    toolIds: ["coaching-questions", "leadership-hats"],
+    toolIds: [
+      "one-to-one-structure","coaching-questions", "leadership-hats"],
     rhythmIds: [],
     order: 11,
   },
@@ -703,8 +704,9 @@ export const capabilities: Capability[] = [
       "Apply this to cofounders, execs, reports, advisors and key partners.",
     ],
     toolIds: [
-      "relationship-design-canvas",
       "one-to-one-structure",
+      "happiness-check",
+      "relationship-design-canvas",
       "stakeholder-map",
       "kss-feedback",
       "non-violent-communication",
@@ -754,6 +756,8 @@ export const capabilities: Capability[] = [
       "Move from managing everyone to managing managers and leaders.",
     ],
     toolIds: [
+      "coaching-questions",
+      "employee-love-languages",
       "development-pipeline","ownership-map", "leadership-hats", "company-7"],
     rhythmIds: [],
     order: 15,
@@ -1792,9 +1796,57 @@ export const tools: Tool[] = [
     type: "template",
     format: ["one-to-one"],
     layerIds: ["founder"],
-    capabilityIds: ["build-incredible-relationships"],
+    capabilityIds: [
+      "build-incredible-relationships",
+      "know-and-use-the-right-leadership-hat",
+      "build-leaders-not-dependencies",
+    ],
+    relatedToolIds: ["coaching-questions", "happiness-check", "commitment-loop"],
     description:
       "A repeatable structure for high-quality one-to-one conversations.",
+  },
+  {
+    id: "happiness-check",
+    title: "Happiness Check",
+    categoryId: "diagnostic-tools",
+    type: "conversation",
+    format: ["one-to-one"],
+    moments: ["diagnose"],
+    depth: ["operating"],
+    frequency: ["quarterly"],
+    layerIds: ["founder", "company"],
+    capabilityIds: [
+      "build-incredible-relationships",
+      "build-leaders-not-dependencies",
+    ],
+    description:
+      "Three questions asked on a regular cadence that surface how someone actually feels about working here — before the resignation letter does.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: ["employee-love-languages", "one-to-one-structure", "kss-feedback"],
+  },
+  {
+    id: "employee-love-languages",
+    title: "Employee Love Languages",
+    categoryId: "leadership-tools",
+    type: "framework",
+    format: ["one-to-one"],
+    moments: ["diagnose", "design"],
+    depth: ["operating"],
+    frequency: ["as-needed"],
+    layerIds: ["founder", "company"],
+    capabilityIds: [
+      "build-leaders-not-dependencies",
+      "build-incredible-relationships",
+      "hire-and-raise-the-talent-bar",
+    ],
+    description:
+      "Five currencies of motivation — salary, upside, learning, responsibility, proximity — because people are paid in more than money and everyone weights them differently.",
+    accreditation: {
+      note: "Outstride original — the name riffs on Gary Chapman's The Five Love Languages",
+    },
+    relatedToolIds: ["happiness-check", "development-pipeline", "one-to-one-structure"],
   },
   {
     id: "relationship-one-pager",
@@ -1828,9 +1880,18 @@ export const tools: Tool[] = [
     type: "conversation",
     format: ["one-to-one"],
     layerIds: ["founder"],
-    capabilityIds: ["know-and-use-the-right-leadership-hat"],
+    capabilityIds: [
+      "know-and-use-the-right-leadership-hat",
+      "build-leaders-not-dependencies",
+    ],
     description:
-      "Questions that help people think for themselves rather than receive answers.",
+      "Questions that help people think for themselves rather than receive answers — the seven essential questions plus founder additions.",
+    accreditation: {
+      originator: "Michael Bungay Stanier",
+      source: "The Coaching Habit (2016)",
+      note: "The seven essential questions; founder additions are Outstride's",
+    },
+    relatedToolIds: ["leadership-hats", "development-pipeline", "one-to-one-structure"],
   },
   {
     id: "leadership-hats",

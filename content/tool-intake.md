@@ -552,3 +552,80 @@ meetings that you run.")_
    owner to credit).
 7. make-ownership-stick, install-the-operating-rhythm. Related: operating-cadence,
    five-dysfunctions, okrs.
+
+### 1:1 Structure (`one-to-one-structure`) — content added 2026-07-05
+
+_(Captured from Ben's voice memo, 2026-07-05 — the one-on-ones dump. Ben was unsure where
+this content fits; resolved: no new capability — the 1:1 is the venue where the hats,
+feedback and development capabilities get delivered; tools carry the material.)_
+
+1. (Existing shell filled.) Structure for one-to-ones built on the coaching mindset.
+2. The mindset is the point: "it's just curiosity, it's just listening, it's just pushing
+   back that urge to just answer."
+3. Their agenda first ("What's on your mind?") → check the person, not just the work
+   (Happiness Check on a cadence) → coach before you advise → close with commitments
+   (Commitment Loop).
+4. The 1:1 leads into so many other things — good questions, listening, the hats.
+5. No diagram.
+6. Outstride original (structure); the opening question is Bungay Stanier's.
+7. know-and-use-the-right-leadership-hat, build-leaders-not-dependencies,
+   build-incredible-relationships. Related: coaching-questions, happiness-check,
+   commitment-loop.
+
+### Coaching Questions (`coaching-questions`) — content added 2026-07-05
+
+_(Captured from Ben's voice memo, 2026-07-05. Ben: "there's these seven coaching questions
+which I think maybe I already have somewhere" — they're Michael Bungay Stanier's, The
+Coaching Habit (2016), quoted verbatim by Ben; MUST carry MBS accreditation.)_
+
+1. (Existing shell filled.)
+2. Use with the coaching hat: smart people who want to grow — never when something's on fire.
+3. The seven essential questions (Bungay Stanier, verbatim from Ben's memo):
+   1. What's on your mind?  2. And what else?  3. What's the real challenge here for you?
+   4. What do you want?  5. How can I help?
+   6. If you're saying yes to this, what are you saying no to?
+   7. What was most useful for you?
+   Plus the Development Pipeline coax set as founder additions.
+4. Mindset: curiosity, listening, resisting the urge to answer.
+5. No diagram.
+6. Michael Bungay Stanier, The Coaching Habit — accreditation added.
+7. know-and-use-the-right-leadership-hat, build-leaders-not-dependencies. Related:
+   leadership-hats, development-pipeline, one-to-one-structure.
+
+### Happiness Check (`happiness-check`) — NEW
+
+_(Captured from Ben's voice memo, 2026-07-05. "These questions are about making sure that
+the employee is happy." Ben floated it as a possible tool — built as one.)_
+
+1. Three questions that surface how someone actually feels about working here, on a
+   regular cadence — before the resignation letter does.
+2. Regular 1:1s (e.g. quarterly per person); any time someone seems flat.
+3. Ben's favourite questions, near-verbatim:
+   - "Out of ten, how happy are you working here right now?"
+   - "How likely do you think it is that you're still working here three years from now?"
+   - "Tell me your favourite things — and your least favourite things."
+4. Asked regularly they normalise honesty; the number matters less than the follow-up.
+5. No diagram.
+6. Outstride original.
+7. build-incredible-relationships, build-leaders-not-dependencies. Related:
+   employee-love-languages, one-to-one-structure.
+
+### Employee Love Languages (`employee-love-languages`) — NEW
+
+_(Captured from Ben's voice memo, 2026-07-05. Ben: "I think I came up with them but maybe
+they exist." Checked: Chapman & White's "5 Languages of Appreciation in the Workplace"
+exists but has a DIFFERENT five (appreciation-focused). Ben's five motivation currencies
+are his own; the name riffs on Gary Chapman's Five Love Languages — credited as such.)_
+
+1. Five currencies of motivation — people are paid in more than money, and every employee
+   weights them differently.
+2. Someone's gone flat, is hinting at leaving, is negotiating — or you're designing an
+   offer.
+3. Ben's five: (1) Salary — regular compensation; (2) Upside — equity, bonuses;
+   (3) Learning & growth; (4) Responsibility & independence; (5) Proximity to the manager.
+   Ben: "I've met employees who are motivated by these different things in different ways."
+4. The mistake is assuming their language is yours.
+5. Maybe a five-column visual later; table carries it for now.
+6. Outstride original; name riffs on Gary Chapman's The Five Love Languages.
+7. build-leaders-not-dependencies, build-incredible-relationships,
+   hire-and-raise-the-talent-bar. Related: happiness-check, development-pipeline.
