@@ -32,6 +32,8 @@ Ben often uses agent sessions to turn voice memos, chat dumps, or pasted notes i
 
 ### Core capture rule
 
+This rule applies to Ben's own raw input — voice memos, chat dumps, pasted notes. It does **not** apply to Granola meeting notes (see "Granola → OS updates" below, which works the opposite way: selective extraction, not majority capture).
+
 Capture the majority of what Ben says. Paraphrase and edit down for tightness, but do not cut large chunks or lose distinctive phrasings — keep lines like "marathon with periods of sprinting", "sprinkle founder magic", and "Champagne at 40" verbatim. Prefer his voice over marketing gloss.
 
 ### Fit the template, extend otherwise
@@ -105,6 +107,15 @@ When drawing on Granola meeting notes or coaching conversations to inform site c
 - **Transform examples.** If you use an anecdote from a coaching conversation, make it materially different and far removed from the source — change sector, stage, numbers, and specifics so it cannot be traced back.
 - **Frameworks yes, facts no.** Strategic themes and coaching frameworks are fair game; exact financials, deal terms, valuations, facility sizes, and live negotiation details are not.
 - **No attributions without consent.** Do not name clients or reference identifiable situations in public-facing content unless you have explicit written approval.
+
+### Granola → OS updates
+
+Ben sometimes reviews Granola meeting notes to see whether they should update the Outstride OS (capabilities, tools, diagrams). This is a different loop from "Raw thoughts to CMS":
+
+- **Extraction, not capture.** The Core capture rule does not apply to meeting notes. Pull out frameworks, recurring themes, and reusable coaching moves only — never the majority of the conversation. If in doubt, leave it out.
+- **Anonymize before anything is written down.** Never paste raw Granola notes into intake docs or any other committed file — `content/` ships with the repo. Anonymize and compositize first (per the rules above), then write only the cleaned extraction into the intake doc with a dated provenance note like "(from a coaching conversation, anonymized)". No meeting titles, attendee names, or dates that identify the engagement.
+- **No update is the expected default.** Most meetings should produce no OS change. Only propose an update when the same theme has shown up more than once or the insight is clearly missing from the OS. Reporting "reviewed, nothing to add" is a successful outcome, not a failure.
+- **Dedup before adding.** Before drafting anything new, check whether `os.ts`, `capabilities-content.ts`, or `tools-content.ts` already covers the insight. Prefer sharpening an existing line over adding a new one, and a small edit over a new section. New capabilities or tools from a single meeting should be rare and flagged for Ben to confirm.
 
 ### Capability copy
 
