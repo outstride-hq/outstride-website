@@ -93,7 +93,7 @@ export default function OsSidebar() {
         </div>
 
         <nav className="os-sidebar" aria-label="Outstride OS">
-          <OsSearch />
+          <OsSearch variant="mobile" />
 
           {osNavGroups.map((group) => (
             <div key={group.label} className="os-sidebar-group mb-4">
@@ -165,7 +165,7 @@ export default function OsSidebar() {
       </div>
 
       <nav className="os-sidebar d-none d-lg-block" aria-label="Outstride OS">
-        <OsSearch />
+        <OsSearch variant="desktop" />
 
         {osNavGroups.map((group) => (
           <div key={group.label} className="os-sidebar-group mb-4">

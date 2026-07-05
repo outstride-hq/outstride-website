@@ -12,6 +12,7 @@ import { chaptersSquadsDefinition } from "./definitions/chapters-squads";
 import { company7Definition } from "./definitions/company-7";
 import { stakeholderMapDefinition } from "./definitions/stakeholder-map";
 import { tenMinuteRetroDefinition } from "./definitions/ten-minute-retro";
+import { northStarMetricsDefinition } from "./definitions/north-star-metrics";
 import { nvcOfnrDefinition } from "./definitions/nvc-ofnr";
 import { sbiFeedbackDefinition } from "./definitions/sbi-feedback";
 import { sevenFounderNeedsDefinition } from "./definitions/seven-founder-needs";
@@ -45,6 +46,7 @@ const definitions: Record<string, DiagramDefinition> = {
   [company7Definition.id]: company7Definition,
   [stakeholderMapDefinition.id]: stakeholderMapDefinition,
   [tenMinuteRetroDefinition.id]: tenMinuteRetroDefinition,
+  [northStarMetricsDefinition.id]: northStarMetricsDefinition,
 };
 
 export type DiagramReferenceImage = {
@@ -143,6 +145,13 @@ const sandboxEntries: DiagramSandboxEntry[] = [
   },
   {
     definition: tenMinuteRetroDefinition,
+  },
+  {
+    definition: northStarMetricsDefinition,
+    referenceImage: {
+      src: "/images/diagrams/north-star-metrics-original.png",
+      alt: "Original North Star & Health Metrics slide reference",
+    },
   },
 ];
 

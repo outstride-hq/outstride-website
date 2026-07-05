@@ -157,6 +157,17 @@ we expand later or weave it into the content.")_
 **Resolved (Ben, 2026-07-03):** added to `os.ts` as a metadata-only draft
 (`thirty-sixty-ninety`); page content waits for Ben's own 30-60-90 structure.
 
+**Update (Ben, 2026-07-05):** Ben asked to "build this out w. examples" — page drafted
+from the thin capture above. The learn → contribute → own phase framing and the worked
+example (first marketing lead at a Series A B2B SaaS) are **crafted composites**, not
+Ben's own structure or a real engagement — replace when Ben supplies his version. Kept
+verbatim from the capture: transparency about evaluations early on; Performance × Culture
+Grid at checkpoints; low score early is OK — trajectory matters; pair with the
+premortem's watch-list. Accreditation confirmed 2026-07-05 (was an open item in
+`content/review-2026-07.md`): the 30-60-90 framing is popularised by Michael Watkins,
+*The First 90 Days* (2003) — credited as Outstride adaptation. `senior-hire-process`
+added to related tools (link was one-way before).
+
 ### Crossing the Line — placement TBD
 
 _(Captured from Ben's voice memo, 2026-07-03.)_
@@ -711,6 +722,42 @@ capability discussion — see capability intake.)_
    parked in capability intake.
 7. Related: team-traffic-lighting, five-dysfunctions, performance-culture-grid.
 
+### North Star & Health Metrics (`north-star-metric`) — enrichment 2026-07-05
+
+_(Captured from Ben's chat note + slide screenshot, 2026-07-05. Existing thin tool
+`north-star-metric` retitled "North Star & Health Metrics" and filled; slug kept. Ben:
+"wdyt? feel free to improve on this draft.")_
+
+1. Purpose, verbatim: "align company around what we're trying to maximise."
+2. Story from Ben's company, near-verbatim: "are we a trading company (max trading vol) or
+   an investing company (max # financially active users) have to decid!!" — the North Star
+   choice was an identity decision, not an analytics decision.
+3. The operating rule, from Ben's example (his slide colours):
+   1. "maximise green metric (absolute)" — the North Star.
+   2. "as long as blue metrics are healthy e.g. ARPU > €50" — the health metrics as
+      guardrails with thresholds.
+   Plus "make sure metrics make sense" — what makes a good metric (Ben's checklist,
+   verbatim): obviously good · understandable · measurable · aligned with company's plan ·
+   not too leading / lagging.
+4. Maximise one metric absolutely; hold the others above thresholds. One number to chase,
+   a few numbers not to break — and choosing the North Star is choosing what company you
+   are.
+5. Yes — Ben's slide: green North Star pill ("Customer Value" → mFAU) on top, three blue
+   health pills below (Activation → % D14 deposits · Engagement → % users logged in ·
+   Revenue → ARPU). Built as grid diagram `north-star-metrics`; original slide kept as
+   reference image.
+6. Sean Ellis coined the North Star Metric (2010s); Amplitude's North Star Playbook (John
+   Cutler) added the input/guardrail structure — accredited, Outstride adaptation.
+7. chart-the-path, map-the-destination (existing links kept). Related: okrs,
+   company-health-scorecard, strategy-one-pager.
+
+**Open questions:**
+
+- The slide metrics (mFAU, % D14 deposits, % users logged in, ARPU > €50) are from Ben's
+  own company and used with his blessing ("example from my company"); no client data.
+- "Not too leading / lagging" drafted on the page as: leading enough to act on, lagging
+  enough to reflect real customer value. Check Ben likes the phrasing.
+
 ### Habit Stacks (`habit-stacks`) — revision 2026-07-05
 
 _(Captured from Ben's chat note, 2026-07-05: "let's improve this. 1. add emojis 2. reduce
@@ -792,3 +839,51 @@ captured here but only summarised on the page (see open questions).
   `quarterly-retro` and `ten-minute-retro`) — currently only summarised in one line on
   the habit-stacks page. Promote to a tool?
 - "Beat81" is a real Berlin fitness brand — generalised to "sport classes" on the page.
+
+### OKRs (`okrs`) — page build-out
+
+_(Captured from Ben's chat note, 2026-07-05: "build out page for OKRs pls - you can reference
+strategy one pager + the regular accountability traffic light check ins.")_
+
+1. Connect the company milestone and strategy one-pager to quarterly team goals and measurable
+   outcomes.
+2. Use when the company has strategy on one page but people cannot yet explain how their work
+   ladders up to the milestone — or when quarterly goals exist but reviews have become narrative
+   status updates.
+3. Draft from the Strategy One-Pager: destination / next milestone -> company objective ->
+   team objectives -> key results. Write KRs as outcomes, not inputs. Review regularly with a
+   traffic-light check-in: green / amber / red against the agreed goal before narrative.
+4. POV: OKRs are only half the tool. The other half is the regular accountability rhythm. Without
+   the traffic-light check-in, OKRs become quarterly theatre; without the one-pager, they become
+   local optimisation.
+5. Use existing visuals: `strategy-grid` for the cascade and `operating-cadence` for the regular
+   OKR traffic-light / quarterly OKR cascade.
+6. Andy Grove / Intel OKRs, popularised by John Doerr in *Measure What Matters*. Outstride
+   adaptation adds the strategy one-pager bridge and regular traffic-light accountability check.
+7. Capabilities: `chart-the-path`, `install-the-operating-rhythm`. Related:
+   `strategy-one-pager`, `operating-cadence`, `commitment-loop`, `team-traffic-lighting`,
+   `north-star-metric`.
+
+### RAG Company Status (`rag-company-status`) — page build-out
+
+_(Captured from Ben's chat note and screenshot, 2026-07-05. Screenshot anonymized here: a
+"Squad: User growth" board with a purpose line, objective rows, key result rows, and mid-/end-
+quarter status columns coloured amber/green.)_
+
+1. A lightweight red-amber-green board for reporting company, squad or goal status against
+   agreed objectives and key results.
+2. Use when OKRs exist but the review is too narrative, or when the founder needs to see at a
+   glance which goal needs attention now and which can be left alone.
+3. The board shape from the screenshot:
+   - Title: squad / function / company area.
+   - Purpose: one sentence explaining what this area is for this period.
+   - Columns: Objective, Key Results, Mid-period status, End-period status.
+   - Rows: each objective has concrete KRs and a RAG colour at each check-in.
+4. POV: the status colour comes before the explanation. This prevents update theatre and tells
+   the founder where to rove and repair.
+5. Picture: table/dashboard, not a new diagram yet. Example should be anonymized and use generic
+   active-user / signup-flow / launch-testing language, not the original company names.
+6. Outstride adaptation of the common RAG reporting pattern.
+7. Capabilities: `chart-the-path`, `install-the-operating-rhythm`. Related: `okrs`,
+   `operating-cadence`, `commitment-loop`, `team-traffic-lighting`,
+   `company-health-scorecard`.

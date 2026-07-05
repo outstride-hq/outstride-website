@@ -292,6 +292,7 @@ export const capabilities: Capability[] = [
       "opportunity-threat-map",
       "north-star-metric",
       "okrs",
+      "rag-company-status",
       "ai-strategy-stress-test",
       "company-health-scorecard",
       "company-7",
@@ -340,6 +341,7 @@ export const capabilities: Capability[] = [
       "commitment-loop",
       "operating-cadence",
       "okrs",
+      "rag-company-status",
       "quarterly-retro",
       "ten-minute-retro",
       "three-cs-decision",
@@ -1112,14 +1114,29 @@ export const tools: Tool[] = [
   },
   {
     id: "north-star-metric",
-    title: "North Star Metric",
+    title: "North Star & Health Metrics",
     categoryId: "direction-tools",
     type: "framework",
     format: ["team", "company"],
+    moments: ["define"],
+    depth: ["operating"],
+    frequency: ["annually", "as-needed"],
     layerIds: ["company"],
     capabilityIds: ["chart-the-path", "map-the-destination"],
     description:
-      "Define the single metric that best captures progress toward the destination.",
+      "Aligns the company around one North Star metric to maximise absolutely, guarded by a small set of health metrics that must stay above agreed thresholds.",
+    diagramId: "north-star-metrics",
+    accreditation: {
+      originator: "Sean Ellis",
+      source: "North Star Metric; guardrail structure via Amplitude's North Star Playbook",
+      sourceUrl: "https://amplitude.com/north-star",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "okrs",
+      "company-health-scorecard",
+      "strategy-one-pager",
+    ],
   },
   {
     id: "values-deck",
@@ -1148,10 +1165,27 @@ export const tools: Tool[] = [
     categoryId: "direction-tools",
     type: "framework",
     format: ["team", "company"],
+    moments: ["define", "deliver"],
+    depth: ["operating"],
+    frequency: ["quarterly", "weekly"],
     layerIds: ["company"],
     capabilityIds: ["chart-the-path", "install-the-operating-rhythm"],
     description:
-      "Connect annual and quarterly goals to team priorities and measurable outcomes.",
+      "Connect the company milestone to quarterly team goals, measurable outcomes and regular traffic-light accountability.",
+    accreditation: {
+      originator: "Andy Grove",
+      source: "High Output Management / John Doerr's Measure What Matters",
+      sourceUrl: "https://www.whatmatters.com/faqs/okr-meaning-definition-example",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "strategy-one-pager",
+      "north-star-metric",
+      "operating-cadence",
+      "commitment-loop",
+      "team-traffic-lighting",
+      "rag-company-status",
+    ],
   },
   {
     id: "chapters-and-squads",
@@ -1195,7 +1229,12 @@ export const tools: Tool[] = [
     accreditation: {
       note: "Outstride original",
     },
-    relatedToolIds: ["chapters-and-squads", "okrs", "company-health-scorecard"],
+    relatedToolIds: [
+      "chapters-and-squads",
+      "okrs",
+      "rag-company-status",
+      "company-health-scorecard",
+    ],
   },
   {
     id: "company-7",
@@ -1829,7 +1868,18 @@ export const tools: Tool[] = [
     capabilityIds: ["hire-and-raise-the-talent-bar"],
     description:
       "A written plan for a new hire's first 30, 60 and 90 days with transparent evaluation checkpoints from day one.",
-    relatedToolIds: ["performance-culture-grid", "premortem"],
+    accreditation: {
+      originator: "Michael Watkins",
+      source: "The First 90 Days (2003)",
+      sourceUrl:
+        "https://store.hbr.org/product/the-first-90-days-updated-and-expanded-proven-strategies-for-getting-up-to-speed-faster-and-smarter/11323",
+      note: "Adapted for Outstride OS",
+    },
+    relatedToolIds: [
+      "performance-culture-grid",
+      "premortem",
+      "senior-hire-process",
+    ],
   },
   {
     id: "sbi-feedback",
@@ -1864,6 +1914,74 @@ export const tools: Tool[] = [
     ],
     description:
       "A Keep / Start / Stop feedback format that depersonalises difficult conversations and sharpens behaviour change.",
+  },
+  {
+    id: "how-to-let-someone-go",
+    title: "How to Let Someone Go",
+    categoryId: "leadership-tools",
+    type: "conversation",
+    format: ["one-to-one"],
+    moments: ["deliver"],
+    depth: ["operating"],
+    frequency: ["as-needed"],
+    layerIds: ["founder", "company"],
+    capabilityIds: [
+      "hire-and-raise-the-talent-bar",
+      "give-feedback-and-hold-the-standard",
+    ],
+    description:
+      "A step-by-step playbook for the conversation where you let someone go — the decision stated cleanly, the reasons concrete, dignity intact and the risks planned before you walk in.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: ["hard-convo-prep", "accountability-dial", "sbi-feedback"],
+  },
+  {
+    id: "hard-convo-prep",
+    title: "2-Minute Hard Convo Prep",
+    categoryId: "leadership-tools",
+    type: "exercise",
+    format: ["solo"],
+    moments: ["design"],
+    depth: ["operating", "inner-work"],
+    frequency: ["as-needed"],
+    layerIds: ["founder"],
+    capabilityIds: [
+      "give-feedback-and-hold-the-standard",
+      "navigate-conflict-and-create-psychological-safety",
+    ],
+    description:
+      "Two minutes before any hard conversation: write the three things you want to get across and the three emotions you want to bring into the room.",
+    accreditation: {
+      note: "Outstride original",
+    },
+    relatedToolIds: [
+      "how-to-let-someone-go",
+      "crossing-the-line",
+      "non-violent-communication",
+    ],
+  },
+  {
+    id: "leadership-test",
+    title: "The Leadership Test",
+    categoryId: "leadership-tools",
+    type: "diagnostic",
+    format: ["solo"],
+    moments: ["diagnose"],
+    depth: ["operating"],
+    frequency: ["quarterly"],
+    layerIds: ["company", "founder"],
+    capabilityIds: ["make-ownership-stick", "design-the-org"],
+    description:
+      "Six questions to run against every member of your leadership team — strategy, execution, culture, and whether the company is their first team.",
+    accreditation: {
+      note: "Outstride original — question six borrows Netflix's keeper test (Reed Hastings & Patty McCord)",
+    },
+    relatedToolIds: [
+      "team-traffic-lighting",
+      "development-pipeline",
+      "five-dysfunctions",
+    ],
   },
   {
     id: "relationship-design-canvas",
@@ -2423,10 +2541,23 @@ export const tools: Tool[] = [
     categoryId: "diagnostic-tools",
     type: "diagnostic",
     format: ["team", "company"],
+    moments: ["diagnose", "deliver"],
+    depth: ["operating"],
+    frequency: ["weekly", "monthly", "quarterly"],
     layerIds: ["company"],
     capabilityIds: ["install-the-operating-rhythm", "chart-the-path"],
     description:
       "A red-amber-green traffic-light view of company health and quarterly goals that surfaces where the founder needs to rove and repair.",
+    accreditation: {
+      note: "Outstride adaptation of common RAG reporting",
+    },
+    relatedToolIds: [
+      "okrs",
+      "operating-cadence",
+      "commitment-loop",
+      "team-traffic-lighting",
+      "company-health-scorecard",
+    ],
   },
   {
     id: "meeting-jobs-map",

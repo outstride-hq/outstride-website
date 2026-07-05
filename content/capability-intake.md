@@ -866,11 +866,28 @@ and raw content below.)_
   distinctive culture for the leadership team". Explicitly unsure if this should be
   a whole capability.
 - Leadership Test tool captured in `content/tool-intake.md` (Ben's four questions +
-  two LLM-proposed additions pending his call).
+  two LLM-proposed additions — Ben approved both 2026-07-05: first-team question and
+  keeper test go in).
+- Ben approved the two voice-memo angles (2026-07-05): (1) one voice outside the
+  room — argue hard inside, defend the decision as one team outside; (2) what only
+  this team can discuss — the meeting-content test that separates a leadership team
+  from a status circle.
+- Ben's verbatim line for the one-voice agreement (2026-07-05): **"80% commitment,
+  100% alignment"** — you may be only 80% sold on the decision, but outside the room
+  you're 100% aligned. Kin to "disagree and commit" (Andy Grove / popularised by
+  Bezos) — accredit if the borrowed phrase is used; Ben's 80/100 formulation is his
+  own.
 - OPEN: whole capability vs. sections in make-ownership-stick / design-the-org /
-  build-a-culture-that-compounds. LLM recommendation 2026-07-05: build the tool
-  first, home it under make-ownership-stick + design-the-org, let the theme earn a
-  capability later if it keeps growing.
+  build-a-culture-that-compounds. LLM recommendation 2026-07-05 (given twice, second
+  time with the tool-overlap argument): NOT a capability yet — the theme's natural
+  anchor tools (five-dysfunctions, personal-histories-trust, six-critical-questions)
+  are already load-bearing on Make Ownership Stick and Build Incredible Relationships,
+  so a new page would hollow or duplicate them. Home the narrative block in Make
+  Ownership Stick (Lencioni is already its anchor; one-voice/first-team are
+  behavioural agreements = ownership territory), cross-ref from Design the Org, link
+  the Leadership Test tool from both. PROMOTION TEST: when Ben has a verbatim founder
+  quote about the *team itself* (Q1) and failure modes he's watched (Q5) that don't
+  overlap ownership or org design, it splits out — energy/resilience precedent.
 
 ### Founder loneliness / mental strain → Master My Mindset + Build My Growth System
 

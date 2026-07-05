@@ -10,6 +10,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { createPortal } from "react-dom";
 import { capabilities, formatToolType, tools } from "@/lib/os";
 
 type OsSearchItem = {
@@ -45,6 +46,35 @@ function normalizeHref(href: string): string {
   return href.endsWith("/") ? href : `${href}/`;
 }
 
+type OsSearchProps = {
+  variant: "desktop" | "mobile";
+};
+
+const DESKTOP_MEDIA_QUERY = "(min-width: 992px)";
+
+function useOsSearchVariantActive(variant: OsSearchProps["variant"]): boolean {
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(DESKTOP_MEDIA_QUERY);
+
+    function syncActive() {
+      setActive(
+        variant === "desktop" ? mediaQuery.matches : !mediaQuery.matches,
+      );
+    }
+
+    syncActive();
+    mediaQuery.addEventListener("change", syncActive);
+
+    return () => {
+      mediaQuery.removeEventListener("change", syncActive);
+    };
+  }, [variant]);
+
+  return active;
+}
+
 async function copyTextToClipboard(text: string): Promise<void> {
   if (navigator.clipboard && window.isSecureContext) {
     await navigator.clipboard.writeText(text);
@@ -63,11 +93,13 @@ async function copyTextToClipboard(text: string): Promise<void> {
   textarea.remove();
 }
 
-export default function OsSearch() {
+export default function OsSearch({ variant }: OsSearchProps) {
   const pathname = usePathname();
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
+  const isActiveVariant = useOsSearchVariantActive(variant);
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const [query, setQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
   const [copiedHref, setCopiedHref] = useState<string | null>(null);
@@ -92,6 +124,14 @@ export default function OsSearch() {
   }, []);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isActiveVariant) {
+      return;
+    }
+
     function handleShortcut(event: globalThis.KeyboardEvent) {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
@@ -104,10 +144,10 @@ export default function OsSearch() {
     return () => {
       window.removeEventListener("keydown", handleShortcut);
     };
-  }, []);
+  }, [isActiveVariant]);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (!isOpen || !isActiveVariant) {
       return;
     }
 
@@ -117,7 +157,7 @@ export default function OsSearch() {
     return () => {
       document.body.classList.remove("os-search-open");
     };
-  }, [isOpen]);
+  }, [isActiveVariant, isOpen]);
 
   useEffect(() => {
     setActiveIndex(0);
@@ -234,89 +274,92 @@ export default function OsSearch() {
         </button>
       </div>
 
-      {isOpen ? (
-        <div
-          className="os-search-backdrop"
-          role="presentation"
-          onMouseDown={closeSearch}
-        >
-          <div
-            className="os-search-dialog"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="os-search-title"
-            onMouseDown={(event) => event.stopPropagation()}
-          >
-            <div className="os-search-input-wrap">
-              <i className="fa-solid fa-magnifying-glass" aria-hidden="true" />
-              <input
-                ref={inputRef}
-                id="os-search-input"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                onKeyDown={handleInputKeyDown}
-                type="search"
-                placeholder="Search tools and capabilities..."
+      {isMounted && isOpen && isActiveVariant
+        ? createPortal(
+            <div
+              className="os-search-backdrop"
+              role="presentation"
+              onMouseDown={closeSearch}
+            >
+              <div
+                className="os-search-dialog"
+                role="dialog"
+                aria-modal="true"
                 aria-labelledby="os-search-title"
-                autoComplete="off"
-              />
-              <button type="button" onClick={closeSearch} aria-label="Close search">
-                Esc
-              </button>
-            </div>
-
-            <p id="os-search-title" className="os-search-title mb-0">
-              Outstride OS search
-            </p>
-
-            <div className="os-search-results" aria-live="polite">
-              {results.length > 0 ? (
-                results.map((item, index) => (
-                  <div
-                    key={item.href}
-                    className={`os-search-result ${
-                      index === activeIndex ? "is-active" : ""
-                    }`}
-                    onMouseEnter={() => setActiveIndex(index)}
-                  >
-                    <Link
-                      href={item.href}
-                      className="os-search-result-link"
-                      onClick={closeSearch}
-                    >
-                      <span className="os-search-result-eyebrow">
-                        {item.type} - {item.eyebrow}
-                      </span>
-                      <span className="os-search-result-title">{item.title}</span>
-                      <span className="os-search-result-description">
-                        {item.description}
-                      </span>
-                    </Link>
-                    <button
-                      type="button"
-                      className="os-search-copy"
-                      onClick={(event) => handleResultCopy(event, item.href)}
-                      aria-label={`Copy link to ${item.title}`}
-                    >
-                      {copiedHref === item.href ? "Copied" : "Copy link"}
-                    </button>
-                  </div>
-                ))
-              ) : (
-                <div className="os-search-empty">
-                  No tools or capabilities match "{query}".
+                onMouseDown={(event) => event.stopPropagation()}
+              >
+                <div className="os-search-input-wrap">
+                  <i className="fa-solid fa-magnifying-glass" aria-hidden="true" />
+                  <input
+                    ref={inputRef}
+                    id="os-search-input"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    onKeyDown={handleInputKeyDown}
+                    type="search"
+                    placeholder="Search tools and capabilities..."
+                    aria-labelledby="os-search-title"
+                    autoComplete="off"
+                  />
+                  <button type="button" onClick={closeSearch} aria-label="Close search">
+                    Esc
+                  </button>
                 </div>
-              )}
-            </div>
 
-            <div className="os-search-footer">
-              <span>Enter to open</span>
-              <span>Arrow keys to move</span>
-              <span>Copy link to share</span>
-            </div>
-          </div>
-        </div>
-      ) : null}
+                <p id="os-search-title" className="os-search-title mb-0">
+                  Outstride OS search
+                </p>
+
+                <div className="os-search-results" aria-live="polite">
+                  {results.length > 0 ? (
+                    results.map((item, index) => (
+                      <div
+                        key={item.href}
+                        className={`os-search-result ${
+                          index === activeIndex ? "is-active" : ""
+                        }`}
+                        onMouseEnter={() => setActiveIndex(index)}
+                      >
+                        <Link
+                          href={item.href}
+                          className="os-search-result-link"
+                          onClick={closeSearch}
+                        >
+                          <span className="os-search-result-eyebrow">
+                            {item.type} - {item.eyebrow}
+                          </span>
+                          <span className="os-search-result-title">{item.title}</span>
+                          <span className="os-search-result-description">
+                            {item.description}
+                          </span>
+                        </Link>
+                        <button
+                          type="button"
+                          className="os-search-copy"
+                          onClick={(event) => handleResultCopy(event, item.href)}
+                          aria-label={`Copy link to ${item.title}`}
+                        >
+                          {copiedHref === item.href ? "Copied" : "Copy link"}
+                        </button>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="os-search-empty">
+                      No tools or capabilities match "{query}".
+                    </div>
+                  )}
+                </div>
+
+                <div className="os-search-footer">
+                  <span>Enter to open</span>
+                  <span>Arrow keys to move</span>
+                  <span>Copy link to share</span>
+                </div>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </div>
   );
 }

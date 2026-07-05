@@ -986,10 +986,11 @@ body.os-mobile-sidebar-open {
 	background: rgba(21, 31, 39, 0.52);
 	display: flex;
 	inset: 0;
+	isolation: isolate;
 	justify-content: center;
 	padding: 8vh 1rem 1rem;
 	position: fixed;
-	z-index: 2000;
+	z-index: 5000;
 }
 
 .os-search-dialog {
@@ -997,11 +998,20 @@ body.os-mobile-sidebar-open {
 	border: 1px solid rgba(255, 255, 255, 0.7);
 	border-radius: 22px;
 	box-shadow: 0 28px 80px rgba(21, 31, 39, 0.24);
+	isolation: isolate;
 	max-height: min(760px, 84vh);
 	max-width: 720px;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
+	z-index: 1;
+}
+
+.os-search-input-wrap,
+.os-search-title,
+.os-search-results,
+.os-search-footer {
+	position: relative;
 	z-index: 1;
 }
 

@@ -66,6 +66,126 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  okrs: {
+    intro:
+      "Turn the one-page strategy into quarterly objectives, measurable key results and a regular traffic-light accountability rhythm.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use OKRs after the destination is clear enough to cascade. The strategy one-pager names where the company is going; OKRs translate that into the handful of outcomes teams will own this quarter.",
+      },
+      {
+        kind: "paragraph",
+        text: "The trap is treating OKRs as a planning artifact. They only work when they stay alive in the operating rhythm — reviewed against agreed goals before the meeting turns into narrative, excuses or status theatre.",
+      },
+      {
+        kind: "heading",
+        text: "Start from the one-pager",
+      },
+      {
+        kind: "diagram",
+        diagramId: "strategy-grid",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Name the next milestone",
+            note: "Start with the concrete bar the company is trying to reach — next round, profitability, market launch, activation step-change. If the milestone is fuzzy, fix that before writing team OKRs.",
+          },
+          {
+            title: "Write the company objective",
+            note: "One plain-English direction for the quarter. It should be memorable enough that a team lead can repeat it without opening the doc.",
+          },
+          {
+            title: "Choose key results that prove progress",
+            note: "Pick three to five measurable outcomes. Favour results that move in the world — conversion, retention, revenue, cycle time, activation — over activity the team can complete without changing the business.",
+          },
+          {
+            title: "Cascade to team OKRs",
+            note: "Each team writes the outcomes it owns and can explain how they ladder up to the company objective. If a team cannot make the link, either the objective is unclear or the work does not belong this quarter.",
+          },
+          {
+            title: "Cut until it fits",
+            note: "A cascade that exceeds capacity is not ambition; it is avoidance. Cut scope before the quarter starts so accountability is attached to commitments the team genuinely chose.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Pressure-test each key result",
+      },
+      {
+        kind: "table",
+        columns: ["Question", "What to look for"],
+        rows: [
+          [
+            "Is it an outcome?",
+            "The number changes because the business changed, not because the team completed a task.",
+          ],
+          [
+            "Is it measurable without debate?",
+            "At review time, the owner can show green, amber or red from evidence, not interpretation.",
+          ],
+          [
+            "Does someone own it?",
+            "One accountable owner can explain the plan, the risks and what support they need.",
+          ],
+          [
+            "Does it ladder up?",
+            "A reasonable person can trace the KR to the company objective and the next milestone.",
+          ],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Run the traffic-light check-in",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Open with the light",
+            note: "Each owner starts with green, amber or red against the agreed KR. No narrative first; status against goal first.",
+          },
+          {
+            title: "Explain the movement",
+            note: "What changed since last time? What evidence supports the colour? What is the current forecast for the quarter?",
+          },
+          {
+            title: "Name the intervention",
+            note: "Green usually needs space. Amber needs support or a decision. Red needs a reset, a sharper plan or a leadership trade-off.",
+          },
+          {
+            title: "Close with commitments",
+            note: "Turn the review into the next set of hard commitments — what will happen by when, and who owns it.",
+          },
+        ],
+      },
+      {
+        kind: "diagram",
+        diagramId: "operating-cadence",
+      },
+      {
+        kind: "callout",
+        text: "OKRs without the one-pager become local optimisation. OKRs without the traffic-light check-in become quarterly theatre. The power is the bridge: one strategy, clear outcomes, regular accountability.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "strategy-one-pager",
+          "north-star-metric",
+          "operating-cadence",
+          "commitment-loop",
+          "team-traffic-lighting",
+        ],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["chart-the-path", "install-the-operating-rhythm"],
+      },
+    ],
+  },
   "ceo-test": {
     intro:
       "A quick self-assessment — score yourself on four questions to check that the big things are covered.",
@@ -123,6 +243,77 @@ export const toolsContent: Record<string, ToolContent> = {
       {
         kind: "capabilityRefs",
         capabilityIds: ["map-the-destination", "chart-the-path"],
+      },
+    ],
+  },
+  "north-star-metric": {
+    intro:
+      "Aligns the company around what you're actually trying to maximise: one North Star metric to grow in absolute terms, guarded by a small set of health metrics that must stay above agreed thresholds.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use this when teams are each optimising a different number, or when roadmap arguments keep circling because nobody has said out loud what the company is trying to maximise.",
+      },
+      {
+        kind: "paragraph",
+        text: "Choosing a North Star is an identity decision disguised as an analytics decision. At one fintech, leadership had to decide: are we a trading company (maximise trading volume) or an investing company (maximise the number of financially active users)? Same product, two different companies — and every roadmap argument was really that undecided question in disguise. You have to decide.",
+      },
+      {
+        kind: "diagram",
+        diagramId: "north-star-metrics",
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Name the identity question",
+            note: "Each candidate North Star implies a different company. Put the options on the table and decide which company you are before you decide which metric to chase.",
+          },
+          {
+            title: "Pick one North Star",
+            note: "The single metric that best captures the value customers get from you. Maximise it in absolute terms — not a ratio you can game by shrinking the denominator.",
+            example: "mFAU — monthly financially active users.",
+          },
+          {
+            title: "Add health metrics with thresholds",
+            note: "A handful of guardrails — typically activation, engagement, revenue — each with an explicit \"healthy\" line agreed in advance.",
+            example: "% of new users depositing within 14 days · % of users logging in · ARPU stays above €50.",
+          },
+          {
+            title: "Run the operating rule",
+            note: "Maximise the North Star as long as every health metric stays healthy. When one dips below its threshold, fixing it takes priority over pushing growth.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "What makes a good metric",
+      },
+      {
+        kind: "list",
+        items: [
+          "Obviously good — more of it is unambiguously better for customers and the company.",
+          "Understandable — anyone in the company can explain it without a data dictionary.",
+          "Measurable — you can track it reliably today, not after a six-month data project.",
+          "Aligned with the company's plan — moving it moves the strategy, not a vanity number.",
+          "Not too leading, not too lagging — leading enough that teams can act on it this quarter, lagging enough that it reflects real customer value.",
+        ],
+      },
+      {
+        kind: "callout",
+        text: "One number to chase, a few numbers you're not allowed to break. The health thresholds are what make it safe to maximise a single metric aggressively — without them, the North Star becomes a licence to burn everything else down.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["okrs", "company-health-scorecard", "strategy-one-pager"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["chart-the-path", "map-the-destination"],
       },
     ],
   },
@@ -2900,6 +3091,77 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "thirty-sixty-ninety": {
+    intro:
+      "A written plan for a new hire's first 30, 60 and 90 days — goals per phase, and evaluation checkpoints that are transparent from day one.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use it for every meaningful hire. Most onboarding is a laptop, a Slack invite and vibes — expectations stay implicit until someone is quietly frustrated at month three. This plan makes the expectations explicit in week one, and makes the evaluation open and kind instead of a surprise.",
+      },
+      {
+        kind: "callout",
+        text: "Transparency about early evaluation is kindness, not surveillance. Tell them on day one exactly when and how they will be evaluated — and that a low score at day 30 is fine, because they are new. What matters is trajectory.",
+      },
+      {
+        kind: "heading",
+        text: "The shape",
+      },
+      {
+        kind: "table",
+        columns: ["Phase", "Focus", "Example goals — first marketing lead, Series A B2B SaaS"],
+        rows: [
+          [
+            "Days 1–30",
+            "Learn",
+            "Meet the ten people who matter most, inside and out; sit in on five customer calls; write back what they've learned about the funnel — including what they'd challenge.",
+          ],
+          [
+            "Days 31–60",
+            "Contribute",
+            "Own one channel end to end; ship the first campaign; agree the metrics that will define the function.",
+          ],
+          [
+            "Days 61–90",
+            "Own",
+            "Running the function without hand-holding; a costed plan for the next two quarters; first hire or agency decision made.",
+          ],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Write it together in week one",
+            note: "You draft the skeleton before they start; they fill in and push back in the first days. A plan written about someone is a test — a plan written with them is a contract.",
+          },
+          {
+            title: "Book the checkpoints on day one",
+            note: "Three calendar invites — day 30, 60, 90 — before the first week ends. At each one, score them on the Performance × Culture Grid.",
+            example:
+              "At each checkpoint we'll look at the plan together and I'll score performance and culture openly. Day 30 will be low on performance — that's expected.",
+          },
+          {
+            title: "Watch trajectory, not the number",
+            note: "A 4 at day 30 that becomes a 6 at day 60 is a great hire settling in. A 6 that is still a 6 at day 90 is the conversation you're avoiding.",
+          },
+          {
+            title: "Fold in the premortem watch-list",
+            note: "If you premortemed the hire, the top risks become explicit things to watch at each checkpoint — not vague worries you carry alone.",
+          },
+        ],
+      },
+      { kind: "toolRef", toolIds: ["performance-culture-grid", "premortem", "senior-hire-process"] },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["hire-and-raise-the-talent-bar"],
+      },
+    ],
+  },
   "chapters-and-squads": {
     intro:
       "Cross-functional squads own one slice of the user journey; chapters keep each craft consistent across squads.",
@@ -2977,6 +3239,125 @@ export const toolsContent: Record<string, ToolContent> = {
           "make-ownership-stick",
           "install-the-operating-rhythm",
         ],
+      },
+    ],
+  },
+  "rag-company-status": {
+    intro:
+      "A simple red-amber-green status board for objectives, key results and company health — so the founder can see where to rove and repair.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use this in OKR reviews, leadership meetings and monthly business reviews when updates are getting too narrative. The board forces the conversation to start with the signal: what is green, what is amber, what is red, and what needs a decision.",
+      },
+      {
+        kind: "paragraph",
+        text: "This is different from Team Traffic Lighting. Team Traffic Lighting rates the team itself; RAG Company Status rates progress against agreed goals. Pair them when you need both questions answered: is the team healthy, and are the outcomes moving?",
+      },
+      {
+        kind: "heading",
+        text: "The board",
+      },
+      {
+        kind: "table",
+        columns: ["Field", "What it captures"],
+        rows: [
+          [
+            "Squad / area",
+            "The part of the company being reviewed: user growth, sales, product, hiring, runway, operations.",
+          ],
+          [
+            "Purpose",
+            "One sentence for what this area exists to achieve this period.",
+          ],
+          [
+            "Objective",
+            "The direction of travel — ideally pulled from the quarter's OKRs.",
+          ],
+          [
+            "Key results",
+            "The measurable outcomes that prove the objective is moving.",
+          ],
+          [
+            "Status columns",
+            "Mid-period and end-period traffic lights, or whatever cadence your operating rhythm uses.",
+          ],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Example: user growth",
+      },
+      {
+        kind: "paragraph",
+        text: "Purpose: position the new product story and grow active users.",
+      },
+      {
+        kind: "table",
+        columns: ["Objective", "Key results", "Mid-period", "End-period"],
+        rows: [
+          [
+            "Create the next-period optimisation strategy and roadmap",
+            "Activation plan in place; roadmap features and tests ready to start development",
+            "Amber",
+            "Not reviewed yet",
+          ],
+          [
+            "Redesign the signup flow and logged-in homepage for the new brand",
+            "Both ready for launch",
+            "Amber",
+            "Not reviewed yet",
+          ],
+          [
+            "Launch and test in-product education cards",
+            "Cards live; impact understood; learnings applied to the roadmap",
+            "Green",
+            "Not reviewed yet",
+          ],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Start with the colour",
+            note: "Each owner reports green, amber or red before explanation. No slide-story first; status against goal first.",
+          },
+          {
+            title: "Ask what changed",
+            note: "What evidence moved the colour since the last check-in? What did we learn? What is the forecast if nothing changes?",
+          },
+          {
+            title: "Separate support from intervention",
+            note: "Green usually gets space. Amber gets support, a decision or a constraint removed. Red gets founder attention, a reset or a trade-off.",
+          },
+          {
+            title: "Close with commitments",
+            note: "Every amber or red line leaves with an owner, next action and date. Open the next review with those commitments.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The colour is not a grade. It is a routing signal. A red reported early with a plan is healthier than a green that survives only because nobody asked the hard question.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "okrs",
+          "operating-cadence",
+          "commitment-loop",
+          "team-traffic-lighting",
+          "company-health-scorecard",
+        ],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["chart-the-path", "install-the-operating-rhythm"],
       },
     ],
   },
