@@ -887,3 +887,29 @@ quarter status columns coloured amber/green.)_
 7. Capabilities: `chart-the-path`, `install-the-operating-rhythm`. Related: `okrs`,
    `operating-cadence`, `commitment-loop`, `team-traffic-lighting`,
    `company-health-scorecard`.
+
+### 2-Minute Hard Convo Prep (`hard-convo-prep`) — page build-out 2026-07-05
+
+_(The tool was split out of `how-to-let-someone-go` per the open question above (Ben:
+"maybe a separate tool"). Source material is the single bullet from Ben's 2026-07-05
+chat notes: before the convo, think about the **3 things you want to get across** and
+the **3 emotions you want to bring** to the call. Page drafted from that bullet.)_
+
+1. Two minutes before any hard conversation: write the three things you want to get
+   across and the three emotions you want to bring into the room.
+2. Any booked hard conversation — underperformance, cofounder tension, a board pushback,
+   letting someone go.
+3. The mechanic: 3 messages × 3 emotions on one note; glance at it before you walk in.
+4. POV (drafted, not verbatim Ben): you bring three emotions either way — the only
+   question is whether you chose them.
+5. No diagram — the tool is a note, not a canvas.
+6. Outstride original (accreditation already on the tool in `os-data.ts`).
+7. give-feedback-and-hold-the-standard, navigate-conflict-and-create-psychological-safety.
+   Related: how-to-let-someone-go, crossing-the-line, non-violent-communication.
+
+**Provenance flags:**
+
+- The worked example on the page (founder telling a loyal early engineer they won't get
+  the Head of Engineering role) is a **crafted composite** — no verbatim founder example
+  captured yet. Replace when Ben supplies a real one.
+- The "chosen emotions" framing in the callout is drafted, not Ben's phrasing — confirm.

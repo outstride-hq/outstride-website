@@ -3035,6 +3035,78 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "hard-convo-prep": {
+    intro:
+      "Two minutes, one note: the three things you want to get across, and the three emotions you want to bring into the room.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "Use it before any hard conversation that's already booked — underperformance, cofounder tension, board pushback, letting someone go. Hard conversations rarely fail on content; they fail because the message wanders and the emotion in the room is whatever you happened to walk in with.",
+      },
+      {
+        kind: "heading",
+        text: "The two lists",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Three things you want to get across",
+            note: "Not everything that's true — the three messages that must survive the conversation. If they only remember three sentences, which three?",
+          },
+          {
+            title: "Three emotions you want to bring",
+            note: "You'll bring three emotions either way; the only question is whether you chose them. Name the ones that serve the conversation, and glance at the note before you walk in.",
+          },
+        ],
+      },
+      {
+        kind: "heading",
+        text: "Worked example",
+      },
+      {
+        kind: "paragraph",
+        text: "A founder is about to tell a loyal early engineer that the Head of Engineering role is going to an external hire. Two minutes before the call, the note reads:",
+      },
+      {
+        kind: "table",
+        columns: ["Three things to get across", "Three emotions to bring"],
+        rows: [
+          [
+            "The decision is made: we're hiring externally for Head of Engineering.",
+            "Warmth — five years together has earned that.",
+          ],
+          [
+            "This is about the stage of the company, not your performance — here's what you've built.",
+            "Steadiness — no hedging, no reopening the decision mid-call.",
+          ],
+          [
+            "I want to design your next chapter here with you, starting this week.",
+            "Genuine curiosity about what they want next.",
+          ],
+        ],
+      },
+      {
+        kind: "callout",
+        text: "Without the note, the same call drifts: the founder over-explains, softens the decision until it sounds negotiable, and the dread they walked in with reads as coldness. The prep doesn't make the conversation pleasant — it makes it land the way you meant it.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: [
+          "how-to-let-someone-go",
+          "crossing-the-line",
+          "non-violent-communication",
+        ],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: [
+          "give-feedback-and-hold-the-standard",
+          "navigate-conflict-and-create-psychological-safety",
+        ],
+      },
+    ],
+  },
   "senior-hire-process": {
     intro:
       "A worked example of a serious senior-hire process — four phases ending in a strategy task presented to the C-level — to strip back for smaller roles.",
