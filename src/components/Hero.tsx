@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TypedText from "@/components/TypedText";
 
 export default function Hero() {
@@ -19,14 +20,9 @@ export default function Hero() {
             <a href="#contact" className="btn btn-dark rounded-0 mt-3">
               Get in touch
             </a>
-            <a
-              href="https://blog.outstride.co/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-link text-dark mt-3"
-            >
-              See my writing
-            </a>
+            <Link href="/os/" className="btn btn-link text-dark mt-3">
+              Explore OS
+            </Link>
           </div>
           <div className="col-lg-5 text-center align-self-center mb-4 mb-lg-0 order-0 order-lg-1">
             <div className="bg-light rounded-pill d-inline-block p-3 shadow-lg wow zoomIn">

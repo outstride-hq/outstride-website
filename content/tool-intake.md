@@ -629,3 +629,84 @@ are his own; the name riffs on Gary Chapman's Five Love Languages — credited a
 6. Outstride original; name riffs on Gary Chapman's The Five Love Languages.
 7. build-leaders-not-dependencies, build-incredible-relationships,
    hire-and-raise-the-talent-bar. Related: happiness-check, development-pipeline.
+
+### How to Let Someone Go (`how-to-let-someone-go`) — NEW playbook
+
+_(Captured from Ben's chat notes, 2026-07-05.)_
+
+1. A step-by-step playbook for the conversation where you let someone go — decision
+   stated cleanly, reasons concrete, dignity intact, risks planned beforehand.
+2. The decision is made and the conversation is booked. Upstream of the tool, the bar
+   for the decision itself: **"if it's not a hell yeah, it's a no"** (Derek Sivers's
+   phrasing — accredit if it goes on the page). The Accountability Dial is the route
+   that should have led here — no silent escalation to fired (cross-ref
+   `accountability-dial`).
+3. Ben's steps, near-verbatim:
+   - Before the convo: think about the **3 things you want to get across** and the
+     **3 emotions you want to bring** to the call (maybe a separate "2-minute hard
+     convo prep" — see open questions).
+   - Also beforehand: if there's a risk of the employee causing harm to the company
+     (e.g. a dev leaving with passwords), make a plan first — e.g. be ready to cut
+     off access.
+   - Open by stating clearly that **this decision has been made**. "Do not give them
+     reason to think that this is still being considered."
+   - Then give them the prepared bullet points on why.
+   - When explaining why, use **SBI** to give concrete examples rather than just
+     "you didn't perform well."
+   - Give them the opportunity to ask questions now BUT suggest they take a day to
+     process the news, then have a proper debrief call the next day.
+   - Give the person the opportunity to **co-create the narrative** — e.g. "I'd be
+     happy to share that this was a mutual decision with the rest of the team."
+   - Think about what you can offer that person: gardening leave, references.
+   - In the follow-up meeting, run an **exit interview** — "a wonderful opportunity
+     to hear a more unfiltered view of the company." (Ben wrote "conservative,
+     unfiltered" — word check: "candid" likely intended.) Remember to ask good
+     questions (see truth-questions idea below).
+4. Even if you do everything "right", the result might not be particularly pleasant —
+   it's important to understand that. And the most load-bearing move is the first one:
+   state that the decision is made.
+5. No picture captured. (Candidate: a timeline strip — prep → the call → a day to
+   process → debrief + exit interview.)
+6. Outstride original. Sub-credits where used: SBI (Center for Creative Leadership,
+   already accredited on `sbi-feedback`); "hell yeah or no" (Derek Sivers).
+7. hire-and-raise-the-talent-bar (owns exits — see capability intake note 2026-07-05),
+   give-feedback-and-hold-the-standard. Related: accountability-dial, sbi-feedback,
+   happiness-check.
+
+**Open questions:**
+
+- Split the **2-Minute Hard Convo Prep** (3 things to get across × 3 emotions to bring)
+  into its own tiny tool? It's reusable for any hard conversation — conflict, cofounder,
+  board. Ben floated it as "maybe a separate tool".
+- **Questions to Find Truth Quickly** — Ben's idea: a generic version of the Happiness
+  Check for extracting honest signal fast (exit interviews, skip-levels, post-mortems).
+  Own tool or a block inside this one? Ben's actual questions NOT captured yet — needs
+  his list before drafting.
+- "Gardening leave" is UK-flavoured — keep or generalise?
+- No verbatim founder story captured for the eventual page hook.
+
+### Leadership Test (name TBD — "the [Company] Leadership Test"?) — NEW
+
+_(Captured from Ben's chat notes, 2026-07-05, alongside the leadership-team-as-a-team
+capability discussion — see capability intake.)_
+
+1. A short test every leadership-team member should pass — run it per person, honestly,
+   on a cadence.
+2. Ben's four questions (his draft; he flagged #2 for a rewrite):
+   - Does this person understand and champion the company strategy?
+   - Have they created a strategy for their area that's driven from and supports the
+     company strategy? _(rewrite candidate: "Does their area have a strategy that flows
+     straight from the company's — and visibly serves it?")_
+   - Have they built a team & systems to create a high likelihood of success?
+   - Does this person embody the culture?
+3. Suggested additions (LLM proposals 2026-07-05, NOT Ben's — pending his call):
+   - The first-team question: do they put the company above their function? (This was
+     Ben's stated angle for the whole theme but isn't in his four yet.)
+   - The keeper test: would you fight to keep them? (Netflix — Hastings/McCord;
+     accredit if used.)
+4. No picture captured. (Candidate: checklist card, or a 4–5 row per-exec grid like
+   team-traffic-lighting.)
+5. Outstride original (keeper test sub-credit if added).
+6. Placement TBD: make-ownership-stick / design-the-org / possible new capability —
+   parked in capability intake.
+7. Related: team-traffic-lighting, five-dysfunctions, performance-culture-grid.

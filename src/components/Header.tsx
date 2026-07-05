@@ -66,6 +66,17 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="nav-item">
+                  <a
+                    className="nav-link"
+                    href="https://blog.outstride.co/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={handleNavClick}
+                  >
+                    Blog
+                  </a>
+                </li>
+                <li className="nav-item">
                   <Link
                     className={`nav-link ${
                       pathname === "/testimonials" ? "active" : ""
@@ -112,17 +123,6 @@ export default function Header() {
                   title="LinkedIn"
                 >
                   <i className="fab fa-linkedin"></i>
-                </a>
-              </li>
-              <li className="social-icons-twitter">
-                <a
-                  data-bs-toggle="tooltip"
-                  href="https://blog.outstride.co/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Medium"
-                >
-                  <i className="fab fa-medium"></i>
                 </a>
               </li>
             </ul>

@@ -20,10 +20,10 @@ export default function CapabilityCard({
   return (
     <div>
       <div className="d-flex align-items-center gap-3 mb-3">
-        <span className="os-number-badge">{capability.number}</span>
-        <h4 className="text-5 fw-700 mb-0">
-          {capability.emoji} {capability.title}
-        </h4>
+        <span className="os-number-badge os-emoji-badge" aria-hidden="true">
+          {capability.emoji}
+        </span>
+        <h4 className="text-5 fw-700 mb-0">{capability.title}</h4>
       </div>
       {variant === "compact" ? (
         <p className="text-muted small mb-0">{capabilitySummary(capability)}</p>

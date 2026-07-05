@@ -12,27 +12,20 @@ export function RelatedCapabilities({ capabilities }: RelatedCapabilitiesProps) 
 
   return (
     <div className="mt-5 pt-4 border-top mb-0">
-      <h2 className="os-prose-related-heading mb-4">Related capabilities</h2>
-      <div className="row g-3">
+      <h2 className="os-prose-related-heading mb-3">Related capabilities</h2>
+      <ul className="os-related-cap-list list-unstyled mb-0">
         {capabilities.map((capability) => (
-          <div key={capability.id} className="col-md-6">
+          <li key={capability.id}>
             <a
               href={`/os/capabilities/${capability.id}/`}
               className="text-decoration-none"
             >
-              <div className="featured-box p-3 h-100">
-                <div className="d-flex align-items-center gap-2 mb-2">
-                  <span className="os-number-badge">{capability.number}</span>
-                  <h3 className="os-prose-card-title mb-0">
-                    {capability.emoji} {capability.title}
-                  </h3>
-                </div>
-                <p className="text-muted small mb-0">{capability.summary}</p>
-              </div>
+              <span aria-hidden="true">{capability.emoji}</span>{" "}
+              {capability.title}
             </a>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

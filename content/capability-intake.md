@@ -841,3 +841,48 @@ question: Design the Org fills its own page without touching Make Ownership Stic
 - Page DRAFTED 2026-07-04 — first page with a fully real hook quote.
 - Memo 2 (real founder quotes across other pages) deferred: Ben will do a read-through
   pass in the future.
+
+---
+
+## Thematic-gap chat notes (2026-07-05)
+
+_(From a chat session auditing thematic coverage. Four themes discussed; Ben's decisions
+and raw content below.)_
+
+### Exits → Hire & Raise the Talent Bar (scope extension)
+
+- The capability's scope now includes **when to let someone go**, not just entry:
+  Ben's bar — **"if it's not a hell yeah, it's a no"** (Sivers phrasing; accredit if
+  used on the page). Reference the Accountability Dial as the route that should have
+  preceded any exit.
+- New playbook tool `how-to-let-someone-go` captured in `content/tool-intake.md`
+  (2026-07-05) with Ben's full step list, plus two candidate spin-off tools parked
+  there (2-Minute Hard Convo Prep; Questions to Find Truth Quickly).
+- Q1 (verbatim hiring founder quotes) and Q5 still owed before the page drafts.
+
+### Leadership team as a team (placement OPEN)
+
+- Ben's angles: **putting the company above the function**, and "crafting a
+  distinctive culture for the leadership team". Explicitly unsure if this should be
+  a whole capability.
+- Leadership Test tool captured in `content/tool-intake.md` (Ben's four questions +
+  two LLM-proposed additions pending his call).
+- OPEN: whole capability vs. sections in make-ownership-stick / design-the-org /
+  build-a-culture-that-compounds. LLM recommendation 2026-07-05: build the tool
+  first, home it under make-ownership-stick + design-the-org, let the theme earn a
+  capability later if it keeps growing.
+
+### Founder loneliness / mental strain → Master My Mindset + Build My Growth System
+
+- Ben (2026-07-05): "really important to emphasize mental strain + need to build
+  resilience, find balance, peers etc." — add to Master My Mindset and to the
+  personal-board material in Build My Growth System. Loneliness currently has ZERO
+  mentions across OS content; also a strong symptom-map candidate ("I have no one I
+  can actually talk to about this" → build-my-growth-system).
+- No new capability; enrich existing pages.
+
+### Company-level crisis → Make the Right Calls (tentative)
+
+- Ben's low-commitment lean ("hmmm... maybe"): crisis navigation lives in the
+  decision-making capability — deciding under pressure, wartime calls. Parked; no
+  action until Ben returns to it.

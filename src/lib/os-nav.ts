@@ -8,7 +8,6 @@ import {
   getToolEffectiveStatus,
   layers,
   resolveOsContentStatus,
-  toolLibraryCategories,
   tools,
   type OsContentStatus,
 } from "@/lib/os";
@@ -69,64 +68,31 @@ function buildCapabilitySubGroups(): OsNavSubGroup[] {
   });
 }
 
-const flagshipToolIds = new Set([
-  "symptom-map",
-  "company-health-scorecard",
-  "two-hour-constraint",
-  "ownership-map",
-  "leadership-hats",
-  "relationship-design-canvas",
-]);
-
-function compareToolsForNav(
-  a: (typeof tools)[number],
-  b: (typeof tools)[number],
-): number {
-  const aFlagship = flagshipToolIds.has(a.id);
-  const bFlagship = flagshipToolIds.has(b.id);
-  if (aFlagship !== bFlagship) {
-    return aFlagship ? -1 : 1;
-  }
-  return a.title.localeCompare(b.title);
-}
-
-function buildToolSubGroups(): OsNavSubGroup[] {
-  return toolLibraryCategories
-    .map((category) => {
-      const categoryTools = tools
-        .filter((tool) => tool.categoryId === category.id)
-        .sort(compareToolsForNav);
-
-      return {
-        label: `Category ${category.letter}: ${category.title}`,
-        items: categoryTools.map((tool) => ({
-          label: tool.title,
-          href: `/os/tools/${tool.id}/`,
-          status: getToolEffectiveStatus(tool),
-        })),
-      };
-    })
-    .filter((group) => group.items.length > 0);
+function buildOverviewItems(): OsNavItem[] {
+  return [
+    ...osPages.slice(0, 4).map((page) => ({
+      label: page.label,
+      href: page.href,
+      status: page.status,
+    })),
+    ...osPages.slice(4).map((page) => ({
+      label:
+        page.href === "/os/tools/" ? `${tools.length} Tools` : page.label,
+      href: page.href,
+      status: page.status,
+    })),
+  ];
 }
 
 export const osNavGroups: OsNavGroup[] = [
   {
     label: "Overview",
-    items: osPages.slice(0, 4).map((page) => ({
-      label: page.label,
-      href: page.href,
-      status: page.status,
-    })),
+    items: buildOverviewItems(),
   },
   {
     label: "Capabilities",
     href: "/os/capabilities/",
     subGroups: buildCapabilitySubGroups(),
-  },
-  {
-    label: "Tools",
-    href: "/os/tools/",
-    subGroups: buildToolSubGroups(),
   },
 ];
 
