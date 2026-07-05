@@ -1804,6 +1804,9 @@ export const tools: Tool[] = [
     relatedToolIds: ["coaching-questions", "happiness-check", "commitment-loop"],
     description:
       "A repeatable structure for high-quality one-to-one conversations.",
+    accreditation: {
+      note: "Outstride original",
+    },
   },
   {
     id: "happiness-check",
