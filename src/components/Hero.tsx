@@ -20,8 +20,8 @@ export default function Hero() {
             <a href="#contact" className="btn btn-dark rounded-0 mt-3">
               Get in touch
             </a>
-            <Link href="/os/" className="btn btn-link text-dark mt-3">
-              Explore OS
+            <Link href="/os/" className="btn btn-outline-dark rounded-0 mt-3 ms-lg-2">
+              Explore the OS
             </Link>
           </div>
           <div className="col-lg-5 text-center align-self-center mb-4 mb-lg-0 order-0 order-lg-1">
