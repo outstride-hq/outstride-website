@@ -1114,6 +1114,46 @@ filled; his "favourite structure" kept verbatim below.)_
   ("future first, metrics second") is pulled from the existing be-storyteller-in-chief
   capability page for consistency, not from this dump.
 
+### Traffic-Light Days (`traffic-light-days`) — NEW, BUILT 2026-07-06
+
+_(Captured from Ben's own LinkedIn post, 2026-07-06. His post verbatim: "10 second life
+hack. When you wake up in the morning, ask yourself which day it is: 🟢 Green day - do your
+most ambitious work. 🟠 Orange day - do solid, useful work, but don't force brilliance.
+🔴 Red day - Go easy on yourself. Do easy work like expenses, booking flights, copying
+information from A to B." Ben's own public content, no client data — kept close to verbatim.
+Built as a tool same day: "let's turn this into a tool.")_
+
+1. A ten-second morning check — is today a green, amber or red day? — that matches the
+   ambition of your work to the energy you actually woke up with.
+2. Every morning, before you plan the day; especially useful when you keep trying to force
+   peak output on days your battery can't fund it. The daily companion to the Energy Audit:
+   the audit colours the past two weeks after the fact; this colours today, in advance.
+3. Ask which day it is, then choose work to match:
+   - 🟢 **Green day** — do your most ambitious work (the strategy deck, the hard hire, the
+     creative leap).
+   - 🟠 **Amber day** — do solid, useful work, but don't force brilliance.
+   - 🔴 **Red day** — go easy on yourself. Do easy work: expenses, booking flights, copying
+     information from A to B.
+   Then share the light with your cofounder (already in Ben's daily habit stack: "Share w.
+   co-founder my traffic light for today").
+4. The point isn't to have more green days — it's to stop spending green-day expectations on
+   a red-day battery. Naming a red day is permission, not failure: a red day spent on
+   expenses is a win; a red day spent trying to write the strategy is two days lost.
+5. The three colour bands themselves. A small table carries it (colour · the day · what to
+   do); no new diagram needed initially — matches the team-traffic-lighting call.
+6. Outstride original — a founder-sized daily cut of the traffic-light system (colour-coded
+   "energy days" are a common productivity heuristic with no single owner). Ben posts it as
+   his own life hack and already runs it in his habit stack.
+7. manage-my-energy-system, build-resilience-and-recovery. Related: energy-audit (its
+   after-the-fact twin), two-equilibria-map, habit-stacks (where the daily light lives),
+   team-traffic-lighting (the company-side sibling).
+
+**Open questions:**
+
+- Green/Orange/Red in the post vs Green/Amber/Red everywhere else in the OS — standardised
+  on **amber** for consistency with team-traffic-lighting and the RAG tools; Ben's post word
+  "orange" noted here in case he wants it kept.
+
 ### Board Pack (`board-pack`) — page build-out 2026-07-05
 
 _(Ben: "I think I share a lot about board etc. via voice — do you have the notes?" Sourced

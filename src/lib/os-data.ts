@@ -702,6 +702,7 @@ export const capabilities: Capability[] = [
       "energy-audit",
       "human-9",
       "habit-stacks",
+      "traffic-light-days",
     ],
     order: 20,
   },
@@ -723,6 +724,7 @@ export const capabilities: Capability[] = [
       "two-equilibria-map",
       "personal-manual",
       "habit-stacks",
+      "traffic-light-days",
     ],
     order: 21,
   },
@@ -2066,6 +2068,32 @@ export const tools: Tool[] = [
       "personal-manual",
       "seven-founder-needs",
       "habit-stacks",
+      "traffic-light-days",
+    ],
+  },
+  {
+    id: "traffic-light-days",
+    title: "Traffic-Light Days",
+    categoryId: "human-tools",
+    type: "rhythm",
+    format: ["solo", "cofounder"],
+    moments: ["diagnose"],
+    depth: ["surface"],
+    layerIds: ["founder", "human"],
+    capabilityIds: [
+      "manage-my-energy-system",
+      "build-resilience-and-recovery",
+    ],
+    description:
+      "A ten-second morning check — is today a green, amber or red day? — that matches the ambition of your work to the energy you actually woke up with.",
+    accreditation: {
+      note: "Outstride original — a founder-sized daily cut of the traffic-light system",
+    },
+    relatedToolIds: [
+      "energy-audit",
+      "two-equilibria-map",
+      "habit-stacks",
+      "team-traffic-lighting",
     ],
   },
   {
@@ -2182,6 +2210,7 @@ export const tools: Tool[] = [
       "personal-manual",
       "habit-stacks",
       "energy-audit",
+      "traffic-light-days",
     ],
   },
   {

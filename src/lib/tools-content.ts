@@ -2091,6 +2091,71 @@ export const toolsContent: Record<string, ToolContent> = {
       },
     ],
   },
+  "traffic-light-days": {
+    intro:
+      "A ten-second morning check — is today a green, amber or red day? — that matches the ambition of your work to the energy you actually woke up with.",
+    blocks: [
+      {
+        kind: "paragraph",
+        text: "When you wake up, before you touch the calendar, ask yourself which day it is. Some mornings you're sharp and expansive; some mornings you're flat and can barely face the inbox. Most founders ignore the difference and demand the same peak output every day — then wonder why the strategy deck they forced out on a red morning has to be rewritten anyway. This is the daily companion to the Energy Audit: the audit colours the last two weeks after the fact; this colours today, in advance.",
+      },
+      {
+        kind: "table",
+        columns: ["Today is a…", "Energy", "So do…"],
+        rows: [
+          [
+            "🟢 Green day",
+            "Sharp, expansive",
+            "Your most ambitious work — the strategy, the hard hire, the creative leap.",
+          ],
+          [
+            "🟠 Amber day",
+            "Steady, unremarkable",
+            "Solid, useful work — but don't force brilliance.",
+          ],
+          [
+            "🔴 Red day",
+            "Flat, depleted",
+            "Go easy on yourself. Easy work: expenses, booking flights, copying information from A to B.",
+          ],
+        ],
+      },
+      {
+        kind: "heading",
+        text: "How to run it",
+      },
+      {
+        kind: "steps",
+        steps: [
+          {
+            title: "Call the colour first thing",
+            note: "Before the calendar, before the inbox. It's a gut read on the battery you woke up with, not a plan — ten seconds, most mornings you already know.",
+          },
+          {
+            title: "Match the work to the colour",
+            note: "Move your most ambitious work onto green mornings and let red mornings clear the admin backlog. The work still gets done; it just gets done on the right day.",
+            example: "Strategy deck slips from a red Tuesday to a green Thursday; the red Tuesday knocks out expenses and travel booking that were clogging the list anyway.",
+          },
+          {
+            title: "Share your light with your cofounder",
+            note: "Ben runs this in his daily habit stack — \"share with my cofounder my traffic light for today\". It sets expectations without a meeting: a red light says don't bring me the big decision today.",
+          },
+        ],
+      },
+      {
+        kind: "callout",
+        text: "The point isn't to have more green days — it's to stop spending green-day expectations on a red-day battery. Naming a red day is permission, not failure: a red day spent on expenses is a win; a red day spent trying to write the strategy is two days lost.",
+      },
+      {
+        kind: "toolRef",
+        toolIds: ["energy-audit", "two-equilibria-map", "habit-stacks", "team-traffic-lighting"],
+      },
+      {
+        kind: "capabilityRefs",
+        capabilityIds: ["manage-my-energy-system", "build-resilience-and-recovery"],
+      },
+    ],
+  },
   "personal-manual": {
     intro:
       "A written manual of how you work — your best conditions, your triggers, your recovery methods — plus a playbook of pre-committed if-then rules, written while you're well so you don't negotiate with yourself when you're not.",
