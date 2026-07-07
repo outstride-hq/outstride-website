@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import {
   type KeyboardEvent,
   type MouseEvent,
+  useCallback,
   useEffect,
   useMemo,
   useRef,
@@ -104,7 +105,8 @@ export default function OsSearch({ variant }: OsSearchProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [copiedHref, setCopiedHref] = useState<string | null>(null);
   const [currentCopied, setCurrentCopied] = useState(false);
-  const [shortcutLabel, setShortcutLabel] = useState("Ctrl K");
+  const [searchShortcutLabel, setSearchShortcutLabel] = useState("Ctrl K");
+  const [copyLinkShortcutLabel, setCopyLinkShortcutLabel] = useState("Ctrl Shift L");
 
   const results = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -120,12 +122,24 @@ export default function OsSearch({ variant }: OsSearchProps) {
 
   useEffect(() => {
     const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform);
-    setShortcutLabel(isMac ? "Cmd K" : "Ctrl K");
+    const modifier = isMac ? "Cmd" : "Ctrl";
+    setSearchShortcutLabel(`${modifier} K`);
+    setCopyLinkShortcutLabel(`${modifier} Shift L`);
   }, []);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  async function copyHref(href: string) {
+    await copyTextToClipboard(buildAbsoluteUrl(href));
+    setCopiedHref(href);
+  }
+
+  const copyCurrentPage = useCallback(async () => {
+    await copyTextToClipboard(buildAbsoluteUrl(normalizeHref(pathname)));
+    setCurrentCopied(true);
+  }, [pathname]);
 
   useEffect(() => {
     if (!isActiveVariant) {
@@ -133,7 +147,26 @@ export default function OsSearch({ variant }: OsSearchProps) {
     }
 
     function handleShortcut(event: globalThis.KeyboardEvent) {
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+      const key = event.key.toLowerCase();
+      const hasModifier = event.metaKey || event.ctrlKey;
+
+      if (hasModifier && event.shiftKey && key === "l") {
+        const target = event.target;
+
+        if (
+          target instanceof HTMLElement &&
+          (target.isContentEditable ||
+            target.closest("input, textarea, select, [contenteditable='true']"))
+        ) {
+          return;
+        }
+
+        event.preventDefault();
+        void copyCurrentPage();
+        return;
+      }
+
+      if (hasModifier && !event.shiftKey && key === "k") {
         event.preventDefault();
         setIsOpen(true);
       }
@@ -144,7 +177,7 @@ export default function OsSearch({ variant }: OsSearchProps) {
     return () => {
       window.removeEventListener("keydown", handleShortcut);
     };
-  }, [isActiveVariant]);
+  }, [copyCurrentPage, isActiveVariant]);
 
   useEffect(() => {
     if (!isOpen || !isActiveVariant) {
@@ -191,16 +224,6 @@ export default function OsSearch({ variant }: OsSearchProps) {
 
   function openSearch() {
     setIsOpen(true);
-  }
-
-  async function copyHref(href: string) {
-    await copyTextToClipboard(buildAbsoluteUrl(href));
-    setCopiedHref(href);
-  }
-
-  async function copyCurrentPage() {
-    await copyTextToClipboard(buildAbsoluteUrl(normalizeHref(pathname)));
-    setCurrentCopied(true);
   }
 
   function handleInputKeyDown(event: KeyboardEvent<HTMLInputElement>) {
@@ -262,15 +285,18 @@ export default function OsSearch({ variant }: OsSearchProps) {
             <i className="fa-solid fa-magnifying-glass me-2" aria-hidden="true" />
             Search OS
           </span>
-          <kbd>{shortcutLabel}</kbd>
+          <kbd>{searchShortcutLabel}</kbd>
         </button>
         <button
           type="button"
           className="os-copy-current"
           onClick={() => void copyCurrentPage()}
         >
-          <i className="fa-regular fa-copy me-2" aria-hidden="true" />
-          {currentCopied ? "Copied page link" : "Copy page link"}
+          <span>
+            <i className="fa-regular fa-copy me-2" aria-hidden="true" />
+            {currentCopied ? "Copied page link" : "Copy page link"}
+          </span>
+          <kbd>{copyLinkShortcutLabel}</kbd>
         </button>
       </div>
 

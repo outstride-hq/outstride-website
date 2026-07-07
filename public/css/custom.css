@@ -1020,7 +1020,8 @@ body.os-mobile-sidebar-open {
 	color: var(--out-coral-500);
 }
 
-.os-search-trigger kbd {
+.os-search-trigger kbd,
+.os-copy-current kbd {
 	background: #fff2ea;
 	border: 1px solid var(--out-coral-200);
 	border-radius: 8px;
@@ -1033,7 +1034,6 @@ body.os-mobile-sidebar-open {
 .os-copy-current {
 	color: var(--out-muted);
 	font-weight: 600;
-	justify-content: center;
 }
 
 .os-search-backdrop {
@@ -1485,7 +1485,8 @@ body.os-mobile-sidebar-open {
 		padding: 1rem !important;
 	}
 
-	.os-search-trigger kbd {
+	.os-search-trigger kbd,
+	.os-copy-current kbd {
 		display: none;
 	}
 
