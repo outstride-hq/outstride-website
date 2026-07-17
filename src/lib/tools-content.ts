@@ -8,7 +8,12 @@ export type ToolBlock =
   | { kind: "paragraph"; text: string }
   | { kind: "heading"; text: string }
   | { kind: "list"; items: string[] }
-  | { kind: "table"; columns: string[]; rows: string[][] }
+  | {
+      kind: "table";
+      columns: string[];
+      rows: string[][];
+      emphasis?: "none" | "firstColumn";
+    }
   | { kind: "steps"; steps: ToolStep[] }
   | { kind: "callout"; text: string }
   | { kind: "diagram"; diagramId: string }
@@ -1508,29 +1513,11 @@ export const toolsContent: Record<string, ToolContent> = {
     blocks: [
       {
         kind: "paragraph",
-        text: "Use this for existing employees and for hiring debriefs. Keep the flow simple: score three role outcomes and three values first, plot the person on the grid second, then use the matching decision card.",
+        text: "Most talent debates go in circles because everyone in the room is scoring a different thing. One person means \"great to work with\", another means \"hits their number\", and the conversation never lands. The grid splits the question in two — are they delivering the role, and are they living the values — and scores each on evidence. Once the two scores are separate, the right decision usually stops being controversial.",
       },
       {
-        kind: "heading",
-        text: "Score inputs (before plotting)",
-      },
-      {
-        kind: "table",
-        columns: ["Performance box (3x JD outcomes)", "Culture box (3x values)"],
-        rows: [
-          ["1. Role outcome #1 - __/10", "1. Own outcomes - __/10"],
-          ["2. Role outcome #2 - __/10", "2. Raise the bar - __/10"],
-          ["3. Role outcome #3 - __/10", "3. Build others up - __/10"],
-          ["Average = performance score", "Average = culture score"],
-        ],
-      },
-      {
-        kind: "list",
-        items: [
-          "Write each JD line as an outcome, not an activity.",
-          "Use evidence from the last 30-90 days for each score.",
-          "For hiring, score from structured interview signal, work sample and references.",
-        ],
+        kind: "paragraph",
+        text: "Use it for existing employees and for hiring debriefs. Start with the grid so the four decisions are clear, then score three role outcomes and three values, plot the person, and take the matching action.",
       },
       {
         kind: "heading",
@@ -1541,11 +1528,56 @@ export const toolsContent: Record<string, ToolContent> = {
         diagramId: "culture-performance-grid",
       },
       {
+        kind: "paragraph",
+        text: "Culture runs up the vertical axis (low → high). Performance runs across the horizontal axis (low → high). Each quadrant names both the position and the default decision: invest, scale, exit, or manage out.",
+      },
+      {
+        kind: "heading",
+        text: "Score inputs (before plotting)",
+      },
+      {
+        kind: "table",
+        emphasis: "none",
+        columns: ["Performance box (3x JD outcomes)"],
+        rows: [
+          ["1. Role outcome #1 - __/10"],
+          ["2. Role outcome #2 - __/10"],
+          ["3. Role outcome #3 - __/10"],
+          ["Average = performance score"],
+        ],
+      },
+      {
+        kind: "table",
+        emphasis: "none",
+        columns: ["Culture box (3x values)"],
+        rows: [
+          ["1. Own outcomes - __/10"],
+          ["2. Raise the bar - __/10"],
+          ["3. Build others up - __/10"],
+          ["Average = culture score"],
+        ],
+      },
+      {
+        kind: "paragraph",
+        text: "Average only scored criteria. A missing score (\"?\") means you lack evidence — collect it before the next calibration instead of guessing or averaging around it.",
+      },
+      {
+        kind: "list",
+        items: [
+          "Write each JD line as an outcome, not an activity.",
+          "The three values shown are examples — swap in your company's actual values. If you haven't written them down yet, that's the first gap this tool exposes.",
+          "Use evidence from the last 30-90 days for each score.",
+          "Decide where the midline sits before you plot, and hold it in the same place for everyone — the grid only works if scores are comparable across people.",
+          "For hiring, score from structured interview signal, work sample and references — the [[tool:senior-hire-process|Senior Hire Process]] is a full loop designed to generate exactly this evidence.",
+        ],
+      },
+      {
         kind: "heading",
         text: "Decision cards (after plotting)",
       },
       {
         kind: "table",
+        emphasis: "firstColumn",
         columns: ["Card", "Decision", "What to do now"],
         rows: [
           [
@@ -1561,7 +1593,7 @@ export const toolsContent: Record<string, ToolContent> = {
           [
             "High performance + low culture",
             "Manage out at the right time",
-            "Short-term output may be useful; long-term culture damage is costly.",
+            "The classic brilliant jerk. Short-term output may be useful; the long-term culture damage costs more.",
           ],
           [
             "High culture + low performance",
@@ -1572,7 +1604,7 @@ export const toolsContent: Record<string, ToolContent> = {
       },
       {
         kind: "callout",
-        text: "Run this quarterly in calibration meetings and force one clear action per person: scale, invest, manage out, or exit.",
+        text: "Run this quarterly in calibration meetings and force one clear action per person: scale, invest, manage out, or exit. Whatever the card says, deliver it as [[tool:sbi-feedback|specific, behaviour-level feedback]] — a plotted grid is a diagnosis, not a conversation.",
       },
       {
         kind: "heading",
@@ -1580,7 +1612,7 @@ export const toolsContent: Record<string, ToolContent> = {
       },
       {
         kind: "paragraph",
-        text: "A sales lead at a seed-stage startup. Culture, scored against the company's values: hunger 6.5, proactivity 4, reliability 5. Performance, scored against the three outcomes in the job description: generate qualified calls — 3/10; represent the company at industry events — no score yet; lift the team's close rate — 6/10. Averaged and plotted: middling culture, low performance — the \"invest if capacity allows\" quadrant, with a focused development plan and a deadline.",
+        text: "A sales lead at a seed-stage startup. Culture, scored against the company's values: hunger 6.5, proactivity 4, reliability 5. Performance, scored against the three outcomes in the job description: generate qualified calls — 3/10; represent the company at industry events — no score yet; lift the team's close rate — 6/10. Averaged and plotted: middling culture, low performance — that's the card sitting just left of centre on the grid above, in the \"invest if capacity allows\" quadrant, with a focused development plan and a deadline.",
       },
       {
         kind: "callout",

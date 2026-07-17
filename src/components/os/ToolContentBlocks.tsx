@@ -77,9 +77,15 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                 ))}
               </ul>
             );
-          case "table":
+          case "table": {
+            const emphasis = block.emphasis ?? "firstColumn";
+            const wrapClassName =
+              emphasis === "firstColumn"
+                ? "os-table-wrap os-table-wrap--emphasize-first"
+                : "os-table-wrap";
+
             return (
-              <div key={index} className="os-table-wrap">
+              <div key={index} className={wrapClassName}>
                 <div className="table-responsive">
                   <table className="table align-middle mb-0">
                     <thead>
@@ -104,6 +110,7 @@ export default function ToolContentBlocks({ blocks }: ToolContentBlocksProps) {
                 </div>
               </div>
             );
+          }
           case "steps":
             return (
               <div key={index}>

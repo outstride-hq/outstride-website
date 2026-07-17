@@ -849,7 +849,7 @@ section.bg-primary a {
 	vertical-align: top;
 }
 
-.os-table-wrap td:first-child {
+.os-table-wrap--emphasize-first td:first-child {
 	font-weight: 700;
 }
 
