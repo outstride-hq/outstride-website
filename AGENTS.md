@@ -217,3 +217,13 @@ Skip commit/push for question-only or review-only tasks with no code changes.
 ## Before finishing
 
 Run `npm run build` and resolve any type or lint errors introduced by your changes. When work is complete, commit and push per the git workflow above unless the user opted out.
+
+## Cursor Cloud specific instructions
+
+Setup runs `npm install` (npm + `package-lock.json`; Node 18+, verified on Node 22). The dependency refresh is handled by the startup update script, so you should not need to reinstall manually.
+
+- **Run dev:** `npm run dev` serves at `http://localhost:3000` (Next.js dev server). It uses a separate `distDir` (`.next-dev`) from production (`.next`), so `npm run dev` and `npm run build` can run without clobbering each other's output.
+- **Build:** `npm run build` runs `prebuild` first (`npm run generate:json` → writes `public/json` via `scripts/generate-context-json.ts` using `tsx`) then `next build` static-exports to `out/`. This is the primary quality gate and also type-checks.
+- **Lint/typecheck:** there is no `lint` npm script. `next lint` is unconfigured and prompts interactively — don't rely on it in automation. Use `npx tsc --noEmit` for a standalone type-check. Biome is a devDependency but the repo has no `biome.json`, so `npx biome check` reports default-style noise (tabs/spaces) that is not the project's standard — do not treat it as the lint gate.
+- **Interactive features are client components** (e.g. the OS search modal in `src/components/os/OsSearch.tsx`, reachable from `/os`); most other pages are statically pre-rendered content.
+- **Preview the static export:** `npm run start` (`npx serve out`) serves the built `out/` dir, useful for validating export-only behavior that differs from the dev server.
